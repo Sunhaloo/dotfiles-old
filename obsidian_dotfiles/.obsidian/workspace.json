@@ -1,0 +1,270 @@
+{
+  "main": {
+    "id": "25d1405e454c91ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e49f3d25061444a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8521b8ea32cb5b1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning/Hobbies/Windows Docs/Windows Reset - Installation.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "25ed3d2af1ff5064",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning/Hobbies/Git Docs/Git Setup.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 1,
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f2785f56b474db5e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e37db63afe5c0b66",
+        "type": "tabs",
+        "dimension": 35.8,
+        "children": [
+          {
+            "id": "4cad13d082b07031",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c4e489cded96c359",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a70f24c2c393263e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "96bd1d3477c2a727",
+        "type": "tabs",
+        "dimension": 33.7,
+        "children": [
+          {
+            "id": "c86d2231862bfb35",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "ebec414a2e184aa6",
+        "type": "tabs",
+        "dimension": 30.5,
+        "children": [
+          {
+            "id": "7cec6d1e6cfd1111",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 306.5
+  },
+  "right": {
+    "id": "91af16be4f3f8284",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc96e01b13b76bbc",
+        "type": "tabs",
+        "dimension": 32.21544715447154,
+        "children": [
+          {
+            "id": "c344ca13e4c25dfd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Learning/Hobbies/Git Docs/Git Setup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0518d2d7eeb47924",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Learning/Hobbies/Git Docs/Git Setup.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "eed8aabb0404df4a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "18683896574bfddd",
+        "type": "tabs",
+        "dimension": 35.670731707317074,
+        "children": [
+          {
+            "id": "768e9c25d1151c5d",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "906dde9f0d046c09",
+        "type": "tabs",
+        "dimension": 32.113821138211385,
+        "children": [
+          {
+            "id": "abd244413661c90a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Learning/Hobbies/Git Docs/Git Setup.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 290.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "templater-obsidian:Templater": false,
+      "obsidian-book-search-plugin:Create new book note": false
+    }
+  },
+  "active": "25ed3d2af1ff5064",
+  "lastOpenFiles": [
+    "Learning/Hobbies/Windows Docs/Windows Reset - Installation.md",
+    "1. Life/Swipe Folder/Media Swipe File.md",
+    "Learning/Hobbies/Git Docs/Git Setup.md",
+    "TO DO.md",
+    "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
+    "Obsidian Management/Media/Images/Microsoft Windows/windows docs using obsidian.png",
+    "Obsidian Management/Media/Images/Microsoft Windows/Windows Features.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG",
+    "Learning/Hobbies/Windows Docs/Untitled.md",
+    "Obsidian Management/Media/Images/Microsoft Windows/control keyboard-sliders.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/settings-keyboard_settings.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/fast-startup.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows",
+    "Obsidian Management/Media/Images/New folder",
+    "1. Life/People/Girls/Saniyah ( Joomun Tuition ).md",
+    "Learning/School HSC/Python/Sorting Algos/Bubble Sort - Python.md",
+    "Learning/Hobbies/Windows Docs/Komorebi Window Tiling Manager.md",
+    "Data view.md",
+    "Learning/Hobbies/Git Docs/Dotfiles.md",
+    "Learning/Courses/The Odin Project/CSS/CSS Flexbox ( Kevin Powell )/Flexbox CSS Kevin Powell.md",
+    "Learning/Courses/The Odin Project/CSS/Flexbox Alignment.md",
+    "1. Life/Swipe Folder/General Swipe File.md",
+    "1. Life/Swipe Folder/People Swipe File.md",
+    "1. Life/Journaling/1. Journal Data View.md",
+    "1. Life/Journaling/Journal's Folder/First Day of 2024.md",
+    "1. Life/Journaling/Journal's Folder/Final HSC Exam.md",
+    "PARA Method.md",
+    "Untitled.md",
+    "testing.py",
+    "New Text Document.txt",
+    "1. Life/Journaling/Journal's Folder/My Return.md",
+    "1. Life/Journaling/Journal's Folder/Another day of installing Linux.md",
+    "1. Life/Journaling/Journal's Folder/Tried Arch.md",
+    "En Bobok.md",
+    "Learning/Courses/The Odin Project/The Odin Project Data View.md",
+    "I am Fucking Bored and Tire.md",
+    "1. Life/Journaling/Journal's Folder",
+    "Learning/Courses/The Odin Project/CSS/CSS Flexbox ( Kevin Powell )",
+    "Obsidian Management/Media/Images/The Odin Project/flex box powerful tool.png",
+    "Obsidian Management/Media/Images/The Odin Project/both flex container and flex item.png",
+    "Obsidian Management/Media/Images/The Odin Project/flex container and flex item.png",
+    "Learning/Hobbies/Blender",
+    "Content ( YouTube, Twitch, Anime )/Anime",
+    "Content ( YouTube, Twitch, Anime )",
+    "Obsidian Management/Media/Images/Git Basics",
+    "Tree Diagram For Uni ( Files ).canvas"
+  ]
+}
