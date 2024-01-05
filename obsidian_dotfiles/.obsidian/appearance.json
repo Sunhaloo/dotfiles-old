@@ -9,8 +9,5 @@
   "nativeMenus": false,
   "cssTheme": "Atom",
   "baseFontSize": 19,
-  "enabledCssSnippets": [
-    "my_caret",
-    "custom"
-  ]
+  "enabledCssSnippets": []
 }
