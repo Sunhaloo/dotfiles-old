@@ -21,6 +21,8 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
+-- Open Lex
+keymap.set("n", "lx", ":Lex<Return>", opts)
 
 -- TABS
 
