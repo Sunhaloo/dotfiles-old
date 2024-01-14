@@ -1,10 +1,17 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- Keymap File Written in Lua
 
 -- Variables
 local keymap = vim.keymap
 local opts = { noremap = true, silent = false }
+
+-- Leader Key
+keymap.set("n", "<Space>", "", opts)
+vim.gmapleader = " "
+vim.g.maplocalleader = " "
+
+-- <C-i> is not <C-i>, need to make it become <C-i>
+keymap.set("n", "<C-i>", "<C-i>", opts)
+
 
 -- NORMAL Mode
 
@@ -18,11 +25,15 @@ keymap.set("n", "dw", "vb_d")
 -- Select All
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- Removing the annoying paste buffer / register thing
+keymap.set("x", "p", [["_dP]])
+
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- Open Lex
 keymap.set("n", "lx", ":Lex<Return>", opts)
+
 
 -- TABS
 
@@ -52,6 +63,7 @@ keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end)
 
+
 -- INSERT Mode
 
 -- Go to NORMAL Mode From INSERT Mode
@@ -61,8 +73,6 @@ keymap.set("i", "jk", "<ESC>", opts)
 keymap.set("i", "<C-h>", "<Left>", opts)
 keymap.set("i", "<C-l>", "<Right>", opts)
 keymap.set("i", "<C-j>", "<Down>", opts)
-
--- This is not working for the moment
 keymap.set("i", "<C-k>", "<Up>", opts)
 
 
@@ -77,3 +87,7 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 
 -- Paste even when in VISUAL Mode
 keymap.set("v", "p", '"_dP', opts)
+
+-- Stay in Indent Mode
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)
