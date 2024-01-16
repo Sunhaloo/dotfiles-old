@@ -1,0 +1,89 @@
+{
+  "quickPlayData" : {
+    "2535455328372957" : 
+    [
+      {
+        "epochLastPlayedTimeMs" : 1705399104000,
+        "id" : "Main World",
+        "javaInstance" : {
+          "configId" : "Quilt 1.20.4",
+          "game" : {
+            "gamemode" : "survival",
+            "type" : "singleplayer"
+          }
+        },
+        "name" : "Main World",
+        "source" : "JavaQuickPlay"
+      },
+      {
+        "epochLastPlayedTimeMs" : 1705398587886,
+        "id" : "Quilt 1.20.4",
+        "javaInstance" : {
+          "configId" : "Quilt 1.20.4"
+        },
+        "source" : "JavaQuickPlay"
+      },
+      {
+        "epochLastPlayedTimeMs" : 1705397843000,
+        "id" : "Survival Test",
+        "javaInstance" : {
+          "configId" : "Quilt 1.20.4",
+          "game" : {
+            "gamemode" : "survival",
+            "type" : "singleplayer"
+          }
+        },
+        "name" : "Survival Test",
+        "source" : "JavaQuickPlay"
+      },
+      {
+        "epochLastPlayedTimeMs" : 1705396496000,
+        "id" : "Testing",
+        "javaInstance" : {
+          "configId" : "Quilt 1.20.4",
+          "game" : {
+            "gamemode" : "creative",
+            "type" : "singleplayer"
+          }
+        },
+        "name" : "Testing",
+        "source" : "JavaQuickPlay"
+      },
+      {
+        "epochLastPlayedTimeMs" : 1705302854437,
+        "id" : "f52678bb58679f45bd127d09fdf57727",
+        "javaInstance" : {
+          "configId" : "f52678bb58679f45bd127d09fdf57727"
+        },
+        "source" : "JavaQuickPlay"
+      },
+      {
+        "epochLastPlayedTimeMs" : 1704878910000,
+        "id" : "Testing",
+        "javaInstance" : {
+          "configId" : "f52678bb58679f45bd127d09fdf57727",
+          "game" : {
+            "gamemode" : "creative",
+            "type" : "singleplayer"
+          }
+        },
+        "name" : "Testing",
+        "source" : "JavaQuickPlay"
+      },
+      {
+        "epochLastPlayedTimeMs" : 1704785980000,
+        "id" : "Test World",
+        "javaInstance" : {
+          "configId" : "f52678bb58679f45bd127d09fdf57727",
+          "game" : {
+            "gamemode" : "survival",
+            "type" : "singleplayer"
+          }
+        },
+        "name" : "Test World",
+        "source" : "JavaQuickPlay"
+      }
+    ]
+  },
+  "version" : 0
+}

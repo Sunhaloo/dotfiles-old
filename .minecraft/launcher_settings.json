@@ -1,0 +1,13 @@
+{
+  "channel" : "release",
+  "customChannels" : [],
+  "deviceId" : 11375041841234968731,
+  "disableGPU" : true,
+  "formatVersion" : 0,
+  "locale" : "en-US",
+  "productLibraryDir" : "C:\\Users\\azmaa\\AppData\\Local\\Mojang\\products",
+  "quickPlayEnabled" : false,
+  "useArm64JreIfSupported" : false,
+  "useMagnifiedMode" : false,
+  "version" : 6
+}

@@ -1,0 +1,317 @@
+---- Quilt Loader: Failed to load ----
+Date/Time: 2024/01/16 13:49:19.4598
+Quilt Loader Version: 0.23.0
+
+-- Error 1 --
+
+Better Ping Display requires version [1.20.2, 1.20.2] of minecraft, which is missing!
+
+- <mods>/BetterPingDisplay-Fabric-1.20.2-1.1.1.jar
+
+
+-- Plugin State --
+
+Cycle number = 1
+Cycle Step = SOLVE
+
+Loaded Plugins (2):
+ - 'quilt_loader' (Builtin)
+ - 'quilted_fabric_loader' (Builtin)
+
+
+
+
+-- Mod Table --
+
+| Mod                                   | ID                                  | Version              | Plugin                | Flags | File Hash (SHA-1)                        | File(s)                                                                                                                                        | Sub-File                                                                 |
+|---------------------------------------|-------------------------------------|----------------------|-----------------------|-------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| Better Ping Display                   | betterpingdisplay                   | 1.1.1                | quilted_fabric_loader | ..    | a8068f3a56c12f6cdcc797b6eea7820e808f780d | <mods>\BetterPingDisplay-Fabric-1.20.2-1.1.1.jar                                                                                               |                                                                          |
+| Fabric API Base                       | fabric-api-base                     | 0.4.34+f31bf8813b    | quilted_fabric_loader | ..    | 999eb53c5761850e99d234812dd0f710640b79a5 | <mods>\sodium-fabric-mc1.20.3-0.5.5.jar                                                                                                        | /META-INF/jars/fabric-api-base-0.4.34+f31bf8813b.jar                     |
+| Fabric BlockView API (v2)             | fabric-block-view-api-v2            | 1.0.2+73761d2e3b     | quilted_fabric_loader | ..    | 999eb53c5761850e99d234812dd0f710640b79a5 | <mods>\sodium-fabric-mc1.20.3-0.5.5.jar                                                                                                        | /META-INF/jars/fabric-block-view-api-v2-1.0.2+73761d2e3b.jar             |
+| Fabric Key Binding API (v1)           | fabric-key-binding-api-v1           | 1.0.23+aaaf9d332d    | quilted_fabric_loader | ..    | 7e62bb2851f2afc06946ea3fc170173528aefdbb | <mods>\iris-1.20.4-1.6.14.jar                                                                                                                  | /META-INF/jars/fabric-key-binding-api-v1-1.0.23+aaaf9d332d.jar           |
+| Fabric Rendering Data Attachment (v1) | fabric-rendering-data-attachment-v1 | 0.3.40+73761d2e3b    | quilted_fabric_loader | ..    | 999eb53c5761850e99d234812dd0f710640b79a5 | <mods>\sodium-fabric-mc1.20.3-0.5.5.jar                                                                                                        | /META-INF/jars/fabric-rendering-data-attachment-v1-0.3.40+73761d2e3b.jar |
+| Fabric Rendering Fluids (v1)          | fabric-rendering-fluids-v1          | 3.0.31+f4b7e4243b    | quilted_fabric_loader | ..    | 999eb53c5761850e99d234812dd0f710640b79a5 | <mods>\sodium-fabric-mc1.20.3-0.5.5.jar                                                                                                        | /META-INF/jars/fabric-rendering-fluids-v1-3.0.31+f4b7e4243b.jar          |
+| Fabric Resource Loader (v0)           | fabric-resource-loader-v0           | 0.11.14+f31bf8813b   | quilted_fabric_loader | ..    | 999eb53c5761850e99d234812dd0f710640b79a5 | <mods>\sodium-fabric-mc1.20.3-0.5.5.jar                                                                                                        | /META-INF/jars/fabric-resource-loader-v0-0.11.14+f31bf8813b.jar          |
+| FerriteCore                           | ferritecore                         | 6.0.3                | quilted_fabric_loader | ..    | f2bbb773f4213d36201b7682f206e2a6f213c0c  | <mods>\ferritecore-6.0.3-fabric.jar                                                                                                            |                                                                          |
+| Iris                                  | iris                                | 1.6.14               | quilted_fabric_loader | ..    | 7e62bb2851f2afc06946ea3fc170173528aefdbb | <mods>\iris-1.20.4-1.6.14.jar                                                                                                                  |                                                                          |
+| LazyDFU                               | lazydfu                             | 0.1.3                | quilted_fabric_loader | ..    | 0dfa8b03ed408fb7fdada29e01cfebba02af1049 | <mods>\lazydfu-0.1.3.jar                                                                                                                       |                                                                          |
+| Lithium                               | lithium                             | 0.12.1               | quilted_fabric_loader | ..    | 4a0744beb2246d93cb475d21a5a53faa556956e0 | <mods>\lithium-fabric-mc1.20.4-0.12.1.jar                                                                                                      |                                                                          |
+| Minecraft                             | minecraft                           | 1.20.4               | quilt_loader          | ..    | 3ba4a30557a9b057760af4011f909ba619fc5125 | <game>\.cache\quilt_loader\remappedJars\minecraft-1.20.4-0.23.0\client-intermediary.jar                                                        | /                                                                        |
+|                                       |                                     |                      |                       |       | 65085e2eb921c4a3ebdde3d248637f1776e6d80d | <user>\AppData\Roaming\.minecraft\libraries\com\mojang\datafixerupper\6.0.8\datafixerupper-6.0.8.jar                                           | /                                                                        |
+|                                       |                                     |                      |                       |       | 73e324f2ee541493a5179abf367237faa782ed21 | <user>\AppData\Roaming\.minecraft\libraries\com\mojang\authlib\6.0.52\authlib-6.0.52.jar                                                       | /                                                                        |
+|                                       |                                     |                      |                       |       |                                          | <user>\AppData\Roaming\.minecraft\libraries\com\mojang\brigadier\1.2.9\brigadier-1.2.9.jar                                                     | /                                                                        |
+| MixinExtras                           | mixinextras                         | 0.3.2                | quilted_fabric_loader | ..    | 87c072efe4c4d4ffdd38085c12fa21d7f469b20d | <user>\AppData\Roaming\.minecraft\libraries\org\quiltmc\quilt-loader\0.23.0\quilt-loader-0.23.0.jar                                            | /META-INF/jars/mixinextras-fabric-0.3.2.jar                              |
+| MixinExtras                           | mixinextras                         | 0.3.2                | quilted_fabric_loader | ..    | 87c072efe4c4d4ffdd38085c12fa21d7f469b20d | <user>\AppData\Roaming\.minecraft\libraries\org\quiltmc\quilt-loader\0.23.0\quilt-loader-0.23.0.jar                                            | /META-INF/jars/mixinextras-fabric-0.3.2.jar                              |
+| OpenJDK 64-Bit Server VM              | java                                | 17                   | quilt_loader          | ..    |                                          | <user>\AppData\Local\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma |                                                                          |
+| Quilt Loader                          | quilt_loader                        | 0.23.0               | quilt_loader          | ..    | 87c072efe4c4d4ffdd38085c12fa21d7f469b20d | <user>\AppData\Roaming\.minecraft\libraries\org\quiltmc\quilt-loader\0.23.0\quilt-loader-0.23.0.jar                                            |                                                                          |
+| Quilt Loader                          | quilt_loader                        | 0.23.0               | quilt_loader          | ..    | 87c072efe4c4d4ffdd38085c12fa21d7f469b20d | <user>\AppData\Roaming\.minecraft\libraries\org\quiltmc\quilt-loader\0.23.0\quilt-loader-0.23.0.jar                                            |                                                                          |
+| Sodium                                | sodium                              | 0.5.5                | quilted_fabric_loader | ..    | 999eb53c5761850e99d234812dd0f710640b79a5 | <mods>\sodium-fabric-mc1.20.3-0.5.5.jar                                                                                                        |                                                                          |
+| Starlight                             | starlight                           | 1.1.3+fabric.f5dcd1a | quilted_fabric_loader | ..    | 6c1dfb43aa2873ecf474b3278d42348457fbcaf  | <mods>\starlight-1.1.3+fabric.f5dcd1a.jar                                                                                                      |                                                                          |
+| antlr4-runtime                        | org_antlr_antlr4-runtime            | 4.11.1               | quilted_fabric_loader | ..    | 7e62bb2851f2afc06946ea3fc170173528aefdbb | <mods>\iris-1.20.4-1.6.14.jar                                                                                                                  | /META-INF/jars/antlr4-runtime-4.11.1.jar                                 |
+| glsl-transformer                      | io_github_douira_glsl-transformer   | 2.0.0-pre13          | quilted_fabric_loader | ..    | 7e62bb2851f2afc06946ea3fc170173528aefdbb | <mods>\iris-1.20.4-1.6.14.jar                                                                                                                  | /META-INF/jars/glsl-transformer-2.0.0-pre13.jar                          |
+| jcpp                                  | org_anarres_jcpp                    | 1.4.14               | quilted_fabric_loader | ..    | 7e62bb2851f2afc06946ea3fc170173528aefdbb | <mods>\iris-1.20.4-1.6.14.jar                                                                                                                  | /META-INF/jars/jcpp-1.4.14.jar                                           |
+|---------------------------------------|-------------------------------------|----------------------|-----------------------|-------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+
+
+-- Mod Details --
+
+Joined path [4]:
+ - '<game>\.cache\quilt_loader\remappedJars\minecraft-1.20.4-0.23.0\client-intermediary.jar'
+ - '<user>\AppData\Roaming\.minecraft\libraries\com\mojang\datafixerupper\6.0.8\datafixerupper-6.0.8.jar'
+ - '<user>\AppData\Roaming\.minecraft\libraries\com\mojang\authlib\6.0.52\authlib-6.0.52.jar'
+ - '<user>\AppData\Roaming\.minecraft\libraries\com\mojang\brigadier\1.2.9\brigadier-1.2.9.jar'
+mod:
+###############################
+#  Loaded by  'quilt_loader'  #
+#  Name     = 'Minecraft'     #
+#  ID       = 'minecraft'     #
+#  Version  = '1.20.4'        #
+#  LoadType = IF_REQUIRED     #
+#  Depends on 'java' [17, ∞)  #
+###############################
+
+<user>\AppData\Local\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma:
+###########################################
+#  Loaded by  'quilt_loader'              #
+#  Name     = 'OpenJDK 64-Bit Server VM'  #
+#  ID       = 'java'                      #
+#  Version  = '17'                        #
+#  LoadType = IF_REQUIRED                 #
+###########################################
+
+<mods>\BetterPingDisplay-Fabric-1.20.2-1.1.1.jar:
+#############################################
+#  Loaded by  'quilted_fabric_loader'       #
+#  Name     = 'Better Ping Display'         #
+#  ID       = 'betterpingdisplay'           #
+#  Version  = '1.1.1'                       #
+#  LoadType = IF_POSSIBLE                   #
+#  Depends on 'fabricloader' [0.14.22, ∞)   #
+#  Depends on 'minecraft' [1.20.2, 1.20.2]  #
+#############################################
+
+<mods>\ferritecore-6.0.3-fabric.jar:
+############################################
+#  Loaded by  'quilted_fabric_loader'      #
+#  Name     = 'FerriteCore'                #
+#  ID       = 'ferritecore'                #
+#  Version  = '6.0.3'                      #
+#  LoadType = IF_POSSIBLE                  #
+#  Depends on 'fabricloader' [0.14.21, ∞)  #
+#  Depends on 'minecraft' [1.20.4, 1.21)   #
+#  Breaks  on 'hydrogen' (-∞, 0.3]         #
+############################################
+
+<mods>\iris-1.20.4-1.6.14.jar:
+#####################################################################
+#  Loaded by  'quilted_fabric_loader'                               #
+#  Name     = 'Iris'                                                #
+#  ID       = 'iris'                                                #
+#  Version  = '1.6.14'                                              #
+#  LoadType = IF_POSSIBLE                                           #
+#  Depends on 'fabricloader' [0.12.3, ∞)                            #
+#  Depends on 'minecraft' { [1.20.3, 1.20.3] ∪ [1.20.4, 1.20.4] }   #
+#  Depends on 'sodium' [0.5.5, 0.5.5]                               #
+#  Breaks  on 'iris-explorer' (-∞, ∞)                               #
+#  Breaks  on 'originsenhanced' (-∞, 1.3.2]                         #
+#  Breaks  on 'colormatic' (-∞, 3.0.0]                              #
+#  Breaks  on 'bedrockwaters' (-∞, 1.6.0]                           #
+#  Breaks  on 'batchedentityrendering' (-∞, ∞)                      #
+#  Breaks  on 'canvas' (-∞, ∞)                                      #
+#  Breaks  on 'optifabric' (-∞, ∞)                                  #
+#  Breaks  on 'worldeditcui' (-∞, 1.18.1)                           #
+#  Breaks  on 'immersive_portals' (-∞, 1.4.2]                       #
+#                                                                   #
+#  Contained Jars (4):                                              #
+#                                                                   #
+#  /META-INF/jars/antlr4-runtime-4.11.1.jar:                        #
+#  +-----------------------------------------+                      #
+#  |  Loaded by  'quilted_fabric_loader'     |                      #
+#  |  Name     = 'antlr4-runtime'            |                      #
+#  |  ID       = 'org_antlr_antlr4-runtime'  |                      #
+#  |  Version  = '4.11.1'                    |                      #
+#  |  LoadType = IF_POSSIBLE                 |                      #
+#  +-----------------------------------------+                      #
+#                                                                   #
+#  /META-INF/jars/fabric-key-binding-api-v1-1.0.23+aaaf9d332d.jar:  #
+#  +--------------------------------------------+                   #
+#  |  Loaded by  'quilted_fabric_loader'        |                   #
+#  |  Name     = 'Fabric Key Binding API (v1)'  |                   #
+#  |  ID       = 'fabric-key-binding-api-v1'    |                   #
+#  |  Version  = '1.0.23+aaaf9d332d'            |                   #
+#  |  LoadType = IF_POSSIBLE                    |                   #
+#  |  Depends on 'fabricloader' [0.4.0, ∞)      |                   #
+#  +--------------------------------------------+                   #
+#                                                                   #
+#  /META-INF/jars/glsl-transformer-2.0.0-pre13.jar:                 #
+#  +--------------------------------------------------+             #
+#  |  Loaded by  'quilted_fabric_loader'              |             #
+#  |  Name     = 'glsl-transformer'                   |             #
+#  |  ID       = 'io_github_douira_glsl-transformer'  |             #
+#  |  Version  = '2.0.0-pre13'                        |             #
+#  |  LoadType = IF_POSSIBLE                          |             #
+#  +--------------------------------------------------+             #
+#                                                                   #
+#  /META-INF/jars/jcpp-1.4.14.jar:                                  #
+#  +--------------------------------------+                         #
+#  |  Loaded by  'quilted_fabric_loader'  |                         #
+#  |  Name     = 'jcpp'                   |                         #
+#  |  ID       = 'org_anarres_jcpp'       |                         #
+#  |  Version  = '1.4.14'                 |                         #
+#  |  LoadType = IF_POSSIBLE              |                         #
+#  +--------------------------------------+                         #
+#                                                                   #
+#####################################################################
+
+<mods>\lazydfu-0.1.3.jar:
+##########################################
+#  Loaded by  'quilted_fabric_loader'    #
+#  Name     = 'LazyDFU'                  #
+#  ID       = 'lazydfu'                  #
+#  Version  = '0.1.3'                    #
+#  LoadType = IF_POSSIBLE                #
+#  Depends on 'fabricloader' [0.7.0, ∞)  #
+#  Depends on 'minecraft' [1.19, ∞)      #
+##########################################
+
+<mods>\lithium-fabric-mc1.20.4-0.12.1.jar:
+#############################################
+#  Loaded by  'quilted_fabric_loader'       #
+#  Name     = 'Lithium'                     #
+#  ID       = 'lithium'                     #
+#  Version  = '0.12.1'                      #
+#  LoadType = IF_POSSIBLE                   #
+#  Depends on 'fabricloader' [0.12.11, ∞)   #
+#  Depends on 'minecraft' [1.20.4, 1.20.4]  #
+#  Breaks  on 'optifabric' (-∞, ∞)          #
+#############################################
+
+<mods>\sodium-fabric-mc1.20.3-0.5.5.jar:
+###############################################################################
+#  Loaded by  'quilted_fabric_loader'                                         #
+#  Name     = 'Sodium'                                                        #
+#  ID       = 'sodium'                                                        #
+#  Version  = '0.5.5'                                                         #
+#  LoadType = IF_POSSIBLE                                                     #
+#  Depends on 'fabricloader' [0.12.0, ∞)                                      #
+#  Depends on 'fabric-rendering-data-attachment-v1' [0.1, ∞)                  #
+#  Depends on 'fabric-rendering-fluids-v1' [0.1, ∞)                           #
+#  Breaks  on 'optifabric' (-∞, ∞)                                            #
+#  Breaks  on 'canvas' (-∞, ∞)                                                #
+#  Breaks  on 'sodium-blendingregistry' (-∞, ∞)                               #
+#  Breaks  on 'ocrenderfix_sodium' (-∞, ∞)                                    #
+#  Breaks  on 'betterfpsdist' (-∞, 1.20.1-3.8)                                #
+#  Breaks  on 'bobby' (-∞, 5.0.1)                                             #
+#  Breaks  on 'cauldron_dyeing' (-∞, 1.0.11)                                  #
+#  Breaks  on 'cullleaves' (-∞, 3.1.0]                                        #
+#  Breaks  on 'custom_hud' (-∞, 3.1.0+1.20]                                   #
+#  Breaks  on 'dashloader' (-∞, 5.0.0-beta.2)                                 #
+#  Breaks  on 'farsight' (-∞, 1.20.1-4.0)                                     #
+#  Breaks  on 'fluidvoidfading' (-∞, 1.1.2)                                   #
+#  Breaks  on 'iceberg' (-∞, 1.1.14)                                          #
+#  Breaks  on 'iris' (-∞, 1.6.7)                                              #
+#  Breaks  on 'immersive_portals' (-∞, 3.2.5]                                 #
+#  Breaks  on 'indium' (-∞, 1.0.24)                                           #
+#  Breaks  on 'notenoughcrashes' (-∞, 4.4.6)                                  #
+#  Breaks  on 'noxesium' (-∞, 1.0.2)                                          #
+#  Breaks  on 'rayon' (-∞, 1.7.2+1.20.1]                                      #
+#  Breaks  on 'reeses-sodium-options' (-∞, 1.6.4)                             #
+#  Breaks  on 'sodium-extra' (-∞, 0.5.1)                                      #
+#  Breaks  on 'sspb' (-∞, 3.2.0)                                              #
+#                                                                             #
+#  Contained Jars (5):                                                        #
+#                                                                             #
+#  /META-INF/jars/fabric-api-base-0.4.34+f31bf8813b.jar:                      #
+#  +----------------------------------------+                                 #
+#  |  Loaded by  'quilted_fabric_loader'    |                                 #
+#  |  Name     = 'Fabric API Base'          |                                 #
+#  |  ID       = 'fabric-api-base'          |                                 #
+#  |  Version  = '0.4.34+f31bf8813b'        |                                 #
+#  |  LoadType = IF_POSSIBLE                |                                 #
+#  |  Depends on 'fabricloader' [0.4.0, ∞)  |                                 #
+#  +----------------------------------------+                                 #
+#                                                                             #
+#  /META-INF/jars/fabric-block-view-api-v2-1.0.2+73761d2e3b.jar:              #
+#  +------------------------------------------+                               #
+#  |  Loaded by  'quilted_fabric_loader'      |                               #
+#  |  Name     = 'Fabric BlockView API (v2)'  |                               #
+#  |  ID       = 'fabric-block-view-api-v2'   |                               #
+#  |  Version  = '1.0.2+73761d2e3b'           |                               #
+#  |  LoadType = IF_POSSIBLE                  |                               #
+#  |  Depends on 'fabricloader' [0.14.21, ∞)  |                               #
+#  +------------------------------------------+                               #
+#                                                                             #
+#  /META-INF/jars/fabric-rendering-data-attachment-v1-0.3.40+73761d2e3b.jar:  #
+#  +------------------------------------------------------+                   #
+#  |  Loaded by  'quilted_fabric_loader'                  |                   #
+#  |  Name     = 'Fabric Rendering Data Attachment (v1)'  |                   #
+#  |  ID       = 'fabric-rendering-data-attachment-v1'    |                   #
+#  |  Version  = '0.3.40+73761d2e3b'                      |                   #
+#  |  LoadType = IF_POSSIBLE                              |                   #
+#  |  Depends on 'fabricloader' [0.4.0, ∞)                |                   #
+#  |  Depends on 'fabric-block-view-api-v2' (-∞, ∞)       |                   #
+#  +------------------------------------------------------+                   #
+#                                                                             #
+#  /META-INF/jars/fabric-rendering-fluids-v1-3.0.31+f4b7e4243b.jar:           #
+#  +---------------------------------------------+                            #
+#  |  Loaded by  'quilted_fabric_loader'         |                            #
+#  |  Name     = 'Fabric Rendering Fluids (v1)'  |                            #
+#  |  ID       = 'fabric-rendering-fluids-v1'    |                            #
+#  |  Version  = '3.0.31+f4b7e4243b'             |                            #
+#  |  LoadType = IF_POSSIBLE                     |                            #
+#  |  Depends on 'fabricloader' [0.4.0, ∞)       |                            #
+#  |  Depends on 'fabric-api-base' (-∞, ∞)       |                            #
+#  +---------------------------------------------+                            #
+#                                                                             #
+#  /META-INF/jars/fabric-resource-loader-v0-0.11.14+f31bf8813b.jar:           #
+#  +--------------------------------------------+                             #
+#  |  Loaded by  'quilted_fabric_loader'        |                             #
+#  |  Name     = 'Fabric Resource Loader (v0)'  |                             #
+#  |  ID       = 'fabric-resource-loader-v0'    |                             #
+#  |  Version  = '0.11.14+f31bf8813b'           |                             #
+#  |  LoadType = IF_POSSIBLE                    |                             #
+#  |  Depends on 'fabricloader' [0.13.0, ∞)     |                             #
+#  +--------------------------------------------+                             #
+#                                                                             #
+###############################################################################
+
+<mods>\starlight-1.1.3+fabric.f5dcd1a.jar:
+#############################################
+#  Loaded by  'quilted_fabric_loader'       #
+#  Name     = 'Starlight'                   #
+#  ID       = 'starlight'                   #
+#  Version  = '1.1.3+fabric.f5dcd1a'        #
+#  LoadType = IF_POSSIBLE                   #
+#  Depends on 'fabricloader' [0.15.1, ∞)    #
+#  Depends on 'minecraft' [1.20.4, 1.20.4]  #
+#  Breaks  on 'phosphor' (-∞, ∞)            #
+#############################################
+
+<user>\AppData\Roaming\.minecraft\libraries\org\quiltmc\quilt-loader\0.23.0\quilt-loader-0.23.0.jar:
+###############################################################
+#  Loaded by  'quilt_loader'                                  #
+#  Name     = 'Quilt Loader'                                  #
+#  ID       = 'quilt_loader'                                  #
+#  Version  = '0.23.0'                                        #
+#  LoadType = IF_REQUIRED                                     #
+#  Provides   'fabricloader' 0.15.3                           #
+#  Depends on 'mixinextras' (-∞, ∞)                           #
+#                                                             #
+#  Contained Jars (1):                                        #
+#                                                             #
+#  /META-INF/jars/mixinextras-fabric-0.3.2.jar:               #
+#  +-------------------------------------------------------+  #
+#  |  Loaded by  'quilted_fabric_loader'                   |  #
+#  |  Name     = 'MixinExtras'                             |  #
+#  |  ID       = 'mixinextras'                             |  #
+#  |  Version  = '0.3.2'                                   |  #
+#  |  LoadType = IF_POSSIBLE                               |  #
+#  |  Provides   'com_github_llamalad7_mixinextras' 0.3.2  |  #
+#  |  Depends on 'fabricloader' [0.14.25, ∞)               |  #
+#  +-------------------------------------------------------+  #
+#                                                             #
+###############################################################
+
+
+
+---- end of report ----
