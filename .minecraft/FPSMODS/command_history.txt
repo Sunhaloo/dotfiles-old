@@ -1,5 +1,0 @@
-/gamemode creative
-/gamemode spec
-/gamemode spectator
-/seed
-/gamemode creative
