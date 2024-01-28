@@ -48,15 +48,18 @@ return {
       })
     end,
   },
-  -- {
-  --   "maxmx03/dracula.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("dracula").setup({
-  --       transparent = true,
-  --     })
-  --   end,
-  -- },
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    lazy = false,
+    config = function()
+      require("gruvbox").setup({
+        transparent = true,
+        undercurl = true,
+        lualine = {
+          transparent = true,
+        },
+      })
+    end,
+  },
 }
-
