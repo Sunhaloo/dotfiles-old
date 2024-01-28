@@ -1,0 +1,75 @@
+{
+    // Allow opens unstrusted files
+    "security.workspace.trust.untrustedFiles": "open",
+    // Does not need to confirm when deleting
+    "explorer.confirmDelete": false,
+    // Font Size
+    "editor.fontSize": 18,
+    // Font Family
+    "editor.fontFamily": "JetBrainsMono Nerd Font, Hack Nerd Font",
+    // Theme / Appearance
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    // Icon Theme / Appearance
+    "workbench.iconTheme": "material-icon-theme",
+    // Can change zoom level with `Ctrl + Scoll Wheel`
+    "editor.mouseWheelZoom": true,
+    // Editor Zoom Level
+    "window.zoomLevel": 1,
+    // Disable Font Ligatures ( does not change eqaul, greater or less than signs )
+    "editor.fontLigatures": false,
+    // Disables the Minimap to the Right
+    "editor.minimap.enabled": false,
+
+    // VIM Things
+    "vim.leader": "<space>",
+    // Move around Folds properly
+    "vim.foldfix": true,
+    "vim.hlsearch": true,
+    // Use System Clipboard
+    "vim.useSystemClipboard": true,
+    // Enable highlight on yanking
+    "vim.highlightedyank.enable": true,
+    "vim.normalModeKeyBindings": [
+        // Select All with `Ctrl + A`
+        {
+            "before":["<c-a>"],
+            "after":["g", "g", "V", "G",]
+        },
+        // Use `Ctrl + S` to save
+        {
+            "before": ["<c-s>"],
+            "commands": [":w"]
+        },
+        // Toggle Boolean's keybindings
+        {
+            "before": ["leader", "i"],
+            "commands": ["extension.toggleBool"],
+        },
+    ],
+    "vim.insertModeKeyBindings": [
+        // Enter Normal Mode with `jk`
+        {
+            "before":["j", "k"],
+            "after":["<Esc>"]
+        },
+        {
+            "before":["<c-j>"],
+            "after":["<Down>"]
+        },
+        {
+            "before":["<c-k>"],
+            "after":["<Up>"]
+        },
+        {
+            "before":["<c-h>"],
+            "after":["<Left>"]
+        },
+        {
+            "before":["<c-l>"],
+            "after":["<Right>"]
+        },
+    ],
+    "editor.lineNumbers": "relative",
+    "workbench.startupEditor": "none"
+
+}
