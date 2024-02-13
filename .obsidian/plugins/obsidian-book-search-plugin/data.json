@@ -1,0 +1,14 @@
+{
+  "folder": "Reading Vault",
+  "fileNameFormat": "{{title}}",
+  "frontmatter": "",
+  "content": "",
+  "useDefaultFrontmatter": false,
+  "defaultFrontmatterKeyType": "Snake Case",
+  "templateFile": "Obsidian Management/Templates/Book Search Template.md",
+  "serviceProvider": "google",
+  "naverClientId": "",
+  "naverClientSecret": "",
+  "localePreference": "default",
+  "openPageOnCompletion": true
+}

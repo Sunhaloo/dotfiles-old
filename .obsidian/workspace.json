@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "25d1405e454c91ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "c005c4190511d32c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "739ff1712077b1eb",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f2785f56b474db5e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e37db63afe5c0b66",
+        "type": "tabs",
+        "dimension": 35.8,
+        "children": [
+          {
+            "id": "4cad13d082b07031",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c4e489cded96c359",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a70f24c2c393263e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "96bd1d3477c2a727",
+        "type": "tabs",
+        "dimension": 33.7,
+        "children": [
+          {
+            "id": "c86d2231862bfb35",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "ebec414a2e184aa6",
+        "type": "tabs",
+        "dimension": 30.5,
+        "children": [
+          {
+            "id": "7cec6d1e6cfd1111",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 306.5
+  },
+  "right": {
+    "id": "91af16be4f3f8284",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc96e01b13b76bbc",
+        "type": "tabs",
+        "dimension": 32.21544715447154,
+        "children": [
+          {
+            "id": "c344ca13e4c25dfd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0518d2d7eeb47924",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "eed8aabb0404df4a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "18683896574bfddd",
+        "type": "tabs",
+        "dimension": 35.670731707317074,
+        "children": [
+          {
+            "id": "768e9c25d1151c5d",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "906dde9f0d046c09",
+        "type": "tabs",
+        "dimension": 32.113821138211385,
+        "children": [
+          {
+            "id": "abd244413661c90a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 290.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "templater-obsidian:Templater": false,
+      "obsidian-book-search-plugin:Create new book note": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "739ff1712077b1eb",
+  "lastOpenFiles": [
+    "Learning/C Programming Language/C Basics/C Math Function.md",
+    "Learning/School HSC/Math Function in Python.md",
+    "Learning/C Programming Language/C Data View.md",
+    "Learning/School HSC/Python/Python HSC Data View.md",
+    "Learning/School HSC/Python/Python Basics/Python Language.md",
+    "Learning/School HSC/Python/Python Basics/Python Modules/Modules - Python.md",
+    "Learning/C Programming Language/C Basics/C Language.md",
+    "Learning/School HSC/Python/Python Basics/Functions and Procedures - Python.md",
+    "Learning/School HSC/Python/Python Basics/String Manipulation - Python.md",
+    "Test File.md",
+    "1. Life/Swipe Folder/People Swipe File.md",
+    "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
+    "Untitled 1.md",
+    "Learning/School HSC/Python/Random Codes/Random HSC Python Codes.md",
+    "Data view.md",
+    "Obsidian Management/Templates/Reading Definition Template.md",
+    "TO DO.md",
+    "Content ( YouTube, Twitch, Anime, Games )/Movies/Movies List.md",
+    "PARA Method.md",
+    "Tree Diagram For Uni ( Files ).canvas",
+    "Learning/School HSC/Python/ADT ( 1D-Array )( Cambridge )/Queue ADT - 1D Array ( Cambridge ).md",
+    "Learning/Courses/The Odin Project/The Odin Project Data View.md",
+    "Learning/Courses/The Odin Project/CSS/CSS Flexbox ( Kevin Powell )/README.md.md",
+    "Learning/Courses/The Odin Project/CSS/The Box Model.md",
+    "Learning/Courses/The Odin Project/HTML/HTML.md",
+    "1. Life/Journaling/Journal's Folder/HSC Result November 2023.md",
+    "1. Life/Journaling/1. Journal Data View.md",
+    "Obsidian Management/Media/Images/Random/~SC Nov-2023 Results.tmp",
+    "Obsidian Management/Media/Images/Random/HSC Nov-2023 Results.JPG",
+    "Content ( YouTube, Twitch, Anime, Games )/Movies",
+    "Obsidian Management/Media/Images/Programming Languages/C Language/ASCII Table.webp",
+    "Obsidian Management/Media/Images/Programming Languages/C Language",
+    "Obsidian Management/Media/Images/Programming Languages/New folder",
+    "Learning/C Programming Language/C Basics",
+    "Learning/C Programming Language",
+    "Excalidraw",
+    "New Vault/Excalidraw",
+    "New Vault",
+    "Obsidian Management/Media/Images/Screenshots/gpu temp-desktop-pc.PNG",
+    "Content ( YouTube, Twitch, Anime, Games )/Games/Fortnite",
+    "Obsidian Management/Media/Images/Microsoft Windows/windows docs using obsidian.png",
+    "Obsidian Management/Media/Images/Microsoft Windows/Windows Features.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/control keyboard-sliders.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/settings-keyboard_settings.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/fast-startup.PNG"
+  ]
+}

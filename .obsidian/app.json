@@ -1,0 +1,20 @@
+{
+  "defaultViewMode": "preview",
+  "livePreview": false,
+  "readableLineLength": false,
+  "foldHeading": false,
+  "foldIndent": true,
+  "showLineNumber": true,
+  "vimMode": true,
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "Obsidian Management/Media",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}
