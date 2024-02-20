@@ -4,18 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "c005c4190511d32c",
+        "id": "2cb38aa7c0a69ad6",
         "type": "tabs",
         "children": [
           {
-            "id": "739ff1712077b1eb",
+            "id": "dd37a11d5b29221b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Learning/School HSC/Math Function in Python.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "b230df0f25407a03",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning/School HSC/Python/Python Basics/Python Math Function.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "62cc19513aa16b52",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning/C Programming Language/C Basics/C Math Function.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -97,7 +126,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5
+    "width": 306.5,
+    "collapsed": true
   },
   "right": {
     "id": "91af16be4f3f8284",
@@ -114,6 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Learning/School HSC/Python/Python Basics/Python Math Function.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,6 +161,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Learning/School HSC/Python/Python Basics/Python Math Function.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +206,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Learning/School HSC/Python/Python Basics/Python Math Function.md"
+              }
             }
           }
         ]
@@ -197,35 +231,36 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "739ff1712077b1eb",
+  "active": "b230df0f25407a03",
   "lastOpenFiles": [
     "Learning/C Programming Language/C Basics/C Math Function.md",
+    "Learning/School HSC/Python/Python Basics/Python Math Function.md",
     "Learning/School HSC/Math Function in Python.md",
+    "Learning/School HSC/Untitled.md",
     "Learning/C Programming Language/C Data View.md",
     "Learning/School HSC/Python/Python HSC Data View.md",
+    "Obsidian Management/Templates/Python Template.md",
+    "Untitled.canvas",
+    "Untitled.md",
+    "Learning/C Programming Language/C Basics/Random C Program Codes.md",
+    "Content ( YouTube, Twitch, Anime, Games )/Anime/Anime List.md",
+    "Learning/Hobbies/Windows Docs/Windows Reset - Installation.md",
+    "Learning/C Programming Language/C Basics/C Language.md",
+    "Learning/School HSC/Python/Random Codes/Random HSC Python Codes.md",
+    "Content ( YouTube, Twitch, Anime, Games )/Movies/Movies List.md",
     "Learning/School HSC/Python/Python Basics/Python Language.md",
     "Learning/School HSC/Python/Python Basics/Python Modules/Modules - Python.md",
-    "Learning/C Programming Language/C Basics/C Language.md",
     "Learning/School HSC/Python/Python Basics/Functions and Procedures - Python.md",
     "Learning/School HSC/Python/Python Basics/String Manipulation - Python.md",
     "Test File.md",
     "1. Life/Swipe Folder/People Swipe File.md",
     "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
     "Untitled 1.md",
-    "Learning/School HSC/Python/Random Codes/Random HSC Python Codes.md",
     "Data view.md",
     "Obsidian Management/Templates/Reading Definition Template.md",
     "TO DO.md",
-    "Content ( YouTube, Twitch, Anime, Games )/Movies/Movies List.md",
     "PARA Method.md",
     "Tree Diagram For Uni ( Files ).canvas",
-    "Learning/School HSC/Python/ADT ( 1D-Array )( Cambridge )/Queue ADT - 1D Array ( Cambridge ).md",
-    "Learning/Courses/The Odin Project/The Odin Project Data View.md",
-    "Learning/Courses/The Odin Project/CSS/CSS Flexbox ( Kevin Powell )/README.md.md",
-    "Learning/Courses/The Odin Project/CSS/The Box Model.md",
-    "Learning/Courses/The Odin Project/HTML/HTML.md",
-    "1. Life/Journaling/Journal's Folder/HSC Result November 2023.md",
-    "1. Life/Journaling/1. Journal Data View.md",
     "Obsidian Management/Media/Images/Random/~SC Nov-2023 Results.tmp",
     "Obsidian Management/Media/Images/Random/HSC Nov-2023 Results.JPG",
     "Content ( YouTube, Twitch, Anime, Games )/Movies",
