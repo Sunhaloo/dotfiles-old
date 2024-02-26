@@ -1,7 +1,7 @@
 {
   "accentColor": "",
-  "theme": "moonstone",
-  "interfaceFontFamily": "Inter,Agave Nerd Font,JetBrainsMono Nerd Font",
+  "theme": "obsidian",
+  "interfaceFontFamily": "Inter,Agave Nerd Font,JetBrainsMono Nerd Font,BigBlueTerm437 Nerd Font Mono",
   "textFontFamily": "Victor Mono,SF Mono,JetBrainsMono Nerd Font,Hack Nerd Font,Agave Nerd Font",
   "monospaceFontFamily": "Hack Nerd Font,JetBrainsMono Nerd Font Mono",
   "showViewHeader": false,
