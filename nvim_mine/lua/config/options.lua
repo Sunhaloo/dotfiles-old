@@ -54,7 +54,9 @@ opt.sidescrolloff = 8 -- Controls the minimum number of columns to keep to the l
 opt.title = true -- Shows the title in the Terminal Tab ( look up )
 opt.titlelen = 0 -- Do NOT shorten the Title length
 opt.guifont = "JetBrainsMono NFM Regular" -- Sets the font for ther GUI version of Neovim
-opt.shortmess:append("c")
+opt.shortmess:append("I") -- Disables Intro / Start Message
+-- opt.shortmess:append("c") -- Enables Intro / Start Message
+
 
 vim.g.netrw_banner = 0 -- Disable message in "Lex" / netrw
 vim.g.netrw_mouse = 2 -- Allows for mouse usage in "Lex" / netrw
