@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,8 +109,11 @@ alias ls="eza"
 alias ls -la="eza -la"
 alias tree="eza -T"
 # Linux
+alias fucking="sudo"
 alias update="sudo apt update; sudo apt upgrade -y"
 alias clean="sudo apt autoremove; sudo apt autoclean"
+# ZSH Source
+alias src="source ~/.zshrc"
 
 
 # Fuzzy Finder
