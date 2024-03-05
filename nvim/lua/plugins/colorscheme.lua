@@ -11,8 +11,8 @@ return {
         transparent = true,
       }
     end,
-    -- Added "Everforest" colorscheme
   },
+  -- Added "Everforest" colorscheme
   {
     "neanias/everforest-nvim",
     version = false,
@@ -22,6 +22,7 @@ return {
       require("everforest").setup({})
     end,
   },
+  -- Added "TokyoNight" colorscheme
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -32,6 +33,7 @@ return {
       }
     end,
   },
+  -- Added "OneDark" colorscheme
   {
     "navarasu/onedark.nvim",
     lazy = false,
@@ -48,14 +50,28 @@ return {
       })
     end,
   },
+  -- Added "Gruvbox" colorscheme
   {
-    "maxmx03/dracula.nvim",
-    lazy = false,
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
+    lazy = false,
     config = function()
-      require("dracula").setup({
+      require("gruvbox").setup({
         transparent = true,
+        undercurl = true,
+        lualine = {
+          transparent = true,
+        },
       })
     end,
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    require("catppuccin").setup({
+      flavour = "mocha",
+      transparent_background = true,
+    }),
   },
 }
