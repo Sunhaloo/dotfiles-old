@@ -1,9 +1,9 @@
 {
   "accentColor": "",
   "theme": "obsidian",
-  "interfaceFontFamily": "Inter,Agave Nerd Font,JetBrainsMono Nerd Font,BigBlueTerm437 Nerd Font Mono",
-  "textFontFamily": "Victor Mono,SF Mono,JetBrainsMono Nerd Font,Hack Nerd Font,Agave Nerd Font",
-  "monospaceFontFamily": "Hack Nerd Font,JetBrainsMono Nerd Font Mono",
+  "interfaceFontFamily": "Inter",
+  "textFontFamily": "JetBrainsMono Nerd Font,ComicShannsMono Nerd Font",
+  "monospaceFontFamily": "PlemolJP Console NF",
   "showViewHeader": false,
   "translucency": false,
   "nativeMenus": false,

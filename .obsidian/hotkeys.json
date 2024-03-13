@@ -95,5 +95,13 @@
       ],
       "key": "R"
     }
+  ],
+  "graph:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "J"
+    }
   ]
 }
