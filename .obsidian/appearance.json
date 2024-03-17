@@ -3,11 +3,11 @@
   "theme": "obsidian",
   "interfaceFontFamily": "Inter",
   "textFontFamily": "JetBrainsMono Nerd Font,ComicShannsMono Nerd Font",
-  "monospaceFontFamily": "PlemolJP Console NF",
+  "monospaceFontFamily": "VictorMono Nerd Font,PlemolJP Console NF",
   "showViewHeader": false,
   "translucency": false,
   "nativeMenus": false,
-  "cssTheme": "SS",
-  "baseFontSize": 16,
+  "cssTheme": "Material Gruvbox",
+  "baseFontSize": 14,
   "enabledCssSnippets": []
 }

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a9dad54a70ead3c1",
+        "id": "b3bfae79be40480e",
         "type": "tabs",
         "children": [
           {
-            "id": "fc3086770b036742",
+            "id": "7d8838d1b96b7539",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -197,16 +197,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fc3086770b036742",
+  "active": "7d8838d1b96b7539",
   "lastOpenFiles": [
+    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
+    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
+    "1. Life/Swipe Folder/People Swipe File.md",
+    "Learning/C Programming Language/C Data View.md",
+    "Obsidian Management/Media/Images/Programming Languages/C Language/C_Lang-tenary_operator-vs-if_else.png",
+    "Content ( YouTube, Twitch, Anime, Games )/Movies/Movies List.md",
+    "Learning/C Programming Language/C Basics/C Math Function.md",
     "Excalidraw/Programming Excalidraw Drawings/Urban Terminal Ticketing Thing.md",
-    "Excalidraw/Programming Excalidraw Drawings",
     "1. Life/Swipe Folder/Media Swipe File.md",
+    "Learning/School HSC/Python/Random Codes/Random HSC Python Codes.md",
+    "Learning/School HSC/Python/Searching Algos/Binary Search - Python.md",
+    "Excalidraw/Programming Excalidraw Drawings",
     "Data view.md",
     "1. Life/Journaling/Journal's Folder/HSC Result November 2023.md",
-    "Learning/C Programming Language/C Data View.md",
     "Learning/C Programming Language/C Basics/C Tips.md",
-    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
     "Learning/School HSC/Python/Python Basics/Functions and Procedures - Python.md",
     "Learning/C Programming Language/C Basics/C Language.md",
     "Learning/Hobbies/Windows Docs/Windows Reset - Installation.md",
@@ -214,18 +221,12 @@
     "Learning/School HSC/Python/Searching Algos/Linear Search - Python.md",
     "Content ( YouTube, Twitch, Anime, Games )/Games/Fortnite/Game User Settings.md",
     "Content ( YouTube, Twitch, Anime, Games )/Games/Fortnite/Fortnite Keybinds.md",
-    "Learning/C Programming Language/C Basics/C Math Function.md",
-    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
     "Learning/C Programming Language/Random C Program Codes.md",
     "Learning/School HSC/Python/Python Basics/Selection and Iteration - Python.md",
     "Learning/Hobbies/Git Docs/Git Setup.md",
-    "1. Life/Swipe Folder/People Swipe File.md",
-    "Learning/School HSC/Python/Random Codes/Random HSC Python Codes.md",
     "Learning/Hobbies/Windows Docs/Komorebi Window Tiling Manager.md",
     "Untitled.canvas",
     "Learning/School HSC/Python/Random Codes/Untitled.md",
-    "Excalidraw/Drawing 2024-03-06 13.39.29.excalidraw.md",
-    "Learning/Hobbies/Linux/Debian-Based Distributions.md",
     "1. Life/People/Teachers/English Teachers",
     "Tree Diagram For Uni ( Files ).canvas",
     "Obsidian Management/Media/Images/Random/~SC Nov-2023 Results.tmp",
@@ -244,7 +245,6 @@
     "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
     "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG",
     "Obsidian Management/Media/Images/Microsoft Windows/control keyboard-sliders.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/settings-keyboard_settings.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/fast-startup.PNG"
+    "Obsidian Management/Media/Images/Microsoft Windows/settings-keyboard_settings.PNG"
   ]
 }

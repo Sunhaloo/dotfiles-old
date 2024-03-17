@@ -1,7 +1,13 @@
 {
   "basePath": "https://www.peerdraft.app/cm/",
+  "subscriptionAPI": "https://www.peerdraft.app/subscription",
+  "connectAPI": "https://www.peerdraft.app/subscription/connect",
   "name": "S.Sunhaloo",
-  "signaling": [
-    "wss://signal.peerdraft.app"
-  ]
+  "signaling": "wss://www.peerdraft.app/signal",
+  "oid": "b65867d0-47fe-4623-9222-603a5ddbc648",
+  "plan": {
+    "type": "hobby"
+  },
+  "duration": 0,
+  "version": "1.2.6"
 }
