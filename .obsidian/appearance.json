@@ -2,12 +2,15 @@
   "accentColor": "",
   "theme": "obsidian",
   "interfaceFontFamily": "Inter",
-  "textFontFamily": "JetBrainsMono Nerd Font,ComicShannsMono Nerd Font",
+  "textFontFamily": "OperatorMono Nerd Font,JetBrainsMono Nerd Font,ComicShannsMono Nerd Font",
   "monospaceFontFamily": "VictorMono Nerd Font,PlemolJP Console NF",
   "showViewHeader": false,
   "translucency": false,
   "nativeMenus": false,
   "cssTheme": "GitHub Theme",
-  "baseFontSize": 14,
-  "enabledCssSnippets": []
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "notes-pen",
+    "highlighters"
+  ]
 }

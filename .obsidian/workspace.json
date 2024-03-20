@@ -4,15 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "4ec6956cd9604baa",
+        "id": "a145d3b34ae3c577",
         "type": "tabs",
         "children": [
           {
-            "id": "9e9388bc115d30b3",
+            "id": "d003c1f5c6c6c870",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Learning/C Programming Language/C Basics/Arrays - C.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "803a60dbee22ed6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ],
@@ -114,6 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Learning/C Programming Language/C Basics/Arrays - C.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,6 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Learning/C Programming Language/C Basics/Arrays - C.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +192,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Learning/C Programming Language/C Basics/Arrays - C.md"
+              }
             }
           }
         ]
@@ -197,11 +217,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4cad13d082b07031",
+  "active": "d003c1f5c6c6c870",
   "lastOpenFiles": [
+    "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
+    "Learning/C Programming Language/C Basics/C Tips.md",
+    "Learning/C Programming Language/C Basics/Arrays - C.md",
+    "Excalidraw/Programming Excalidraw Drawings/Python Timer Project.md",
+    "Obsidian Management/Media/Pasted Image 20240320113057_064.png",
+    "1. Life/Swipe Folder/Media Swipe File.md",
+    "Learning/C Programming Language/C Basics/a.md",
+    "Learning/C Programming Language/C Basics/C Language.md",
+    "Learning/C Programming Language/C Data View.md",
+    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
+    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
     "Learning/C Programming Language/C Basics/Include Headers/C String Functions.md",
     "Learning/C Programming Language/C Basics/Include Headers/C Math Function.md",
-    "Learning/C Programming Language/C Basics/C Language.md",
     "Learning/School HSC/Python/Python Basics/String Manipulation - Python.md",
     "Learning/Courses/The Odin Project/HTML/HTML.md",
     "Learning/C Programming Language/C Basics/Include Headers/Untitled.md",
@@ -210,12 +240,7 @@
     "TO DO.md",
     "PARA Method.md",
     "Content ( YouTube, Twitch, Anime, Games )/Movies/Movies List.md",
-    "1. Life/Swipe Folder/Media Swipe File.md",
-    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
-    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
-    "Learning/C Programming Language/C Data View.md",
     "Learning/C Programming Language/C Basics/Include Headers",
-    "Learning/C Programming Language/C Basics/Untitled.md",
     "1. Life/Swipe Folder/People Swipe File.md",
     "Obsidian Management/Media/Images/Programming Languages/C Language/C_Lang-tenary_operator-vs-if_else.png",
     "Excalidraw/Programming Excalidraw Drawings/Urban Terminal Ticketing Thing.md",
@@ -223,11 +248,6 @@
     "Excalidraw/Programming Excalidraw Drawings",
     "Data view.md",
     "1. Life/Journaling/Journal's Folder/HSC Result November 2023.md",
-    "Learning/C Programming Language/C Basics/C Tips.md",
-    "Learning/School HSC/Python/Python Basics/Functions and Procedures - Python.md",
-    "Learning/Hobbies/Windows Docs/Windows Reset - Installation.md",
-    "Learning/Hobbies/Linux/Arch Linux.md",
-    "Learning/School HSC/Python/Searching Algos/Linear Search - Python.md",
     "Untitled.canvas",
     "1. Life/People/Teachers/English Teachers",
     "Tree Diagram For Uni ( Files ).canvas",
@@ -245,7 +265,6 @@
     "Obsidian Management/Media/Images/Microsoft Windows/Windows Features.PNG",
     "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
     "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/control keyboard-sliders.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/settings-keyboard_settings.PNG"
+    "Obsidian Management/Media/Images/Microsoft Windows/control keyboard-sliders.PNG"
   ]
 }
