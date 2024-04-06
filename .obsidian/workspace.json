@@ -4,29 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a145d3b34ae3c577",
+        "id": "32a420a82218ac67",
         "type": "tabs",
         "children": [
           {
-            "id": "d003c1f5c6c6c870",
+            "id": "afde4c88ffc7150d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning/C Programming Language/C Basics/Arrays - C.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "803a60dbee22ed6c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
-                "mode": "preview",
+                "file": "Learning/C Programming Language/C Basics/C Tips.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -62,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Bubble Sort",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -130,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning/C Programming Language/C Basics/Arrays - C.md",
+                "file": "Learning/C Programming Language/C Basics/C Tips.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning/C Programming Language/C Basics/Arrays - C.md",
+                "file": "Learning/C Programming Language/C Basics/C Tips.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -193,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Learning/C Programming Language/C Basics/Arrays - C.md"
+                "file": "Learning/C Programming Language/C Basics/C Tips.md"
               }
             }
           }
@@ -217,54 +205,55 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d003c1f5c6c6c870",
+  "active": "afde4c88ffc7150d",
   "lastOpenFiles": [
-    "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
     "Learning/C Programming Language/C Basics/C Tips.md",
-    "Learning/C Programming Language/C Basics/Arrays - C.md",
-    "Excalidraw/Programming Excalidraw Drawings/Python Timer Project.md",
-    "Obsidian Management/Media/Pasted Image 20240320113057_064.png",
-    "1. Life/Swipe Folder/Media Swipe File.md",
-    "Learning/C Programming Language/C Basics/a.md",
-    "Learning/C Programming Language/C Basics/C Language.md",
     "Learning/C Programming Language/C Data View.md",
-    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
+    "Learning/C Programming Language/Random C Program Codes.md",
+    "Learning/C Programming Language/C Basics/User-Defined Data Types - C.md",
     "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
-    "Learning/C Programming Language/C Basics/Include Headers/C String Functions.md",
-    "Learning/C Programming Language/C Basics/Include Headers/C Math Function.md",
-    "Learning/School HSC/Python/Python Basics/String Manipulation - Python.md",
-    "Learning/Courses/The Odin Project/HTML/HTML.md",
-    "Learning/C Programming Language/C Basics/Include Headers/Untitled.md",
-    "Learning/C Programming Language/C Basics/Include Headers/Untitled 1.md",
-    "Learning/School HSC/Python/Random Codes/Random HSC Python Codes.md",
-    "TO DO.md",
-    "PARA Method.md",
-    "Content ( YouTube, Twitch, Anime, Games )/Movies/Movies List.md",
-    "Learning/C Programming Language/C Basics/Include Headers",
-    "1. Life/Swipe Folder/People Swipe File.md",
-    "Obsidian Management/Media/Images/Programming Languages/C Language/C_Lang-tenary_operator-vs-if_else.png",
-    "Excalidraw/Programming Excalidraw Drawings/Urban Terminal Ticketing Thing.md",
-    "Learning/School HSC/Python/Searching Algos/Binary Search - Python.md",
-    "Excalidraw/Programming Excalidraw Drawings",
+    "Learning/C Programming Language/C Basics/Structs & Typedef - C.md",
+    "1. Life/Swipe Folder/Media Swipe File.md",
+    "Learning/School HSC/Python/Python Data View.md",
+    "Learning/School HSC/Python/Python Basics/Object Oriented Programming - Python.md",
+    "Learning/Hobbies/Git Docs/Create New Branch.md",
     "Data view.md",
-    "1. Life/Journaling/Journal's Folder/HSC Result November 2023.md",
+    "Learning/C Programming Language/Sorting Algos - C/Bubble Sort - C.md",
+    "Learning/School HSC/Python/Random Codes - Python/Random Python Codes.md",
+    "Learning/C Programming Language/C Basics/Arrays - C.md",
+    "Excalidraw/Programming Excalidraw Drawings/Urban Terminal Ticketing Thing.md",
+    "Learning/C Programming Language/C Basics/the.md",
+    "Learning/School HSC/Python/Python Basics/Text Files - Python.md",
+    "Learning/Hobbies/Git Docs/Git Tips.md",
+    "Learning/Hobbies/Git Docs/Git Data View.md",
+    "Learning/Hobbies/Git Docs/Git Setup.md",
+    "Learning/Hobbies/Git Docs/Dotfiles.md",
+    "Learning/C Programming Language/C Basics/C Language.md",
+    "Learning/Hobbies/Git Docs/Change Branch Name.md",
+    "Learning/School HSC/Python/Sorting Algos - Python/Bubble Sort - Python.md",
+    "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
+    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
+    "Learning/C Programming Language/Sorting Algos - C",
+    "Learning/Hobbies/Android",
     "Untitled.canvas",
-    "1. Life/People/Teachers/English Teachers",
+    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs/12+Rules+to+Learn+to+Code+[2nd+Edition]+2022.pdf",
+    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs/2023+Web+Dev+Syllabus.pdf",
+    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs",
+    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/New folder",
+    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )",
+    "Learning/Courses/Udemy Courses/Web Development ( Angela",
+    "Learning/Courses/Udemy Courses/New folder",
+    "Learning/Courses/Udemy Courses",
+    "Obsidian Management/Media/Pasted Image 20240320163533_793.jpg",
+    "Obsidian Management/Media/Pasted Image 20240320113057_064.png",
+    "Obsidian Management/Media/Images/Programming Languages/C Language/C_Lang-tenary_operator-vs-if_else.png",
     "Tree Diagram For Uni ( Files ).canvas",
-    "Obsidian Management/Media/Images/Random/~SC Nov-2023 Results.tmp",
     "Obsidian Management/Media/Images/Random/HSC Nov-2023 Results.JPG",
-    "Content ( YouTube, Twitch, Anime, Games )/Movies",
     "Obsidian Management/Media/Images/Programming Languages/C Language/ASCII Table.webp",
-    "Obsidian Management/Media/Images/Programming Languages/C Language",
-    "Obsidian Management/Media/Images/Programming Languages/New folder",
-    "Learning/C Programming Language/C Basics",
-    "Learning/C Programming Language",
-    "Excalidraw",
     "Obsidian Management/Media/Images/Screenshots/gpu temp-desktop-pc.PNG",
     "Obsidian Management/Media/Images/Microsoft Windows/windows docs using obsidian.png",
     "Obsidian Management/Media/Images/Microsoft Windows/Windows Features.PNG",
     "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/control keyboard-sliders.PNG"
+    "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG"
   ]
 }
