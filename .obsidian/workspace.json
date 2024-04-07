@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "32a420a82218ac67",
+        "id": "da47db4e4072f8dd",
         "type": "tabs",
         "children": [
           {
-            "id": "afde4c88ffc7150d",
+            "id": "d872ee197fede9af",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning/C Programming Language/C Basics/C Tips.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -50,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Bubble Sort",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +114,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning/C Programming Language/C Basics/C Tips.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +130,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning/C Programming Language/C Basics/C Tips.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,9 +174,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Learning/C Programming Language/C Basics/C Tips.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -205,55 +197,55 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "afde4c88ffc7150d",
+  "active": "d872ee197fede9af",
   "lastOpenFiles": [
-    "Learning/C Programming Language/C Basics/C Tips.md",
-    "Learning/C Programming Language/C Data View.md",
-    "Learning/C Programming Language/Random C Program Codes.md",
-    "Learning/C Programming Language/C Basics/User-Defined Data Types - C.md",
-    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
-    "Learning/C Programming Language/C Basics/Structs & Typedef - C.md",
-    "1. Life/Swipe Folder/Media Swipe File.md",
-    "Learning/School HSC/Python/Python Data View.md",
-    "Learning/School HSC/Python/Python Basics/Object Oriented Programming - Python.md",
-    "Learning/Hobbies/Git Docs/Create New Branch.md",
-    "Data view.md",
-    "Learning/C Programming Language/Sorting Algos - C/Bubble Sort - C.md",
-    "Learning/School HSC/Python/Random Codes - Python/Random Python Codes.md",
-    "Learning/C Programming Language/C Basics/Arrays - C.md",
-    "Excalidraw/Programming Excalidraw Drawings/Urban Terminal Ticketing Thing.md",
-    "Learning/C Programming Language/C Basics/the.md",
-    "Learning/School HSC/Python/Python Basics/Text Files - Python.md",
-    "Learning/Hobbies/Git Docs/Git Tips.md",
-    "Learning/Hobbies/Git Docs/Git Data View.md",
-    "Learning/Hobbies/Git Docs/Git Setup.md",
-    "Learning/Hobbies/Git Docs/Dotfiles.md",
-    "Learning/C Programming Language/C Basics/C Language.md",
-    "Learning/Hobbies/Git Docs/Change Branch Name.md",
-    "Learning/School HSC/Python/Sorting Algos - Python/Bubble Sort - Python.md",
-    "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
-    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
-    "Learning/C Programming Language/Sorting Algos - C",
-    "Learning/Hobbies/Android",
-    "Untitled.canvas",
+    "Obsidian Management/Media/Images/Screenshots/gpu temp-desktop-pc.PNG",
+    "Obsidian Management/Media/Images/Screenshots/Thank you note to Mr Ibrahim Joomun.jpg",
+    "Obsidian Management/Media/Images/Microsoft Windows/windows docs using obsidian.png",
+    "Obsidian Management/Media/Images/Microsoft Windows/settings-keyboard_settings.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
+    "Obsidian Management/Media/Images/Microsoft Windows/fast-startup.PNG",
+    "Obsidian Management/Media/Images/Git Basics/git status lifecycle.png",
     "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs/12+Rules+to+Learn+to+Code+[2nd+Edition]+2022.pdf",
     "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs/2023+Web+Dev+Syllabus.pdf",
+    "Learning/Courses/The Odin Project/CSS/CSS Flexbox ( Kevin Powell )/README.md.md",
+    "Learning/Courses/The Odin Project/CSS/CSS Flexbox ( Kevin Powell )/Flexbox CSS Kevin Powell.md",
     "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/New folder",
+    "Learning/Python-Old/Python Basics/Python Modules/Modules - Python.md",
+    "Learning/Python-Old/Python Basics/Python Modules/Random Module - Python.md",
+    "Learning/Courses/The Odin Project/CSS/Block and Inline.md",
+    "Learning/Courses/The Odin Project/HTML/Inspecting HTML and CSS Files.md",
+    "Learning/Courses/The Odin Project/HTML/HTML.md",
+    "Learning/Courses/The Odin Project/CSS/The Box Model.md",
+    "Learning/Courses/The Odin Project/CSS/Flexbox.md",
+    "Learning/Courses/The Odin Project/CSS/CSS Flexbox ( Kevin Powell )",
+    "Learning/Courses/The Odin Project/CSS/CSS.md",
+    "Learning/Courses/The Odin Project/CSS/Flexbox Alignment.md",
+    "Learning/Courses/The Odin Project/CSS/CSS Properties.md",
+    "Learning/Courses/The Odin Project/CSS/CSS Cascade.md",
+    "Learning/C Programming Language/C Basics/Include Headers/C String Functions.md",
+    "Learning/C Programming Language/C Basics/Include Headers/C Math Function.md",
+    "Learning/Python-Old/Random Codes - Python/Random Python Codes.md",
+    "Learning/Python-Old/Sorting Algos - Python/Insertion Sort - Python.md",
+    "Learning/Python-Old/Sorting Algos - Python/Bubble Sort - Python.md",
+    "Learning/Python-Old/Searching Algos - Python/Linear Search - Python.md",
+    "Learning/Python-Old/Searching Algos - Python/Binary Search - Python.md",
+    "Learning/Python-Old/ADT ( 1D-Array )( Mine )/Stack ADT - 1D Array ( Mine ).md",
+    "Learning/Python-Old/ADT ( 1D-Array )( Mine )/Queue ADT - 1D Array ( Mine ).md",
+    "Learning/Python-Old/Python Basics/Text Files - Python.md",
+    "Learning/Python-Old/Python Basics/String Manipulation - Python.md",
+    "Learning/Python-Old/Python Basics/Python Modules",
+    "Learning/Python-Old/Python Basics/Selection and Iteration - Python.md",
     "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela",
-    "Learning/Courses/Udemy Courses/New folder",
-    "Learning/Courses/Udemy Courses",
-    "Obsidian Management/Media/Pasted Image 20240320163533_793.jpg",
-    "Obsidian Management/Media/Pasted Image 20240320113057_064.png",
-    "Obsidian Management/Media/Images/Programming Languages/C Language/C_Lang-tenary_operator-vs-if_else.png",
+    "Learning/Courses/The Odin Project/HTML",
+    "Learning/Courses/The Odin Project/CSS",
+    "Learning/C Programming Language/C Basics/Include Headers",
+    "Learning/Python-Old/Random Codes - Python",
+    "Obsidian Management/Media/Images/The Odin Project/tree_link_images_structure.PNG",
+    "Obsidian Management/Media/Images/The Odin Project/tree_link_images_folder.PNG",
+    "Obsidian Management/Media/Images/The Odin Project/box-model_odinproject-mdn.png",
+    "Obsidian Management/Media/Images/The Odin Project/GitStatus3.PNG",
     "Tree Diagram For Uni ( Files ).canvas",
-    "Obsidian Management/Media/Images/Random/HSC Nov-2023 Results.JPG",
-    "Obsidian Management/Media/Images/Programming Languages/C Language/ASCII Table.webp",
-    "Obsidian Management/Media/Images/Screenshots/gpu temp-desktop-pc.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/windows docs using obsidian.png",
-    "Obsidian Management/Media/Images/Microsoft Windows/Windows Features.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG"
+    "Untitled.canvas"
   ]
 }

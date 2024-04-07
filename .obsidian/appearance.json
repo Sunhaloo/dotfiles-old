@@ -2,7 +2,7 @@
   "accentColor": "",
   "theme": "obsidian",
   "interfaceFontFamily": "MesloLGL Nerd Font,Inter",
-  "textFontFamily": "Cascadia Code,JetBrainsMono Nerd Font,OperatorMono Nerd Font,3270 Nerd Font",
+  "textFontFamily": "Hack Nerd Font,JetBrainsMono Nerd Font,3270 Nerd Font,Cascadia Code,OperatorMono Nerd Font",
   "monospaceFontFamily": "VictorMono Nerd Font,PlemolJP Console NF",
   "showViewHeader": false,
   "translucency": false,
