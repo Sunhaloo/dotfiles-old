@@ -10,4 +10,4 @@ Some of the fonts that I usually download are:
 
 >[!note]
 >This is not completed
->- Should I put links to the fonts or just put the actaul fonts in the fonts folder?
+>- Should I put links to the fonts or just put the actual fonts in the fonts folder?
