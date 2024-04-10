@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,16 +106,20 @@ alias python="python3"
 # Neovim
 alias nv="nvim"
 # Eza
-alias ls="eza"
-alias ls -la="eza -la"
+alias ls="eza --icons"
+alias ls -la="eza -la --icons"
 alias tree="eza -T"
 # Linux
 alias fucking="sudo"
 alias update="sudo apt update; sudo apt upgrade -y"
 alias clean="sudo apt autoremove; sudo apt autoclean"
+# Windows
+alias windows="cd /mnt/c/Users/Azmaan/Desktop"
 # ZSH Source
 alias src="source ~/.zshrc"
 
+# FNM for markdown lint Neovim
+eval "$(fnm env)"
 
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

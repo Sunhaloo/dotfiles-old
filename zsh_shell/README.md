@@ -1,4 +1,5 @@
-# Requirements
+#
+Requirements:
 You are going to need to install / clone:
 
 1. [eza](https://github.com/eza-community/eza)
