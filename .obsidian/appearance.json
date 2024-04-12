@@ -1,8 +1,8 @@
 {
   "accentColor": "",
   "theme": "obsidian",
-  "interfaceFontFamily": "MesloLGL Nerd Font,Inter",
-  "textFontFamily": "Hack Nerd Font,JetBrainsMono Nerd Font,3270 Nerd Font,Cascadia Code,OperatorMono Nerd Font",
+  "interfaceFontFamily": "ZedMono Nerd Font Mono,Helvetica,Inter",
+  "textFontFamily": "PlemolJP Console NF,Inter,JetBrainsMono Nerd Font,OperatorMono Nerd Font,MV Boli,VictorMono Nerd Font",
   "monospaceFontFamily": "VictorMono Nerd Font,PlemolJP Console NF",
   "showViewHeader": false,
   "translucency": false,

@@ -6,7 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasStarOfLife"
+      "CoArchive",
+      "CoBook",
+      "RiArtboardFill",
+      "BoBxTv",
+      "BoBxPulse"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -21,6 +25,13 @@
     "iconInFrontmatterEnabled": false,
     "iconsBackgroundCheckEnabled": false,
     "iconsInNotesEnabled": true,
-    "iconIdentifier": ":"
-  }
+    "iconIdentifier": ":",
+    "iconsInLinksEnabled": true,
+    "debugMode": false
+  },
+  "1. Life": "BoBxPulse",
+  "Entertainment": "BoBxTv",
+  "Excalidraw": "RiArtboardFill",
+  "Learning": "CoBook",
+  "Obsidian Management": "CoArchive"
 }
