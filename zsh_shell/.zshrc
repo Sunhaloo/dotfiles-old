@@ -106,9 +106,9 @@ alias python="python3"
 # Neovim
 alias nv="nvim"
 # Eza
-alias ls="eza --icons"
-alias ls -la="eza -la --icons"
-alias tree="eza -T"
+alias ls="eza --no-user --no-time --no-permissions --icons=always"
+alias ls -la="eza -la --no-user --no-time --no-permissions --icons=always"
+alias tree="eza -T --icons=always"
 # Linux
 alias fucking="sudo"
 alias update="sudo apt update; sudo apt upgrade -y"
