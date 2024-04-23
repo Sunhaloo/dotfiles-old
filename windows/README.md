@@ -3,10 +3,14 @@ This folder contains some of the fonts that I usually use
 
 Some of the fonts that I usually download are:
 
-1. JetBrainsMono Nerd Font
+1. JetBrainsMono NF Regular
 2. Hack Nerd Font
-3. PlemolJP Console NF
-4. Victor Mono Nerd Font
+3. Victor Mono
+4. PlemolJP
+5. Monaco Nerd Font Mono
+6. Fira Code Nerd Font Mono
+7. Operator Nerd Font Mono
+8. ZedMonoNerdFontMono Regular
 
 >[!note]
 >This is not completed
