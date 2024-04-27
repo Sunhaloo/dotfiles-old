@@ -11,6 +11,7 @@ Some of the fonts that I usually download are:
 6. Fira Code Nerd Font Mono
 7. Operator Nerd Font Mono
 8. ZedMonoNerdFontMono Regular
+9. Monaspace Randon Var
 
 >[!note]
 >This is not completed
