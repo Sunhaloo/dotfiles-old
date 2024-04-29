@@ -12,6 +12,7 @@ Some of the fonts that I usually download are:
 7. Operator Nerd Font Mono
 8. ZedMonoNerdFontMono Regular
 9. Monaspace Randon Var
+10. BitstromWera Nerd Font Mono
 
 >[!note]
 >This is not completed
