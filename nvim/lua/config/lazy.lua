@@ -16,5 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- make lazy add configuration files from plugins folder
-    {import = "plugins"}
+    {
+        {import = "plugins"},
+    },
 })

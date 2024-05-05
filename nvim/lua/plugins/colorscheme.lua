@@ -3,7 +3,7 @@ return{
   {
     "craftzdog/solarized-osaka.nvim",
     branch = "osaka",
-    lazy = true,
+    lazy = false,
     priority = 1000,
     opts = function()
       return {
@@ -18,10 +18,10 @@ return{
     lazy = false,
     priority = 1000,
     config = function()
-      require("onedark").setup({
+        require("onedark").setup({
         style = "dark",
         transparent = true, -- Turn off if you want OneDark Theme to take the wheel instead of Windows terminal's background colour
-      })
+    })
     end,
   },
 }

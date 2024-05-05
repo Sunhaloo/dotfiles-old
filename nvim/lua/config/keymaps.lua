@@ -87,3 +87,12 @@ keymap.set("v", "p", '"_dP', opts)
 -- Stay in Indent Mode
 keymap.set("v", "<", "<gv", opts)
 keymap.set("v", ">", ">gv", opts)
+
+-- Lazy
+keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", opts)
+
+-- Telescope
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
+keymap.set("n", "<leader>ft", "<cmd>Telescope colorscheme<cr>", opts)
