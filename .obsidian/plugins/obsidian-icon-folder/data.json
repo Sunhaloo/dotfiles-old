@@ -6,11 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "CoArchive",
-      "CoBook",
-      "RiArtboardFill",
-      "BoBxTv",
-      "BoBxPulse"
+      "RiBox3Fill",
+      "RiKanbanView",
+      "FasSnowman",
+      "RiComputerLine",
+      "BoBxsBrain"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -27,11 +27,30 @@
     "iconsInNotesEnabled": true,
     "iconIdentifier": ":",
     "iconsInLinksEnabled": true,
-    "debugMode": false
+    "debugMode": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor"
   },
   "1. Life": "BoBxPulse",
   "Entertainment": "BoBxTv",
   "Excalidraw": "RiArtboardFill",
   "Learning": "CoBook",
-  "Obsidian Management": "CoArchive"
+  "Obsidian Management": "CoArchive",
+  "Obsidian Management/Media/Audios": "FasMicrophoneLines",
+  "Obsidian Management/Media/GIFs": "CoMonitorPlay",
+  "Obsidian Management/Media/Images": "BoBxImages",
+  "Obsidian Management/Media/Videos": "BoBxsVideos",
+  "Data View.md": "FasDatabase",
+  "1. Do List.md": "BoBxsPencil",
+  "Learning/C Programming Language": "FasC",
+  "Learning/Hobbies/Git Docs": "FabGitAlt",
+  "Learning/Hobbies/Linux": "FabLinux",
+  "Learning/Hobbies/Windows Docs": "FabWindows",
+  "Learning/Courses": "RaBook",
+  "1. Life/People": "RiEmotionNormalFill",
+  "1. Life/Swipe Folder": "BoBxsBrain",
+  "Learning/Python": "FabPython",
+  "Learning/Hobbies": "RiComputerLine",
+  "Learning/Hobbies/AOC": "FasSnowman",
+  "Programming Projects Tracker.md": "RiBox3Fill"
 }
