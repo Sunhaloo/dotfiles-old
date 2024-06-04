@@ -7,11 +7,16 @@
   "signaling": "wss://www.peerdraft.app/signal",
   "actives": "wss://www.peerdraft.app/actives",
   "name": "S.Sunhaloo",
-  "oid": "b65867d0-47fe-4623-9222-603a5ddbc648",
+  "root": "",
   "plan": {
     "type": "hobby"
   },
   "duration": 0,
   "debug": false,
-  "version": "2.2.3"
+  "version": "2.4.3",
+  "serverShares": {
+    "files": [],
+    "folders": []
+  },
+  "oid": "b65867d0-47fe-4623-9222-603a5ddbc648"
 }

@@ -12,5 +12,7 @@
   "obsidian-excalidraw-plugin",
   "obsidian-icon-folder",
   "highlightr-plugin",
-  "obsidian-relative-line-numbers"
+  "obsidian-relative-line-numbers",
+  "obsidian-kanban",
+  "obsidian-discordrpc"
 ]

@@ -1,13 +1,13 @@
 {
   "accentColor": "",
   "theme": "obsidian",
-  "interfaceFontFamily": "Helvetica,ZedMono Nerd Font Mono",
-  "textFontFamily": "Monaspace Radon Var,PlemolJP Console NF,JetBrainsMono Nerd Font,Fira Code,Monaco",
-  "monospaceFontFamily": "VictorMono Nerd Font,PlemolJP Console NF",
+  "interfaceFontFamily": "Helvetica",
+  "textFontFamily": "JetBrainsMono Nerd Font",
+  "monospaceFontFamily": "VictorMono Nerd Font Mono",
   "showViewHeader": false,
   "translucency": false,
   "nativeMenus": false,
-  "cssTheme": "Atom",
+  "cssTheme": "Catppuccin",
   "baseFontSize": 15,
   "enabledCssSnippets": [
     "notes-pen",

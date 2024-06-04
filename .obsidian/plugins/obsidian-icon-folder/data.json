@@ -1,16 +1,16 @@
 {
   "settings": {
-    "migrated": 4,
+    "migrated": 5,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 16,
-    "emojiStyle": "none",
+    "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "RiBox3Fill",
-      "RiKanbanView",
-      "FasSnowman",
-      "RiComputerLine",
-      "BoBxsBrain"
+      "FabHtml5",
+      "RiSpeakFill",
+      "RiFunctions",
+      "BoBxsCard",
+      "RiDatabase2Fill"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -29,11 +29,11 @@
     "iconsInLinksEnabled": true,
     "debugMode": false,
     "iconInFrontmatterFieldName": "icon",
-    "iconColorInFrontmatterFieldName": "iconColor"
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconInTitlePosition": "above"
   },
   "1. Life": "BoBxPulse",
   "Entertainment": "BoBxTv",
-  "Excalidraw": "RiArtboardFill",
   "Learning": "CoBook",
   "Obsidian Management": "CoArchive",
   "Obsidian Management/Media/Audios": "FasMicrophoneLines",
@@ -52,5 +52,17 @@
   "Learning/Python": "FabPython",
   "Learning/Hobbies": "RiComputerLine",
   "Learning/Hobbies/AOC": "FasSnowman",
-  "Programming Projects Tracker.md": "RiBox3Fill"
+  "Programming Projects Tracker.md": "RiBox3Fill",
+  "University": "RiGraduationCapLine",
+  "Learning/Programs": "RiAppsLine",
+  "Learning/Java": "FabJava",
+  "Learning/Java/Java Data View.md": "FasDatabase",
+  "Learning/Python/Python Data View.md": "FasDatabase",
+  "University/Level 1 Semester 1": "Fas1",
+  "University/Level 1 Semester 1/Database Design ( BCNS1103C )": "RiDatabase2Fill",
+  "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )": "RiFunctions",
+  "University/Level 1 Semester 1/Professional Communcations ( BCNS1105C )": "RiSpeakFill",
+  "University/Level 1 Semester 1/Web Development ( WAT1119C )": "FabHtml5",
+  "University/University Data View ( Level 1 Semester 1 ).md": "FasDatabase",
+  "Excalidraw": "RiArtboardFill"
 }

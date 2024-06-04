@@ -4,15 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "4776960d21f7af4d",
+        "id": "a3712f993215006a",
         "type": "tabs",
         "children": [
           {
-            "id": "397dd1e9ffe32e4a",
+            "id": "6eb3eea474adf7fb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md",
+                "mode": "preview",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "0a25c06ec98575b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning/Python/Python Basics/Selection and Iteration - Python.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ],
@@ -28,7 +44,7 @@
       {
         "id": "e37db63afe5c0b66",
         "type": "tabs",
-        "dimension": 35.8,
+        "dimension": 39.19902912621359,
         "children": [
           {
             "id": "4cad13d082b07031",
@@ -68,7 +84,7 @@
       {
         "id": "96bd1d3477c2a727",
         "type": "tabs",
-        "dimension": 33.7,
+        "dimension": 30.339805825242717,
         "children": [
           {
             "id": "c86d2231862bfb35",
@@ -83,7 +99,7 @@
       {
         "id": "ebec414a2e184aa6",
         "type": "tabs",
-        "dimension": 30.5,
+        "dimension": 30.46116504854369,
         "children": [
           {
             "id": "7cec6d1e6cfd1111",
@@ -97,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "91af16be4f3f8284",
@@ -115,6 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,6 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +192,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md"
+              }
             }
           }
         ]
@@ -194,59 +213,60 @@
       "templates:Insert template": true,
       "command-palette:Open command palette": true,
       "templater-obsidian:Templater": false,
+      "obsidian-book-search-plugin:Create new book note": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-book-search-plugin:Create new book note": false
+      "obsidian-kanban:Create new board": false
     }
   },
-  "active": "397dd1e9ffe32e4a",
+  "active": "6eb3eea474adf7fb",
   "lastOpenFiles": [
-    "Data View.md",
-    "Learning/Python/Python Basics/Python Modules/OS Module - Python.md",
-    "Learning/Python/Python Basics/Text Files - Python.md",
-    "Learning/Python/Random Codes - Python/Random Python Codes.md",
-    "Learning/Python/Python Basics/Arrays, Tuples, Sets - Python.md",
-    "Programming Projects Tracker.md",
-    "Projects Computer.md",
-    "Kanban Notes",
-    "Learning/Python/Python Basics/Python Language.md",
-    "Learning/Hobbies/Linux/Arch Linux.md",
-    "Learning/Hobbies/Linux/Debian-Based Distributions.md",
-    "Entertainment/Anime List.md",
-    "Learning/Hobbies/AOC/2015/AOC 2015 Day 3.md",
-    "1. Life/Swipe Folder/Media Swipe File.md",
-    "Learning/Hobbies/AOC/2015/AOC 2015 Day 1.md",
-    "Learning/Hobbies/AOC/2015/AOC 2015 Day 2.md",
-    "Learning/Hobbies/AOC/Advent of Code Data View.md",
-    "Obsidian Management/Templates/AOC Template.md",
-    "2015.md",
-    "Learning/Python/Python Data View.md",
-    "Learning/Hobbies/AOC/2015",
-    "Obsidian Management/Templates/Python Template.md",
-    "Learning/Hobbies/Git Docs/Git Branches.md",
-    "Learning/Hobbies/AOC",
     "Learning/Python/Python Basics/Selection and Iteration - Python.md",
-    "1. Life/Swipe Folder/People Swipe File.md",
-    "Learning/Python/Python Basics/Python Modules/Tkinter - CustomTkinter Module.md",
-    "Learning/Hobbies/Windows Docs/Windows Reset - Installation ( Windows 10 + 11 ).md",
-    "Learning/Python/Python Basics/String Manipulation - Python.md",
-    "University",
-    "Learning/Python/Python APIs",
-    "Obsidian Management/Media/Images/Programming Languages/Python/Tkinter/Tkinter Grid Weight.png",
-    "Obsidian Management/Media/Images/Programming Languages/Python/Tkinter/Tkinter North, East, South, West.png",
-    "Obsidian Management/Media/Images/Programming Languages/Python/Tkinter/Tkinter Sticky.png",
-    "Obsidian Management/Media/Images/Programming Languages/Python/Tkinter/Tkinter Grid Layout Image.png",
-    "Obsidian Management/Media/Images/Programming Languages/Python/Tkinter",
-    "Obsidian Management/Media/Images/Programming Languages/Python/New folder",
-    "Obsidian Management/Media/Images/Programming Languages/Python/Python Timer Project/Python Timer.png",
-    "Obsidian Management/Media/Images/Programming Languages/Python/Python Timer Project/python tkinter inspiration.jpg",
-    "Obsidian Management/Media/Pasted image 20240418215823.png",
-    "1. Life/People/Teachers/Ibrahim Joomun",
-    "1. Life/People/Teachers",
-    "1. Life/People/Girls",
-    "Obsidian Management/Media/Images/Screenshots/gpu temp-desktop-pc.PNG",
-    "Obsidian Management/Media/Images/Screenshots/Thank you note to Mr Ibrahim Joomun.jpg",
-    "Obsidian Management/Media/Images/Microsoft Windows/windows docs using obsidian.png",
-    "Tree Diagram For Uni ( Files ).canvas",
-    "Untitled.canvas"
+    "Learning/Java/Java Basics/Selections and Iteration - Java.md",
+    "Test.md",
+    "Programming Projects Tracker.md",
+    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Entity Relationship Diagram Questions.md",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3 - Question 3.png",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Week 3/Practice Question.pdf",
+    "University/University Data View ( Level 1 Semester 1 ).md",
+    "Learning/Python/Python Data View.md",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/Java Random Module - Library.pdf",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/Java Exercises Week 4 - 5.pdf",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/Main Slides Week 4 to 5.pdf",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/week_4_5_Random_Function.pdf",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/week 4_5_Lab 1_1_ControlStatements_May_2024.pdf",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/PT_Lec 4-5_May_2024.pdf",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/New folder",
+    "Learning/C Programming Language/C Data View.md",
+    "Learning/C Programming Language/C Basics/C Language.md",
+    "Learning/Java/Java Basics/Java Language.md",
+    "Learning/C Programming Language/C Tips.md",
+    "Learning/Java/Java Data View.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Version 2/Computer - Computer Spare Parts Shop Requirements ( Version 2 ).md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Version 1/Computer - Computer Spare Parts Shop Requirements ( Version 1 ).md",
+    "Learning/Python/Python Basics/Python Modules/OS Module - Python.md",
+    "1. Life/Swipe Folder/Media Swipe File.md",
+    "Obsidian Management/Media/Images/MS Access/Form - What is Should look like.png",
+    "Obsidian Management/Media/Images/The Odin Project/GitLog1.PNG",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Database and Flat Files.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Version 2",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1/Not Good/Computer - Computer Spare Parts Shop Requirements ( Version 1 ).md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1/Version 1/Computer - Computer Spare Parts Shop Requirements ( Version 1 ).md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Boolean Algebra.md",
+    "Obsidian Management/Templates/Maths for CS Template.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Domain and Range in Set Relation.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Sets, Functions and Relations.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Logic Proposition ( Logic Gates ).md",
+    "Obsidian Management/Templates/Programming ( UNI ) Template.md",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3 - Question 2.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3 - Question 1.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3- Question 1.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions - Week 3- Question 1.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Degree of Relationships - Ternary Degree.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Degree of Relationships - Binary Degree.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Degree of Relationships - Unary Degree.png",
+    "Untitled.canvas",
+    "Tree Diagram For Uni ( Files ).canvas"
   ]
 }
