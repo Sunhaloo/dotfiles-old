@@ -14,6 +14,7 @@ Some of the fonts that I usually download are:
 9. Monaspace Randon Var
 10. BitstromWera Nerd Font Mono
 11. SauceCodePro Nerd Font
+12. CaskaydiaCove Nerd Font ( Regular + Mono + Propo )
 
 >[!note]
 >This is not completed
