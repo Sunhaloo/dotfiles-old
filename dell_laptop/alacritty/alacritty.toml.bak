@@ -1,0 +1,53 @@
+[window]
+
+opacity = 0.8
+decorations = "None"
+padding = { x = 5, y = 5 }
+title = "Terminal"
+
+[font]
+
+# Victor Mono
+# normal.family = "VictorMono Nerd Font"
+# bold.family = "VictorMono Nerd Font"
+# italic.family = "VictorMono Nerd Font"
+# bold_italic.family = "VictorMono Nerd Font"
+
+# JetBrainsMono
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "JetBrainsMono Nerd Font"
+
+# SauceCodePro Mono
+# normal.family = "SauceCodePro Nerd Font"
+# bold.family = "SauceCodePro Nerd Font"
+# italic.family = "SauceCodePro Nerd Font"
+# bold_italic.family = "SauceCodePro Nerd Font"
+
+# Monego
+# normal.family = "Monego Nerd Font Fix"
+# bold.family = "Monego Nerd Font Fix"
+# italic.family = "Monego Nerd Font Fix"
+# bold_italic.family = "Monego Nerd Font Fix"
+
+# Terminess
+# normal.family = "TerminessNerdFont"
+# bold.family = "TerminessNerdFont"
+# italic.family = "TerminessNerdFont"
+# bold_italic.family = "TerminessNerdFont"
+
+# RobotoMono
+# normal.family = "RobotoMonoNerdFont"
+# italic.family = "RobotoMonoNerdFont"
+# bold.family = "RobotoMonoNerdFont"
+# bold_italic.family = "RobotoMonoNerdFont"
+
+# PlemolJP IBM Plex Mono
+# normal.family = "PlemolJP35 Console NF"
+# italic.family = "PlemolJP35 Console NF"
+# bold.family = "PlemolJP35 Console NF"
+# bold_italic.family = "PlemolJP35 Console NF"
+
+# Size of font
+size = 12.0

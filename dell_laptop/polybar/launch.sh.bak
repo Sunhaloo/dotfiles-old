@@ -1,0 +1,25 @@
+#!/bin/bash
+
+CONFIG_FILE="$HOME/.config/polybar/config"
+BAR_NAME="mybar"
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+# Check if the configuration file exists
+if [ -f "$CONFIG_FILE" ]; then
+    echo "Launching polybar with config $CONFIG_FILE..."
+    polybar --config="$CONFIG_FILE" $BAR_NAME &
+
+    if [ $? -eq 0 ]; then
+        echo "Polybar launched successfully!"
+    else
+        echo "Failed to launch polybar. Please check the configuration file and logs for errors."
+    fi
+else
+    echo "Configuration file $CONFIG_FILE not found. Please create the configuration file and try again."
+fi
+

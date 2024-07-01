@@ -1,0 +1,12 @@
+configuration{
+	
+	display-drun: "Applications";
+	display-run: "Commands";
+	display-window: "Window";
+	drun-display-format: "{icon} {name}";
+	show-icons: true;
+	modi:"window,run,drun";
+
+}
+
+@theme "~/.config/rofi/theme/catppuccin-mocha.rasi"
