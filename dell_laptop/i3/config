@@ -208,4 +208,8 @@ bindsym $mod+Shift+Up exec i3lock
 
 # Start polybar
 exec --no-startup-id polybar --config=/home/azmaan/.config/polybar/config.ini mybar &
+# keybind to start / stop polybar
+bindsym $mod+m exec --no-startup-id polybar-msg cmd toggle
 
+# Start picom
+exec --no-startup-id picom --config ~/.config/picom/picom.conf &
