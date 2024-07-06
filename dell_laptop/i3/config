@@ -164,10 +164,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -198,18 +198,42 @@ gaps outer 4
 for_window [class="^.*"] border pixel 1
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale --zoom fill ~/Wallpapers/evening-sky.png
+exec --no-startup-id feh --bg-scale --zoom fill ~/Wallpapers/od_i3.png
 
 # Take Screenshots
-bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
+# of entire screen
+bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
+
+# of selected area
+bindsym $mod+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
 
 # Lock the Computer / Logout in a way
 bindsym $mod+Shift+Up exec i3lock
 
 # Start polybar
+# Start Polybar using the wrapper script
+# exec_always --no-startup-id ~/.config/polybar/launch_with_padding.sh
 exec --no-startup-id polybar --config=/home/azmaan/.config/polybar/config.ini mybar &
 # keybind to start / stop polybar
 bindsym $mod+m exec --no-startup-id polybar-msg cmd toggle
+
+# catppuccin
+# class                 border  backgr. text    indicator child_border
+# client.focused          #c6a0f6 #c6a0f6 #1a1826 #c6a0f6   #c6a0f6
+# client.focused_inactive #a6da95 #a6da95 #ffffff #a6da95   #a6da95
+# client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+# client.urgent           #cc241d #900000 #ffffff #cc241d   #cc241d
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# client.background       #ffffff
+
+# onedark theme
+# class                 border  backgr. text    indicator child_border
+client.focused          #abb2bf #61afef #282c34 #61afef   #56b6c2
+client.focused_inactive #353b45 #353b45 #abb2bf #545862   #353b45
+client.unfocused        #353b45 #282c34 #abb2bf #353b45   #353b45
+client.urgent           #e06c75 #e06c75 #282c34 #e06c75   #e06c75
+client.placeholder      #282c34 #282c34 #abb2bf #282c34   #282c34
+client.background       #c8ccd4
 
 # Start picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf &
