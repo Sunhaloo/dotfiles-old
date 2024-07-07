@@ -1,11 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,39 +91,53 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# Aliases
-# Python
-alias python="python3"
-# Neovim
-alias nv="nvim"
-# Eza
-alias ls="eza --no-user --no-time --no-permissions --icons=always"
-alias ls -la="eza -la --no-user --no-time --no-permissions --icons=always"
-alias tree="eza -T --icons=always"
-# Linux
-alias fucking="sudo"
-alias update="sudo apt update; sudo apt upgrade -y"
-alias clean="sudo apt autoremove; sudo apt autoclean"
-# Windows
-alias windows="cd /mnt/c/Users/Azmaan/Desktop"
-# ZSH Source
-alias src="source ~/.zshrc"
-# GitHub
-alias gs="git status"
-alias ga="git add ."
-alias gl="git log"
-alias gpp="git push -u origin"
-alias gp="git pull"
-# Notes Related
-# GitHub/azmaan ---> Obsidian Folder
-alias cp_GO="cp -r S.Sunhaloo ~/Obsidian"
-# Obsidian ---> GitHub Folder
-alias cp_OG="cp -r S.Sunhaloo ~/GitHub/azmaan/"
+
+# ALIASES
+# System
+# change 'sudo' to 'fucking'
+alias fucking='sudo'
+# installing applications
+alias install='sudo apt-get install'
+# removing and purging applications
+alias remove='sudo apt-get remove --purge'
+# update the whole system
+alias update='sudo apt update; sudo apt upgrade -y'
+# clean system packages
+alias clean='sudo apt autoremove -y; sudo apt autoclean'
+# System - eza
+alias ls='eza --no-user --no-time --no-permissions --icons=always'
+alias ls -la='eza -la --no-user --no-time --no-permissions --icons=always'
+alias tree='eza -T --icons=always'
+# Applications
+# opening up Neovim
+alias nv='nvim'
+# make opening Python like in Windows
+alias python='python3'
+# Git
+# clone repository
+alias clone='git clone'
+# alias for 'git status'
+alias gs='git status'
+# alias for 'git add' ---> provide files to add
+alias ga='git add'
+# alias for 'git commit' ---> provide the commit message
+alias commit='git commit -m'
+# alias for 'git push' ---> provide branch
+alias push='git push -u origin'
+# alias for 'git log'
+alias gl='git log'
+# alias for 'git pull'
+alias gp='git pull'
+# Obsidian - GitHub repo
+alias repo-azmaan='cd ~/GitHub/azmaan/'
+alias cp_GO='cp -r S.Sunhaloo ~/Obsidian/'
+alias cp_OG='cp -r S.Sunhaloo ~/GitHub/azmaan/'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
