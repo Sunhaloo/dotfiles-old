@@ -103,9 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # System
 # change 'sudo' to 'fucking'
 alias fucking='sudo'
-# installing applications
+# search for applications ---> provide application / package name
+alias pkgsearch='sudo apt search'
+# installing applications ---> provide application / package name
 alias install='sudo apt-get install'
-# removing and purging applications
+# removing and purging applications ---> provide application / package name
 alias remove='sudo apt-get remove --purge'
 # update the whole system
 alias update='sudo apt update; sudo apt upgrade -y'
@@ -121,7 +123,7 @@ alias nv='nvim'
 # make opening Python like in Windows
 alias python='python3'
 # Git
-# clone repository
+# clone repository ---> provide repository name
 alias clone='git clone'
 # alias for 'git status'
 alias gs='git status'
@@ -129,7 +131,7 @@ alias gs='git status'
 alias ga='git add'
 # alias for 'git commit' ---> provide the commit message
 alias commit='git commit -m'
-# alias for 'git push' ---> provide branch
+# alias for 'git push' ---> provide branch name
 alias push='git push -u origin'
 # alias for 'git log'
 alias gl='git log'
@@ -137,6 +139,8 @@ alias gl='git log'
 alias gp='git pull'
 # Obsidian - GitHub repo
 alias repo-azmaan='cd ~/GitHub/azmaan/'
+# GitHub repo - dotfiles
+alias repo-dotfiles='cd ~/GitHub/dotfiles/'
 alias cp_GO='cp -r S.Sunhaloo ~/Obsidian/'
 alias cp_OG='cp -r S.Sunhaloo ~/GitHub/azmaan/'
 

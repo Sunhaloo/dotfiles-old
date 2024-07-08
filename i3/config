@@ -13,6 +13,10 @@ font pango:JetBrainsMonoNerdFont 10
 # Start XDG autostart .desktop files using dex. See also
 exec --no-startup-id dex --autostart --environment i3
 
+# Resolution
+# set resolution to full-hd
+exec --no-startup-id xrandr --output HDMI-0 --mode 1920x1080
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -120,7 +124,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout?' -B 'Exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -144,23 +148,30 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start i3bar
-bar {
-        status_command i3status -c ~/.config/i3status/config
-}
+# bar {
+#         status_command i3status -c ~/.config/i3status/config
+# }
 
 # Customisations
+
+# Launch Polybar
+exec_always ~/.config/polybar/launch.sh &
+
+# Title Border
+# remove title borders
+for_window [class="^.*"] border pixel 2
 
 # Gaps
 gaps inner 6
 gaps outer 2
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale --zoom fill ~/Wallpapers/od_i3.png
+exec --no-startup-id feh --bg-scale --zoom fill ~/Wallpapers/aerial_view_of_a_city_at_night.jpg
 
 # Colours
 # One Dark Theme
 # class                 border  backgr. text    indicator child_border
-client.focused          #abb2bf #61afef #282c34 #61afef   #56b6c2
+client.focused          #abb2bf #61afef #282c34 #98c379  #98c379
 client.focused_inactive #353b45 #353b45 #abb2bf #545862   #353b45
 client.unfocused        #353b45 #282c34 #abb2bf #353b45   #353b45
 client.urgent           #e06c75 #e06c75 #282c34 #e06c75   #e06c75
@@ -195,5 +206,5 @@ bindsym $mod+c exec codium
 # Thorium Browser
 bindsym $mod+y exec thorium-browser
 
-# Open Nautilus File Manager
-bindsym $mod+n exec nautilus
+# Open Thunar File Manager
+bindsym $mod+n exec thunar
