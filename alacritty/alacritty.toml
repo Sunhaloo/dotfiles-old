@@ -25,8 +25,8 @@ padding.y = 5
 decorations = "None"
 
 # Make Alacritty Transparent
-# WARNING: Does not work with i3?
-opacity = 0.8
+# WARNING: Make sure you have Picom installed
+opacity = 0.6
 
 # Blur Alacritty Transparent Background
 # WARNING: works on macOS and KDE Wayland
@@ -41,5 +41,20 @@ bold = {family = "JetBrainsMono Nerd Font", style = "Bold"}
 italic = {family = "JetBrainsMono Nerd Font", style = "Italic"}
 bold_italic = {family = "JetBrainsMono Nerd Font", style = "Bold Italic"}
 
+# Change font to use PlemolJP35 Console Nerd Font
+# normal = {family = "PlemolJP35 Console NF", style = "Regular"}
+# bold = {family = "PlemolJP35 Console NF", style = "Bold"}
+# italic = {family = "PlemolJP35 Console NF", style = "Italic"}
+# bold_italic = {family = "PlemolJP35 Console NF", style = "Bold Italic"}
+
+# Change font to use Hac Nerd Font Mono
+# normal = {family = "Hack Nerd Font Mono", style = "Regular"}
+# bold = {family = "Hack Nerd Font Mono", style = "Bold"}
+# italic = {family = "Hack Nerd Font Mono", style = "Italic"}
+# bold_italic = {family = "Hack Nerd Font Mono", style = "Bold Italic"}
+
 # Change the Font Size
-size = 12
+# NOTE: 12 is for JetBrainsMono & PlemolJP35 Console Nerd Fonts
+size = 14
+# NOTE: 13 is for Hack Nerd Font Mono
+# size = 13

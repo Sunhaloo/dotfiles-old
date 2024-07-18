@@ -123,6 +123,8 @@ alias nv='nvim'
 # make opening Python like in Windows
 alias python='python3'
 # Git
+# LazyGit UI
+alias lg="lazygit"
 # clone repository ---> provide repository name
 alias clone='git clone'
 # alias for 'git status'
