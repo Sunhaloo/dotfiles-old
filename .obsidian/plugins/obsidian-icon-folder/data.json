@@ -1,16 +1,16 @@
 {
   "settings": {
-    "migrated": 5,
+    "migrated": 6,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 16,
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FabChrome",
+      "FasDatabase",
+      "FabCss3",
       "FabHtml5",
-      "RiSpeakFill",
-      "RiFunctions",
-      "BoBxsCard",
-      "RiDatabase2Fill"
+      "RiSpeakFill"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -64,5 +64,10 @@
   "University/Level 1 Semester 1/Professional Communcations ( BCNS1105C )": "RiSpeakFill",
   "University/Level 1 Semester 1/Web Development ( WAT1119C )": "FabHtml5",
   "University/University Data View ( Level 1 Semester 1 ).md": "FasDatabase",
-  "Excalidraw": "RiArtboardFill"
+  "Excalidraw": "RiArtboardFill",
+  "Learning/Courses/The Odin Project/HTML": "FabHtml5",
+  "Learning/Courses/The Odin Project/CSS": "FabCss3",
+  "Learning/Courses/The Odin Project/HTML/HTML Dataview.md": "FasDatabase",
+  "Learning/Web Development": "FabChrome",
+  "Learning/Web Development/Web Development Data view.md": "FasDatabase"
 }

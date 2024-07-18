@@ -14,5 +14,7 @@
   "highlightr-plugin",
   "obsidian-relative-line-numbers",
   "obsidian-kanban",
-  "obsidian-discordrpc"
+  "obsidian-discordrpc",
+  "excel",
+  "execute-code"
 ]

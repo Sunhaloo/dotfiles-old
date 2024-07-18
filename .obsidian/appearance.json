@@ -7,11 +7,14 @@
   "showViewHeader": false,
   "translucency": false,
   "nativeMenus": false,
-  "cssTheme": "Catppuccin",
-  "baseFontSize": 15,
+  "cssTheme": "Atom",
+  "baseFontSize": 18,
   "enabledCssSnippets": [
     "notes-pen",
     "highlighters",
-    "one-dark-theme"
+    "one-dark-theme",
+    "Notebook Backgrounds",
+    "one-dark",
+    "smooth_cursor"
   ]
 }

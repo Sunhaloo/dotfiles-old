@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a3712f993215006a",
+        "id": "b769028888aa51f7",
         "type": "tabs",
         "children": [
           {
-            "id": "6eb3eea474adf7fb",
+            "id": "38a703b3f8385500",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "0a25c06ec98575b1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning/Python/Python Basics/Selection and Iteration - Python.md",
+                "file": "Learning/Programs/Oracle 10g/Oracle 10g - SQL Commands.md",
                 "mode": "preview",
                 "source": true
               }
@@ -44,7 +32,7 @@
       {
         "id": "e37db63afe5c0b66",
         "type": "tabs",
-        "dimension": 39.19902912621359,
+        "dimension": 38.668373879641486,
         "children": [
           {
             "id": "4cad13d082b07031",
@@ -84,7 +72,7 @@
       {
         "id": "96bd1d3477c2a727",
         "type": "tabs",
-        "dimension": 30.339805825242717,
+        "dimension": 33.41869398207427,
         "children": [
           {
             "id": "c86d2231862bfb35",
@@ -97,12 +85,12 @@
         ]
       },
       {
-        "id": "ebec414a2e184aa6",
+        "id": "a0652db995dd9e49",
         "type": "tabs",
-        "dimension": 30.46116504854369,
+        "dimension": 27.91293213828425,
         "children": [
           {
-            "id": "7cec6d1e6cfd1111",
+            "id": "3935c531efe252c3",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -113,7 +101,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 293,
+    "collapsed": true
   },
   "right": {
     "id": "91af16be4f3f8284",
@@ -122,37 +111,8 @@
       {
         "id": "fc96e01b13b76bbc",
         "type": "tabs",
-        "dimension": 32.21544715447154,
+        "dimension": 40.53398058252427,
         "children": [
-          {
-            "id": "c344ca13e4c25dfd",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "0518d2d7eeb47924",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
           {
             "id": "eed8aabb0404df4a",
             "type": "leaf",
@@ -163,14 +123,24 @@
                 "useHierarchy": true
               }
             }
+          },
+          {
+            "id": "94d96c03471c7f01",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Learning/Programs/Oracle 10g/Oracle 10g - SQL Commands.md"
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "18683896574bfddd",
         "type": "tabs",
-        "dimension": 35.670731707317074,
+        "dimension": 35.19417475728155,
         "children": [
           {
             "id": "768e9c25d1151c5d",
@@ -183,17 +153,36 @@
         ]
       },
       {
-        "id": "906dde9f0d046c09",
+        "id": "8eaf14bf062f27ca",
         "type": "tabs",
-        "dimension": 32.113821138211385,
+        "dimension": 24.271844660194173,
         "children": [
           {
-            "id": "abd244413661c90a",
+            "id": "7fe4ba6b7fdb54c8",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "outgoing-link",
               "state": {
-                "file": "Learning/Java/Java Basics/Selections and Iteration - Java.md"
+                "file": "Learning/Programs/Oracle 10g/Oracle 10g - SQL Commands.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "44e931b2b199c66f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Learning/Programs/Oracle 10g/Oracle 10g - SQL Commands.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -201,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5,
+    "width": 274,
     "collapsed": true
   },
   "left-ribbon": {
@@ -212,60 +201,61 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": true,
       "command-palette:Open command palette": true,
-      "templater-obsidian:Templater": false,
       "obsidian-book-search-plugin:Create new book note": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-kanban:Create new board": false
+      "templater-obsidian:Templater": false,
+      "obsidian-kanban:Create new board": false,
+      "excel:Create Excel File": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6eb3eea474adf7fb",
+  "active": "38a703b3f8385500",
   "lastOpenFiles": [
-    "Learning/Python/Python Basics/Selection and Iteration - Python.md",
-    "Learning/Java/Java Basics/Selections and Iteration - Java.md",
-    "Test.md",
-    "Programming Projects Tracker.md",
-    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Entity Relationship Diagram Questions.md",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3 - Question 3.png",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Week 3/Practice Question.pdf",
-    "University/University Data View ( Level 1 Semester 1 ).md",
-    "Learning/Python/Python Data View.md",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/Java Random Module - Library.pdf",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/Java Exercises Week 4 - 5.pdf",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/Main Slides Week 4 to 5.pdf",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/week_4_5_Random_Function.pdf",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/week 4_5_Lab 1_1_ControlStatements_May_2024.pdf",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4/PT_Lec 4-5_May_2024.pdf",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Week 4",
-    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/New folder",
-    "Learning/C Programming Language/C Data View.md",
-    "Learning/C Programming Language/C Basics/C Language.md",
-    "Learning/Java/Java Basics/Java Language.md",
-    "Learning/C Programming Language/C Tips.md",
-    "Learning/Java/Java Data View.md",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Version 2/Computer - Computer Spare Parts Shop Requirements ( Version 2 ).md",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Version 1/Computer - Computer Spare Parts Shop Requirements ( Version 1 ).md",
-    "Learning/Python/Python Basics/Python Modules/OS Module - Python.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 2 - Database ( 29 July 2024 )/Computer - Computer Spare Parts Shop Oracle 10g Report.md",
+    "Learning/Programs/Oracle 10g/Oracle 10g - SQL Commands.md",
+    "Learning/Web Development/HTML/HTML - Tables.md",
+    "1. Do List.md",
+    "Learning/Java/Java Basics/Arrays, Array Lists, Tuples, Sets - Java.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Computer - Computer Spare Parts Shop Microsoft Access Report.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Database Languages.md",
     "1. Life/Swipe Folder/Media Swipe File.md",
-    "Obsidian Management/Media/Images/MS Access/Form - What is Should look like.png",
-    "Obsidian Management/Media/Images/The Odin Project/GitLog1.PNG",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Database and Flat Files.md",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Version 2",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1/Not Good/Computer - Computer Spare Parts Shop Requirements ( Version 1 ).md",
-    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1/Version 1/Computer - Computer Spare Parts Shop Requirements ( Version 1 ).md",
-    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Boolean Algebra.md",
-    "Obsidian Management/Templates/Maths for CS Template.md",
-    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Domain and Range in Set Relation.md",
-    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Sets, Functions and Relations.md",
-    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Logic Proposition ( Logic Gates ).md",
-    "Obsidian Management/Templates/Programming ( UNI ) Template.md",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3 - Question 2.png",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3 - Question 1.png",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions ERD - Week 3- Question 1.png",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Database Questions - Week 3- Question 1.png",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Degree of Relationships - Ternary Degree.png",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Degree of Relationships - Binary Degree.png",
-    "Obsidian Management/Media/Images/University/Database BCNS1103C/Degree of Relationships - Unary Degree.png",
+    "Learning/Programs/Microsoft Access/Microsoft Access ( 2007 ).md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 1 - Database ( 24 June 2024 )/Computer - Computer Spare Parts Shop Requirements.md",
+    "Computer - Computer Spare Parts Shop Requirements ( Version 4 ).md",
+    "University/University Data View ( Level 1 Semester 1 ).md",
+    "Learning/Programs/Oracle 10g",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Work/Assignment 2 - Database ( 29 July 2024 )",
+    "Data View.md",
+    "Excalidraw/Programming Excalidraw Drawings/Python Timer Project.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Normalisation.md",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/2-NF - Break down of Assessment Table ( Applied 2-NF ).png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/2-NF - Break down of Assessment Table.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/1-NF - Not Fully Dependent of Primary Key Example.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/ChatGPT Note - Anomalies in Database.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Ajit's Shitty Note - Slide - Anomalies in Database.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/1NF - Non Key Attributes Dependent on Primary Key ( Applied 1NF ).png",
+    "Java Execute Code Testing.md",
+    "Test.md",
+    "Learning/Python/Python Basics/String Manipulation - Python.md",
+    "Learning/Python/Sorting Algos - Python/Bubble Sort - Python.md",
+    "Untitled 1.md",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Ajit's Shitty Note - Slide: Anomalies in Database.png",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Partial Dependency.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Functional Dependency.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Untitled.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Database Administrator.md",
+    "University/Level 1 Semester 1/Database Design ( BCNS1103C )/Database Notes/Entity Relationship Diagram ( ERD ) and Relationships.md",
+    "Obsidian Management/Templates/Database ( UNI ) Template.md",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/2-NF: Break down of Assessment Table ( Applied 2-NF ).png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/2-NF: Break down of Assessment Table.png",
+    "Obsidian Management/Media/Images/University/Database BCNS1103C/Un-normalised Table Example.png",
+    "Obsidian Management/Media/Images/Oracle 10g",
+    "Obsidian Management/Media/Images/Apex Oracle",
+    "Learning/Programs/Apex Oracle - SQL",
+    "Learning/Programs/Microsoft Access/microsoft-office-access-2007-the-complete-reference-mcgraw-hill.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 7/Permutations and Combination.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 7",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 6",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/New folder",
     "Untitled.canvas",
     "Tree Diagram For Uni ( Files ).canvas"
   ]
