@@ -190,7 +190,10 @@ bindsym $mod+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --
 # Keybinds for Launching Applications
 
 # Terminal ( Alacritty )
-bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec alacritty
+
+# Terminal ( Kitty )
+bindsym $mod+Return exec kitty
 
 # Rofi (a program launcher)
 # opens application window

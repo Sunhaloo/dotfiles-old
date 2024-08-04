@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -100,28 +100,49 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # ALIASES
+
 # System
 # change 'sudo' to 'fucking'
 alias fucking='sudo'
+
+# System ( Arch / Arch Based Distributions )
 # search for applications ---> provide application / package name
-alias pkgsearch='sudo apt search'
+alias pkgsearch='sudo pacman -Ss'
 # installing applications ---> provide application / package name
-alias install='sudo apt-get install'
+alias install='sudo pacman -S'
 # removing and purging applications ---> provide application / package name
-alias remove='sudo apt-get remove --purge'
+alias remove='sudo pacman -R'
 # update the whole system
-alias update='sudo apt update; sudo apt upgrade -y'
+alias update='sudo pacman -Syu'
 # clean system packages
 alias clean='sudo apt autoremove -y; sudo apt autoclean'
+
+# System ( Debian / Debian Based Distributions )
+# search for applications ---> provide application / package name
+# alias pkgsearch='sudo apt search'
+# installing applications ---> provide application / package name
+# alias install='sudo apt-get install'
+# removing and purging applications ---> provide application / package name
+# alias remove='sudo apt-get remove'
+# update the whole system
+# alias update='sudo apt update; sudo apt upgrade -y'
+# clean system packages
+# alias clean='sudo apt autoremove -y; sudo apt autoclean'
+
 # System - eza
 alias ls='eza --no-user --no-time --no-permissions --icons=always'
 alias ls -la='eza -la --no-user --no-time --no-permissions --icons=always'
 alias tree='eza -T --icons=always'
+
 # Applications
 # opening up Neovim
 alias nv='nvim'
 # make opening Python like in Windows
 alias python='python3'
+
+# Tmux
+alias t='tmux'
+
 # Git
 # LazyGit UI
 alias lg="lazygit"
@@ -146,4 +167,9 @@ alias repo-dotfiles='cd ~/GitHub/dotfiles/'
 alias cp_GO='cp -r S.Sunhaloo ~/Obsidian/'
 alias cp_OG='cp -r S.Sunhaloo ~/GitHub/azmaan/'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# System - cd / zoxide
+# zoxide - smarter 'cd'
+eval "$(zoxide init --cmd cd zsh)"
+
+# 'fzf' fuzzy finder
+source <(fzf --zsh)
