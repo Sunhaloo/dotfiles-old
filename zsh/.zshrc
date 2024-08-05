@@ -115,7 +115,7 @@ alias remove='sudo pacman -R'
 # update the whole system
 alias update='sudo pacman -Syu'
 # clean system packages
-alias clean='sudo apt autoremove -y; sudo apt autoclean'
+alias clean='sudo pacman -Rns $(pacman -Qdtq)'
 
 # System ( Debian / Debian Based Distributions )
 # search for applications ---> provide application / package name
