@@ -45,9 +45,13 @@
     // main fonts
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     // font size
-    "editor.fontSize": 14,
+    "editor.fontSize": 18,
     // for ligatures ( trying it for now )
     "editor.fontLigatures": true,
+    // terminal fonts
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    // terminal font size
+    "terminal.integrated.fontSize": 16,
 
     // Vim Motions ( Vim Extension )
 
@@ -106,6 +110,7 @@
     "vim.highlightedyank.enable": true,
 
     // Vim Leader
-    "vim.leader": "<space>"
+    "vim.leader": "<space>",
+    "window.customTitleBarVisibility": "auto"
 
 }
