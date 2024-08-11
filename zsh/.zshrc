@@ -106,6 +106,8 @@ source $ZSH/oh-my-zsh.sh
 alias fucking='sudo'
 
 # System ( Arch / Arch Based Distributions )
+# search for installed applications ---> provide application / package name
+alias pkgsearchI='sudo pacman -Q | grep'
 # search for applications ---> provide application / package name
 alias pkgsearch='sudo pacman -Ss'
 # installing applications ---> provide application / package name
