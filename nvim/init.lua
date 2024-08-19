@@ -54,3 +54,7 @@ print("Sourced Init File")
 
 -- load keymaps file
 require("config.keymaps")
+-- load options file
+require("config.options")
+-- load options file
+require("config.lazy")

@@ -67,17 +67,12 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
--- diagnostic
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end)
-
 -- insert mode
 
 -- go to normal mode from insert mode
 keymap.set("i", "jk", "<ESC>", opts)
 
--- navigation within insert mode
+-- navigation within insert mode ( I am weird )
 keymap.set("i", "<C-h>", "<Left>", opts)
 keymap.set("i", "<C-l>", "<Right>", opts)
 keymap.set("i", "<C-j>", "<Down>", opts)
@@ -85,8 +80,9 @@ keymap.set("i", "<C-k>", "<Up>", opts)
 
 -- visual mode
 
--- removing the annoying paste buffer / register thing
-keymap.set("x", "p", [["_dP]])
+-- paste over currently selected text without yanking it
+keymap.set("v", "p", [["_dp]])
+keymap.set("v", "p", [["_dP]])
 
 -- go to normal mode from visual mode
 keymap.set("v", "jk", "<ESC>", opts)
