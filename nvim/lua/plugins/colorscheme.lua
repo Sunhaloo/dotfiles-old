@@ -1,15 +1,20 @@
 return {
 
     {
-      "craftzdog/solarized-osaka.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {},
-    },
-
-    {
       "olimorris/onedarkpro.nvim",
-      priority = 1000, -- Ensure it loads first
+      -- name to use in `init.lua` file
+      name = "onedark",
+      enabled = true,
+      priority = 1000,
+      config = function()
+          require("onedarkpro").setup({
+              options = {
+                  cursorline = false,
+                  transparency = true,
+                  terminal_colors = true,
+              }
+          })
+      end,
     }
 
 }

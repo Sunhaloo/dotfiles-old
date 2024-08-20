@@ -22,14 +22,11 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Setup lazy.nvim
-require("lazy").setup({
+require("lazy").setup({ import = "plugins" }, {
 
-  spec = {
-    -- import your plugins
-    -- { import = "lazyvim.plugins" },
-    opts = {
-        colourscheme = "solarized-osaka"
-    },
+  install = {
+        missing = true,
+        colorscheme = { "onedark" }
   },
 
   -- Configure any other settings here. See the documentation for more details.

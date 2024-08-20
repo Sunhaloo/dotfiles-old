@@ -56,5 +56,9 @@ print("Sourced Init File")
 require("config.keymaps")
 -- load options file
 require("config.options")
--- load options file
+-- load lazy file
 require("config.lazy")
+-- for the moment I will configure the theme like this
+vim.cmd.colorscheme("onedark")
+-- load auto-commands file
+require("config.autocmd")
