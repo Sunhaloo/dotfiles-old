@@ -98,6 +98,7 @@ keymap.set("v", "p", '"_dP', opts)
 keymap.set("v", "<", "<gv", opts)
 keymap.set("v", ">", ">gv", opts)
 
+
 -- telescope
 keymap.set("n", "<leader>ff", ":Telescope find_files<cr>")
 keymap.set("n", "<leader>fg", ":Telescope git_files<cr>")
