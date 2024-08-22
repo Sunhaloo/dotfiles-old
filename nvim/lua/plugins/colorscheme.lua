@@ -1,20 +1,27 @@
 return {
 
     {
-      "olimorris/onedarkpro.nvim",
-      -- name to use in `init.lua` file
-      name = "onedark",
-      enabled = true,
-      priority = 1000,
-      config = function()
-          require("onedarkpro").setup({
-              options = {
-                  cursorline = false,
-                  transparency = true,
-                  terminal_colors = true,
-              }
-          })
-      end,
+        'navarasu/onedark.nvim',
+        priority = 1000,
+        config = function()
+            require('onedark').setup({
+                style = 'darker',
+                transparent = true,
+                term_colors = true,
+                code_style = {
+                    comments = 'italic',
+                    keywords = 'bold',
+                    functions = 'underline',
+                    strings = 'none',
+                    variables = 'none'
+                },
+                diagnostics = {
+                    darker = true,
+                    undercurl = true
+                },
+
+            })
+        end,
     }
 
 }
