@@ -166,7 +166,7 @@ gaps inner 6
 gaps outer 2
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale --zoom fill ~/Wallpapers/oceandrone.jpg
+exec --no-startup-id feh --bg-scale --zoom fill ~/Wallpapers/od_hills.png
 
 # Colours
 
@@ -179,11 +179,42 @@ exec --no-startup-id feh --bg-scale --zoom fill ~/Wallpapers/oceandrone.jpg
 # client.placeholder      #282c34 #282c34 #abb2bf #282c34   #282c34
 # client.background       #c8ccd4
 
-# Tokyo Night
-# class                  border  backgr. text    indicator child_border
-client.focused           #343b58 #343b58 #c0caf5 #343b58   #343b58
-client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
-client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
+# Catppuccin Theme
+# colours
+set $rosewater #f4dbd6
+set $flamingo #f0c6c6
+set $pink #f5bde6
+set $mauve #c6a0f6
+set $red #ed8796
+set $maroon #ee99a0
+set $peach #f5a97f
+set $yellow #eed49f
+set $green #a6da95
+set $teal #8bd5ca
+set $sky #91d7e3
+set $sapphire #7dc4e4
+set $blue #8aadf4
+set $lavender #b7bdf8
+set $text #cad3f5
+set $subtext1 #b8c0e0
+set $subtext0 #a5adcb
+set $overlay2 #939ab7
+set $overlay1 #8087a2
+set $overlay0 #6e738d
+set $surface2 #5b6078
+set $surface1 #494d64
+set $surface0 #363a4f
+set $base #24273a
+set $mantle #1e2030
+set $crust #181926
+
+# class                   border  backgr. text    indicator child_border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 # Picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf &

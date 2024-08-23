@@ -9,4 +9,4 @@ configuration{
 
 }
 
-@theme "~/.config/rofi/themes/tokyonight.rasi"
+@theme "~/.config/rofi/themes/catppuccin_macchiato.rasi"

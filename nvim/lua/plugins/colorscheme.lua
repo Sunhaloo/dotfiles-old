@@ -23,6 +23,7 @@ return {
             })
         end,
     },
+
     {
       "folke/tokyonight.nvim",
       lazy = false,
@@ -32,6 +33,22 @@ return {
               style = "storm",
           })
       end,
+    },
+
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        config = function()
+            require("catppuccin").setup({
+                flavour = "macchiato",
+                background = {
+                    light = "latte",
+                    dark = "macchiato",
+                },
+                transparent_background = true,
+            })
+        end,
     }
 
 }
