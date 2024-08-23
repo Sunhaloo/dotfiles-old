@@ -23,22 +23,15 @@ return {
             })
         end,
     },
-
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            require("rose-pine").setup({
-                variant = "main",
-                dark_variant = "main",
-                dim_inactive_windows = false,
-                styles = {
-                    bold = true,
-                    italic = true,
-                    transparency = true,
-                }
-            })
-        end,
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      config = function()
+          require("tokyonight").setup({
+              style = "storm",
+          })
+      end,
     }
 
 }
