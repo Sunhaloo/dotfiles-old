@@ -59,6 +59,6 @@ require("config.options")
 -- load lazy file
 require("config.lazy")
 -- for the moment I will configure the theme like this
-vim.cmd.colorscheme("onedark")
+vim.cmd.colorscheme("rose-pine")
 -- load auto-commands file
 require("config.autocmd")
