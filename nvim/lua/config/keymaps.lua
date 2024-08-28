@@ -7,7 +7,7 @@ local keymap = vim.keymap
 -- `silent` tells Neovim to display the command or not to display the command
 	-- if set to `true` will silent the commands
 	-- if set to `false` will not silent the commands
-local opts = { noremap = true, silent = false }
+local opts = { noremap = true, silent = true }
 
 -- leader keys ---> set to `<Space>`
 -- overall / global leader key takes control over "most" files
@@ -22,30 +22,30 @@ keymap.set("n", "<C-i>", "<C-i>", opts)
 -- NORMAL Mode
 
 -- copy to system clipboard
-keymap.set({"n", "v"}, "<leader>y", [["+y]])
+keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
 -- paste from system clipboard
-keymap.set({"n", "v"}, "<leader>p", [["+p]])
+keymap.set({"n", "v"}, "<leader>p", [["+p]], { desc = "Copy FROM System Clipboard" })
 
 -- increment / decrement numbers
 
 -- increment using '+' character
-keymap.set("n", "+", "<C-a>")
+keymap.set("n", "+", "<C-a>", { desc = "Increment Number by 1"})
 -- decrement using '-' character
-keymap.set("n", "-", "<C-x>")
+keymap.set("n", "-", "<C-x>", { desc = "Decrement Number by 1"})
 
 -- delete a word backwards
 keymap.set("n", "dw", "vb_d")
 
 -- select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All"})
 
 -- open lex
-keymap.set("n", "lx", ":Lex<Return>")
+keymap.set("n", "lx", ":Lex<Return>", { desc = "Lex" })
 
 -- tabs
 
 -- new tab with `te`
-keymap.set("n", "te", ":tabedit")
+keymap.set("n", "te", ":tabedit", { desc = "Open New Tab" })
 -- switch to next tab with `<Tab>`
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 -- switch to previous tab with `Shift+<Tab>`
@@ -98,9 +98,15 @@ keymap.set("v", "p", '"_dP', opts)
 keymap.set("v", "<", "<gv", opts)
 keymap.set("v", ">", ">gv", opts)
 
+-- lazy plugin manager
+keymap.set("n", "<leader>L", ":Lazy<CR>", { desc = "Lazy Plugin Manager" })
+
+-- neotree file browser
+keymap.set("n", "<leader>e", ":Neotree toggle left<CR>", { desc = "File Explorer ( Left )" })
+keymap.set("n", "<leader>E", ":Neotree toggle float<CR>", { desc = "File Explorer ( Float )" })
 
 -- telescope
-keymap.set("n", "<leader>ff", ":Telescope find_files<cr>")
-keymap.set("n", "<leader>fg", ":Telescope git_files<cr>")
-keymap.set("n", "<leader>fl", ":Telescope live_grep<cr>")
-keymap.set("n", "<leader>fo", ":Telescope oldfiles<cr>")
+keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Telescope Find Files"})
+keymap.set("n", "<leader>fg", ":Telescope git_files<CR>", { desc = "Telescope Find Git Files"})
+keymap.set("n", "<leader>fl", ":Telescope live_grep<CR>", { desc = "Telescope Live Grep"})
+keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Telescope Buffer"})

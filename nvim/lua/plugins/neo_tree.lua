@@ -8,10 +8,6 @@ return {
           "MunifTanjim/nui.nvim",
         },
         event = "VeryLazy",
-        keys = {
-            {"<leader>e", ":Neotree toggle left<CR>", silent = true, desc="FileExplorer Left"},
-            {"<leader>E", ":Neotree toggle float<CR>", silent = true, desc="FileExplorer Float"}
-        },
         config = function()
             require("neo-tree").setup({
                 popup_border_style = "rounded",
