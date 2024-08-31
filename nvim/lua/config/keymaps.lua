@@ -110,3 +110,6 @@ keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Telescope F
 keymap.set("n", "<leader>fg", ":Telescope git_files<CR>", { desc = "Telescope Find Git Files"})
 keymap.set("n", "<leader>fl", ":Telescope live_grep<CR>", { desc = "Telescope Live Grep"})
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Telescope Buffer"})
+
+-- zenmode
+keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
