@@ -50,7 +50,7 @@ print("Sourced Init File")
 	Hence, what I am trying to say is that we need to LOAD the `keymaps.lua` file file and then we will not have any problems
 	with the leader key ( `mapleader` and `localmapleader` )
 	
---]]--
+]]--
 
 -- load keymaps file
 require("config.keymaps")

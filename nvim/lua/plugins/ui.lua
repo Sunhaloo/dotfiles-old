@@ -32,5 +32,48 @@ return {
           desc = "Buffer Local Keymaps (which-key)",
         },
       },
-    }
+    },
+    -- zen mode plugin
+    {
+      "folke/zen-mode.nvim",
+      opts = {
+          window = {
+              backdrop = 0.30,
+              width = 120,
+              height = 1,
+              -- Neovim built-in UI options
+              options = {
+                  relativenumber = true,
+                  cursorline = false,
+                  cursorcolumn = false
+              },
+          },
+          plugins = {
+              -- futher options
+              options = {
+                  -- enabled the 'futher options'
+                  enabled = true,
+                  -- removes the status line
+                  laststatus = 0,
+                  -- removes the command we are doing
+                  -- command like `diw`, `ciw` and more will now be shown
+                  showcmd = false
+              },
+              -- remove status line from tmux
+              tmux = { enabled = true },
+              -- terminal settings
+              kitty = {
+                  enabled = true,
+                  font = "+4",
+              },
+          },
+      }
+    },
+    -- bufferline plugin
+    {
+        'akinsho/bufferline.nvim',
+        event = "VeryLazy",
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    },
 }

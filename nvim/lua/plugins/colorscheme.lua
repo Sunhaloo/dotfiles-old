@@ -1,5 +1,6 @@
 return {
-
+    -- beloved one dark theme
+    -- that I am not using
     {
         'navarasu/onedark.nvim',
         priority = 1000,
@@ -23,18 +24,7 @@ return {
             })
         end,
     },
-
-    {
-      "folke/tokyonight.nvim",
-      lazy = false,
-      priority = 1000,
-      config = function()
-          require("tokyonight").setup({
-              style = "storm",
-          })
-      end,
-    },
-
+    -- catppussin theme ---> say it like how ThePrimeAgan says it
     {
         "catppuccin/nvim",
         name = "catppuccin",
@@ -46,7 +36,7 @@ return {
                     light = "latte",
                     dark = "macchiato",
                 },
-                transparent_background = true,
+                transparent_background = false,
             })
         end,
     }
