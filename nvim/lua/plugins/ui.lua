@@ -74,6 +74,40 @@ return {
         'akinsho/bufferline.nvim',
         event = "VeryLazy",
         version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons'
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        keys = {
+            { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+            { "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
+        },
+        opts = function()
+            local bufferline = require('bufferline')
+            return {
+                options = {
+                    mode = "tabs",
+                    numbers = "none",
+                    separator_style = "slant",
+                    show_buffer_close_icons = true,
+                    show_close_icon = true,
+                    -- Combining presets to remove italics but keep bold
+                    style_preset = {
+                        bufferline.style_preset.no_italic,
+                        bufferline.style_preset.bold,
+                    },
+                },
+            }
+        end,
+    },
+    -- lualine / statusline
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            require("lualine").setup({
+                options = {
+                    -- sets the theme to whatever I am currently using
+                    theme = "auto",
+                },
+            })
+        end,
     },
 }
