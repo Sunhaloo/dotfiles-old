@@ -56,6 +56,7 @@ keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
 -- move window ( from neovim to neovim )
+-- NOTE: currently using the vim-tmux-navigator plugin ==> makes it so much easier
 keymap.set("n", "sh", "<C-w>h")
 keymap.set("n", "sk", "<C-w>k")
 keymap.set("n", "sj", "<C-w>j")
@@ -87,7 +88,7 @@ keymap.set("v", "p", [["_dP]])
 -- go to normal mode from visual mode
 keymap.set("v", "jk", "<ESC>", opts)
 
--- move lines of text
+-- move lines of text ( up / down ) with visual mode
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 
@@ -110,6 +111,7 @@ keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Telescope F
 keymap.set("n", "<leader>fg", ":Telescope git_files<CR>", { desc = "Telescope Find Git Files"})
 keymap.set("n", "<leader>fl", ":Telescope live_grep<CR>", { desc = "Telescope Live Grep"})
 keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Telescope Buffer"})
+keymap.set("n", "<leader>fo", ":Telescope oldfiles<CR>", { desc = "Telescope Old Files"})
 
--- zenmode
+-- toggle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
