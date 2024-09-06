@@ -158,4 +158,28 @@ return {
             }
         },
     },
+    -- todo-comments by mah BOI folke
+    {
+        "folke/todo-comments.nvim",
+        -- lazy load on these 2 events
+        -- when opening already existing file / a new file
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+            local todo_comments = require("todo-comments")
+            -- create a variable ( similar to keymaps.lua file )
+            local keymap = vim.keymap -- for conciseness
+
+            -- jump to next todo-comment
+            keymap.set("n", "]t", function()
+              todo_comments.jump_next()
+            end, { desc = "Next todo comment" })
+            -- jump to previous todo-comment
+            keymap.set("n", "[t", function()
+              todo_comments.jump_prev()
+            end, { desc = "Previous todo comment" })
+            -- call the setup function
+            todo_comments.setup()
+        end,
+    }
 }

@@ -40,16 +40,18 @@ keymap.set("n", "dw", "vb_d")
 keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All"})
 
 -- open lex
-keymap.set("n", "lx", ":Lex<Return>", { desc = "Lex" })
+keymap.set("n", "lx", "<cmd>Lex<Return>", { desc = "Lex" })
 
 -- tabs
 
 -- new tab with `te`
-keymap.set("n", "te", ":tabedit", { desc = "Open New Tab" })
+keymap.set("n", "te", "<cmd>tabedit<CR>", { desc = "Open New Tab" })
 -- switch to next tab with `<Tab>`
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<tab>", "<cmd>tabnext<Return>", opts)
 -- switch to previous tab with `Shift+<Tab>`
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "<s-tab>", "<cmd>tabprev<Return>", opts)
+-- save and close tab with <leader>X
+keymap.set("n", "<leader>X", ":w | tabclose<CR>", { desc = "Save and Close Tab" })
 
 -- split window ( neovim )
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -107,11 +109,12 @@ keymap.set("n", "<leader>e", ":Neotree toggle left<CR>", { desc = "File Explorer
 keymap.set("n", "<leader>E", ":Neotree toggle float<CR>", { desc = "File Explorer ( Float )" })
 
 -- telescope
-keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Telescope Find Files"})
-keymap.set("n", "<leader>fg", ":Telescope git_files<CR>", { desc = "Telescope Find Git Files"})
-keymap.set("n", "<leader>fl", ":Telescope live_grep<CR>", { desc = "Telescope Live Grep"})
-keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Telescope Buffer"})
-keymap.set("n", "<leader>fo", ":Telescope oldfiles<CR>", { desc = "Telescope Old Files"})
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Telescope Find Files"})
+keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>", { desc = "Telescope Find Git Files"})
+keymap.set("n", "<leader>fl", "<cmd>Telescope live_grep<CR>", { desc = "Telescope Live Grep"})
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope Buffer"})
+keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope Old Files"})
+keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find ToDo Comments"})
 
 -- toggle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
