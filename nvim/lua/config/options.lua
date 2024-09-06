@@ -12,8 +12,7 @@ opt.fileencoding = "utf-8" -- Sets the encoding of the file
 
 -- opt.ignorecase = false -- Search results needs to be case sensitive
 opt.ignorecase = true -- Search results does NOT needs to be case sensitive
-
-opt.smartcase = true -- Affects the behaviour of searching and pattern ( related to case sensitive stuff )
+opt.smartcase = false -- Affects the behaviour of searching and pattern ( related to case sensitive stuff )
 opt.smartindent = true -- Automatically adjust the indentation of the line
 opt.swapfile = false -- Does NOT create a swap file
 opt.timeoutlen = 1000 -- Time to wait for a mapped sequence to complete ( in ms - related to keymaps )
