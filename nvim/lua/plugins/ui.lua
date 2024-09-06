@@ -102,12 +102,60 @@ return {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
+            -- create variable to configure lazy pending updates count
+            local lazy_status = require("lazy.status")
             require("lualine").setup({
                 options = {
                     -- sets the theme to whatever I am currently using
                     theme = "auto",
                 },
+                -- see the "sections" with `:h lualine`
+                sections = {
+                    lualine_x = {
+                        {
+                            lazy_status.updates,
+                            cond = lazy_status.has_updates,
+                        },
+                        -- removing the encoding type
+                        -- { "encoding" },
+                        -- shows the file format ( penguin logo )
+                        { "fileformat" },
+                        -- shows the extension ( example: `.py`, `.c`, `.txt` ) of the file
+                        { "filetype" },
+                    },
+                }
             })
         end,
+    },
+    -- for more asthetic visual when renaming file and more
+    {
+      'stevearc/dressing.nvim',
+      event = "VeryLazy",
+      config = function()
+          require("dressing").setup({
+              input = {
+                  -- enable the plugin
+                  enabled = true,
+                  title_pos = "center",
+                  start_in_insert = true,
+                  border = "rounder",
+                  relative = "cursor",
+              }
+          })
+      end,
+    },
+    -- indent guide / indent blank lines plugin
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        -- lazy load on these 2 events
+        -- when opening already existing file / a new file
+        event = { "BufReadPre", "BufNewFile" },
+        main = "ibl",
+        opts = {
+            indent = {
+                -- specify a character to use for the indentation
+                char = "¦",
+            }
+        },
     },
 }
