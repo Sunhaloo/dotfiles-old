@@ -31,6 +31,7 @@ return {
                     "pyright",
                     "html",
                     "lua_ls",
+                    "marksman",
                 },
             })
         end,

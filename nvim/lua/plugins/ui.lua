@@ -181,5 +181,7 @@ return {
             -- call the setup function
             todo_comments.setup()
         end,
-    }
+    },
+    -- mini-hi-patterns ( highlights hex / hsl colour codes )
+    { 'echasnovski/mini.hipatterns', version = false },
 }
