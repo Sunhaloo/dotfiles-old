@@ -27,6 +27,7 @@ return {
                 -- list of LSPs for mason to install
                 -- ensures that these are always installed
                 ensure_installed = {
+                    "clangd",
                     "pyright",
                     "html",
                     "lua_ls",

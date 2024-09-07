@@ -62,7 +62,7 @@ return {
             -- sources for autocompletion
             sources = {
                 -- the order in which we "order" them is important
-                -- { name = "nvim_lsp" },
+                { name = "nvim_lsp" },
                 -- snippets
                 { name = "luasnip" },
                 -- words from current buffer
