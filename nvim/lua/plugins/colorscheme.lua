@@ -36,7 +36,7 @@ return {
                     light = "latte",
                     dark = "macchiato",
                 },
-                transparent_background = false,
+                transparent_background = true,
             })
         end,
     }
