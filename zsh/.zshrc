@@ -4,6 +4,9 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Path of Binaries ( I think )
+export PATH=$PATH:/home/azmaan/.local/bin
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -164,14 +167,23 @@ alias gl='git log'
 alias gp='git pull'
 # Obsidian - GitHub repo
 alias repo-azmaan='cd ~/GitHub/azmaan/'
+alias repo-obsidian='cd ~/GitHub/obsidian/'
 # GitHub repo - dotfiles
 alias repo-dotfiles='cd ~/GitHub/dotfiles/'
-alias cp_GO='cp -r S.Sunhaloo ~/Obsidian/'
-alias cp_OG='cp -r S.Sunhaloo ~/GitHub/azmaan/'
+alias cp_GO='cp -r S.Sunhaloo/ Question - Problems - Solutions/ ~/Obsidian/'
+alias cp_OG='cp -r S.Sunhaloo ~/GitHub/obsidian/'
 
 # System - cd / zoxide
+
 # zoxide - smarter 'cd'
 eval "$(zoxide init --cmd cd zsh)"
 
 # 'fzf' fuzzy finder
 source <(fzf --zsh)
+
+# oh-my-posh prompt
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.toml)"
+
+# starship prompt
+# export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+# eval "$(starship init zsh)"
