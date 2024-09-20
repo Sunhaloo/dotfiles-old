@@ -85,7 +85,7 @@ return {
                 options = {
                     mode = "tabs",
                     numbers = "none",
-                    separator_style = "slant",
+                    separator_style = "thin",
                     show_buffer_close_icons = true,
                     show_close_icon = true,
                     -- Combining presets to remove italics but keep bold

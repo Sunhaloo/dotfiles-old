@@ -36,9 +36,20 @@ return {
                     light = "latte",
                     dark = "macchiato",
                 },
+                -- set the background to transparent
                 transparent_background = true,
             })
         end,
-    }
-
+    },
+    {
+      "craftzdog/solarized-osaka.nvim",
+      lazy = false,
+      priority = 1000,
+      config =  function()
+          require("solarized-osaka").setup({
+              -- set the background to transparent
+              transparent = true,
+          })
+       end,
+    },
 }

@@ -9,4 +9,4 @@ configuration{
 
 }
 
-@theme "~/.config/rofi/themes/catppuccin_macchiato.rasi"
+@theme "~/.config/rofi/themes/solarized.rasi"

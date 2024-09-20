@@ -59,6 +59,6 @@ require("config.options")
 -- load lazy file
 require("config.lazy")
 -- for the moment I will configure the theme like this
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("solarized-osaka")
 -- load auto-commands file
 require("config.autocmd")
