@@ -44,6 +44,7 @@ print("Sourced Init File")
 	I am currently using Linux ( I used Arch BTW ---> on my desktop ); I got the following path then I ran that ^ command
 
 	```console
+    # output
 	/home/azmaan/.config/nvim
 	```
 
@@ -52,13 +53,14 @@ print("Sourced Init File")
 	
 ]]--
 
+-- in short the **order** or loading the configuration files are important
 -- load keymaps file
 require("config.keymaps")
 -- load options file
 require("config.options")
 -- load lazy file
 require("config.lazy")
--- for the moment I will configure the theme like this
+-- configure the theme
 vim.cmd.colorscheme("solarized-osaka")
 -- load auto-commands file
 require("config.autocmd")
