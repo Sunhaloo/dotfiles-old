@@ -182,6 +182,24 @@ return {
             todo_comments.setup()
         end,
     },
-    -- mini-hi-patterns ( highlights hex / hsl colour codes )
-    { 'echasnovski/mini.hipatterns', version = false },
+    -- BUG: does not highlight the hex colours!!!
+    -- in addition, mini-hipatterns does not work!
+    {
+        "norcalli/nvim-colorizer.lua",
+    },
+    -- caret animation
+    {
+        "echasnovski/mini.animate",
+        version = '*',
+        event = "VeryLazy",
+        config = function()
+            require("mini.animate").setup({
+                -- cursor animation
+                cursor = {
+                    -- enable the animation
+                    enable = true,
+                }
+            })
+        end,
+    },
 }
