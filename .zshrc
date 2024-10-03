@@ -81,7 +81,7 @@ mvto-obsidian() {
 }
 # create a function to move github folders to obsidian folder using bash script
 mvto-github() {
-    sh ~/move_Obsidian_Github.sh.sh
+    sh ~/move_Obsidian_Github.sh
 }
 
 # ALIASES
@@ -91,8 +91,12 @@ mvto-github() {
 alias fucking='sudo'
 
 # System ( Arch / Arch Based Distributions )
+# list all the packages ( yay )
+alias pkglist-yay='sudo pacman -Qm'
+# list all the packages ( pacman )
+alias pkglist-all='sudo pacman -Q'
 # search for installed applications ---> provide application / package name
-alias pkgsearchI='sudo pacman -Q | grep'
+alias pkglist-installed='sudo pacman -Q | grep'
 # search for applications ---> provide application / package name
 alias pkgsearch='sudo pacman -Ss'
 # installing applications ---> provide application / package name
