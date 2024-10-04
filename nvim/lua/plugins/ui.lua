@@ -203,4 +203,16 @@ return {
             })
         end,
     },
+    -- noice ( the thing that places the command line in the center )
+    {
+      "folke/noice.nvim",
+      event = "VeryLazy",
+      opts = {
+        -- add any options here
+      },
+      dependencies = {
+        -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+        "MunifTanjim/nui.nvim",
+        }
+    },
 }

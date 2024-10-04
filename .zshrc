@@ -75,6 +75,17 @@ zsh_src() {
     source ~/.zshrc
 }
 
+# create a function to toggle the opacity of kitty
+toggle_kitty_background() {
+  sh ~/.config/kitty/background_opacity.sh
+}
+
+# create a function to change profile of kitty
+change_kitty_profile() {
+  chmod +x ~/.config/kitty/change_profile.sh
+  sh ~/.config/kitty/change_profile.sh
+}
+
 # create a function to move obsidian folders to github folder using bash script
 mvto-obsidian() {
     sh ~/move_GitHub_Obsidian.sh
@@ -154,6 +165,8 @@ alias gp='git pull'
 # Obsidian - GitHub repo
 alias repo-azmaan='cd ~/GitHub/azmaan/'
 alias repo-obsidian='cd ~/GitHub/obsidian/'
+# GitHub repo - dotfiles
+alias repo-dotfiles='cd ~/GitHub/dotfiles/'
 alias cp_GO='cp -r S.Sunhaloo/ Question - Problems - Solutions/ ~/Obsidian/'
 alias cp_OG='cp -r S.Sunhaloo ~/GitHub/obsidian/'
 
