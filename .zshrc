@@ -154,8 +154,6 @@ alias gp='git pull'
 # Obsidian - GitHub repo
 alias repo-azmaan='cd ~/GitHub/azmaan/'
 alias repo-obsidian='cd ~/GitHub/obsidian/'
-# GitHub repo - dotfiles
-alias repo-dotfiles='cd ~/GitHub/dotfiles/'
 alias cp_GO='cp -r S.Sunhaloo/ Question - Problems - Solutions/ ~/Obsidian/'
 alias cp_OG='cp -r S.Sunhaloo ~/GitHub/obsidian/'
 
