@@ -18,17 +18,15 @@ background_blur 0
 
 # Font Customisation
 # font family
-font_family      family="ZedMono Nerd Font Mono"
 # font_family      family="JetBrainsMono Nerd Font"
 # font_family      family="ZedMono Nerd Font Mono"
 # font_family      family="PlemolJP Console NF"
 # font_family      family="Monaspace Radon"
 # font_family      family="Monaco Nerd Font Mono"
 # font_family      family="Hack Nerd Font Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# font size
+# bold_font        auto
+# italic_font      auto
+# bold_italic_font auto
 font_size 15.0
 # ligatures ( let's test out ligatures )
 disable_ligatures true
@@ -54,7 +52,7 @@ underline_hyperlinks hover
 # caret shape ( focused )
 shell_integration no-cursor
 # cursor shape
-cursor_shape beam
+cursor_shape block
 # caret shape ( unfocused )
 cursor_shape_unfocused hollow
 # caret blinking ( disable = 0 | system default = -1 )

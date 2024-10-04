@@ -198,6 +198,7 @@ return {
                 cursor = {
                     -- enable the animation
                     enable = true,
+                    timing = require('mini.animate').gen_timing.linear({ duration = 100, unit = 'total' }),
                 }
             })
         end,
