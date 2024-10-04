@@ -122,7 +122,7 @@ alias clean='sudo pacman -Rns $(pacman -Qdtq)'
 
 # System - eza
 alias ls='eza --no-user --no-time --no-permissions --icons=always'
-alias ls -la='eza -la --no-user --no-time --no-permissions --icons=always'
+alias ll='eza -la --no-user --no-time --no-permissions --icons=always'
 alias tree='eza -T --icons=always'
 
 # Applications

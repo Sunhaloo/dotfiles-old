@@ -35,3 +35,10 @@ api.nvim_create_autocmd(
     end,
   }
 )
+
+-- set caret to "bar / beam" after exiting neovim
+vim.api.nvim_create_autocmd("VimLeave", {
+    group = group,
+    pattern = "*",
+    command = "set guicursor=a:ver25"
+})

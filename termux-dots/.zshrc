@@ -145,7 +145,7 @@ eval "$(zoxide init --cmd cd zsh)"
 source <(fzf --zsh)
 
 # oh-my-posh prompt
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.toml)"
 
 # starship prompt
 # export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
