@@ -61,6 +61,7 @@ require("config.options")
 -- load lazy file
 require("config.lazy")
 -- configure the theme
-vim.cmd.colorscheme("solarized-osaka")
+-- vim.cmd.colorscheme("solarized-osaka")
+vim.cmd.colorscheme("onedark")
 -- load auto-commands file
 require("config.autocmd")
