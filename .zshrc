@@ -75,15 +75,9 @@ zsh_src() {
     source ~/.zshrc
 }
 
-# create a function to toggle the opacity of kitty
-toggle_kitty_background() {
-  sh ~/.config/kitty/background_opacity.sh
-}
-
 # create a function to change profile of kitty
 change_kitty_profile() {
-  chmod +x ~/.config/kitty/change_profile.sh
-  sh ~/.config/kitty/change_profile.sh
+  sh ~/.config/kitty/profile.sh
 }
 
 # create a function to move obsidian folders to github folder using bash script
