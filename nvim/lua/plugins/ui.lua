@@ -182,10 +182,14 @@ return {
             todo_comments.setup()
         end,
     },
-    -- BUG: does not highlight the hex colours!!!
-    -- in addition, mini-hipatterns does not work!
+    -- well, colorizer
     {
-        "norcalli/nvim-colorizer.lua",
+        'echasnovski/mini.hipatterns',
+        version = false,
+        config = function()
+            require("mini.hipatterns").setup()
+        end
+
     },
     -- caret animation
     {

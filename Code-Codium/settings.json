@@ -18,10 +18,6 @@
     "window.zoomLevel": 0,
     // change the zoom level with mouse wheel
     "editor.mouseWheelZoom": true,
-
-    // Appearance Customisation
-    // global theme for VS Code / Codium
-    "workbench.colorTheme": "One Dark Pro",
     // icon theme
     "workbench.iconTheme": "material-icon-theme",
     // changes colour of some icon themes
@@ -43,15 +39,15 @@
     
     // Fonts
     // main fonts
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontFamily": "Iosevka Nerd Font",
     // font size
-    "editor.fontSize": 18,
+    "editor.fontSize": 20,
     // for ligatures ( trying it for now )
     "editor.fontLigatures": true,
     // terminal fonts
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontFamily": "Iosevka Nerd Font",
     // terminal font size
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 18,
 
     // Vim Motions ( Vim Extension )
 
@@ -111,6 +107,7 @@
 
     // Vim Leader
     "vim.leader": "<space>",
-    "window.customTitleBarVisibility": "auto"
+    "window.customTitleBarVisibility": "auto",
+    "workbench.colorTheme": "Solarized Osaka"
 
 }

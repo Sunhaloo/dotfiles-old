@@ -9,4 +9,4 @@ configuration{
 
 }
 
-@theme "~/.config/rofi/themes/solarized.rasi"
+@theme "~/.config/rofi/themes/one_dark.rasi"
