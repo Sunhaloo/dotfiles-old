@@ -118,3 +118,7 @@ keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find ToDo Comm
 
 -- toggle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
+
+-- markdown preview
+keymap.set("n", "<leader>Mp", ":MarkdownPreview<CR>", { desc = "Markdown Preview Start" })
+keymap.set("n", "<leader>Mps", ":MarkdownPreviewStop<CR>", { desc = "Markdown Preview Stop" })
