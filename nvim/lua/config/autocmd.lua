@@ -23,7 +23,7 @@ api.nvim_create_autocmd(
   { pattern = "*", command = "set nocursorline", group = cursorGrp }
 )
 
--- Enable spell checking for certain file types
+-- enable spell checking for certain file types
 api.nvim_create_autocmd(
   { "BufRead", "BufNewFile" },
   -- { pattern = { "*.txt", "*.md", "*.tex" }, command = [[setlocal spell<cr> setlocal spelllang=en,de<cr>]] }
@@ -37,8 +37,9 @@ api.nvim_create_autocmd(
 )
 
 -- Set caret / cursor to "beam / bar" after exiting neovim
-vim.api.nvim_create_autocmd("VimLeave", {
-    group = group,
-    pattern = "*",
-    command = "set guicursor=a:ver25"
-})
+-- NOTE: enable if you are using beam / bar caret ( cursor )
+-- vim.api.nvim_create_autocmd("VimLeave", {
+--     group = group,
+--     pattern = "*",
+--     command = "set guicursor=a:ver25"
+-- })

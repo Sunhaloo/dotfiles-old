@@ -1,11 +1,11 @@
 return {
     -- beloved one dark theme
-    -- that I am not using
     {
         'navarasu/onedark.nvim',
         priority = 1000,
         config = function()
             require('onedark').setup({
+                -- style set to the darker variant
                 style = 'darker',
                 transparent = true,
                 term_colors = true,
@@ -24,6 +24,11 @@ return {
             })
         end,
     },
+    -- one dark theme that has one light also
+    -- {
+    --   "olimorris/onedarkpro.nvim",
+    --   priority = 1000, -- Ensure it loads first
+    -- },
     -- catppussin theme ---> say it like how ThePrimeAgan says it
     {
         "catppuccin/nvim",

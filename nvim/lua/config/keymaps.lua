@@ -109,12 +109,14 @@ keymap.set("n", "<leader>e", ":Neotree toggle left<CR>", { desc = "File Explorer
 keymap.set("n", "<leader>E", ":Neotree toggle float<CR>", { desc = "File Explorer ( Float )" })
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Telescope Find Files"})
-keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>", { desc = "Telescope Find Git Files"})
-keymap.set("n", "<leader>fl", "<cmd>Telescope live_grep<CR>", { desc = "Telescope Live Grep"})
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope Buffer"})
-keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope Old Files"})
-keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find ToDo Comments"})
+keymap.set("n", "<leader>T", "<cmd>Telescope<CR>", { desc = "Telescope" })
+keymap.set("n", "<leader>th", "<cmd>Telescope colorscheme<CR>", { desc = "Change Colorscheme" })
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Telescope Find Files" })
+keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>", { desc = "Telescope Find Git Files" })
+keymap.set("n", "<leader>fl", "<cmd>Telescope live_grep<CR>", { desc = "Telescope Live Grep" })
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope Buffer" })
+keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope Old Files" })
+keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find ToDo Comments" })
 
 -- toggle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
