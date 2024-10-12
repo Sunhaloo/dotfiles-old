@@ -46,6 +46,7 @@ return {
             })
         end,
     },
+    -- the goat @devaslife theme
     {
       "craftzdog/solarized-osaka.nvim",
       lazy = false,
@@ -56,5 +57,31 @@ return {
               transparent = true,
           })
        end,
+    },
+    -- eldritch theme
+    {
+      "eldritch-theme/eldritch.nvim",
+      lazy = false,
+      priority = 1000,
+      config = function()
+          require("eldritch").setup({
+              terminal_colors = true,
+              transparent = true,
+          })
+      end,
+    },
+    -- cyberdream theme
+    {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require("cyberdream").setup({
+            terminal_colors = true,
+            transparent = true,
+            italic_comments = true,
+            borderless_telescope = true,
+        })
+    end,
     },
 }
