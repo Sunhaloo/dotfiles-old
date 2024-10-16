@@ -7,7 +7,9 @@ return {
             require('onedark').setup({
                 -- style set to the darker variant
                 style = 'darker',
+                -- style = 'light',
                 transparent = true,
+                -- transparent = false,
                 term_colors = true,
                 code_style = {
                     comments = 'italic',

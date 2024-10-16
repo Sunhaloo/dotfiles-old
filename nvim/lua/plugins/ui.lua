@@ -108,22 +108,38 @@ return {
                 options = {
                     -- sets the theme to whatever I am currently using
                     theme = "auto",
+                    -- always enabled the icons
+                    icons_enabled = true,
+                    component_separators = { left = "", right = "" },
+                    section_separators = { left = "", right = "" },
                 },
+
+                --[[
+                    +-------------------------------------------------+
+                    | A | B | C                             X | Y | Z |
+                    +-------------------------------------------------+
+                ]]--
                 -- see the "sections" with `:h lualine`
                 sections = {
-                    lualine_x = {
-                        {
-                            lazy_status.updates,
-                            cond = lazy_status.has_updates,
-                        },
-                        -- removing the encoding type
-                        -- { "encoding" },
-                        -- shows the file format ( penguin logo )
-                        { "fileformat" },
-                        -- shows the extension ( example: `.py`, `.c`, `.txt` ) of the file
-                        { "filetype" },
-                    },
-                }
+                    lualine_a = {'mode'},
+                    lualine_b = {'branch', 'diff'},
+                    lualine_c = {'filename'},
+                    lualine_x = {'fileformat', 'filetype'},
+                    lualine_y = {},
+                    lualine_z = {'location'},
+                    -- lualine_x = {
+                    --     {
+                    --         lazy_status.updates,
+                    --         cond = lazy_status.has_updates,
+                    --     },
+                    --     -- removing the encoding type
+                    --     -- { "encoding" },
+                    --     -- shows the file format ( penguin logo )
+                    --     { "fileformat" },
+                    --     -- shows the extension ( example: `.py`, `.c`, `.txt` ) of the file
+                    --     { "filetype" },
+                    -- },
+                },
             })
         end,
     },
