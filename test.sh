@@ -1,7 +1,9 @@
 #!/bin/bash
 
-
 github="$HOME/GitHub/obsidian"
+github_sun="$HOME/GitHub/obsidian/S.Sunhaloo"
+github_qna="$HOME/GitHub/obsidian/Question - Problems - Solutions"
+
 obsidian="$HOME/Obsidian/"
 obsidian_sun="$HOME/Obsidian/S.Sunhaloo"
 obsidian_qna="$HOME/Obsidian/Question - Problems - Solutions"
@@ -9,30 +11,30 @@ obsidian_qna="$HOME/Obsidian/Question - Problems - Solutions"
 # create functions to move folders
 github_obsidian() {
     printf "\nDeleting Folders in '%s' Directory" "$obsidian"
-    rm -rf ~/Obsidian/S.Sunhaloo
-    rm -rf ~/Obsidian/Question\ -\ Problems\ -\ Solutions/
+    rm -rf $obsidian_sun
+    rm -rf $obsidian_qna
 
-    printf "\nMoving Folders\n"
-    cp -r ~/GitHub/obsidian/S.Sunhaloo ~/Obsidian/
-    cp -r ~/GitHub/obsidian/Question\ -\ Problems\ -\ Solutions/ ~/Obsidian/
+    printf "\nMoving Folders to '%s'\n" "$obsidian"
+    cp -r $github_sun $obsidian
+    cp -r $github_qna $obsidian
 }
 
 
 obsidian_github() {
     printf "\nDeleting Folders in '%s' Directory" "$github"
-    rm -rf ~/GitHub/obsidian/S.Sunhaloo
-    rm -rf ~/GitHub/obsidian/Question\ -\ Problems\ -\ Solutions/
+    rm -rf $github_sun
+    rm -rf $github_qna
 
-    printf "\nMoving Folders\n"
-    cp -r ~/Obsidian/S.Sunhaloo ~/GitHub/obsidian/
-    cp -r ~/Obsidian/Question\ -\ Problems\ -\ Solutions/ ~/GitHub/obsidian/
+    printf "\nMoving Folders to '%s'\n" "$github"
+    cp -r $obsidian_sun $github
+    cp -r $obsidian_qna $github
 }
 
 
 printf "\nObsidian Vault Folder Move Script\n"
 
-printf "\nOption 1: Move From Obsidian to GitHub"
-printf "\nOption 2: Move From GitHub to Obsidian\n\n"
+printf "\nOption [1]: Move From Obsidian to GitHub"
+printf "\nOption [2]: Move From GitHub to Obsidian\n\n"
 
 # ask the user to enter option
 read -p "Please Enter Option: " user_option
