@@ -1,10 +1,8 @@
--- Options File Written in Lua
-
 -- create a variable to shorthand `vim.opt`
 -- opt ---> vim.opt
 local opt = vim.opt
 
--- Follow Chris@ChrisMachine's "nvim" `options.lua' file
+-- follow Chris@ChrisMachine's "nvim" `options.lua' file
 
 -- System
 

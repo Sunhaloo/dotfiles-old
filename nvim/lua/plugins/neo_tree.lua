@@ -20,6 +20,9 @@ return {
                         -- hide_gitignored = false,
                         sort_order = "asc",
                         always_show = {
+                            ".bashrc",
+                            ".zshrc",
+                            ".tmux.conf",
                             ".git",
                             ".obsidian"
                         },

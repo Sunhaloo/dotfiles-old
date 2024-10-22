@@ -36,7 +36,7 @@ api.nvim_create_autocmd(
   }
 )
 
--- Set caret / cursor to "beam / bar" after exiting neovim
+-- set caret / cursor to "beam / bar" after exiting neovim
 -- NOTE: enable if you are using beam / bar caret ( cursor )
 -- vim.api.nvim_create_autocmd("VimLeave", {
 --     group = group,

@@ -1,5 +1,3 @@
--- Keymap File Written in Lua
-
 -- variables
 -- no need to type prefix `vim.keymap` before every keymap
 local keymap = vim.keymap
@@ -116,7 +114,7 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>", { desc = "Telescop
 keymap.set("n", "<leader>fl", "<cmd>Telescope live_grep<CR>", { desc = "Telescope Live Grep" })
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope Buffer" })
 keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope Old Files" })
-keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find ToDo Comments" })
+keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Highlighted Comments" })
 
 -- toggle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
