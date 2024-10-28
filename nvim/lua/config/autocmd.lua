@@ -28,16 +28,16 @@ api.nvim_create_autocmd(
   { "BufRead", "BufNewFile" },
   -- { pattern = { "*.txt", "*.md", "*.tex" }, command = [[setlocal spell<cr> setlocal spelllang=en,de<cr>]] }
   {
-    pattern = { "*.txt", "*.md", "*.tex", "*.sql", },
+    pattern = { "*.txt", "*.md" },
     callback = function()
       vim.opt.spell = true
-      vim.opt.spelllang = "en_gb"
+      vim.opt.spelllang = "en_GB"
     end,
   }
 )
 
--- set caret / cursor to "beam / bar" after exiting neovim
--- NOTE: enable if you are using beam / bar caret ( cursor )
+-- set caret / cursor to "beam" after exiting neovim
+-- NOTE: enable if you are using beam caret ( cursor )
 -- vim.api.nvim_create_autocmd("VimLeave", {
 --     group = group,
 --     pattern = "*",

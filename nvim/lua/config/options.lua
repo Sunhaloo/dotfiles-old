@@ -5,7 +5,6 @@ local opt = vim.opt
 -- follow Chris@ChrisMachine's "nvim" `options.lua' file
 
 -- System
-
 opt.backup = false -- Does NOT create backup file
 opt.clipboard = "unnamedplus" -- Allows Neovim to use system clipboard
 opt.fileencoding = "utf-8" -- Sets the encoding of the file
@@ -16,23 +15,20 @@ opt.smartcase = false -- Affects the behaviour of searching and pattern ( relate
 opt.smartindent = true -- Automatically adjust the indentation of the line
 opt.swapfile = false -- Does NOT create a swap file
 opt.timeoutlen = 1000 -- Time to wait for a mapped sequence to complete ( in ms - related to keymaps )
-opt.undofile = true -- Allows for persistent undo
+-- opt.undofile = true -- Allows for persistent undo
+opt.undofile = false -- Disables persistent undo
 opt.updatetime = 100 -- Faster completion ( Default Value = 4000ms )
 opt.writebackup = false -- Does NOT allow for file to be edited by another program / neovim ( from what I understand )
 opt.expandtab = true -- Converts `Tab` to `Space`
 
--- opt.shiftwidth = 2 -- Number of spaces inserted for each indentation
 opt.shiftwidth = 4 -- Number of spaces inserted for each indentation
--- opt.tabstop = 2 -- Insert 2 spaces for a `Tab`
 opt.tabstop = 4 -- Insert 4 spaces for a `Tab`
 
 -- Split Windows / Panes ( " -")
-
 opt.splitbelow = true -- Force all horizontal splits to go below current window )
 opt.splitright = true -- Force all vertical splits to go to the right of current windows
 
 -- Appearance
-
 opt.belloff = "all" -- WTF man a bell!!!
 opt.cmdheight = 0 -- Space for Neovim Command Line ( in this case NO space )
 opt.conceallevel = 0 -- Will show `` in markdown files
@@ -55,7 +51,6 @@ opt.title = true -- Shows the title in the Terminal Tab ( look up )
 opt.titlelen = 0 -- Do NOT shorten the Title length
 opt.guifont = "JetBrainsMono Nerd Font" -- Sets the font for ther GUI version of Neovim
 opt.shortmess:append("I") -- Disables Intro / Start Message
--- opt.shortmess:append("c") -- Enables Intro / Start Message
 
 vim.g.netrw_banner = 0 -- Disable message in "Lex" / netrw
 vim.g.netrw_mouse = 2 -- Allows for mouse usage in "Lex" / netrw

@@ -4,7 +4,7 @@ return {
       version = "*",
       config = function()
           require("toggleterm").setup({
-              size = 15,
+              size = 20,
               open_mapping = [[<c-/>]],
               hide_numbers = true,
               direction = "float",

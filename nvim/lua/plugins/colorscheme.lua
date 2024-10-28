@@ -9,14 +9,13 @@ return {
                 style = 'darker',
                 -- style = 'light',
                 transparent = true,
-                -- transparent = false,
                 term_colors = true,
                 code_style = {
                     comments = 'italic',
-                    keywords = 'bold',
+                    keywords = 'none',
                     functions = 'underline',
-                    strings = 'none',
-                    variables = 'none'
+                    strings = 'italic',
+                    variables = 'bold'
                 },
                 diagnostics = {
                     darker = true,
@@ -26,12 +25,6 @@ return {
             })
         end,
     },
-    -- one dark theme that has one light also
-    -- {
-    --   "olimorris/onedarkpro.nvim",
-    --   priority = 1000, -- Ensure it loads first
-    -- },
-    -- catppussin theme ---> say it like how ThePrimeAgan says it
     {
         "catppuccin/nvim",
         name = "catppuccin",
@@ -43,7 +36,6 @@ return {
                     light = "latte",
                     dark = "macchiato",
                 },
-                -- set the background to transparent
                 transparent_background = true,
             })
         end,

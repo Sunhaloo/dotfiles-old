@@ -15,17 +15,17 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- <C-i> is not <C-i> by default, need to make it become <C-i>
+-- NOTE: this is what @devaslife did;
+-- I don't really know when, how, if I have ever used this!
 keymap.set("n", "<C-i>", "<C-i>", opts)
 
 -- NORMAL Mode
-
 -- copy to system clipboard
 keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
 -- paste from system clipboard
-keymap.set({"n", "v"}, "<leader>p", [["+p]], { desc = "Copy FROM System Clipboard" })
+keymap.set({"n", "v"}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
 
 -- increment / decrement numbers
-
 -- increment using '+' character
 keymap.set("n", "+", "<C-a>", { desc = "Increment Number by 1"})
 -- decrement using '-' character
@@ -41,12 +41,11 @@ keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All"})
 keymap.set("n", "lx", "<cmd>Lex<Return>", { desc = "Lex" })
 
 -- tabs
-
 -- new tab with `te`
 keymap.set("n", "te", "<cmd>tabedit<CR>", { desc = "Open New Tab" })
--- switch to next tab with `<Tab>`
-keymap.set("n", "<tab>", "<cmd>tabnext<Return>", opts)
--- switch to previous tab with `Shift+<Tab>`
+-- switch to next tab with `<Tab>` ( uncomment if you want to use <Tab> )
+-- keymap.set("n", "<tab>", "<cmd>tabnext<Return>", opts)
+-- switch to previous tab with `Shift+<Tab>` ( I pretty much use this one )
 keymap.set("n", "<s-tab>", "<cmd>tabprev<Return>", opts)
 -- save and close tab with <leader>X
 keymap.set("n", "<leader>X", ":w | tabclose<CR>", { desc = "Save and Close Tab" })
@@ -68,8 +67,7 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
--- insert mode
-
+-- INSERT mode
 -- go to normal mode from insert mode
 keymap.set("i", "jk", "<ESC>", opts)
 
@@ -79,8 +77,7 @@ keymap.set("i", "<C-l>", "<Right>", opts)
 keymap.set("i", "<C-j>", "<Down>", opts)
 keymap.set("i", "<C-k>", "<Up>", opts)
 
--- visual mode
-
+-- VISUAL mode
 -- paste over currently selected text without yanking it
 keymap.set("v", "p", [["_dp]])
 keymap.set("v", "p", [["_dP]])
@@ -116,7 +113,7 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope 
 keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope Old Files" })
 keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Highlighted Comments" })
 
--- toggle zenmode
+-- togle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
 
 -- markdown preview

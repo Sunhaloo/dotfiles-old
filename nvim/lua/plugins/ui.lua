@@ -44,7 +44,7 @@ return {
               -- Neovim built-in UI options
               options = {
                   relativenumber = true,
-                  cursorline = false,
+                  cursorline = true,
                   cursorcolumn = false
               },
           },
@@ -64,7 +64,7 @@ return {
               -- terminal settings
               kitty = {
                   enabled = true,
-                  font = "+4",
+                  font = "+2",
               },
           },
       }
@@ -127,18 +127,6 @@ return {
                     lualine_x = {'fileformat', 'filetype'},
                     lualine_y = {},
                     lualine_z = {'location'},
-                    -- lualine_x = {
-                    --     {
-                    --         lazy_status.updates,
-                    --         cond = lazy_status.has_updates,
-                    --     },
-                    --     -- removing the encoding type
-                    --     -- { "encoding" },
-                    --     -- shows the file format ( penguin logo )
-                    --     { "fileformat" },
-                    --     -- shows the extension ( example: `.py`, `.c`, `.txt` ) of the file
-                    --     { "filetype" },
-                    -- },
                 },
             })
         end,
@@ -212,16 +200,6 @@ return {
               })
       end,
     },
-    -- well, colorizer
-    -- {
-    --     'echasnovski/mini.hipatterns',
-    --     version = false,
-    --     config = function()
-    --         require("mini.hipatterns").setup()
-    --     end
-    --
-    -- },
-    -- caret animation
     {
         "echasnovski/mini.animate",
         version = '*',
