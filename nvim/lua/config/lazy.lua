@@ -24,11 +24,6 @@ vim.g.maplocalleader = " "
 -- Setup lazy.nvim
 require("lazy").setup({ { import = "plugins" }, { import = "plugins.LSP" }, { import = "plugins.markdown" } }, {
 
-	install = {
-		missing = true,
-		colorscheme = { "onedark" },
-	},
-
 	-- automatically check for plugin updates
 	checker = {
 		enabled = true,

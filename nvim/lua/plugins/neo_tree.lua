@@ -15,9 +15,12 @@ return {
                 sort_case_insensitive = true,
                 filesystem = {
                     filtered_items = {
-                        -- visible = true,
-                        -- hide_dotfiles = false,
-                        -- hide_gitignored = false,
+                        hide_dotfiles = false,
+                        hide_by_name = {
+                            ".cache",
+                            ".npm",
+                            ".nv"
+                        },
                         sort_order = "asc",
                         always_show = {
                             ".bashrc",

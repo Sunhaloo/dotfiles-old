@@ -1,5 +1,4 @@
--- variables
--- no need to type prefix `vim.keymap` before every keymap
+-- variable to shortend `vim.keymap`
 local keymap = vim.keymap
 -- `noremap` prevents keymaps from being overwritten
 -- `silent` tells Neovim to display the command or not to display the command

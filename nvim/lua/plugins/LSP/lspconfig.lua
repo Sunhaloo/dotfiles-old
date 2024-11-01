@@ -1,8 +1,3 @@
---[[
-    please refer to Josean Martinez Neovim Configuration Video
-    where he explains this `lspconfig.lua` file
-]]
-
 return {
   "neovim/nvim-lspconfig",
   -- lazy load on these 2 events
