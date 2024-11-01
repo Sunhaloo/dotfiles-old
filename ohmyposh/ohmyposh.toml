@@ -14,7 +14,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     background = 'transparent'
     foreground = 'p:blue'
-    template = '{{ .Path }}'
+    template = '<#e55561>[</>{{ .Path }}<#e55561>]</>'
 
     [blocks.segments.properties]
       style = 'full'
@@ -24,7 +24,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     foreground = 'p:lightDark'
     background = 'transparent'
-    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    template = '[{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>]'
 
     [blocks.segments.properties]
       commit_icon = '@'
@@ -57,7 +57,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       "{{if eq .Code 0}}p:green{{end}}",
     ]
     background = 'transparent'
-    template = '❯'
+    template = 'λ'
 
 [transient_prompt]
   foreground_templates = [
@@ -65,7 +65,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     "{{if eq .Code 0}}p:green{{end}}",
   ]
   background = 'transparent'
-  template = '❯ '
+  template = 'λ'
 
 [secondary_prompt]
   foreground = 'p:green'
@@ -76,9 +76,9 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
        style = 'full'
 
 [palette]
-red = '#e06c75'
+red = '#e55561'
 yellow = '#e5c07b'
-green = '#98c379'
-teal = '#56b6c2'
-blue = '#61afef'
-lightDark = '#7f848e'
+green = '#8ebd6b'
+teal = '#48b0bd'
+blue = '#4fa6ed'
+lightDark = '#7a818e'
