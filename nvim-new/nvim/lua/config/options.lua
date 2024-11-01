@@ -62,16 +62,27 @@ opt.termguicolors = true
 opt.cursorline = true
 -- show the line and column number separated by a comma
 opt.ruler = false
-opt.showcmd = true -- Display incomplete command in status line ( useful for providing visual feedback )
-opt.number = true -- Adds number line
-opt.relativenumber = true -- Line numbers will be relative
-opt.signcolumn = "yes" -- Shows errors and other information next to the line numbers
-opt.scrolloff = 0 -- Controls the minimum number of screen lines to keep above and below the cursor when scrolling
-opt.sidescrolloff = 8 -- Controls the minimum number of columns to keep to the left and right of the cursor when scrolling horizontally
-opt.title = true -- Shows the title in the Terminal Tab ( look up )
-opt.titlelen = 0 -- Do NOT shorten the Title length
-opt.guifont = "JetBrainsMono Nerd Font" -- Sets the font for ther GUI version of Neovim
-opt.shortmess:append("I") -- Disables Intro / Start Message
-
-vim.g.netrw_banner = 0 -- Disable message in "Lex" / netrw
-vim.g.netrw_mouse = 2 -- Allows for mouse usage in "Lex" / netrw
+-- display the incomplete command in status line
+opt.showcmd = false
+-- enable the numbers in the side column
+opt.number = true
+-- enable the relative line numbers
+opt.relativenumber = true
+-- icons and errors next to line numbers ( in side column )
+opt.signcolumn = "yes"
+-- number of lines to keep above / below the caret / cursor ( when scrolling vertically )
+opt.scrolloff = 0
+-- number of columns to keep to the left / right of caret / cursor  ( when scrolling horizontally )
+opt.sidescrolloff = 8
+-- will show the full path of the file ( in your terminal )
+opt.title = false
+-- if `opt.title` is enabled; don't shorten it
+opt.titlelen = 0
+-- font for GUI versions of Neovim ( programs such as Neovide )
+opt.guifont = "Iosevka Nerd Font Mono"
+-- disable the intro message for Neovim ( much more clean this way )
+opt.shortmess:append("I")
+-- disable the top message in 'Lex'
+vim.g.netrw_banner = 0
+-- allow for mouse usage is 'Lex'
+vim.g.netrw_mouse = 2
