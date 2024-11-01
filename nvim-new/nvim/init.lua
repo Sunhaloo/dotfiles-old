@@ -1,5 +1,4 @@
-print("Sourced init.lua File")
--- source the configuration file
+-- source the configuration files
 require("config.keymaps")
 require("config.options")
 require("config.autocmd")
