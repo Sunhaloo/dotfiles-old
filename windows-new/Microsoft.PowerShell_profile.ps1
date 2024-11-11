@@ -1,3 +1,4 @@
+
 # System
 # list all the packages installed with winget
 function winget_list { & winget list $args }
@@ -62,3 +63,6 @@ Set-Alias -Name gp -Value git_pull
 
 # zoxide - smarter 'cd'
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
+
+# ohmyposh configuration
+oh-my-posh init pwsh --config ~/ohmyposh/ohmyposh.toml | Invoke-Expression
