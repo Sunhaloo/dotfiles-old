@@ -45,11 +45,11 @@ Set-Alias -Name gs -Value git_status
 function git_add { & git add $args }
 Set-Alias -Name ga -Value git_add
 # alias for 'git commit'
-function git_commit { & git commit -m $args }
+function git_commit { & 'git commit -m' $args }
 Set-Alias -Name commit -Value git_commit
 # alias for 'git push'
-function git_push { & git push -u origin $args }
-Set-Alias -Name commit -Value git_push
+function git_push { & 'git push -u origin' $args }
+Set-Alias -Name push -Value git_push
 # alias for 'git log'
 Remove-Item Alias:gl -Force
 function git_log { & git log $args }
