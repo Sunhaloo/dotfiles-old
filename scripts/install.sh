@@ -143,6 +143,7 @@ install_all() {
 	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc lua go rustup
 	install_package ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh
 	install_package ristretto obsidian discord obs-studio mpv
+	install_package arc-gtk-theme-eos
 	install_package ttf-hack-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-iosevka-nerd
 
 	# AUR packages
