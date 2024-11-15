@@ -11,8 +11,7 @@ display_options() {
     printf "\nOption [2]: Move Files and Folders to Required Location"
     printf "\nOption [3]: Install All Programs - Packages / Tools - Drivers"
     printf "\nOption [4]: Install OMZ, TMUX TPM"
-    printf "\nOption [5]: GitHub Configuration"
-    printf "\nOption [6]: Exit\n\n"
+    printf "\nOption [5]: Exit\n\n"
 }
 
 
@@ -133,16 +132,65 @@ install_all() {
 	printf "\nInstalling Packages - Applications - Tools - Drivers\n\n"
 
 	# pacman packages
-	install_package
+	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard
+	install_package kitty rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput
+	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc lua go rustup
+	install_package ffmpeg ripgrep fd eza fzf lazygit tmux yazi zsh
+	install_package ristretto obsidian discord obs-studio mpv
 
 	# AUR packages
-	install_yay_package
+	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh thorium-browser-bin vscodium-bin nwg-look ani-cli bibata-cursor-theme banana-cursor-bin
 
 }
 
 
+# function to install oh-my-zsh
+install_omz() {
+	printf "\nOh-My-ZSH Installation\n\n"
 
-# function tto evaluate user's choice of option
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+	printf "\nOh-My-ZSH Installation Completed\n\n"
+
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+
+	printf "\nOh-My-ZSH Plugins Installation\n\n"
+
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+	printf "\nOh-My-ZSH Plugins Installation Completed\n\n"
+
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+}
+
+# function to install tmux-tmp
+install_tpm() {
+    printf "\n\nTMUX TPM Installation\n\n"
+
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+	printf "\nTMUX TPM Installation Completed\n\n"
+
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+}
+
+
+# function to evaluate user's choice of option
 evaluate_user_option() {
 	# conditions to evaluate based on user's choice
 	if [[ "$user_option" = 1 ]]; then
@@ -154,9 +202,15 @@ evaluate_user_option() {
 		move_file_folders
 
 	if [[ "$user_option" = 3 ]]; then
-		# call the function to move files and folders
+		# call the function to install all programs / packages
+		install_all
+
+	if [[ "$user_option" = 4 ]]; then
+		# call function to install OMZ, TMUX TPM...
+		install_omz
+		install_tpm
  
-	elif [[ "$user_option" = 7 ]]; then
+	elif [[ "$user_option" = 5 ]]; then
 		# user wants to exit the script
 		printf "\nGood Bye!\n"
 		exit 0
@@ -191,7 +245,6 @@ main() {
 
     # call `evaluate_user_option` to run the functions in selected option
     evaluate_user_option "$user_option"
-
 }
 
 
