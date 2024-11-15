@@ -1,0 +1,15 @@
+{
+	"pyprland": {
+		"plugins": ["scratchpads"]
+	},
+	"scratchpads": {
+		"term": {
+			"command": "kitty --class scratchpad -o font_size=12.0",
+			"margin": 50
+		},
+		"yazi": {
+			"command": "kitty --class scratchpad -e yazi",
+			"margin": 50
+		}
+	}
+}
