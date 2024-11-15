@@ -122,17 +122,23 @@ install_all() {
 	# update the package manager's and AUR's database and update system
 	sudo pacman -Syy --noconfirm
 	sudo pacman -Syu --noconfirm
+
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+
+
 	yay -Syy --noconfirm
 	yay -Syu --noconfirm
 
 	# output '-' 50 times
 	printf '%0.s-' {1..50}
-	printf "\n\n"
+	printf "\n"
 
 	printf "\nInstalling Packages - Applications - Tools - Drivers\n\n"
 
 	# pacman packages
-	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard
+	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard waybar
 	install_package kitty rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput
 	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc lua go rustup
 	install_package ffmpeg ripgrep fd eza fzf lazygit tmux yazi zsh
@@ -197,15 +203,15 @@ evaluate_user_option() {
 		# call the function to setup git
 		setup_git_ssh
 
-	if [[ "$user_option" = 2 ]]; then
+	elif [[ "$user_option" = 2 ]]; then
 		# call the function to move files and folders
 		move_file_folders
 
-	if [[ "$user_option" = 3 ]]; then
+	elif [[ "$user_option" = 3 ]]; then
 		# call the function to install all programs / packages
 		install_all
 
-	if [[ "$user_option" = 4 ]]; then
+	elif [[ "$user_option" = 4 ]]; then
 		# call function to install OMZ, TMUX TPM...
 		install_omz
 		install_tpm
