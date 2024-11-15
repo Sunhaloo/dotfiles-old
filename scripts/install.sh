@@ -141,8 +141,9 @@ install_all() {
 	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard waybar
 	install_package kitty rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput
 	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc lua go rustup
-	install_package ffmpeg ripgrep fd eza fzf lazygit tmux yazi zsh
+	install_package ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh
 	install_package ristretto obsidian discord obs-studio mpv
+	install_package ttf-hack-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-iosevka-nerd
 
 	# AUR packages
 	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh thorium-browser-bin vscodium-bin nwg-look ani-cli bibata-cursor-theme banana-cursor-bin
@@ -170,6 +171,10 @@ install_omz() {
 
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+	# remove the new .zshrc that has been created by omz installation
+	rm -rf ~/.zshrc.pre-oh-my-zsh
+	cp -r ~/dotfiles/.zshrc "$HOME"
 
 	printf "\nOh-My-ZSH Plugins Installation Completed\n\n"
 
