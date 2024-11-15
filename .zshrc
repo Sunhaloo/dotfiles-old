@@ -76,12 +76,12 @@ zsh_src() {
 
 # create a function to change profile of kitty
 kitty_profile() {
-  sh ~/scripts/profile.sh
+  sh ~/scripts/kitty_profile.sh
 }
 
 # create a function to move obsidian folders to github folder using bash script
 obsidian_move() {
-    sh ~/scripts/move_folders_obsidian.sh
+  sh ~/scripts/obsidian_vault.sh
 }
 
 # ALIASES
