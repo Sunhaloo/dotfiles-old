@@ -4,18 +4,17 @@
   font-family: JetBrainsMono NF;
   font-weight: bold;
   font-size: 14px;
-  min-height: 0;
 }
 
 window#waybar {
   /*background: #15121b;*/
-  /*background: transparent;*/
+  background: transparent;
   color: #cdd6f4;
 }
 
 tooltip {
   background: #1e1e2e;
-  border-radius: 10px;
+  border-radius: 5px;
   border-width: 2px;
   border-style: solid;
   border-color: #11111b;
@@ -36,14 +35,14 @@ tooltip {
 #workspaces button.focused {
   color: #cdd6f4;
   background: #eba0ac;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #workspaces button.urgent {
   color: #11111b;
   /*background: #a6e3a1;*/
   background: #e55561;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #workspaces button:hover {
@@ -52,7 +51,7 @@ tooltip {
   /*background: #1e1e2e;*/
   /*color: #cdd6f4;*/
   color: #1e1e2e;
-  border-radius: 10px;
+  border-radius: 5px;
   padding-right: 10px
 }
 
@@ -72,11 +71,13 @@ tooltip {
 #memory,
 #network,
 #workspaces,
+#temperature,
 #tray,
 #backlight {
   background: #1e1e2e;
   padding: 0px 10px;
   margin: 3px 0px;
+  border-radius: 5px;
 }
 
 #battery.critical:not(.charging) {
@@ -90,14 +91,14 @@ tooltip {
 }
 
 #tray {
-  border-radius: 10px;
+  border-radius: 5px;
   margin-right: 4px;
   font-size: 19px;
 }
 
 #workspaces {
   background: #1e1e2e;
-  border-radius: 10px;
+  border-radius: 5px;
   padding-right: 0px;
   /*padding-left: 5px;*/
   padding-left: 0px;
@@ -106,14 +107,14 @@ tooltip {
 
 #custom-caffeine {
   color: #89dceb;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
   padding-right: 12px;
 }
 
 #inhibitor {
   background: #1e1e2e;
   color: #f5e0dc;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
   padding-right: 12px;
   padding-left: 5px;
   padding-left: 12px;
@@ -136,7 +137,7 @@ tooltip {
 
 #clock {
   color: #f9e2af;
-  border-radius: 10px;
+  border-radius: 5px;
   /* padding-right: 5px */
 }
 
