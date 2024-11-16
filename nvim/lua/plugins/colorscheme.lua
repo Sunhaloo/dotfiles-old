@@ -116,5 +116,15 @@ return {
 	-- base16 black metal theme
 	{
 		"metalelf0/base16-black-metal-scheme",
-	}
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("tokyonight").setup({
+				style = "night"
+			})
+		end
+	},
 }
