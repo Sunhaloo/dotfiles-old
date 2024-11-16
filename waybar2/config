@@ -35,10 +35,12 @@
         "warp-on-scroll": false,
         "format": "{icon}",
         "format-icons": {
-			"1":"",
-			"2":"",
-			"3":"",
-            "urgent": "",
+			"1": "",
+			"2": "",
+			"3": "",
+			"9": "",
+			"10": "",
+            "urgent": "",
             "focused": "",
             "default": ""
         }
@@ -93,7 +95,7 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        }
+        },
     },
     "tray": {
         // "icon-size": 21,
@@ -154,8 +156,8 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  ({signalStrength}%)",
-        "format-ethernet": "  Connected",
+        "format-wifi": " ({signalStrength}%)",
+        "format-ethernet": " ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": " 󰖪 ",
@@ -193,7 +195,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
