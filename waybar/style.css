@@ -167,3 +167,8 @@ tooltip {
   background: #15121b;
   color: #cdd6f4;
 }
+
+/*NOTE: place this on most right hand side*/
+#temperature {
+	margin-right: 20px;
+}
