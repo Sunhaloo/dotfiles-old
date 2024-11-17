@@ -148,7 +148,7 @@ install_all() {
 
 	# AUR packages
 	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh thorium-browser-bin vscodium-bin nwg-look ani-cli bibata-cursor-theme banana-cursor-bin
-	install_yay_package slides
+	install_yay_package slides vencord
 
 }
 
