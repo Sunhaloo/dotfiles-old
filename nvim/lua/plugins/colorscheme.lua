@@ -125,6 +125,10 @@ return {
 			require("tokyonight").setup({
 				style = "night",
 				transparent = true,
+				terminal_colors = true,
+				styles = {
+					functions = { bold = true },
+				},
 			})
 		end
 	},
