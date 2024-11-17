@@ -14,7 +14,7 @@ return {
 			require("image").setup({
 				backend = "kitty",
 				kitty_method = "normal",
-				max_height_window_percentage = 30,
+				max_height_window_percentage = 22,
 				tmux_show_only_in_active_window = true,
 				integrations = {
 					markdown = {
