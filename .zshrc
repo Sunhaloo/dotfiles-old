@@ -89,6 +89,12 @@ obsidian_move() {
 # System
 # change 'sudo' to 'fucking'
 alias fucking='sudo'
+# check status of ssh / sshd service
+alias ssh-status='sudo systemctl status sshd'
+# start ssh / sshd service
+alias ssh-start='sudo systemctl start sshd'
+# stop ssh / sshd service
+alias ssh-stop='sudo systemctl stop sshd'
 
 # System ( Arch / Arch Based Distributions )
 # refresh the package database
