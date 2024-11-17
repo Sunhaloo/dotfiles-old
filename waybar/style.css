@@ -17,7 +17,7 @@ tooltip {
   border-radius: 5px;
   border-width: 2px;
   border-style: solid;
-  border-color: #11111b;
+  /*border-color: #11111b;*/
 }
 
 #workspaces button {
@@ -132,17 +132,19 @@ tooltip {
   background: #1e1e2e;
   padding: 0px 10px;
   margin: 3px 0px;
-  color: #f5c2e7;
+  /*color: #f5c2e7;*/
+  color: #ff757f;
 }
 
 #clock {
-  color: #f9e2af;
+  /*color: #f9e2af;*/
+  color: #ffc777;
   border-radius: 5px;
   /* padding-right: 5px */
 }
 
 #network {
-  color: #fab387;
+  color: #ff9e64;
 }
 
 #pulseaudio {
@@ -150,13 +152,13 @@ tooltip {
 }
 
 #memory {
-  color: #7dc4e4;
+  /*color: #7dc4e4;*/
+  color: #4fd6be;
 }
 
 #battery {
   color: #a6e3a1;
-  border-radius: 0 10px 10px 0;
-  margin-right: 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 #backlight {
@@ -170,5 +172,6 @@ tooltip {
 
 /*NOTE: place this on most right hand side*/
 #temperature {
-	margin-right: 20px;
+	margin-right: 5px;
+	margin-left: -1px;
 }
