@@ -140,7 +140,7 @@ install_all() {
 	# pacman packages
 	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard swaync waybar
 	install_package kitty rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput
-	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc lua go rustup
+	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua go rustup
 	install_package ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh
 	install_package ristretto obsidian discord obs-studio mpv
 	install_package arc-gtk-theme-eos
