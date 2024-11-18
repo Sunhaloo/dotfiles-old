@@ -139,7 +139,7 @@ install_all() {
 
 	# pacman packages
 	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard swaync waybar sddm
-	install_package kitty neovim rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput brightnessctl
+	install_package kitty neovim rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput brightnessctl network-manager-applet blueman
 	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua go rustup
 	install_package ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp
 	install_package ristretto obsidian obs-studio mpv spotify-launcher

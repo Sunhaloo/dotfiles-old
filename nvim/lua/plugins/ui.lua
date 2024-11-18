@@ -200,31 +200,32 @@ return {
               })
       end,
     },
-    {
-        "echasnovski/mini.animate",
-        version = '*',
-        event = "VeryLazy",
-        config = function()
-            require("mini.animate").setup({
-                -- cursor animation
-                cursor = {
-                    -- enable the animation
-                    enable = true,
-                    timing = require('mini.animate').gen_timing.linear({ duration = 100, unit = 'total' }),
-                }
-            })
-        end,
-    },
+	-- smooth cursor
+	{
+		"gen740/SmoothCursor.nvim",
+		event = "VeryLazy",
+		config = function()
+			require('smoothcursor').setup({})
+		end,
+	},
+	-- smooth scroll
+	{
+		"karb94/neoscroll.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("neoscroll").setup({})
+		end,
+	},
     -- noice ( the thing that places the command line in the center )
     {
-      "folke/noice.nvim",
-      event = "VeryLazy",
-      opts = {
-        -- add any options here
-      },
-      dependencies = {
-        -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-        "MunifTanjim/nui.nvim",
-        }
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+		-- add any options here
+		},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+		}
     },
 }

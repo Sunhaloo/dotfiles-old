@@ -128,6 +128,8 @@ return {
 				terminal_colors = true,
 				styles = {
 					functions = { bold = true },
+					sidebars = "transparent",
+					floats = "transparent",
 				},
 			})
 		end
