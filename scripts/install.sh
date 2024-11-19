@@ -237,8 +237,8 @@ kanata_configuration() {
 	mkdir -p ~/.config/systemd/user
 	mkdir -p ~/.config/kanata
 	# move the `.service` file
-	sudo cp ~/dotfiles/kanata/kanata.service ~/.config/systemd/user/
-	sudo cp ~/dotfiles/kanata/config.kbd ~/.config/kanata/
+	cp ~/dotfiles/kanata/kanata.service ~/.config/systemd/user/
+	cp ~/dotfiles/kanata/config.kbd ~/.config/kanata/
 }
 
 

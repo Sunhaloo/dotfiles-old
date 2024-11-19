@@ -233,6 +233,7 @@ return {
 		cmd = "ShowkeysToggle",
 		opts = {
 			position = "top-right",
+			show_count = true,
 		},
 	},
 }
