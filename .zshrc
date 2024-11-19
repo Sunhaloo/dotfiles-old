@@ -137,7 +137,7 @@ alias clean_jlog='sudo journalctl --vacuum-size=0'
 # System - eza
 alias ls='eza --no-user --no-time --no-permissions --icons=always'
 alias ll='eza -la --no-user --no-time --no-permissions --icons=always'
-alias tree='eza -T --icons=always'
+alias lt='eza -T --icons=always'
 
 # Applications
 # opening up Neovim

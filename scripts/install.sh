@@ -202,6 +202,46 @@ install_tpm() {
 }
 
 
+# WARNING: this has not been tested
+# in addition, this is basically taken from:
+# https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md
+kanata_configuration() {
+	# create a new group
+	sudo groupadd uinput
+	# add the user
+	printf "\nAdding the User '%s'\n" "$USER"
+	sudo usermod -aG input $USER
+	sudo usermod -aG uinput $USER
+
+	# move file from kanata folder to /etc/udev/rules.d
+	sudo cp ~/dotfiles/kanata/99-input.rules /etc/udev/rules.d/
+	# reload the "thing" IDK what I am reading
+	sudo udevadm control --reload-rules && sudo udevadm trigger
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+
+	printf "\nVerification\n"
+	# verify it
+	ls -l /dev/uinput
+
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+
+	# load the uinput drivers
+	sudo modprobe uinput
+
+	# move the configuration files from dotfiles to ~/.config
+	# create the directories
+	mkdir -p ~/.config/systemd/user
+	mkdir -p ~/.config/kanata
+	# move the `.service` file
+	sudo cp ~/dotfiles/kanata/kanata.service ~/.config/systemd/user/
+	sudo cp ~/dotfiles/kanata/config.kbd ~/.config/kanata/
+}
+
+
 # function to evaluate user's choice of option
 evaluate_user_option() {
 	# conditions to evaluate based on user's choice

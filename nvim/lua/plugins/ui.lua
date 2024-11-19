@@ -232,7 +232,7 @@ return {
 		"nvzone/showkeys",
 		cmd = "ShowkeysToggle",
 		opts = {
-			position = "bottom-right",
+			position = "top-right",
 		},
 	},
 }
