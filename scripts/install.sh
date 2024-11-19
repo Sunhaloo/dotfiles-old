@@ -140,14 +140,14 @@ install_all() {
 	# pacman packages
 	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard swaync waybar sddm
 	install_package kitty neovim rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput brightnessctl network-manager-applet blueman
-	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua go rustup
+	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua go rustup rust
 	install_package ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp
 	install_package ristretto obsidian obs-studio mpv spotify-launcher
 	install_package arc-gtk-theme-eos
 	install_package otf-font-awesome ttf-hack-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-iosevka-nerd ttf-victor-mono-nerd
 
 	# AUR packages
-	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh thorium-browser-bin vscodium-bin nwg-look ani-cli bibata-cursor-theme banana-cursor-bin apple_cursor whitesur-icon-theme
+	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh kanata thorium-browser-bin vscodium-bin nwg-look ani-cli bibata-cursor-theme banana-cursor-bin apple_cursor whitesur-icon-theme
 	install_yay_package slides vencord
 }
 
