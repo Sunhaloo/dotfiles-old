@@ -228,4 +228,11 @@ return {
 			"MunifTanjim/nui.nvim",
 		}
     },
+	{
+		"nvzone/showkeys",
+		cmd = "ShowkeysToggle",
+		opts = {
+			position = "bottom-right",
+		},
+	},
 }

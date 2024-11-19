@@ -117,6 +117,20 @@ return {
 	{
 		"metalelf0/base16-black-metal-scheme",
 	},
+		-- "folke/tokyonight.nvim",
+		-- lazy = false,
+		-- priority = 1000,
+		-- config = function()
+			-- require("tokyonight").setup({
+			-- 	style = "night",
+			-- 	transparent = true,
+			-- 	terminal_colors = true,
+			-- 	styles = {
+			-- 		functions = { bold = true },
+			-- 		sidebars = "transparent",
+			-- 		floats = "transparent",
+			-- 	},
+			-- })
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
@@ -132,6 +146,26 @@ return {
 					floats = "transparent",
 				},
 			})
-		end
+		end,
+	},
+	{
+		"tiagovla/tokyodark.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("tokyodark").setup({
+				-- transparent_background = true,
+				terminal_colors = true,
+				gamma = 1.00,
+				styles = {
+					comments = { italic = true }, -- style for comments
+					keywords = {}, -- style for keywords
+					identifiers = {}, -- style for identifiers
+					functions = { bold = true }, -- style for functions
+					variables = {}, -- style for variables
+				},
+
+			})
+		end,
 	},
 }

@@ -113,8 +113,10 @@ keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope
 keymap.set("n", "<leader>fO", "<cmd>ObsidianSearch<CR>", { desc = "Search in Obsidian Vault" })
 keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Highlighted Comments" })
 
--- togle zenmode
+-- toggle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
+-- toggle screenkey thing only in neovim ( very nice )
+keymap.set("n", "<leader>sk", ":ShowkeysToggle<CR>", { desc = "Toggle Key Shower 🤣" })
 
 -- markdown preview
 keymap.set("n", "<leader>Mp", ":MarkdownPreview<CR>", { desc = "Markdown Preview Start" })
