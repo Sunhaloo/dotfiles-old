@@ -107,10 +107,14 @@
     },
     "cpu": {
         "format": "  {usage}%",
-        "tooltip": false
+        "tooltip": true,
+		"on-click": "kitty -e btop"
     },
     "memory": {
-        "format": " {}%"
+        "format": " {}%",
+        "tooltip": true,
+		// NOTE: should I keep this?
+		"on-click": "kitty -e systemctl list-units --type=service"
     },
     "temperature": {
         // "thermal-zone": 2,
