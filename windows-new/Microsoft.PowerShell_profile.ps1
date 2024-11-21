@@ -22,9 +22,12 @@ Set-Alias -Name ls -Value eza_ls
 function eza_ll { eza -la --no-user --no-time --no-permissions --icons=always }
 Set-Alias -Name ll -Value eza_ll
 # tree
-Remove-Alias tree
+Remove-Item Alias:tree
 function eza_tree { eza -T --icons=always }
-Set-Alias -Name tree -Value eza_tree
+New-Alias -Name lt -Value eza_tree
+
+# grep
+Set-Alias -Name grep -Value rg
 
 
 # Applications
