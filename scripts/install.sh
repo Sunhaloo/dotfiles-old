@@ -147,7 +147,8 @@ install_all() {
 	install_package otf-font-awesome ttf-hack-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-iosevka-nerd ttf-victor-mono-nerd
 
 	# AUR packages
-	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh kanata thorium-browser-bin vscodium-bin nwg-look ani-cli bibata-cursor-theme banana-cursor-bin apple_cursor whitesur-icon-theme
+	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh kanata thorium-browser-bin vscodium-bin nwg-look ani-cli 
+	install_yay_package bibata-cursor-theme banana-cursor-bin apple_cursor whitesur-icon-theme
 	install_yay_package slides vencord
 }
 

@@ -69,20 +69,34 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 
 # FUNCTIONS
+# create a function to refresh yay + pacman packages and update
+update() {
+	# refresh yay packages and update packages
+	yay -Syy --noconfirm
+	yay -Syu --noconfirm
+	# refresh pacman packages and update packages
+	sudo pacman -Syy --noconfirm
+	sudo pacman -Syu --noconfirm
+}
+
+
 # create a function to source `.zshrc` file
 zsh_src() {
     source ~/.zshrc
 }
+
 
 # create a function to change profile of kitty
 kitty_profile() {
   sh ~/scripts/kitty_profile.sh
 }
 
+
 # create a function to move obsidian folders to github folder using bash script
 obsidian_move() {
   sh ~/scripts/obsidian_vault.sh
 }
+
 
 # ALIASES
 
@@ -114,7 +128,7 @@ alias install='sudo pacman -S'
 # removing and purging applications ---> provide application / package name
 alias remove='sudo pacman -R'
 # update the whole system
-alias update='sudo pacman -Syu'
+# alias update='sudo pacman -Syu'
 # clean system packages
 alias clean='sudo pacman -Rns $(pacman -Qdtq)'
 # clean system logs
