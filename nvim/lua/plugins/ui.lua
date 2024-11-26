@@ -186,20 +186,40 @@ return {
             todo_comments.setup()
         end,
     },
-    {
-      "norcalli/nvim-colorizer.lua",
-        config = function()
-          require("colorizer").setup({ "css", "scss", "html", "javascript", "lua", "toml" }, {
-              RGB = true, -- #RGB hex codes
-              RRGGBB = true, -- #RRGGBB hex codes
-              RRGGBBAA = true, -- #RRGGBBAA hex codes
-              rgb_fn = true, -- CSS rgb() and rgba() functions
-              hsl_fn = true, -- CSS hsl() and hsla() functions
-              css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-              css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-              })
-      end,
-    },
+	-- colorizer plugin
+    -- {
+    --   "norcalli/nvim-colorizer.lua",
+    --     config = function()
+    --       require("colorizer").setup({ "css", "scss", "html", "javascript", "lua", "toml", "conf" }, {
+    --           RGB = true, -- #RGB hex codes
+    --           RRGGBB = true, -- #RRGGBB hex codes
+    --           RRGGBBAA = true, -- #RRGGBBAA hex codes
+    --           rgb_fn = true, -- CSS rgb() and rgba() functions
+    --           hsl_fn = true, -- CSS hsl() and hsla() functions
+    --           css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+    --           css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+    --           })
+    --   end,
+    -- },
+	-- mini.hipattern ==> colorizer plugin
+	{
+		"echasnovski/mini.hipatterns",
+		version = false,
+		config = function()
+			local hipatterns = require("mini.hipatterns")
+			hipatterns.setup({
+				highlighters = {
+					-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+					fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
+					hack  = { pattern = '%f[%w]()HACK()%f[%W]',  group = 'MiniHipatternsHack'  },
+					todo  = { pattern = '%f[%w]()TODO()%f[%W]',  group = 'MiniHipatternsTodo'  },
+					note  = { pattern = '%f[%w]()NOTE()%f[%W]',  group = 'MiniHipatternsNote'  },
+					-- Highlight hex color strings (`#rrggbb`) using that color
+					hex_color = hipatterns.gen_highlighter.hex_color(),
+				},
+		})
+		end,
+	},
 	-- smooth cursor
 	{
 		"gen740/SmoothCursor.nvim",

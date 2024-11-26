@@ -42,7 +42,7 @@ api.nvim_create_autocmd(
 
 
 -- enable the show keys on launch
-vim.api.nvim_create_autocmd({ "BufEnter", "TabNew", "TabEnter", "WinEnter" }, {
+vim.api.nvim_create_autocmd({ "BufEnter", "BufLeave", "TabNew", "TabEnter", "TabLeave", "WinEnter" }, {
     callback = function()
         vim.cmd("ShowkeysToggle")
     end,

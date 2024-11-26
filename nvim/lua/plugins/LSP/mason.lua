@@ -29,6 +29,7 @@ return {
                 ensure_installed = {
                     "clangd",
                     "pyright",
+					"black",
                     "html",
                     "lua_ls",
                     "marksman",
