@@ -234,6 +234,9 @@ kanata_configuration() {
 	# load the uinput drivers
 	sudo modprobe uinput
 
+	# remove the "default" service file ( if present )
+	sudo rm /usr/lib/systemd/system/kanata.service
+
 	# move the configuration files from dotfiles to ~/.config
 	# create the directories
 	mkdir -p ~/.config/systemd/user
