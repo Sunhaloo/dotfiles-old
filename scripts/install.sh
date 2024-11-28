@@ -241,6 +241,12 @@ kanata_configuration() {
 	# move the `.service` file
 	cp ~/dotfiles/kanata/kanata.service ~/.config/systemd/user/
 	cp ~/dotfiles/kanata/config.kbd ~/.config/kanata/
+
+	# run the service
+	systemctl --user daemon-reload
+	systemctl --user enable kanata.service
+	systemctl --user start kanata.service
+	systemctl --user status kanata.service
 }
 
 
