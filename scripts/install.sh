@@ -264,7 +264,7 @@ evaluate_user_option() {
 		install_omz
 		install_tpm
 
-	elif [[ "$user_option" = 4 ]]; then
+	elif [[ "$user_option" = 5 ]]; then
 		# call the function that will configure kanata ( key remapper )
 		kanata_configuration
  
