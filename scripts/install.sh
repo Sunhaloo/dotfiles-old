@@ -144,7 +144,7 @@ install_all() {
 	install_package ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp
 	install_package ristretto obsidian obs-studio mpv spotify-launcher
 	install_package arc-gtk-theme-eos
-	install_package otf-font-awesome ttf-hack-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd ttf-iosevka-nerd ttf-victor-mono-nerd
+	install_package otf-font-awesome ttf-jetbrains-mono-nerd ttf-ubuntu-mono-nerd ttf-terminus-nerd ttf-proggyclean-nerd ttf-victor-mono-nerd
 
 	# AUR packages
 	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh kanata thorium-browser-bin vscodium-bin nwg-look ani-cli 
