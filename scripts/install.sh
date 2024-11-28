@@ -11,7 +11,8 @@ display_options() {
     printf "\nOption [2]: Move Files and Folders to Required Location"
     printf "\nOption [3]: Install All Programs - Packages / Tools - Drivers"
     printf "\nOption [4]: Install OMZ, TMUX TPM"
-    printf "\nOption [5]: Exit\n\n"
+    printf "\nOption [5]: Kanata Configuration"
+    printf "\nOption [6]: Exit\n\n"
 }
 
 
@@ -262,8 +263,12 @@ evaluate_user_option() {
 		# call function to install OMZ, TMUX TPM...
 		install_omz
 		install_tpm
+
+	elif [[ "$user_option" = 4 ]]; then
+		# call the function that will configure kanata ( key remapper )
+		kanata_configuration
  
-	elif [[ "$user_option" = 5 ]]; then
+	elif [[ "$user_option" = 6 ]]; then
 		# user wants to exit the script
 		printf "\nGood Bye!\n"
 		exit 0
