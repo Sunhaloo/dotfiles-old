@@ -149,8 +149,7 @@ install_all() {
 
 	# AUR packages
 	install_yay_package intel-ivsc-firmware hyprshot pyprland oh-my-posh kanata thorium-browser-bin vscodium-bin nwg-look ani-cli 
-	# install_yay_package bibata-cursor-theme banana-cursor-bin apple_cursor whitesur-icon-theme
-	install_yay_package bibata-cursor-theme  whitesur-icon-theme
+	install_yay_package xcursor-vanilla-dmz bibata-cursor-theme  whitesur-icon-theme
 	install_yay_package slides vencord
 }
 

@@ -1,3 +1,44 @@
+/*
+  my colours from OneNice
+  main background: #1f2329
+  darker background: #181b20
+  --red: #e55561;
+  --orange: #cc9057;
+  --green: #8ebd6b;
+  --aqua: #48b0bd;
+  --purple: #bf68d9;
+  --blue: #4fa6ed;
+  --yellow: #e5c07b;
+
+  OneDark ( Navarasu Theme )
+	black = "#0e1013",
+	bg0 = "#1f2329",
+	bg1 = "#282c34",
+	bg2 = "#30363f",
+	bg3 = "#323641",
+	bg_d = "#181b20",
+	bg_blue = "#61afef",
+	bg_yellow = "#e8c88c",
+	fg = "#a0a8b7",
+	purple = "#bf68d9",
+	green = "#8ebd6b",
+	orange = "#cc9057",
+	blue = "#4fa6ed",
+	yellow = "#e2b86b",
+	cyan = "#48b0bd",
+	red = "#e55561",
+	grey = "#535965",
+	light_grey = "#7a818e",
+	dark_cyan = "#266269",
+	dark_red = "#8b3434",
+	dark_yellow = "#835d1a",
+	dark_purple = "#7e3992",
+	diff_add = "#272e23",
+	diff_delete = "#2d2223",
+	diff_change = "#172a3a",
+	diff_text = "#274964",
+ */
+
 * {
   border: none;
   border-radius: 0;
@@ -7,37 +48,47 @@
 }
 
 window#waybar {
-  /*background: #15121b;*/
+  /*main waybar's background colour*/
   background: transparent;
+  /*main text colour / foreground colour ==> my white*/
   color: #cdd6f4;
 }
 
+/*the styles when hovering over clock, cpu, memory, etc*/
 tooltip {
-  background: #1e1e2e;
-  border-radius: 5px;
-  border-width: 2px;
+  /*background colour of that "hover" context*/
+  background: #323641;
+  /*radius of border*/
+  border-radius: 2px;
+  /*border size*/
+  border-width: 1px;
+  /*border style*/
   border-style: solid;
-  /*border-color: #11111b;*/
+  /*colour of that border*/
+  border-color: #bf68d9;
 }
 
 #workspaces button {
+  /*unactive workspace "text" colour*/
+  color: #cdd6f4;
   padding: 5px;
-  color: #45475a;
+  /*BUG: please fix*/
   margin-right: 5px;
 }
 
 #workspaces button.active {
-  /*color: #cdd6f4;*/
+  /*active workspace "text" colour*/
   color: #8ebd6b;
-
 }
 
+/*WARNING: Need to look into this*/
 #workspaces button.focused {
   color: #cdd6f4;
   background: #eba0ac;
   border-radius: 5px;
 }
 
+/*WARNING: Need to look into this*/
 #workspaces button.urgent {
   color: #11111b;
   /*background: #a6e3a1;*/
@@ -46,11 +97,12 @@ tooltip {
 }
 
 #workspaces button:hover {
-  /*background: #11111b;*/
-  background: #c0caf5;
-  /*background: #1e1e2e;*/
-  /*color: #cdd6f4;*/
-  color: #1e1e2e;
+  /*background colour on hover*/
+  /*background: #c0caf5;*/
+  background: #323641;
+  /*main "text" colour on hover*/
+  color: #cdd6f4;
+  /*BUG: Please Fix*/
   border-radius: 5px;
   padding-right: 10px
 }
@@ -74,7 +126,8 @@ tooltip {
 #temperature,
 #tray,
 #backlight {
-  background: #1e1e2e;
+  /*main background colour for most things*/
+  background: #323641;
   padding: 0px 10px;
   margin: 3px 0px;
   border-radius: 5px;
@@ -97,7 +150,8 @@ tooltip {
 }
 
 #workspaces {
-  background: #1e1e2e;
+  /*main background colour for workspaces on the left*/
+  background: #323641;
   border-radius: 5px;
   padding-right: 0px;
   /*padding-left: 5px;*/
@@ -112,7 +166,7 @@ tooltip {
 }
 
 #inhibitor {
-  background: #1e1e2e;
+  background: #323641;
   color: #f5e0dc;
   border-radius: 5px 0px 0px 5px;
   padding-right: 12px;
@@ -129,31 +183,34 @@ tooltip {
 }
 
 #cpu {
-  background: #1e1e2e;
+  /*main background colour for cpu module*/
+  background: #323641;
   padding: 0px 10px;
   margin: 3px 0px;
-  /*color: #f5c2e7;*/
-  color: #ff757f;
+  /*main "text" colour*/
+  color: #e55561;
 }
 
 #clock {
-  /*color: #f9e2af;*/
-  color: #ffc777;
+  /*main "text" colour*/
+  color: #e5c07b;
+  /*radius of border*/
   border-radius: 5px;
-  /* padding-right: 5px */
 }
 
 #network {
-  color: #ff9e64;
+  /*main "text" colour*/
+  color: #cc9057;
 }
 
 #pulseaudio {
-  color: #89b4fa;
+  /*main "text" colour*/
+  color: #48b0bd;
 }
 
 #memory {
-  /*color: #7dc4e4;*/
-  color: #4fd6be;
+  /*main "text" colour*/
+  color: #4fa6ed;
 }
 
 #battery {
