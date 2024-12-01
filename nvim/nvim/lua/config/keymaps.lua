@@ -24,9 +24,6 @@ keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard"
 -- paste from system clipboard
 keymap.set({"n", "v"}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
 
--- search + replace all occurances of a string
-keymap.set("n", "<leader>H", ":%s/", { desc = "Search + Replace ( All )" })
-
 -- increment / decrement numbers
 -- increment using '+' character
 keymap.set("n", "+", "<C-a>", { desc = "Increment Number by 1"})
