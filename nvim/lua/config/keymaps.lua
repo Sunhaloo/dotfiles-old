@@ -102,8 +102,10 @@ keymap.set("v", ">", ">gv", opts)
 keymap.set("n", "<leader>L", ":Lazy<CR>", { desc = "Lazy Plugin Manager" })
 
 -- neotree file browser
-keymap.set("n", "<leader>e", ":Neotree toggle left<CR>", { desc = "File Explorer ( Left )" })
-keymap.set("n", "<leader>E", ":Neotree toggle float<CR>", { desc = "File Explorer ( Float )" })
+keymap.set("n", "<leader>e", "<cmd>Neotree toggle left<CR>", { desc = "File Explorer ( Left )" })
+-- keymap.set("n", "<leader>E", ":Neotree toggle float<CR>", { desc = "File Explorer ( Float )" })
+-- INFO: Testing mini.files
+keymap.set("n", "<leader>E", "<cmd>lua MiniFiles.open()<CR>", { desc = "File Explorer ( Float )" })
 
 -- telescope
 keymap.set("n", "<leader>T", "<cmd>Telescope<CR>", { desc = "Telescope" })

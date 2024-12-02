@@ -168,4 +168,15 @@ return {
 			})
 		end,
 	},
+	{
+		"gbprod/nord.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+		  require("nord").setup({
+			  terminal_colors = true,
+			  transparent = true,
+		  })
+		end,
+	},
 }
