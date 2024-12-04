@@ -115,14 +115,9 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>", { desc = "Telescop
 keymap.set("n", "<leader>fl", "<cmd>Telescope live_grep<CR>", { desc = "Telescope Live Grep" })
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Telescope Buffer" })
 keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Telescope Old Files" })
-keymap.set("n", "<leader>fO", "<cmd>ObsidianSearch<CR>", { desc = "Search in Obsidian Vault" })
 keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Find Highlighted Comments" })
 
 -- toggle zenmode
 keymap.set("n", "<leader>Z", ":ZenMode<CR>", { desc = "Zen Mode" })
 -- toggle screenkey thing only in neovim ( very nice )
 keymap.set("n", "<leader>sk", ":ShowkeysToggle<CR>", { desc = "Toggle Key Shower 🤣" })
-
--- markdown preview
-keymap.set("n", "<leader>Mp", ":MarkdownPreview<CR>", { desc = "Markdown Preview Start" })
-keymap.set("n", "<leader>Mps", ":MarkdownPreviewStop<CR>", { desc = "Markdown Preview Stop" })

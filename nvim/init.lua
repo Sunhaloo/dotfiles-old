@@ -1,6 +1,7 @@
 -- in short the **order** or loading the configuration files are important
 -- load keymaps file
 require("config.keymaps")
+require("config.keymaps_md")
 -- load options file
 require("config.options")
 -- load lazy file

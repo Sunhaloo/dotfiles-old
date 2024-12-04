@@ -169,14 +169,16 @@ return {
 		end,
 	},
 	{
-		"gbprod/nord.nvim",
+		"shaunsingh/nord.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-		  require("nord").setup({
-			  terminal_colors = true,
-			  transparent = true,
-		  })
+			require("nord").set()
+			-- create a local variable
+			local setup = vim.g
+			setup.nord_italic = false
+			setup.nord_disable_background = true
+			setup.nord_enable_sidebar_background = false
 		end,
 	},
 }
