@@ -54,10 +54,10 @@ change_font() {
 		printf "\nFont changed to JetBrainsMono Nerd Font Mono... Please Reload Kitty\n"
 		
 	elif [ "$user_font" = 2 ]; then
-		# user selects "Ubuntu"
+		# user selects "MonaspiceKr"
 		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="MonaspiceKr Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
-		printf "\nFont changed to Ubuntu Nerd Font Mono... Please Reload Kitty\n"
+		printf "\nFont changed to MonaspiceKr Nerd Font Mono... Please Reload Kitty\n"
 		
 	elif [ "$user_font" = 3 ]; then
 		# user selects "CaskaydiaCove"
