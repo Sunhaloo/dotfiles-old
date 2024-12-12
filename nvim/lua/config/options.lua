@@ -14,11 +14,11 @@ set.ignorecase = true
 -- disable 'smartcase' to find all the instance of characters in search query
 set.smartcase = false
 -- fuck the swap file
-set.swapfile = false -- setting this option to 'off' ==> 2 options below becomes automatically 'off'
+set.swapfile = false -- --> setting this option to 'off' ==> 2 options below becomes automatically 'off'
 -- controls a lot of things like swap file creation time, plugin reponsiveness and more
-set.updatetime = 200 --> default value = 4000 ms
+set.updatetime = 200 -- --> default value = 4000 ms
 -- controls amount of characters that is in file before creating swap file
-set.updatecount = 0 --- default value = 200 character counts
+set.updatecount = 0 -- --> default value = 200 character counts
 -- time in 'ms' to wait for a mapped sequence to be executed
 set.timeoutlen = 800
 -- disable persisent undo ( undo stops when you close - re-open file )
