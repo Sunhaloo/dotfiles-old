@@ -1,12 +1,6 @@
--- in short the **order** or loading the configuration files are important
--- load keymaps file
-require("config.keymaps")
-require("config.keymaps_md")
--- load options file
+print("Source File")
+
+-- "import" the options configuration file
 require("config.options")
--- load lazy file
+-- "import" the lazy configuration file
 require("config.lazy")
--- set the theme ( main theme `onedark` )
-vim.cmd.colorscheme("onedark")
--- load auto-commands file
-require("config.autocmd")
