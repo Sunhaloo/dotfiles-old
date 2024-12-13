@@ -25,4 +25,5 @@ require("lazy").setup({
   spec = {},
   -- automatically check for updates
   checker = { enabled = true },
+  ui = { border = "rounded" }
 })
