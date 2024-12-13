@@ -1,4 +1,4 @@
--- create a variable that will truncate `vim.opt`
+-- variable that will truncate `vim.opt`
 local set = vim.opt
 
 -- << General Neovim Options >>
@@ -57,7 +57,7 @@ set.showmode = false
 set.hlsearch = false
 -- completely hide the concealed text
 set.conceallevel = 3
--- NOTE: concealcursor seems cool
+-- NOTE: concealcursor seems cool ==> use it in markdown ftplugin
 
 -- always show tabline
 set.showtabline = 2
