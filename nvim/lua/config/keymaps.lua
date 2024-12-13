@@ -1,4 +1,4 @@
--- variable that will truncate `vim.key`
+-- variable that will truncate `vim.keymap`
 local key = vim.keymap
 
 -- variable that will hold options for `noremap` and `silent`
@@ -13,12 +13,14 @@ vim.g.maplocalleader = ' '
 
 -- NOTE: using `<cmd>` means that you need to use `<CR>
 
+
 -- << Reload and Package Management >>
 
 -- reload the current file
 key.set('n', "<leader>R", "<Cmd>source %<CR>", { desc = "Reload Neovim" })
 -- open 'lazy' "start" window
 key.set('n', "<leader>L", "<Cmd>Lazy<CR>", { desc = "Lazy Plugin Manager" })
+
 
 -- << Quality of Life >>
 
@@ -30,9 +32,10 @@ key.set('n', "<C-a>", "gg<S-v>G", { desc = "Select All"})
 key.set({'n', 'v'}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
 -- paste from system clipboard
 key.set({'n', 'v'}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
--- search and replace
-
-
+-- search and replace one occurrence of that word
+key.set('n', "<leader>h", ":s/", { desc = "Search + Replace ( One )" })
+-- search and replace all occurrences of that word
+key.set('n', "<leader>H", ":%s/", { desc = "Search + Replace ( All )" })
 
 
 
@@ -43,17 +46,17 @@ key.set('i', "<C-l>", "<Right>", opts)
 key.set('i', "<C-j>", "<Down>", opts)
 key.set('i', "<C-k>", "<Up>", opts)
 
+
 -- << Coding / Writing >>
 
 -- move lines / blocks of text up / down
 key.set('v', "<A-k>", ":m '<-2<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Up"})
 key.set('v', "<A-j>", ":m '>+1<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Down"})
 -- paste even when in visual mode
-key.set("v", "p", '"_dP', opts, { desc = "Paste in Visual Mode" })
+key.set('v', 'p', '"_dP', opts, { desc = "Paste in Visual Mode" })
 -- stay in visual ( indent ) mode when indenting lines / block of text
-
-
-
+key.set('v', '<', "<gv", opts, { desc = "Stay in Visual Mode ( Indent In )" })
+key.set('v', '>', ">gv", opts, { desc = "Stay in Visual Mode ( Indent Out )" })
 
 
 -- << Tabs - Buffers - Splits >>
@@ -64,10 +67,18 @@ key.set('n', "te", "<Cmd>tabnew<CR>", { desc = "Open New Tab" })
 key.set('n', "<Tab>", "<Cmd>tabnext<CR>", { desc = "Switch to Next Tab" })
 -- switch to previous tab
 key.set('n', "<S-Tab>", "<Cmd>tabprev<CR>", { desc = "Switch to Previous Tab" })
+-- close tab without saving
+key.set('n', "<leader>Q", "<Cmd>q!<CR>", { desc = "Close Tab Without Saving" })
 -- save and close tab
-key.set('n', "<leader>Q", "<Cmd>wq<CR>", { desc = "Switch to Previous Tab" })
+key.set('n', "<leader>q", "<Cmd>wq<CR>", { desc = "Save and Close Tab" })
 
 -- split window ( horizontally )
 key.set('n', "ss", "<Cmd>split<CR>", opts, { desc = "Create Horizontal Split" })
 -- split window ( vertically )
 key.set('n', "sv", "<Cmd>vsplit<CR>", opts, { desc = "Create Vertical Split" })
+
+
+-- << Miscellaneous >>
+
+-- open vim built-in file manager ( 'Explore' / 'Lex' )
+key.set('n', "lx", "<Cmd>Lex<CR>", { desc = "Open 'Lex'" })

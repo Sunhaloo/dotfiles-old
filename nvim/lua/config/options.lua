@@ -1,6 +1,7 @@
 -- variable that will truncate `vim.opt`
 local set = vim.opt
 
+
 -- << General Neovim Options >>
 
 -- no need to create backup files ==> use auto-save.nvim plugin
@@ -24,6 +25,7 @@ set.timeoutlen = 800
 -- disable persisent undo ( undo stops when you close - re-open file )
 set.undofile = false
 
+
 -- << Coding and Writing Options >>
 
 -- enable line numbers
@@ -44,6 +46,7 @@ set.shiftwidth = 4
 set.spell = true
 -- language for spell checking
 set.spelllang = { "en_gb" }
+
 
 -- << Appearance Options >>
 
@@ -82,6 +85,7 @@ set.pumwidth = 1000 -- --> default value = 1000
 -- transparency for popup menus ( Completions, Help, Command-Line Menus )
 set.pumblend = 7 -- --> default value = 0
 
+
 -- << Neovim Splits Options >>
 
 -- new horizontal split will go below the current split
@@ -90,6 +94,7 @@ set.splitbelow = true
 set.splitright = true
 -- scroll behaviour for splits ( opening / closing, resizing )
 set.splitkeep = "topline" -- --> default value = "cursor"
+
 
 -- << GUI Options >>
 
