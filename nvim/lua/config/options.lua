@@ -43,8 +43,8 @@ set.shiftwidth = 4
 
 -- enable terminal colours ( MORE COLOURSSSS!!!! )
 set.termguicolors = true
--- hide the command line until used
-set.cmdheight = 0 -- --> setting this option to 'off' ==> option below becomes automatically 'off'
+-- hide the command line until used ( default = 1 | hidden = 0 ) TESTING '1'
+set.cmdheight = 1 -- --> setting this option to 'off' ==> option below becomes automatically 'off'
 -- show the "writing" mode ( 'NORMAL', 'INSERT', etc )
 set.showmode = false
 -- stop highlighting search query on exit search query
@@ -53,17 +53,27 @@ set.hlsearch = false
 set.conceallevel = 3
 -- NOTE: concealcursor seems cool
 
+-- always show tabline
+set.showtabline = 2
+-- don't show the ruler ( current location in file )
+set.ruler = false
+-- signcolumn before line number ( column )
+set.signcolumn = "auto:1" -- ==> show when needed with max width of '1'
+-- avoid all the |hit-enter| prompts caused by file messages ( see help for more INFO )
+set.shortmess = "afiIlnxtTo" -- --> default value = "ltToOCF"
+
+
 
 -- << Coding Appearance Options >>
 
+-- highlight the current line ( horizontally )
+set.cursorline = true
 -- height for popup menus ( Completions Menus )
 set.pumheight = 0 -- --> default value = 0
 -- width for popup menus ( Completions Menus )
 set.pumwidth = 1000 -- --> default value = 1000
 -- transparency for popup menus ( Completions, Help, Command-Line Menus )
 set.pumblend = 7 -- --> default value = 0
--- always show tabline
-set.showtabline = 2
 
 -- << Neovim Splits Options >>
 
