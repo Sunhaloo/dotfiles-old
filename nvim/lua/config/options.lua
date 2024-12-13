@@ -15,7 +15,7 @@ set.ignorecase = true
 set.smartcase = false
 -- fuck the swap file
 set.swapfile = false -- --> setting this option to 'off' ==> the 2 options below becomes automatically 'off'
--- controls a lot of things like swap file creation time, plugin reponsiveness and more
+-- controls a lot of things like swap file creation time, plugin-reponsiveness and more
 set.updatetime = 200 -- --> default value = 4000 ms
 -- controls amount of characters that is in file before creating swap file
 set.updatecount = 0 -- --> default value = 200 character counts
@@ -39,12 +39,18 @@ set.softtabstop = 4
 -- number of spaces for indentation
 set.shiftwidth = 4
 
+-- NOTE: need add this to markdown ftplugin
+-- enable spell checking
+set.spell = true
+-- language for spell checking
+set.spelllang = { "en_gb" }
+
 -- << Appearance Options >>
 
 -- enable terminal colours ( MORE COLOURSSSS!!!! )
 set.termguicolors = true
 -- hide the command line until used ( default = 1 | hidden = 0 ) TESTING '1'
-set.cmdheight = 1 -- --> setting this option to 'off' ==> option below becomes automatically 'off'
+set.cmdheight = 0 -- --> setting this option to 'off' ==> option below becomes automatically 'off'
 -- show the "writing" mode ( 'NORMAL', 'INSERT', etc )
 set.showmode = false
 -- stop highlighting search query on exit search query
@@ -60,8 +66,9 @@ set.ruler = false
 -- signcolumn before line number ( column )
 set.signcolumn = "auto:1" -- ==> show when needed with max width of '1'
 -- avoid all the |hit-enter| prompts caused by file messages ( see help for more INFO )
-set.shortmess = "afiIlnxtTo" -- --> default value = "ltToOCF"
-
+set.shortmess = "wfiIlnxtToOCF" -- --> default value = "ltToOCF"
+-- disable help message in 'Lex'
+vim.g.netrw_banner = 1
 
 
 -- << Coding Appearance Options >>
@@ -83,3 +90,8 @@ set.splitbelow = true
 set.splitright = true
 -- scroll behaviour for splits ( opening / closing, resizing )
 set.splitkeep = "topline" -- --> default value = "cursor"
+
+-- << GUI Options >>
+
+-- set the actual font for GUI
+set.guifont = "JetBrainsMono Nerd Font Mono"
