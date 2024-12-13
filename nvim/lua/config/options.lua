@@ -41,12 +41,18 @@ set.shiftwidth = 4
 
 -- << Appearance Options >>
 
+-- enable terminal colours ( MORE COLOURSSSS!!!! )
+set.termguicolors = true
 -- hide the command line until used
 set.cmdheight = 0 -- --> setting this option to 'off' ==> option below becomes automatically 'off'
 -- show the "writing" mode ( 'NORMAL', 'INSERT', etc )
 set.showmode = false
 -- stop highlighting search query on exit search query
 set.hlsearch = false
+-- completely hide the concealed text
+set.conceallevel = 3
+-- NOTE: concealcursor seems cool
+
 
 -- << Coding Appearance Options >>
 
@@ -54,9 +60,10 @@ set.hlsearch = false
 set.pumheight = 0 -- --> default value = 0
 -- width for popup menus ( Completions Menus )
 set.pumwidth = 1000 -- --> default value = 1000
--- transparency for popup menus ( Completions Menus )
-set.pumblend = 50 -- --> default value = 0
-
+-- transparency for popup menus ( Completions, Help, Command-Line Menus )
+set.pumblend = 7 -- --> default value = 0
+-- always show tabline
+set.showtabline = 2
 
 -- << Neovim Splits Options >>
 
