@@ -1,3 +1,4 @@
 {
-  "lazy.nvim": { "branch": "main", "commit": "7c493713bc2cb392706866eeba53aaef6c8e9fc6" }
+  "lazy.nvim": { "branch": "main", "commit": "7c493713bc2cb392706866eeba53aaef6c8e9fc6" },
+  "nvim-lspconfig": { "branch": "master", "commit": "ffe543e171792e4e7c42f1e73c4ab5c6fe71b861" }
 }

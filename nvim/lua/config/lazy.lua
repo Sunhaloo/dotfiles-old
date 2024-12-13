@@ -22,7 +22,9 @@ vim.g.maplocalleader = " "
 
 -- setup lazy.nvim
 require("lazy").setup({
-  spec = {},
+  spec = {
+      { import = "plugins" }
+  },
   -- automatically check for updates
   checker = { enabled = true },
   ui = { border = "rounded" }
