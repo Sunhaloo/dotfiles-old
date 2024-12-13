@@ -23,17 +23,51 @@ key.set('n', "<leader>L", "<Cmd>Lazy<CR>", { desc = "Lazy Plugin Manager" })
 -- << Quality of Life >>
 
 -- remap <Esc> to <jk>
-key.set("i", "jk", "<ESC>", opts)
+key.set('i', "jk", "<ESC>", opts, { desc = "Exit Insert Mode" })
 -- select all within file
-key.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All"})
+key.set('n', "<C-a>", "gg<S-v>G", { desc = "Select All"})
 -- copy to system clipboard
-key.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
+key.set({'n', 'v'}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
 -- paste from system clipboard
-key.set({"n", "v"}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
+key.set({'n', 'v'}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
 -- search and replace
 
+
+
+
+
+
 -- my weird fucking keymappings ( My QOL Improvement )
-key.set("i", "<C-h>", "<Left>", opts)
-key.set("i", "<C-l>", "<Right>", opts)
-key.set("i", "<C-j>", "<Down>", opts)
-key.set("i", "<C-k>", "<Up>", opts)
+key.set('i', "<C-h>", "<Left>", opts)
+key.set('i', "<C-l>", "<Right>", opts)
+key.set('i', "<C-j>", "<Down>", opts)
+key.set('i', "<C-k>", "<Up>", opts)
+
+-- << Coding / Writing >>
+
+-- move lines / blocks of text up / down
+key.set('v', "<A-k>", ":m '<-2<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Up"})
+key.set('v', "<A-j>", ":m '>+1<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Down"})
+-- paste even when in visual mode
+key.set("v", "p", '"_dP', opts, { desc = "Paste in Visual Mode" })
+-- stay in visual ( indent ) mode when indenting lines / block of text
+
+
+
+
+
+-- << Tabs - Buffers - Splits >>
+
+-- create a new tab
+key.set('n', "te", "<Cmd>tabnew<CR>", { desc = "Open New Tab" })
+-- switch to next tab
+key.set('n', "<Tab>", "<Cmd>tabnext<CR>", { desc = "Switch to Next Tab" })
+-- switch to previous tab
+key.set('n', "<S-Tab>", "<Cmd>tabprev<CR>", { desc = "Switch to Previous Tab" })
+-- save and close tab
+key.set('n', "<leader>Q", "<Cmd>wq<CR>", { desc = "Switch to Previous Tab" })
+
+-- split window ( horizontally )
+key.set('n', "ss", "<Cmd>split<CR>", opts, { desc = "Create Horizontal Split" })
+-- split window ( vertically )
+key.set('n', "sv", "<Cmd>vsplit<CR>", opts, { desc = "Create Vertical Split" })
