@@ -36,11 +36,50 @@ return {
                 local opts = { buffer = ev.buf, silent = true }
 
                 -- keymaps for LSP
+                opts.desc = "Show LSP Definitions"
+                key.set('n', "gd", "<Cmd>Telescope lsp_definitions<CR>", opts)
+
+                opts.desc = "Go To Declaration"
+                key.set('n', "gD", vim.lsp.buf.declaration, opts)
+
+                opts.desc = "Show LSP References"
+                key.set('n', "gR", "<Cmd>Telescope lsp_references<CR>", opts)
+
+                opts.desc = "Show LSP Type Implementations"
+                key.set('n', "gi", "<Cmd>Telescope lsp_implementations<CR>", opts)
+
+                opts.desc = "Show LSP Type Definitions"
+                key.set('n', "gt", "<Cmd>Telescope lsp_type_definitions<CR>", opts)
+
+                opts.desc = "Show Line Diagnostics"
+                key.set('n', "<leader>d", vim.diagnostics.open_float, opts)
+
+                opts.desc = "Show Buffer Diagnostics"
+                key.set('n', "<leader>D", "<Cmd>Telescope diagnostics bufnr=0<CR>", opts)
+
+                opts.desc = "Next Diagnostics"
+                key.set('n', "]d", vim.diagnostic.goto_next, opts)
+
+                opts.desc = "Previous Diagnostics"
+                key.set('n', "[d", vim.diagnostic.goto_prev, opts)
+
+                opts.desc = "Show Documentation Under Cursor"
+                key.set('n', "K", vim.lsp.bug.hover, opts)
+
+                opts.desc = "Restart LSP"
+                key.set('n', "<leader>rs", "<Cmd>LspRestart<CR>", opts)
             end,
         })
 
         -- configuration for 'mason-lspconfig'
-        mason_lspconfig = setup_handlers({})
+        mason_lspconfig = setup_handlers({
+            function(server_name)
+                lspconfig[server_name].setup({
+                    capabilities = capabilities
+                })
+            end,
+            -- configure shit here
+        })
 
     end,
 }
