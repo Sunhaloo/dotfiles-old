@@ -18,16 +18,29 @@ return {
         },
     },
     config = function()
-        -- configuration for 'nvim-lspconfig'
+        -- create variables for configuration for both 'nvim-lspconfig' + 'mason-lspconfig'
         local lspconfig = require("lspconfig")
-
-        -- configuration for 'mason-lspconfig'
         local mason_lspconfig = require("mason-lspconfig")
 
         -- variable that will truncate `vim.keymap`
         local key = vim.keymap
-        -- variable that will hold options for `noremap` and `silent`
-        local opts = { noremap = true, silent = true }
+
+        -- configuration for 'nvim-lspconfig'
+        -- create auto-command which will be loaded on event 'LspAttach'
+        vim.api.nvim_create_autocmd("LspAttach", {
+            -- create group ( organise and manage LSP auto-commands only )
+            group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+            -- create callback function ( 'event' as arg )
+            callback = function(ev)
+                -- variable what will hold these options for LOCAL Buffer ONLY
+                local opts = { buffer = ev.buf, silent = true }
+
+                -- keymaps for LSP
+            end,
+        })
+
+        -- configuration for 'mason-lspconfig'
+        mason_lspconfig = setup_handlers({})
 
     end,
 }
