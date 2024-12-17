@@ -17,7 +17,17 @@ return {
             },
         },
     },
-    -- configuration for 'nvim-lspconfig'
     config = function()
+        -- configuration for 'nvim-lspconfig'
+        local lspconfig = require("lspconfig")
+
+        -- configuration for 'mason-lspconfig'
+        local mason_lspconfig = require("mason-lspconfig")
+
+        -- variable that will truncate `vim.keymap`
+        local key = vim.keymap
+        -- variable that will hold options for `noremap` and `silent`
+        local opts = { noremap = true, silent = true }
+
     end,
 }

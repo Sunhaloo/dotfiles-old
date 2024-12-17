@@ -31,7 +31,9 @@ return {
                 -- writing / markdown related
                 "marksman",
                 "ltex"
-            }
+            },
+            -- installs "Not-Installed" LSPs ( or others ) if LSPs ( or other ) is already configured
+            automatic_installation = true
         })
     end,
 }
