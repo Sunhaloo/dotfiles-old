@@ -1,29 +1,23 @@
 return {
-    {
-        -- clone the data only repo
-        "neovim/nvim-lspconfig",
-        -- for performance start the plugin on these 2 events
-        events = { "BufReadPre", "BufNewFile" },
-        -- other dependencies to clone
-        dependencies = {
-            "hrsh7th/cmp-nvim-lsp",
-            {
-                -- faster LuaLS setup
-                "folke/lazydev.nvim",
-                -- only enable on `.lua` files
-                ft = "lua",
-                -- default configuration
-                opts = {
-                  library = {
-                    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-                  },
-                },
+    -- quickstart configurations for LSP
+    "neovim/nvim-lspconfig",
+    -- start on these 2 events
+    events = { "BufReadPre", "BufNewFile" },
+    -- dependencies to install with 'nvim-lspconfig'
+    dependencies = {
+        {
+            -- faster LuaLS things
+            "folke/lazydev.nvim",
+            -- load only on lua 'filetypes'
+            ft = "lua",
+            opts = {
+              library = {
+                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+              },
             },
         },
-        -- our configuration
-        config = function()
-            
-
-        end,
-    }
+    },
+    -- configuration for 'nvim-lspconfig'
+    config = function()
+    end,
 }
