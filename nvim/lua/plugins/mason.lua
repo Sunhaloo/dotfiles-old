@@ -8,8 +8,8 @@ return {
     },
     config = function()
         -- create variables for configuration for both 'mason-lspconfig' + 'mason'
-        local mason_lspconfig = require("mason-lspconfig")
         local mason = require("mason")
+        local mason_lspconfig = require("mason-lspconfig")
 
         -- configuration for 'mason'
         mason.setup({
