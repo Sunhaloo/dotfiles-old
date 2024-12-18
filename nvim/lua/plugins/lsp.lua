@@ -52,7 +52,7 @@ return {
                 key.set('n', "gt", "<Cmd>Telescope lsp_type_definitions<CR>", opts)
 
                 opts.desc = "Show Line Diagnostics"
-                key.set('n', "<leader>d", vim.diagnostics.open_float, opts)
+                key.set('n', "<leader>d", vim.diagnostic.open_float, opts)
 
                 opts.desc = "Show Buffer Diagnostics"
                 key.set('n', "<leader>D", "<Cmd>Telescope diagnostics bufnr=0<CR>", opts)
@@ -64,7 +64,7 @@ return {
                 key.set('n', "[d", vim.diagnostic.goto_prev, opts)
 
                 opts.desc = "Show Documentation Under Cursor"
-                key.set('n', "K", vim.lsp.bug.hover, opts)
+                key.set('n', "K", vim.lsp.buf.hover, opts)
 
                 opts.desc = "Restart LSP"
                 key.set('n', "<leader>rs", "<Cmd>LspRestart<CR>", opts)
@@ -72,7 +72,7 @@ return {
         })
 
         -- configuration for 'mason-lspconfig'
-        mason_lspconfig = setup_handlers({
+        mason_lspconfig.setup_handlers({
             function(server_name)
                 lspconfig[server_name].setup({
                     capabilities = capabilities
