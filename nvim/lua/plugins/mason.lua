@@ -7,8 +7,12 @@ return {
         "williamboman/mason-lspconfig.nvim",
     },
     config = function()
+        -- create variables for configuration for both 'mason-lspconfig' + 'mason'
+        local mason_lspconfig = require("mason-lspconfig")
+        local mason = require("mason")
+
         -- configuration for 'mason'
-        require("mason").setup({
+        mason.setup({
             -- ui configuration for mason
             ui = {
                 -- do `:h nvim_open_win()` for options
@@ -22,7 +26,7 @@ return {
             }
         })
         -- configuration for 'mason-lspconfig'
-        require("mason-lspconfig").setup({
+        mason_lspconfig.setup({
             -- make sure that these LSPs are installed "by default"
             ensure_installed = {
                 -- programming / code related

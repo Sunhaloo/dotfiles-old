@@ -5,6 +5,7 @@ return {
     events = { "BufReadPre", "BufNewFile" },
     -- dependencies to install with 'nvim-lspconfig'
     dependencies = {
+        "hrsh7th/cmp-nvim-lsp",
         {
             -- faster LuaLS things
             "folke/lazydev.nvim",
@@ -21,6 +22,8 @@ return {
         -- create variables for configuration for both 'nvim-lspconfig' + 'mason-lspconfig'
         local lspconfig = require("lspconfig")
         local mason_lspconfig = require("mason-lspconfig")
+        -- NOTE: for some reason it's not `cmp-nvim-lsp` instead its `cmp_nvim_lsp`
+        local nvim_cmp_lsp = require("cmp_nvim_lsp")
 
         -- variable that will truncate `vim.keymap`
         local key = vim.keymap
@@ -71,14 +74,18 @@ return {
             end,
         })
 
-        -- configuration for 'mason-lspconfig'
+        -- configuration for 'cmp-nvim-lsp'
+        -- setup neovim to enhance autocompletion with 'nvim-cmp'
+        local capabilities = nvim_cmp_lsp.default_capabilities()
+
+        -- configuration for 'mason-lspconfig' ( configure LSP server with 'mason-lspconfig' )
         mason_lspconfig.setup_handlers({
             function(server_name)
                 lspconfig[server_name].setup({
+                    -- pass that "better" autocompletion ( nvim-cmp ) "settings" to the default one's
                     capabilities = capabilities
                 })
             end,
-            -- configure shit here
         })
 
     end,
