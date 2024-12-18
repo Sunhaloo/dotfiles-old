@@ -6,6 +6,7 @@ return {
     -- dependencies to install with 'nvim-lspconfig'
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
+        "williamboman/mason-lspconfig.nvim",
         {
             -- faster LuaLS things
             "folke/lazydev.nvim",
@@ -86,7 +87,15 @@ return {
                     capabilities = capabilities
                 })
             end,
-        })
 
+            -- configure 'pyright'
+            ["pyright"] = function()
+                lspconfig["pyright"].setup({
+                    -- enhance auto-completion "engine" for 'pyright' wht 'nvim-cmp
+                    capabilities = capabilities
+                })
+            end,
+
+        })
     end,
 }
