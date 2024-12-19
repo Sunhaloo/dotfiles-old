@@ -81,15 +81,18 @@ return {
         dependencies = {
             -- acts like a bridge between 'nvim-lspconfig' and 'mason' itself
             "williamboman/mason-lspconfig.nvim",
+            -- will allow us to download formatters automatically
+            "WhoIsSethDaniel/mason-tool-installer.nvim",
             -- completion "engine" that will be able to source LSP completions
             "hrsh7th/cmp-nvim-lsp",
         },
 
         -- configuration for 'mason' and 'mason-lspconfig'
         config = function()
-            -- create variables for import configuration for both 'mason' + 'mason-lspconfig' + 'cmp-nvim-lsp'
+            -- import configuration files
             local mason = require("mason")
             local mason_lspconfig = require("mason-lspconfig")
+            local mason_tool_installer = require("mason-tool-installer")
             local lspconfig = require("lspconfig")
             local nvim_cmp_lsp = require("cmp_nvim_lsp")
 
@@ -120,7 +123,31 @@ return {
                     "ltex"
                 },
                 -- installs "Not-Installed" LSPs ( or others ) if LSPs ( or other ) is already configured
-                automatic_installation = true
+                automatic_installation = true,
+            })
+
+            -- configuration for 'mason-tool-installer'
+            mason_tool_installer.setup({
+                -- make sure that these formatters are installed "by default"
+                ensure_installed = {
+                    "luacheck",
+                    "stylua",
+                    "black",
+                    "isort",
+                    "ruff"
+                },
+                -- auto update them
+                auto_update = true,
+                -- don't run on start
+                run_on_start = false,
+            })
+
+            -- autoformat python files with 'black' and 'isort' on save
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                pattern = "*.py",
+                callback = function()
+                    vim.lsp.buf.format({ async = false })
+                end,
             })
 
             -- configuration for 'cmp-nvim-lsp'
