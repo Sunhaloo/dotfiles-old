@@ -1,5 +1,5 @@
 return {
-    -- main LSP configuration
+   -- main LSP configuration
     {
         -- quickstart configurations for LSP
         "neovim/nvim-lspconfig",
@@ -84,7 +84,7 @@ return {
             -- will allow us to download formatters automatically
             "WhoIsSethDaniel/mason-tool-installer.nvim",
             -- completion "engine" that will be able to source LSP completions
-            "hrsh7th/cmp-nvim-lsp",
+            "Saghen/blink.cmp",
         },
 
         -- configuration for 'mason' and 'mason-lspconfig'
@@ -94,7 +94,7 @@ return {
             local mason_lspconfig = require("mason-lspconfig")
             local mason_tool_installer = require("mason-tool-installer")
             local lspconfig = require("lspconfig")
-            local nvim_cmp_lsp = require("cmp_nvim_lsp")
+            local completion = require("blink.cmp")
 
 
             -- configuration for 'mason'
@@ -152,15 +152,16 @@ return {
                 end,
             })
 
-            -- configuration for 'cmp-nvim-lsp'
-            -- setup neovim to enhance autocompletion with 'nvim-cmp'
-            local capabilities = nvim_cmp_lsp.default_capabilities()
+            -- configuration for 'blink.cmp' ( LSP Side )
+            -- setup neovim to enhance autocompletion with 'blink.cmp'
+            -- local capabilities = nvim_cmp_lscwp.default_capabilities()
+            local capabilities = completion.get_lsp_capabilities()
 
             -- configuration for 'mason-lspconfig' ( configure LSP server with 'mason-lspconfig' )
             mason_lspconfig.setup_handlers({
                 function(server_name)
                     lspconfig[server_name].setup({
-                        -- pass that "better" autocompletion ( nvim-cmp ) "settings" to the default one's
+                        -- pass that "better" autocompletion ( blink.cmp ) "settings" to the default one's
                         capabilities = capabilities
                     })
                 end,
@@ -168,49 +169,11 @@ return {
                 -- configure 'pyright'
                 ["pyright"] = function()
                     lspconfig["pyright"].setup({
-                        -- enhance auto-completion "engine" for 'pyright' wht 'nvim-cmp
+                        -- enhance auto-completion "engine" for 'pyright' with 'blink.cmp'
                         capabilities = capabilities
                     })
                 end,
             })
         end,
     },
-    {
-        -- better syntax highlighting
-        "nvim-treesitter/nvim-treesitter",
-        -- run the command `TSUpdate` whenever we are updating plugins with 'lazy'
-        build = ":TSUpdate",
-        -- start on these 2 events
-        event = { "BufReadPre", "BufNewFile" },
-        -- configuration for 'nvim-treesitter'
-        config = function()
-            -- import the configuration files for 'nvim-treesitter'
-            require("nvim-treesitter.configs").setup({
-                -- make sure that parsers for these languages are installed by "default"
-                ensure_installed = {
-                    "lua",
-                    "python",
-                    "markdown",
-                    "markdown_inline"
-                },
-                -- enable highlighting
-                highlight = {
-                    enable = true,
-                    -- disable highlights / 'nivm-treesitter' based on file types
-                    disable = {},
-                },
-                -- enable indentation ( view documentation for more information )
-                indent = {
-                    enable = true,
-                },
-                -- what parsers do we need to ignore
-                ignore_install = {},
-                -- no need to install parsers automatically ( write down what you need manually )
-                auto_install = false,
-                -- don't install parsers synchronously 
-                sync_install = false,
-
-            })
-        end,
-    }
 }
