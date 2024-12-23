@@ -22,8 +22,27 @@ return {
                 -- use 'nvim-cmp' appearance by default as most theme does not support 'blink.cmp'
               use_nvim_cmp_as_default = true,
                 -- 'mono' ==> 'Nerd Font Mono' Fonts | 'normal' ==> 'Nerd Font' Fonts ( NOT Mono Variant )
-              nerd_font_variant = 'mono'
+              nerd_font_variant = 'mono',
+
             },
+            -- from line 28 to 44 ==> set border of completion to 'rounded'
+            completion = {
+                menu = {
+                    border = 'rounded'
+                },
+
+                documentation = {
+                    window = {
+                        border = 'rounded'
+                    }
+                },
+            },
+            signature = {
+                window = {
+                    border = 'rounded'
+                }
+            },
+
 
             -- priority for sourcing auto-completion
             sources = {
