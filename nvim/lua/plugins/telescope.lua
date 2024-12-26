@@ -11,6 +11,18 @@ return {
         },
         -- configure telescope
         config = function ()
+            -- general telescope configuration
+            require("telescope").setup({
+                -- change the theme for git files ( 'git_files' picker )
+                pickers = {
+                    git_files = {
+                        -- change the themes to 'ivy'
+                        theme = "ivy"
+                    }
+                }
+            })
+            
+
             -- create a variable for `telescope.builtin`
             local builtin = require("telescope.builtin")
             -- variable that will truncate `vim.keymap`
@@ -32,11 +44,11 @@ return {
             -- custom "custom" keymappings for Telescope ( refer to Teej's video )
             -- allow the user to search for files in the directory: `~/Obsidian/S.Sunhaloo`
             key.set('n', "<leader>fO", function ()
-                -- get the `find_files` method for telescope
-                builtin.find_files {
+                -- get the `find_files` method for telescope + use the 'ivy' theme
+                builtin.find_files(require("telescope.themes").get_ivy({
                     -- setup the custom directory ( in this case my Obsidian Vault )
                     cwd = "$HOME/Obsidian/S.Sunhaloo/"
-                }
+                }))
             end,
                 {
                     desc = "Find Obsidian Files [ Telescope ]"
@@ -48,6 +60,8 @@ return {
                 builtin.find_files {
                     -- setup the custom directory for `~/.config/`
                     cwd = "$HOME/.config/"
+                    -- use line below for neovim configuration only
+                    -- cwd = vim.fn.stdpath("config")
                 }
             end,
                 {
