@@ -19,6 +19,10 @@ return {
                         -- change the themes to 'ivy'
                         theme = "ivy"
                     }
+                },
+                -- "custom" extension that we can add to telescope
+                extension = {
+                    fzf = {}
                 }
             })
             
@@ -60,7 +64,7 @@ return {
                 builtin.find_files {
                     -- setup the custom directory for `~/.config/`
                     cwd = "$HOME/.config/"
-                    -- use line below for neovim configuration only
+                    -- un-comment the line below to search Neovim configuration directory only
                     -- cwd = vim.fn.stdpath("config")
                 }
             end,
