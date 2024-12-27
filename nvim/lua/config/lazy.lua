@@ -22,10 +22,17 @@ vim.g.maplocalleader = " "
 
 -- setup lazy.nvim
 require("lazy").setup({
-  spec = {
-      { import = "plugins" },
-  },
-  -- automatically check for updates
-  checker = { enabled = true },
-  ui = { border = "rounded" }
+    spec = {
+        -- point to the 'plugins' folder ( ~/.config/nvim/lua/plugins/ )
+        { import = "plugins" },
+    },
+    -- automatically check for updates
+    checker = { enabled = true },
+    ui = { border = "rounded" }
 })
+
+-- point to the 'plugins' folder again
+-- but this time, we are not "returning" anything ( no spec being returned )
+
+-- instead of using something like 'toggleterm.nvim' ==> make it ourselves
+require("plugins.terminal")

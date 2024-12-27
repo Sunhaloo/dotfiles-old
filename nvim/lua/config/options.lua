@@ -41,7 +41,10 @@ set.softtabstop = 4
 -- number of spaces for indentation
 set.shiftwidth = 4
 
--- NOTE: need add this to markdown ftplugin
+-- << Spell Checking >>
+
+-- NOTE: Uncomment the lines of code for "global" spell checking ==> in EVERY file ( coding files included )
+
 -- enable spell checking
 set.spell = true
 -- language for spell checking

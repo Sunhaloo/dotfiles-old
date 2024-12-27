@@ -36,8 +36,10 @@ key.set({'n', 'v'}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard"
 key.set('n', "<leader>h", ":s/", { desc = "Search + Replace ( One )" })
 -- search and replace all occurrences of that word
 key.set('n', "<leader>H", ":%s/", { desc = "Search + Replace ( All )" })
-
-
+-- increment number
+key.set('n', '+', "<C-a>", { desc = "Increment Number" })
+-- decrement number
+key.set('n', '-', "<C-x>", { desc = "Decrement Number" })
 
 
 -- my weird fucking keymappings ( My QOL Improvement )
