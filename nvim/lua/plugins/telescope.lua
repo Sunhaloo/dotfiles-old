@@ -21,11 +21,13 @@ return {
                     }
                 },
                 -- "custom" extension that we can add to telescope
-                extension = {
+                extensions = {
                     fzf = {}
                 }
             })
             
+            -- allow telescope to load our installed extensions
+            require("telescope").load_extension("fzf")
 
             -- create a variable for `telescope.builtin`
             local builtin = require("telescope.builtin")
