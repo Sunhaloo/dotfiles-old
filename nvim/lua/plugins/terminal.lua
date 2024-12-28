@@ -24,11 +24,34 @@ key.set('n', "<leader>ht", function()
     vim.cmd.wincmd("J")
     -- set the height for terminal ( adjust for your screen size and resolution )
     vim.api.nvim_win_set_height(0, 15)
+    -- start in insert mode upon entering
+    vim.cmd("startinsert")
 end,
+    -- add a simple description
     {
         desc = "Open Hortizontal Terminal"
     }
 )
+
+-- create a vertical terminal
+key.set('n', "<leader>vt", function()
+    -- create a new window ( empty buffer )
+    vim.cmd.vnew()
+    -- run the command to open Neovim terminal
+    vim.cmd.term()
+    -- place the window at the far right side ( with terminal buffer open )
+    vim.cmd.wincmd("L")
+    -- set the width for terminal ( adjust for your screen size and resolution )
+    vim.api.nvim_win_set_width(0, 50)
+    -- start in insert mode upon entering
+    vim.cmd("startinsert")
+end,
+    -- add a simple description
+    {
+        desc = "Open Vertical Terminal"
+    }
+)
+
 
 -- return "nothing" ==> suppresses lazy's annoying 'spec' message
 return {}
