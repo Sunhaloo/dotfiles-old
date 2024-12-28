@@ -74,10 +74,15 @@ key.set('n', "<leader>Q", "<Cmd>q!<CR>", { desc = "Close Tab Without Saving" })
 -- save and close tab
 key.set('n', "<leader>q", "<Cmd>wq<CR>", { desc = "Save and Close Tab" })
 
--- split window ( horizontally )
-key.set('n', "ss", "<Cmd>split<CR>", opts, { desc = "Create Horizontal Split" })
--- split window ( vertically )
-key.set('n', "sv", "<Cmd>vsplit<CR>", opts, { desc = "Create Vertical Split" })
+-- split window horizontally with same buffer
+key.set('n', "ss", "<Cmd>split<CR>", opts, { desc = "Create Horizontal Split ( Same Buffer )" })
+-- split window vertically with same buffer
+key.set('n', "sv", "<Cmd>vsplit<CR>", opts, { desc = "Create Vertical Split ( Same Buffer )" })
+
+-- split window horizontally with new buffer
+key.set('n', "<leader>ss", "<Cmd>new<CR>", opts, { desc = "Create Horizontal Split ( New Buffer )" })
+-- split window vertically with new buffer
+key.set('n', "<leader>sv", "<Cmd>vnew<CR>", opts, { desc = "Create Vertical Split ( Same Buffer )" })
 
 
 -- << Miscellaneous >>
