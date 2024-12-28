@@ -8,6 +8,8 @@ return {
             "nvim-lua/plenary.nvim",
             -- improve sorting performance
             "nvim-telescope/telescope-fzf-native.nvim",
+            -- icons for telescope
+            "echasnovski/mini.icons",
         },
         -- configure telescope
         config = function ()

@@ -3,7 +3,7 @@ return {
         -- better auto-completion for Neovim
         "saghen/blink.cmp",
         -- dependencies to install with 'blink'
-        dependencies = 'rafamadriz/friendly-snippets',
+        dependencies = { "rafamadriz/friendly-snippets" },
         -- start on this event
         event = { "InsertEnter" },
         -- use a release tag to download pre-built binaries ==> default option
