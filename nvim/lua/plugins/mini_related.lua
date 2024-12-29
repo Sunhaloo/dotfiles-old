@@ -3,6 +3,8 @@ return {
         -- icons! What else can I say!
         "echasnovski/mini.icons",
         version = false,
+        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
+        event = "VeryLazy",
         -- configuration for 'mini.icons'
         config = function()
             -- enable the icons ( as per documentation )
@@ -16,6 +18,8 @@ return {
         -- my choice for a file tree ( rival 'oil.nvim' for me )
         "echasnovski/mini.files",
         version = false,
+        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
+        event = "VeryLazy",
         -- configuration for 'mini.files'
         config = function()
             -- enable the file manager ( as per documentation )
