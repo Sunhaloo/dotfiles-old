@@ -51,7 +51,3 @@ end,
         desc = "Open Vertical Terminal"
     }
 )
-
-
--- return "nothing" ==> suppresses lazy's annoying 'spec' message
--- return {}
