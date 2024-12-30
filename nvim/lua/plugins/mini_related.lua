@@ -48,6 +48,7 @@ return {
             -- enable the autopairs plugin
             require("mini.pairs").setup({
                 mappings = {
+                    -- create autopairs for '<>' as mini.pairs does not come with that
                     ['<'] = { action = 'open', pair = '<>', neigh_pattern = '[^\\].' },
                     ['>'] = { action = 'close', pair = '<>', neigh_pattern = '[^\\].' },
                 }

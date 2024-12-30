@@ -9,7 +9,8 @@ local state = {
 
 -- code provided by ChatGPT
 local function create_floating_window(opts)
-    -- Get screen dimensions
+    -- get the dimensions of the current Neovim window ==> screen dimensions
+    -- NOTE: "Terminal Zoom" is also taken into account
     local screen_width = vim.o.columns
     local screen_height = vim.o.lines
 
@@ -18,7 +19,7 @@ local function create_floating_window(opts)
     local height = opts and opts.height or math.floor(screen_height * 0.8)
 
     -- Calculate the starting position (row and col) to center the window
-    local row = math.floor((screen_height - height) / 2)
+    local row = math.floor((screen_height - height) / 2) - 0.9
     local col = math.floor((screen_width - width) / 2)
 
     -- create a buffer in the window
@@ -42,7 +43,7 @@ local function create_floating_window(opts)
         row = row,
         col = col,
         style = "minimal", -- No borders or UI elements
-        border = "rounded", -- Optional: rounded borders
+        border = "rounded" -- Optional: rounded borders
     })
 
     -- update the return to use table
