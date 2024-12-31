@@ -1,11 +1,14 @@
 -- variable that will truncate `vim.keymap`
 local key = vim.keymap
 
+-- give an initial state for the window and buffer
 local state = {
+    -- initial state for horizontal terminal
     horizontal_term = {
         buf = -1,
         win = -1
     },
+    -- initial state for vertical terminal
     vertical_term = {
         buf = -1,
         win = -1
