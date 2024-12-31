@@ -4,8 +4,10 @@ return {
         "saghen/blink.cmp",
         -- dependencies to install with 'blink'
         dependencies = {
-            "rafamadriz/friendly-snippets"
-
+            -- gives us VS C*de snippets without any configuration
+            "rafamadriz/friendly-snippets",
+            -- custom snippet engine written in Lua
+            "L3MON4D3/LuaSnip",
         },
         -- start on this event
         event = { "InsertEnter" },
