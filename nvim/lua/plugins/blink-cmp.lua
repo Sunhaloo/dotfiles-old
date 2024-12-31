@@ -56,8 +56,8 @@ return {
                 -- NOTE: adding LuaSnip as a source but also keeping 'snippets'
                 default = { "lsp", "luasnip", "snippets", "buffer", "path" },
             },
-        },
 
+        },
 
         -- where and how to get the auto-completion
         opts_extend = { "sources.default" }
