@@ -7,6 +7,16 @@ return {
         event = "VeryLazy",
         -- configuration for 'which-key'
         opts = {
+            -- icons configuration
+            icons = {
+                breadcrumb = "",
+                separator = "",
+                group = "",
+                keys = {
+                    Esc = "",
+                    Space = ""
+                }
+            }
         },
         -- how to "open" / "call" 'which-key'
         keys = {
@@ -18,9 +28,5 @@ return {
                 desc = "Current Buffer Local Keymappings [ which-key ]"
             }
         },
-        -- icons configuration
-        icons = {
-            breadcrumb = ".."
-        }
     },
 }

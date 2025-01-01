@@ -8,8 +8,6 @@ return {
             "nvim-lua/plenary.nvim",
             -- improve sorting performance
             "nvim-telescope/telescope-fzf-native.nvim",
-            -- telescope file browser extension ( currently using 'mini.files' )
-            -- "nvim-telescope/telescope-file-browser.nvim",
             -- icons for telescope
             "echasnovski/mini.icons",
         },
@@ -20,25 +18,18 @@ return {
                 -- change the theme for git files ( 'git_files' picker )
                 pickers = {
                     git_files = {
-                        -- change the theme to 'ivy'
+                        -- change the themes to 'ivy'
                         theme = "ivy"
                     }
                 },
                 -- "custom" extension that we can add to telescope
                 extensions = {
-                    fzf = {},
-                    -- currently using 'mini.files'
-                    -- file_browser = {
-                    --     -- change the theme to 'dropdown'
-                    --     theme = "dropdown",
-                    -- }
+                    fzf = {}
                 }
             })
             
             -- allow telescope to load our installed extensions
             require("telescope").load_extension("fzf")
-            -- currently using 'mini.files'
-            -- require("telescope").load_extension("file_browser")
 
             -- create a variable for `telescope.builtin`
             local builtin = require("telescope.builtin")
@@ -82,7 +73,7 @@ return {
                 }
             end,
                 {
-                    desc = "Find Confiugration Files [ Telescope ]"
+                    desc = "Find Configuration Files [ Telescope ]"
                 }
             )
         end,
