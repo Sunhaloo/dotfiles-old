@@ -4,19 +4,12 @@ return {
         -- plugin will be used to show what keymaps we have configured
         -- The Human Brain is NOT Good!
         "folke/which-key.nvim",
+        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
         event = "VeryLazy",
         -- configuration for 'which-key'
         opts = {
-            -- icons configuration
-            icons = {
-                breadcrumb = "",
-                separator = "",
-                group = "",
-                keys = {
-                    Esc = "",
-                    Space = ""
-                }
-            }
+            -- change the style / theme
+            preset = "modern"
         },
         -- how to "open" / "call" 'which-key'
         keys = {
@@ -29,4 +22,16 @@ return {
             }
         },
     },
+    {
+        "lukas-reineke/virt-column.nvim",
+        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
+        -- event = "VeryLazy",
+        event = "BufRead",
+        -- configuration for 'virt-column'
+        config = function()
+            require("virt-column").setup({
+                -- will be configured lated
+            })
+        end
+    }
 }

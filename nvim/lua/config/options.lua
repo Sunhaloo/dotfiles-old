@@ -2,6 +2,7 @@
 local set = vim.opt
 
 
+
 -- << General Neovim Options >>
 
 -- no need to create backup files ==> use auto-save.nvim plugin
@@ -97,6 +98,8 @@ set.splitbelow = true
 set.splitright = true
 -- scroll behaviour for splits ( opening / closing, resizing )
 set.splitkeep = "topline" -- --> default value = "cursor"
+-- to be used with the plugin 'virt-column' ==> display vertical line at column '80'
+set.colorcolumn = "80"
 
 
 -- << GUI Options >>
