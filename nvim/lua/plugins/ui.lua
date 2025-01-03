@@ -47,6 +47,17 @@ return {
         end,
     },
     {
+        -- plugin that customises the command line area / bottom bar
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "echasnovski/mini.icons" },
+        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
+        event = "VeryLazy",
+        -- configuration for 'lualine'
+        config = function()
+            require("lualine").setup({})
+        end
+    },
+    {
         -- plugin will be used to show what keymaps we have configured
         -- The Human Brain is NOT Good!
         "folke/which-key.nvim",
