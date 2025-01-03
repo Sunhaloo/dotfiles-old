@@ -18,7 +18,30 @@ return {
             require("bufferline").setup({
                 -- general options and appearance configuration
                 options = {
+                    -- << General Options >>
+                    -- make "bufferline" to act on tabs over buffers
                     mode = "tabs",
+                    -- << Mouse Options >>
+                    -- right click will make current buffer split horizontally
+                    right_mouse_command = "horizontal sbuffer %d",
+                    -- middle mouse button will make current buffer split vertically
+                    middle_mouse_command = "vertical sbuffer %d",
+                    -- << Appearance Options >>
+                    -- indicate if you are on "current" buffer / tab
+                    indicator = {
+                        -- icon = " ",
+                        -- change `style` to `'icon'` and uncomment line above to use icon
+                        style = "underline"
+                    },
+                    -- << Icons >>
+                    -- icons to show if file has been modified / changed
+                    modified_icon = "",
+                    -- color the icons
+                    color_icons = true,
+                    -- << Separator Style >>
+                    -- options for the `separator_style`
+                        -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' }
+                    separator_style = "slant",
                 }
             })
         end,

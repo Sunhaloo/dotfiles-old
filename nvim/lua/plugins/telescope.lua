@@ -77,7 +77,10 @@ return {
                 }
             )
             -- allow the user to search for help documentation
-            key.set('n', "<leader>fh", builtin.help_tags, { desc = "Help - Documentation [ Telescope ]" })
+            key.set('n', "<leader>fh", function()
+                -- require("telescope.builtin").help_tags(require("telescope.themes").get_dropdown())
+                builtin.help_tags(require("telescope.themes").get_ivy())
+            end, { desc = "Help - Documentation [ Telescope ]" })
         end,
     }
 }
