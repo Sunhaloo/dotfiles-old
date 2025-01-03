@@ -11,7 +11,7 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- NOTE: using `<cmd>` means that you need to use `<CR>
+-- NOTE: using `<Cmd>` means that you need to use `<CR>
 
 
 -- << Reload and Package Management >>

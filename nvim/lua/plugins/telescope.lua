@@ -76,6 +76,8 @@ return {
                     desc = "Find Configuration Files [ Telescope ]"
                 }
             )
+            -- allow the user to search for help documentation
+            key.set('n', "<leader>fh", builtin.help_tags, { desc = "Help - Documentation [ Telescope ]" })
         end,
     }
 }

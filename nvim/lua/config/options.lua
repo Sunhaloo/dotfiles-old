@@ -2,7 +2,6 @@
 local set = vim.opt
 
 
-
 -- << General Neovim Options >>
 
 -- no need to create backup files ==> use auto-save.nvim plugin
