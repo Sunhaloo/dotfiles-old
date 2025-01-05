@@ -1,7 +1,11 @@
+-- variable that will truncate `vim.keymap`
+local key = vim.keymap
+
 -- function that is being used by lualine's inactive sections
 local function bruh()
     return [[💀]]
 end
+
 
 
 -- file where I will be keeping all UI related plugins
@@ -188,14 +192,55 @@ return {
         end
     },
     {
+        -- plugin that highlights 'TODO' comments, etc
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        -- start on these 2 events
+        event = { "BufReadPre", "BufNewFile" },
+        -- configuration for 'todo-comments'
+        config = function()
+            local todo_comments = require("todo-comments")
+            -- create a variable ( similar to keymaps.lua file )
+            local keymap = vim.keymap -- for conciseness
+
+            -- jump to next todo-comment
+            keymap.set("n", "]t", function()
+              todo_comments.jump_next()
+            end, { desc = "Next todo comment" })
+            -- jump to previous todo-comment
+            keymap.set("n", "[t", function()
+              todo_comments.jump_prev()
+            end, { desc = "Previous todo comment" })
+            -- call the setup function
+            todo_comments.setup()
+        end,
+    },
+    {
+        -- plugin what will allow for smooth scrolling
+    },
+    {
         -- basically 'screenkey' program but in Neovim
         "NStefan002/screenkey.nvim",
         version = "*",
-        lazy = false,
-        -- start on when in Insert Mode
-        -- event = "InsertEnter",
         -- keymap to be able to toggle it on or off
-        vim.keymap.set('n', "<leader>Sk", "<Cmd>Screenkey<CR>", { desc = "Screenkey [ Neovim ]" })
+        vim.keymap.set('n', "<leader>Sk", "<Cmd>Screenkey<CR>", { desc = "Screenkey [ Neovim ]" }),
+        -- configuration for 'screenkey'
+        config = function()
+            require("screenkey").setup({
+                -- << Appearance >>
+                win_opts = {
+                    -- place the floating window on the top
+                    row = 4,
+                    -- place the floating window on the right
+                    col = vim.o.columns - 1 ,
+                    -- change the size
+                    width = 35,
+                    height = 1,
+                    border = "rounded",
+                    title = "",
+                },
+                show_leader = false,
+            })
+        end,
     }
 }
-

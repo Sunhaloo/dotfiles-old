@@ -24,12 +24,14 @@ return {
                 },
                 -- "custom" extension that we can add to telescope
                 extensions = {
-                    fzf = {}
+                    ["fzf"] = {},
+                    ["todo-comments"] = {},
                 }
             })
             
             -- allow telescope to load our installed extensions
             require("telescope").load_extension("fzf")
+            require("telescope").load_extension("todo-comments")
 
             -- create a variable for `telescope.builtin`
             local builtin = require("telescope.builtin")
