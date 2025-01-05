@@ -10,7 +10,7 @@ return {
             "L3MON4D3/LuaSnip",
         },
         -- start on when in Insert Mode
-        event = { "InsertEnter" },
+        event = "InsertEnter",
         -- use a release tag to download pre-built binaries ==> default option
         version = '*',
         -- configure 'blink'

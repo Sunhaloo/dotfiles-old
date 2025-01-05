@@ -131,8 +131,8 @@ return {
                 inactive_sections = {
                     lualine_a = { bruh },
                     lualine_b = {},
+                    -- same as the "active" one
                     lualine_c = {
-                        -- filename... Duhh!
                         {
                             "filename",
                             -- add custom symbols to 'filename' based on ( see below )
@@ -148,9 +148,6 @@ return {
                     lualine_y = {},
                     lualine_z = {}
                 },
-
-
-
             })
         end
     },
@@ -216,7 +213,19 @@ return {
         end,
     },
     {
-        -- plugin what will allow for smooth scrolling
+        -- plugin that is ( in my opinion better than VS C*de's smooth caret )
+        "gen740/SmoothCursor.nvim",
+        -- start on these 2 events
+        event = { "BufReadPre", "BufNewFile" },
+        -- configuration for 'SmoothCursor'
+        config = function()
+            -- enable the smooth caret
+            require("smoothcursor").setup({
+                -- type of smooth "theme" ( default = "default" | matrix-mode = "matrix" )
+                type = "matrix",
+                timeout = 2000,
+            })
+        end
     },
     {
         -- basically 'screenkey' program but in Neovim
