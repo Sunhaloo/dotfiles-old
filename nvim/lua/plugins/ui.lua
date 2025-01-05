@@ -212,21 +212,21 @@ return {
             todo_comments.setup()
         end,
     },
-    {
-        -- plugin that is ( in my opinion better than VS C*de's smooth caret )
-        "gen740/SmoothCursor.nvim",
-        -- start on these 2 events
-        event = { "BufReadPre", "BufNewFile" },
-        -- configuration for 'SmoothCursor'
-        config = function()
-            -- enable the smooth caret
-            require("smoothcursor").setup({
-                -- type of smooth "theme" ( default = "default" | matrix-mode = "matrix" )
-                type = "matrix",
-                timeout = 2000,
-            })
-        end
-    },
+    -- {
+    --     -- plugin that is ( in my opinion better than VS C*de's smooth caret )
+    --     "gen740/SmoothCursor.nvim",
+    --     -- start on these 2 events
+    --     event = { "BufReadPre", "BufNewFile" },
+    --     -- configuration for 'SmoothCursor'
+    --     config = function()
+    --         -- enable the smooth caret
+    --         require("smoothcursor").setup({
+    --             -- type of smooth "theme" ( default = "default" | matrix-mode = "matrix" )
+    --             type = "matrix",
+    --             timeout = 2000,
+    --         })
+    --     end
+    -- },
     {
         -- basically 'screenkey' program but in Neovim
         "NStefan002/screenkey.nvim",

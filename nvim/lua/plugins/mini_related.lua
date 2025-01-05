@@ -41,21 +41,21 @@ return {
             })
         end,
     },
-    {
-        -- plugin similar to 'neoscroll' ==> provides overall 
-        "echasnovski/mini.animate",
-        version = false,
-        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
-        event = "VeryLazy",
-        -- configuration for 'mini.hipatterns'
-        config = function()
-            -- enable the animations
-            require("mini.animate").setup({
-                -- disable the cursor jumps animations ==> using 'SmoothCursor.nvim'
-                cursor = { enable = false }
-            })
-        end,
-    },
+    -- {
+    --     -- plugin similar to 'neoscroll' ==> provides overall 
+    --     "echasnovski/mini.animate",
+    --     version = false,
+    --     -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
+    --     event = "VeryLazy",
+    --     -- configuration for 'mini.hipatterns'
+    --     config = function()
+    --         -- enable the animations
+    --         require("mini.animate").setup({
+    --             -- disable the cursor jumps animations ==> using 'SmoothCursor.nvim'
+    --             cursor = { enable = false }
+    --         })
+    --     end,
+    -- },
     {
         -- my choice for a file tree ( rival 'oil.nvim' for me )
         "echasnovski/mini.files",
