@@ -1,8 +1,7 @@
 -- function that is being used by lualine's inactive sections
 local function bruh()
-return [[💀]]
+    return [[💀]]
 end
-
 
 
 -- file where I will be keeping all UI related plugins
@@ -126,7 +125,7 @@ return {
                 },
                 -- inactive window --> sections settings
                 inactive_sections = {
-                    lualine_a = { bruh() },
+                    lualine_a = { bruh },
                     lualine_b = {},
                     lualine_c = {
                         -- filename... Duhh!
@@ -187,5 +186,16 @@ return {
                 virtcolumn = "80",
             })
         end
+    },
+    {
+        -- basically 'screenkey' program but in Neovim
+        "NStefan002/screenkey.nvim",
+        version = "*",
+        lazy = false,
+        -- start on when in Insert Mode
+        -- event = "InsertEnter",
+        -- keymap to be able to toggle it on or off
+        vim.keymap.set('n', "<leader>Sk", "<Cmd>Screenkey<CR>", { desc = "Screenkey [ Neovim ]" })
     }
 }
+

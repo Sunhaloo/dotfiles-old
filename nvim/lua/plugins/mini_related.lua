@@ -15,6 +15,25 @@ return {
         end,
     },
     {
+        -- basically a better ( in my opinion ) colorizer plugin
+        "echasnovski/mini.hipatterns",
+        version = false,
+        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
+        event = "VeryLazy",
+        -- configuration for 'mini.hipatterns'
+        config = function()
+            -- import the configuration file
+            local mini_hipatterns = require("mini.hipatterns")
+            -- setup 'mini.hipatterns'
+            mini_hipatterns.setup({
+                highlighters = {
+                    -- enable the highlights for hex color codes ( as per documentation )
+                    hex_color = mini_hipatterns.gen_highlighter.hex_color()
+                }
+            })
+        end,
+    },
+    {
         -- my choice for a file tree ( rival 'oil.nvim' for me )
         "echasnovski/mini.files",
         version = false,
