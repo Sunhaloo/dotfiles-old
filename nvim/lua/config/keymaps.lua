@@ -89,3 +89,9 @@ key.set('n', "<leader>sv", "<Cmd>vnew<CR>", opts, { desc = "Create Vertical Spli
 
 -- open vim built-in file manager ( 'Explore' / 'Lex' )
 key.set('n', "lx", "<Cmd>Lex<CR>", { desc = "Open 'Lex'" })
+
+
+-- << Toggles >>
+
+-- toggle spell checking
+key.set('n', "<leader>ol", function() vim.opt.spell = not vim.opt.spell:get() end, { desc = "Toggle Spell Checking "})

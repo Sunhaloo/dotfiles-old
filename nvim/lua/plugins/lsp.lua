@@ -194,7 +194,8 @@ return {
                     "lua",
                     "python",
                     "markdown",
-                    "markdown_inline"
+                    "markdown_inline",
+                    "yaml"
                 },
                 -- enable highlighting
                 highlight = {

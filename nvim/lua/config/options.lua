@@ -62,7 +62,9 @@ set.showmode = false
 -- stop highlighting search query on exit search query
 set.hlsearch = false
 -- completely hide the concealed text
-set.conceallevel = 3
+-- set.conceallevel = 3
+-- set `conceallevel` to '2' because of 'obsidian.nvim'
+set.conceallevel = 2
 
 -- always show tabline
 set.showtabline = 2

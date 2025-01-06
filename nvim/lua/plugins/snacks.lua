@@ -3,6 +3,7 @@ return {
         -- combination of some great plugins made by the man himself... Folke
         "folke/snacks.nvim",
         priority = 1000,
+        -- plugin IS loaded in immediately during startup
         lazy = false,
         opts = {
             -- basically an animation library
