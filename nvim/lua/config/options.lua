@@ -63,7 +63,6 @@ set.showmode = false
 set.hlsearch = false
 -- completely hide the concealed text
 set.conceallevel = 3
--- NOTE: concealcursor seems cool ==> use it in markdown ftplugin
 
 -- always show tabline
 set.showtabline = 2
