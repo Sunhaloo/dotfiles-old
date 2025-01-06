@@ -28,12 +28,12 @@ return {
             mini_hipatterns.setup({
                 highlighters = {
 					-- enable highlights for 'todo-comments.nvim' plugin
-					bug = { pattern = '%f[%w]()BUG()%f[%W]', group = 'MiniHipatternsFixme' },
-					warning  = { pattern = '%f[%w]()WARNING()%f[%W]',  group = 'MiniHipatternsHack'  },
-					todo  = { pattern = '%f[%w]()TODO()%f[%W]',  group = 'MiniHipatternsTodo'  },
-                    tip  = { pattern = '%f[%w]()TIP()%f[%W]',  group = 'MiniHipatternsTodo'  },
-					note  = { pattern = '%f[%w]()NOTE()%f[%W]',  group = 'MiniHipatternsNote'  },
-					info  = { pattern = '%f[%w]()INFO()%f[%W]',  group = 'MiniHipatternsNote'  },
+					bug = { pattern = '%f[%w]()BUG:()%f[%W]', group = 'MiniHipatternsFixme' },
+					warning  = { pattern = '%f[%w]()WARNING:()%f[%W]',  group = 'MiniHipatternsHack'  },
+					todo  = { pattern = '%f[%w]()TODO:()%f[%W]',  group = 'MiniHipatternsTodo'  },
+                    tip  = { pattern = '%f[%w]()TIP:()%f[%W]',  group = 'MiniHipatternsTodo'  },
+					note  = { pattern = '%f[%w]()NOTE:()%f[%W]',  group = 'MiniHipatternsNote'  },
+					info  = { pattern = '%f[%w]()INFO:()%f[%W]',  group = 'MiniHipatternsNote'  },
 
                     -- enable the highlights for hex color codes ( as per documentation )
                     hex_color = mini_hipatterns.gen_highlighter.hex_color()

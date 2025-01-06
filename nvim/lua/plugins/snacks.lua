@@ -5,8 +5,17 @@ return {
         priority = 1000,
         lazy = false,
         opts = {
-            animate = { enabled = true },
-            bigfile = { enabled = true },
+            -- basically an animation library
+            animate = {
+                enabled = true,
+                fps = 120
+            },
+            -- prevents LSP, Treesitter, etc to attach to really large files
+            bigfile = {
+                enable = true,
+                -- configure size of file ( in bytes --> converting to megabytes )
+                size = 0.8 * 1024 * 1024
+            },
             -- dashboard setup
             -- NOTE: you need to have 'chafa' installed on your system
             dashboard = {
@@ -40,16 +49,27 @@ return {
                         { icon = " ", key = "c", desc = "System Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.expand('$HOME/.config')})" },
                         { icon = " ", key = "q", desc = "Quit", action = "<Cmd>qa<CR>" },
                     },
+                    -- change the "Neovim" header to this!
                     header = [[ "Developers Developers Developers" ]]
                 }
             },
+            -- renders file as quickly as possible before loading plugins
+            quickfile = { enabled = true },
+            --  provides indentation guides
             indent = { enabled = true },
             notifier = { enabled = true },
-            quickfile = { enabled = true },
+            -- basically 'neoscroll.nvim'
             scroll = { enabled = true },
+            -- well... "pretty status column"
             statuscolumn = { enabled = true },
+            -- shows LSP references and be able to quickly jump to them
             words = { enabled = true },
+            -- well provides lazygit inside of Neovim
             lazygit = { enabled = true },
+            -- better UI for renaming stuff ( think that its used by neo-tree and others )
+            input = { enabled = false },
+            -- INFO: still going to use 'toggleterm.nvim'
+            terminal = { enabled = false },
         },
         -- keymappings for snacks.nvim's "sub-plugins"
         keys = {

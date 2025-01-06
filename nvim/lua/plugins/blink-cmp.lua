@@ -17,7 +17,7 @@ return {
         opts = {
             -- keymap configuration
             keymap = {
-                -- default preset = 'default' | vs-c*de like preset = 'super-tab'
+                -- default preset = 'default' | VS C*de like preset = 'super-tab'
                 -- preset = 'default'
                 preset = "super-tab"
             },

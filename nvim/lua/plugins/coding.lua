@@ -21,6 +21,33 @@ return {
         },
     },
     {
+        -- toggle-able terminal
+        "akinsho/toggleterm.nvim",
+        -- start on when in Insert Mode
+        -- event = "InsertEnter",
+        version = "*",
+        -- configuration for 'toggleterm'
+        config = function()
+            require("toggleterm").setup({
+                -- terminal size
+                size = 15,
+                -- keymap to "toggle" terminal
+                open_mapping = [[<c-/>]],
+                -- make the terminal become a floating terminal
+                direction = "float",
+                -- bigger value ==> whiter / brighter terminal | 0 = colourscheme's background
+                shading_factor = 50,
+                -- floating terminal options
+                float_opts = {
+                    -- change the border to "rounded"
+                    border = "rounded",
+                    -- place the title in the center
+                    title_pos = "center"
+                }
+            })
+        end,
+    },
+    {
         -- allows vim motions between Neovim windows
         "christoomey/vim-tmux-navigator",
         cmd = {
