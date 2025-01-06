@@ -140,9 +140,9 @@ end
 -- create a Neovim user-command that can be run in the command line ( similar to auto-command )
 vim.api.nvim_create_user_command("HTerm", horizontal_terminal, {})
 -- create the default 'toggleterm.nvim' keymaps for horizontal terminal
-key.set({'n', 't'}, "<leader>ht", "<Cmd>HTerm<CR>")
+key.set({'n', 't'}, "<leader>ht", "<Cmd>HTerm<CR>", { desc = "Horizontal Terminal" })
 
 -- create a Neovim user-command that can be run in the command line ( similar to auto-command )
 vim.api.nvim_create_user_command("VTerm", vertical_terminal, {})
 -- create the default 'toggleterm.nvim' keymaps for horizontal terminal
-key.set({'n', 't'}, "<leader>vt", "<Cmd>VTerm<CR>")
+key.set({'n', 't'}, "<leader>vt", "<Cmd>VTerm<CR>", { desc = "Vertical Terminal" })

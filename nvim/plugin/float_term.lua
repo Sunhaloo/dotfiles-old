@@ -75,4 +75,4 @@ end
 vim.api.nvim_create_user_command("FloatingTerminal", toggle_term, {})
 
 -- create the default 'toggleterm.nvim' keymaps for terminal
-vim.keymap.set({'n', 't'}, "<C-/>", "<Cmd>FloatingTerminal<CR>")
+vim.keymap.set({'n', 't'}, "<C-/>", "<Cmd>FloatingTerminal<CR>", { desc = "Floating Terminal" })
