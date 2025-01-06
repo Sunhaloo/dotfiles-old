@@ -12,20 +12,20 @@ return {
             dashboard = {
                 -- enable the dashboard plugin
                 enabled = true,
-
-
                 -- what to show on the dashboard
                 sections = {
                     -- display an image
                     {
                         section = "terminal",
                         cmd = "chafa $HOME/Wallpapers/anime_girl_fishing.png --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
-                        padding = 3
+                        padding = 2,
+                        -- set the correct height for the image being used
+                        height = 17,
                     },
                     -- shows the whatever header --> can be configured below
                     { section = "header" },
                     -- show the keymappings we customised below
-                    { section = "keys", gap = 1, padding = 0 },
+                    { section = "keys", gap = 1, padding = 1 },
                     -- display the startup time
                     { section = "startup" }
                 },
@@ -35,6 +35,7 @@ return {
                         { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
                         { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
                         { icon = " ", key = "l", desc = "Live Grep Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+                        { icon = "? ", key = "h", desc = "Help Documentation", action = ":lua Snacks.dashboard.pick('help_tags')" },
                         { icon = " ", key = "o", desc = "Old Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
                         { icon = " ", key = "c", desc = "System Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.expand('$HOME/.config')})" },
                         { icon = " ", key = "q", desc = "Quit", action = "<Cmd>qa<CR>" },
@@ -42,8 +43,6 @@ return {
                     header = [[ "Developers Developers Developers" ]]
                 }
             },
-
-
             indent = { enabled = true },
             input = { enabled = true },
             notifier = { enabled = true },

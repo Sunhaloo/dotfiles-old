@@ -117,7 +117,9 @@ return {
                             icon_only = true,
                         }
                     },
-                    lualine_y = {"location"},
+                    -- lualine_y = {"location"},
+                    -- trying it out without the 'location'
+                    lualine_y = {},
                     lualine_z = {
                         -- date
                         {
