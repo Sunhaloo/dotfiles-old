@@ -41,6 +41,16 @@ return {
             notes_subdir = "~/Obsidian/S.Sunhaloo/Learning/",
             -- don't allow 'obsidian.nvim' to handle the YAML frontmatter
             disable_frontmatter = true
-        }
+        },
+    },
+    {
+        -- displays the markdown file fully rendered out ( like LaTex and everything )
+        "iamcco/markdown-preview.nvim",
+        -- creates these Neovim commands like our 'FloatingTerm', 'HTerm' and 'VTerm'
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        -- on what filetype to act
+        ft = "markdown",
+        -- IDK, some build parameter / function thingy
+        build = function() vim.fn["mkdp#util#install"]() end,
     }
 }
