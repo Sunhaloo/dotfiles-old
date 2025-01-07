@@ -18,7 +18,13 @@ return {
                 -- you can add more to the array if you want more variants
                 toggle_style_list = {"darker", "light"},
                 -- lualine theme configuration
-                lualine = { transparent = true }
+                lualine = { transparent = true },
+
+                -- change the grey colour
+                -- NOTE: this is done so that we can see comments better with transparency on!
+                colors = {
+                    grey = "#7a818e"
+                }
             })
             -- apply the theme
             require("onedark").load()

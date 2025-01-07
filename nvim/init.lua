@@ -4,3 +4,5 @@ require("config.keymaps")
 require("config.options")
 -- "import" the lazy configuration file
 require("config.lazy")
+-- "import" the auto-command file
+require("config.autocmd")

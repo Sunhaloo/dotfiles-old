@@ -191,6 +191,7 @@ return {
             require("nvim-treesitter.configs").setup({
                 -- make sure that parsers for these languages are installed by "default"
                 ensure_installed = {
+                    "bash",
                     "lua",
                     "python",
                     "markdown",

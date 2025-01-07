@@ -46,9 +46,9 @@ set.shiftwidth = 4
 -- NOTE: Uncomment the lines of code for "global" spell checking ==> in EVERY file ( coding files included )
 
 -- enable spell checking
-set.spell = true
+-- set.spell = true
 -- language for spell checking
-set.spelllang = { "en_gb" }
+-- set.spelllang = { "en_gb" }
 
 
 -- << Appearance Options >>

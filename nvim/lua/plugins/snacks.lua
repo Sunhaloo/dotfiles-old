@@ -30,7 +30,7 @@ return {
                         cmd = "chafa $HOME/Wallpapers/anime_girl_fishing.png --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
                         padding = 2,
                         -- set the correct height for the image being used
-                        height = 17,
+                        height = 16,
                     },
                     -- shows the whatever header --> can be configured below
                     { section = "header" },
