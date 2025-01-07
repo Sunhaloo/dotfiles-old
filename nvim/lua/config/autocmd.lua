@@ -44,18 +44,41 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- auto-command that will be activated upon these events ( see code )
 vim.api.nvim_create_autocmd(
     {
-        -- our events
-        "BufReadPre",
-        "BufRead",
-        "BufEnter",
-        "WinNew",
-        "WinEnter",
-        "TabNew",
-        "TabEnter",
-        "TermOpen",
-        "TermEnter",
-        "TermClose",
+        -- Buffer-related events
+        "BufReadPre",  -- Before buffer is read
+        "BufRead",     -- When buffer is read
+        "BufEnter",    -- When entering a buffer
+
+        -- Window-related events
+        "WinNew",      -- When a new window is created
+        "WinEnter",    -- When entering a window
+
+        -- Tab-related events
+        "TabNew",      -- When a new tab is created
+        "TabEnter",    -- When entering a tab
+
+        -- Terminal-related events
+        "TermOpen",    -- When a terminal is opened
+        "TermEnter",   -- When entering a terminal
+        "TermClose",   -- When a terminal is closed
+
+        -- Command-line events (for Telescope prompts)
+        "CmdlineEnter",    -- When entering a command line mode (e.g., when using Telescope)
+        "CmdlineLeave",    -- When leaving a command line mode
     },
+    -- {
+    --     -- our events
+    --     "BufReadPre",
+    --     "BufRead",
+    --     "BufEnter",
+    --     "WinNew",
+    --     "WinEnter",
+    --     "TabNew",
+    --     "TabEnter",
+    --     "TermOpen",
+    --     "TermEnter",
+    --     "TermClose",
+    -- },
     {
         -- auto-command group that will not be duplicated ( etc... )
         group = vim.api.nvim_create_augroup("Start ScreenKey", { clear = true }),

@@ -29,5 +29,24 @@ return {
             -- apply the theme
             require("onedark").load()
         end
+    },
+    {
+        -- in my opinion; the most polished theme
+        "folke/tokyonight.nvim",
+        -- plugin IS loaded in immediately during startup
+        lazy = false,
+        -- make sure that other UI elements start with the theme
+        priority = 1000,
+        -- configuration for 'tokyonight'
+        config = function()
+            require("tokyonight").setup({
+                -- select from 'moon', 'storm', 'night' and 'day'
+                style = "night",
+                -- disable transparency
+                transparent =  false,
+                -- allow the theme to have cohesion with terminal theme
+                terminal_colors = true,
+            })
+        end,
     }
 }

@@ -253,7 +253,7 @@ return {
                 -- << Appearance >>
                 win_opts = {
                     -- place the floating window on the top
-                    row = 40,
+                    row = 37,
                     -- place the floating window on the right
                     col = vim.o.columns - 1 ,
                     -- change the size
