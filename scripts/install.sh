@@ -140,15 +140,15 @@ install_all() {
 
 	# pacman packages
 	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard swaync waybar sddm
-	install_package kitty neovim rofi-emoji rofi btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gufw lxinput brightnessctl network-manager-applet blueman
+	install_package kitty neovim rofi rofi-emoji btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gvfs-mtp gvfs-nfs gufw lxinput brightnessctl network-manager-applet blueman
 	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua go rustup rust
 	install_package p7zip ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp
 	install_package ristretto obsidian obs-studio mpv spotify-launcher
 	install_package arc-gtk-theme-eos
-	install_package otf-font-awesome ttf-jetbrains-mono-nerd ttf-ubuntu-mono-nerd ttf-victor-mono-nerd ttf-cascadia-code-nerd ttf-firacode-nerd ttf-ibmplex-mono-nerd ttf-liberation ttf-sharetech-mono-nerd otf-monaspace-nerd otf-codenewroman-nerd
+	install_package otf-font-awesome ttf-jetbrains-mono-nerd ttf-victor-mono-nerd ttf-cascadia-code-nerd ttf-ibmplex-mono-nerd otf-monaspace-nerd otf-codenewroman-nerd
 	# AUR packages
-	install_yay_package intel-ivsc-firmware hyprshot pyprland-git oh-my-posh kanata thorium-browser-bin vscodium-bin nwg-look ani-cli 
-	install_yay_package whitesur-cursor-theme-git bibata-cursor-theme papirus-icon-theme
+	install_yay_package intel-ivsc-firmware hyprshot pyprland-git oh-my-posh kanata zen-browser-bin vscodium-bin nwg-look ani-cli 
+	install_yay_package bibata-cursor-theme papirus-icon-theme
 	install_yay_package slides vencord
 }
 

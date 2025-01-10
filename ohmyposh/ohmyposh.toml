@@ -11,7 +11,7 @@ final_space = true
   yellow = '#e5c07b'
 
 [secondary_prompt]
-  template = '❯❯ '
+  template = '❯ '
   foreground = 'p:green'
   background = 'transparent'
 

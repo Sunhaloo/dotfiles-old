@@ -116,19 +116,21 @@ alias refresh_pacman='sudo pacman -Syy'
 # clear the package cache
 alias clear_cpacman='sudo pacman -Scc'
 # list all the packages ( yay )
-alias pkglist-yay='sudo pacman -Qm'
+alias ypkglist-installed='sudo pacman -Qm'
 # list all the packages ( pacman )
 alias pkglist-all='sudo pacman -Q'
 # search for installed applications ---> provide application / package name
 alias pkglist-installed='sudo pacman -Q | grep'
 # search for applications ---> provide application / package name
 alias pkgsearch='sudo pacman -Ss'
+# search for applications ( installed with yay ) ---> provide application / package name
+alias ypkgsearch='yay -Ss'
 # installing applications ---> provide application / package name
 alias install='sudo pacman -S'
+# installing applications ( installed with yay ) ---> provide application / package name
+alias yinstall='yay -S'
 # removing and purging applications ---> provide application / package name
 alias remove='sudo pacman -R'
-# update the whole system
-# alias update='sudo pacman -Syu'
 # clean system packages
 alias clean='sudo pacman -Rns $(pacman -Qdtq)'
 # clean system logs
@@ -166,7 +168,7 @@ alias t='tmux'
 # LazyGit UI
 alias lg="lazygit"
 # clone repository ---> provide repository name
-alias clone='git clone'
+alias gc='git clone'
 # alias for 'git status'
 alias gs='git status'
 # alias for 'git add' ---> provide files to add
@@ -179,13 +181,6 @@ alias push='git push -u origin'
 alias gl='git log'
 # alias for 'git pull'
 alias gp='git pull'
-# Obsidian - GitHub repo
-alias repo-azmaan='cd ~/GitHub/azmaan/'
-alias repo-obsidian='cd ~/GitHub/obsidian/'
-# GitHub repo - dotfiles
-alias repo-dotfiles='cd ~/GitHub/dotfiles/'
-alias cp_GO='cp -r S.Sunhaloo/ Question - Problems - Solutions/ ~/Obsidian/'
-alias cp_OG='cp -r S.Sunhaloo ~/GitHub/obsidian/'
 
 # System - cd / zoxide
 # zoxide - smarter 'cd'

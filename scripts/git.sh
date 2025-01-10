@@ -62,7 +62,6 @@ configure_git() {
 
 
 # function to generate SSH key
-# WARNING: This has NOT been tested
 generate_ssh_key() {
 	printf "\n"
 
