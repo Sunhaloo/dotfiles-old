@@ -52,11 +52,12 @@ return {
             },
 
 
+            -- custom snippets
+            snippets = { preset = "luasnip" },
             -- priority for sourcing auto-completion
             sources = {
                 -- basically show auto-completion in this priority
-                -- NOTE: adding LuaSnip as a source but also keeping 'snippets'
-                default = { "lsp", "luasnip", "snippets", "buffer", "path" },
+                default = { "lsp", "snippets", "buffer", "path" },
             },
 
         },

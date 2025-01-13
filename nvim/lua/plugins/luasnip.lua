@@ -16,6 +16,8 @@ return {
         config = function()
             -- importing the 'LuaSnip' file
             local ls = require("luasnip")
+            -- importing and enabling the 'friendly-snippets.nvim' plugin
+            require("luasnip.loaders.from_vscode").lazy_load()
 
             -- create a function that will be able to load snippets from directory
             local function load_snippets()

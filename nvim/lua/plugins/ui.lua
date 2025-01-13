@@ -236,8 +236,11 @@ return {
             -- enable the smooth caret
             require("smoothcursor").setup({
                 -- type of smooth "theme" ( default = "default" | matrix-mode = "matrix" )
-                type = "matrix",
-                timeout = 2000,
+                type = "default",
+                timeout = 1000,
+                fancy = {
+                    enable = true
+                }
             })
         end
     },
