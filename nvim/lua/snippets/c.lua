@@ -10,9 +10,9 @@ return {
             "#include <stdio.h>",
             "",
             "int main() {",
-            "    ",
+            "    printf(\"\\nHello World\\n\");",
         }),
-        i(1, "printf(\"\\nHello World\\n\");"),
+        i(0),
         t({
             "",
             "",
