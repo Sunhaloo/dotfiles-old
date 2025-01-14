@@ -37,8 +37,6 @@ return {
             templates = {
                 folder = "~/Obsidian/S.Sunhaloo/Obsidian Management/Templates/"
             },
-            -- NOTE: Testing notes sub-directory folder
-            notes_subdir = "~/Obsidian/S.Sunhaloo/Learning/",
             -- don't allow 'obsidian.nvim' to handle the YAML frontmatter
             disable_frontmatter = true
         },

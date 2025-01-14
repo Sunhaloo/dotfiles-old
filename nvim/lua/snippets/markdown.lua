@@ -3,47 +3,60 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 
--- Ensure friendly-snippets are loaded
+-- importing and enabling the 'friendly-snippets.nvim' plugin
 require("luasnip.loaders.from_vscode").lazy_load()
 
--- Helper to expand specific snippets
+-- checks whether that the snippets is available ( based on keymapping )
 local function expand_snippet(trigger)
-    -- Check if the trigger exists
+    -- checks if the snippets exists for the markdown filetype
     local available_snippets = ls.get_snippets("markdown")
+    -- searches for the correct snippets
     for _, snippet in ipairs(available_snippets or {}) do
+        -- if the keymapping is same as snippet's trigger
         if snippet.trigger == trigger then
+            -- expands snippets ==> we get the snippets we want
             ls.snip_expand(snippet)
             return
         end
     end
+    -- if no snippets is available for that keymapping
     print("No snippet available for trigger: " .. trigger)
 end
 
--- Key mappings for markdown snippets
+-- keymapping for calling the `"bold"` snippet from friendly-snippets
 vim.api.nvim_buf_set_keymap(0, 'i', '<C-b>', '', {
+    -- some Neovim's options
     noremap = true,
     silent = true,
+    -- callback function to get the snippets
     callback = function()
-        expand_snippet("bold") -- Use 'bold' trigger
+        -- expands the snippets with the function above
+        expand_snippet("bold")
     end
 })
 
 vim.api.nvim_buf_set_keymap(0, 'i', '<C-i>', '', {
+    -- some Neovim's options
     noremap = true,
     silent = true,
+    -- callback function to get the snippets
     callback = function()
-        expand_snippet("italic") -- Use 'italic' trigger
+        -- expands the snippets with the function above
+        expand_snippet("italic")
     end
 })
 
 vim.api.nvim_buf_set_keymap(0, 'i', '<C-k>', '', {
+    -- some Neovim's options
     noremap = true,
     silent = true,
+    -- callback function to get the snippets
     callback = function()
-        expand_snippet("link") -- Use 'italic' trigger
+        expand_snippet("link")
     end
 })
 
+-- the "code" in the return statement are some of custom Luasnip ( snippets ) that I wrote
 return {
     s("Olink", {
         t({
@@ -55,3 +68,6 @@ return {
         })
     })
 }
+
+
+
