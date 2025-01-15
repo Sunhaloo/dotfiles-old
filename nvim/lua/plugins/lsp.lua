@@ -175,6 +175,27 @@ return {
                         capabilities = capabilities
                     })
                 end,
+
+                -- configure 'ltex'
+                ["ltex"] = function()
+                    lspconfig["ltex"].setup({
+                        -- enhance auto-completion "engine" for 'pyright' with 'blink.cmp'
+                        capabilities = capabilities,
+                        -- "configuration"
+                        settings = {
+                            -- configuration for ltex
+                            ltex = {
+                                -- delay the diagnostic so that annoying messages does not pop up
+                                -- NOTE: delay is in 'ms'
+                                diagnosticsDelay = 5000
+                            }
+                        },
+                        -- disable the LSP progress notifications
+                        handlers = {
+                            ["$/progress"] = function() end
+                        }
+                    })
+                end,
             })
         end,
     },
