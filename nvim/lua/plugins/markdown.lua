@@ -38,7 +38,12 @@ return {
                 folder = "~/Obsidian/S.Sunhaloo/Obsidian Management/Templates/"
             },
             -- don't allow 'obsidian.nvim' to handle the YAML frontmatter
-            disable_frontmatter = true
+            disable_frontmatter = true,
+            -- setup the attachments folders
+            attachments = {
+                -- setup the image folders
+                img_folder = "~/Obsidian/S.Sunhaloo/Obsidian Management/Media/Images/"
+            }
         },
     },
     {
