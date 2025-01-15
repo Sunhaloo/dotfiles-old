@@ -3,7 +3,7 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 
--- importing and enabling the 'friendly-snippets.nvim' plugin
+-- -- importing and enabling the 'friendly-snippets.nvim' plugin
 require("luasnip.loaders.from_vscode").lazy_load()
 
 -- checks whether that the snippets is available ( based on keymapping )
@@ -35,6 +35,7 @@ vim.api.nvim_buf_set_keymap(0, 'i', '<C-b>', '', {
     end
 })
 
+-- keymapping for calling the `"italic"` snippet from friendly-snippets
 vim.api.nvim_buf_set_keymap(0, 'i', '<C-i>', '', {
     -- some Neovim's options
     noremap = true,
@@ -46,6 +47,7 @@ vim.api.nvim_buf_set_keymap(0, 'i', '<C-i>', '', {
     end
 })
 
+-- keymapping for calling the `"link"` snippet from friendly-snippets
 vim.api.nvim_buf_set_keymap(0, 'i', '<C-k>', '', {
     -- some Neovim's options
     noremap = true,
@@ -56,8 +58,20 @@ vim.api.nvim_buf_set_keymap(0, 'i', '<C-k>', '', {
     end
 })
 
+-- keymapping for calling the `"mytask"` snippet from Custom Luasnip snippets
+vim.api.nvim_buf_set_keymap(0, 'i', '<C-l>', '', {
+    -- some Neovim's options
+    noremap = true,
+    silent = true,
+    -- callback function to get the snippets
+    callback = function()
+        expand_snippet("mytask")
+    end
+})
+
 -- the "code" in the return statement are some of custom Luasnip ( snippets ) that I wrote
 return {
+    -- snippet to link markdown files in Obsidian
     s("Olink", {
         t({
             "[["
@@ -66,8 +80,14 @@ return {
         t({
             "]]"
         })
+    }),
+    -- snippet to create task
+    -- NOTE: 'friendly-snippets' already has a "task" thingy but I hate where it places the cursor
+    s("mytask", {
+        t({
+            "- [ ] "
+        }),
+        i(1)
     })
+
 }
-
-
-
