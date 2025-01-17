@@ -142,7 +142,7 @@ install_all() {
 	install_package git hyprland hyprutils hyprpicker hyprcursor hyprpaper hyprwayland-scanner xwaylandvideobridge xdg-desktop-portal-hyprland xdg-desktop-portal-wlr power-profiles-daemon wl-clipboard swaync waybar sddm
 	install_package kitty neovim rofi rofi-emoji btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gvfs-mtp gvfs-nfs gufw lxinput brightnessctl network-manager-applet blueman
 	install_package gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua go rustup rust
-	install_package p7zip ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp
+	install_package p7zip ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp zathura
 	install_package ristretto obsidian obs-studio mpv spotify-launcher
 	install_package arc-gtk-theme-eos
 	install_package otf-font-awesome ttf-jetbrains-mono-nerd ttf-victor-mono-nerd ttf-cascadia-code-nerd ttf-ibmplex-mono-nerd otf-monaspace-nerd otf-codenewroman-nerd
