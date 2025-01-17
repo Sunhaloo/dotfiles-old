@@ -23,51 +23,109 @@ local function expand_snippet(trigger)
     print("No snippet available for trigger: " .. trigger)
 end
 
--- keymapping for calling the `"bold"` snippet from friendly-snippets
-vim.api.nvim_buf_set_keymap(0, 'i', '<C-b>', '', {
-    -- some Neovim's options
-    noremap = true,
-    silent = true,
-    -- callback function to get the snippets
+
+-- auto-command that will be activated on markdown ( `.md` ) files
+vim.api.nvim_create_autocmd("FileType", {
+    -- auto-command group that will not be duplicated ( etc... )
+    group = vim.api.nvim_create_augroup("Obsidian Keymaps", { clear = true }),
+    -- set the filetype so that auto-command only start on this filetype
+    pattern = "markdown",
+    -- create a callback function
     callback = function()
-        -- expands the snippets with the function above
-        expand_snippet("bold")
+        -- keymapping for calling the `"bold"` snippet from friendly-snippets
+        vim.api.nvim_buf_set_keymap(0, 'i', '<C-b>', '', {
+            -- some Neovim's options
+            noremap = true,
+            silent = true,
+            -- callback function to get the snippets
+            callback = function()
+                -- expands the snippets with the function above
+                expand_snippet("bold")
+            end
+        })
+
+        -- keymapping for calling the `"italic"` snippet from friendly-snippets
+        vim.api.nvim_buf_set_keymap(0, 'i', '<C-i>', '', {
+            -- some Neovim's options
+            noremap = true,
+            silent = true,
+            -- callback function to get the snippets
+            callback = function()
+                -- expands the snippets with the function above
+                expand_snippet("italic")
+            end
+        })
+
+        -- keymapping for calling the `"link"` snippet from friendly-snippets
+        vim.api.nvim_buf_set_keymap(0, 'i', '<C-k>', '', {
+            -- some Neovim's options
+            noremap = true,
+            silent = true,
+            -- callback function to get the snippets
+            callback = function()
+                expand_snippet("link")
+            end
+        })
+
+        -- keymapping for calling the `"mytask"` snippet from Custom Luasnip snippets
+        vim.api.nvim_buf_set_keymap(0, 'i', '<C-l>', '', {
+            -- some Neovim's options
+            noremap = true,
+            silent = true,
+            -- callback function to get the snippets
+            callback = function()
+                expand_snippet("mytask")
+            end
+        })
     end
 })
 
--- keymapping for calling the `"italic"` snippet from friendly-snippets
-vim.api.nvim_buf_set_keymap(0, 'i', '<C-i>', '', {
-    -- some Neovim's options
-    noremap = true,
-    silent = true,
-    -- callback function to get the snippets
-    callback = function()
-        -- expands the snippets with the function above
-        expand_snippet("italic")
-    end
-})
 
--- keymapping for calling the `"link"` snippet from friendly-snippets
-vim.api.nvim_buf_set_keymap(0, 'i', '<C-k>', '', {
-    -- some Neovim's options
-    noremap = true,
-    silent = true,
-    -- callback function to get the snippets
-    callback = function()
-        expand_snippet("link")
-    end
-})
-
--- keymapping for calling the `"mytask"` snippet from Custom Luasnip snippets
-vim.api.nvim_buf_set_keymap(0, 'i', '<C-l>', '', {
-    -- some Neovim's options
-    noremap = true,
-    silent = true,
-    -- callback function to get the snippets
-    callback = function()
-        expand_snippet("mytask")
-    end
-})
+-- -- keymapping for calling the `"bold"` snippet from friendly-snippets
+-- vim.api.nvim_buf_set_keymap(0, 'i', '<C-b>', '', {
+--     -- some Neovim's options
+--     noremap = true,
+--     silent = true,
+--     -- callback function to get the snippets
+--     callback = function()
+--         -- expands the snippets with the function above
+--         expand_snippet("bold")
+--     end
+-- })
+--
+-- -- keymapping for calling the `"italic"` snippet from friendly-snippets
+-- vim.api.nvim_buf_set_keymap(0, 'i', '<C-i>', '', {
+--     -- some Neovim's options
+--     noremap = true,
+--     silent = true,
+--     -- callback function to get the snippets
+--     callback = function()
+--         -- expands the snippets with the function above
+--         expand_snippet("italic")
+--     end
+-- })
+--
+-- -- keymapping for calling the `"link"` snippet from friendly-snippets
+-- vim.api.nvim_buf_set_keymap(0, 'i', '<C-k>', '', {
+--     -- some Neovim's options
+--     noremap = true,
+--     silent = true,
+--     -- callback function to get the snippets
+--     callback = function()
+--         expand_snippet("link")
+--     end
+-- })
+--
+-- -- keymapping for calling the `"mytask"` snippet from Custom Luasnip snippets
+-- vim.api.nvim_buf_set_keymap(0, 'i', '<C-l>', '', {
+--     -- some Neovim's options
+--     noremap = true,
+--     silent = true,
+--     -- callback function to get the snippets
+--     callback = function()
+--         expand_snippet("mytask")
+--     end
+-- })
 
 -- the "code" in the return statement are some of custom Luasnip ( snippets ) that I wrote
 return {
