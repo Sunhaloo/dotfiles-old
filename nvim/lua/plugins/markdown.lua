@@ -10,6 +10,14 @@ return {
         },
     },
     {
+        -- plugin that that will provide us with "auto-bullets"
+        "bullets-vim/bullets.vim",
+        -- configuration for 'bullets.vim'
+        config = function()
+            vim.g.bullets_delete_last_bullet_if_empty = 1
+        end
+    },
+    {
         -- basically "Obsidian" in Neovim
         "epwalsh/obsidian.nvim",
         version = "*",

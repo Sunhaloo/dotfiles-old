@@ -23,8 +23,6 @@ return {
     {
         -- toggle-able terminal
         "akinsho/toggleterm.nvim",
-        -- start on when in Insert Mode
-        -- event = "InsertEnter",
         version = "*",
         -- configuration for 'toggleterm'
         config = function()
