@@ -124,7 +124,7 @@ alias pkglist-installed='sudo pacman -Q | grep'
 # search for applications ---> provide application / package name
 alias pkgsearch='sudo pacman -Ss'
 # search for applications ( installed with yay ) ---> provide application / package name
-alias ypkgsearch='yay -Ss'
+alias ysearch='yay -Ss'
 # installing applications ---> provide application / package name
 alias install='sudo pacman -S'
 # installing applications ( installed with yay ) ---> provide application / package name
