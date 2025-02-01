@@ -62,22 +62,13 @@ vim.api.nvim_create_autocmd(
         "TermEnter",   -- When entering a terminal
         "TermClose",   -- When a terminal is closed
 
-        -- Command-line events (for Telescope prompts)
-        "CmdlineEnter",    -- When entering a command line mode (e.g., when using Telescope)
+        -- Command-line events ( for Telescope prompts )
+        "CmdlineEnter",    -- When entering a command line mode ( e.g., when using Telescope )
         "CmdlineLeave",    -- When leaving a command line mode
+
+        -- Popup Window
+        "CompleteChanged",    -- When completion popup shows up ( e.g Blink's completion window )
     },
-    -- {
-    --     -- our events
-    --     "BufReadPre",
-    --     "BufRead",
-    --     "BufEnter",
-    --     "WinNew",
-    --     "WinEnter",
-    --     "TabNew",
-    --     "TabEnter",
-    --     "TermOpen",
-    --     "TermEnter",
-    --     "TermClose",
     -- },
     {
         -- auto-command group that will not be duplicated ( etc... )

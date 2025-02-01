@@ -8,7 +8,7 @@ return {
     s("main", {
         t({
             "def main():",
-            "   print(\"Hello World\")",
+            "    print(\"Hello World\")",
         }),
         -- drop the cursor in here ( unfortunately still in INSERT Mode )
         i(1),
@@ -16,7 +16,7 @@ return {
             "",
             "",
             "if __name__ == '__main__':",
-            "   main()"
+            "    main()"
         })
     })
 }

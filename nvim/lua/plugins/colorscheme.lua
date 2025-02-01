@@ -48,5 +48,34 @@ return {
                 terminal_colors = true,
             })
         end,
+    },
+    {
+        -- the most colourless colourful grey theme
+        "shaunsingh/nord.nvim",
+        config = function()
+            -- toggle transparency
+            vim.g.nord_disable_background = false
+            -- load theme
+            -- require("nord").set()
+        end
+    },
+    {
+        -- cozy ( I hate this fucking word ) theme
+        "ellisonleao/gruvbox.nvim",
+        -- plugin IS loaded in immediately during startup
+        lazy = false,
+        -- make sure that other UI elements start with the theme
+        priority = 1000,
+        -- configuration for 'gruvbox'
+        config = function()
+            require("gruvbox").setup({
+                -- use terminal colours
+                terminal_colors = true,
+                -- toggle transparency
+                transparent_mode = false,
+                -- dim the inactive ( buffer I think )
+                dim_inactive = false
+            })
+        end
     }
 }
