@@ -172,7 +172,14 @@ return {
                 ["pyright"] = function()
                     lspconfig["pyright"].setup({
                         -- enhance auto-completion "engine" for 'pyright' with 'blink.cmp'
-                        capabilities = capabilities
+                        capabilities = capabilities,
+                        on_attach = function(client, bufnr)
+                            -- create a local variable for options
+                            local opts = { noremap = true, silent = true, buffer = bufnr }
+                            -- create local variable for setting keymaps
+                            local key = vim.keymap
+                            key.set('n', "<leader>rn", vim.lsp.buf.rename, opts)
+                        end
                     })
                 end,
 
