@@ -146,6 +146,7 @@ change_font_size() {
 }
 
 
+# NOTE: 09/02/2025 ==> keymap added in kitty to change opacity
 # function to change the background opacity
 change_background_opacity() {
 	printf "\nBackground Opacity Selection\n"
