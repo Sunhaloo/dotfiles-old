@@ -2,6 +2,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 version = 3
 final_space = true
 
+# one dark theme
 [palette]
   blue = '#4fa6ed'
   green = '#8ebd6b'
@@ -9,6 +10,27 @@ final_space = true
   red = '#e55561'
   teal = '#48b0bd'
   yellow = '#e5c07b'
+
+# base16 black metal gorgoroth theme
+[palette_alt]
+  background =    '#000000'
+  foreground =    '#c1c1c1'
+  black =         '#000000'
+  red =           '#5f8787'
+  green =         '#9b8d7f'
+  yellow =        '#8c7f70'
+  blue =          '#888888'
+  purple =        '#999999'
+  cyan =          '#aaaaaa'
+  white =         '#c1c1c1'
+  brightBlack =   '#333333'
+  brightRed =     '#5f8787'
+  brightGreen =   '#9b8d7f'
+  brightYellow =  '#8c7f70'
+  brightBlue =    '#888888'
+  brightPurple =  '#999999'
+  brightCyan =    '#aaaaaa'
+  brightWhite =   '#c1c1c1'
 
 [secondary_prompt]
   template = '❯ '
@@ -18,15 +40,15 @@ final_space = true
 [transient_prompt]
   template = '󰘧 '
   background = 'transparent'
-  foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:green{{end}}']
+  foreground_templates = ['{{if gt .Code 0}}p:palette_alt.red{{end}}', '{{if eq .Code 0}}p:palette_alt.green{{end}}']
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
   newline = true
   [[blocks.segments]]
-    template = '<p:red>[</>{{ .Path }}<p:red>]</>'
-    foreground = 'p:blue'
+    template = '<p:palette_alt.red>[</>{{ .Path }}<p:palette_alt.red>]</>'
+    foreground = 'p:palette_alt.blue'
     background = 'transparent'
     type = 'path'
     style = 'plain'
@@ -36,8 +58,8 @@ final_space = true
       style = 'full'
 
   [[blocks.segments]]
-    template = '[{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}<p:red>*</>{{ end }}<cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>]'
-    foreground = 'p:lightDark'
+    template = '[{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}<p:red> *</>{{ end }}<p:palette_alt.cyan>{{ if gt .Behind 0 }}{{ end }}{{ if gt .Ahead 0 }}{{ end }}</>]'
+    foreground = 'p:palette_alt.brightBlack'
     background = 'transparent'
     type = 'git'
     style = 'plain'
@@ -53,7 +75,7 @@ final_space = true
 
   [[blocks.segments]]
     template = '{{ .FormattedMs }}'
-    foreground = 'p:yellow'
+    foreground = 'p:palette_alt.yellow'
     background = 'transparent'
     type = 'executiontime'
     style = 'plain'
@@ -72,7 +94,7 @@ final_space = true
     background = 'transparent'
     type = 'text'
     style = 'plain'
-    foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:green{{end}}']
+    foreground_templates = ['{{if gt .Code 0}}p:palette_alt.red{{end}}', '{{if eq .Code 0}}p:palette_alt.green{{end}}']
 
     [blocks.segments.properties]
       cache_duration = 'none'

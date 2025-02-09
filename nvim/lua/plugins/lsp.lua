@@ -224,7 +224,8 @@ return {
                     "python",
                     "markdown",
                     "markdown_inline",
-                    "yaml"
+                    "yaml",
+                    "html"
                 },
                 -- enable highlighting
                 highlight = {
