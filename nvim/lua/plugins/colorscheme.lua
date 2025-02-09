@@ -15,8 +15,11 @@ return {
             })
             -- apply the theme
             -- vim.cmd('colorscheme base16-black-metal-gorgoroth')
+
+            -- NOTE: I don't know how to use the theme / colours that I defined
+            -- this is why I am changing the color for the comment in   '~/.local/share/nvim/lazy/base16-nvim/colors/'
             -- apply my custom theme ( based on black-metal-gorgoroth)
-            vim.cmd('colorscheme base16-my-gorgoroth')
+            -- vim.cmd('colorscheme base16-my-gorgoroth')
         end
     },
     {
