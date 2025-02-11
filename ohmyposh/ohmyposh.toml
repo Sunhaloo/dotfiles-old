@@ -40,15 +40,15 @@ final_space = true
 [transient_prompt]
   template = '󰘧 '
   background = 'transparent'
-  foreground_templates = ['{{if gt .Code 0}}p:palette_alt.red{{end}}', '{{if eq .Code 0}}p:palette_alt.green{{end}}']
+  foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:green{{end}}']
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
   newline = true
   [[blocks.segments]]
-    template = '<p:palette_alt.red>[</>{{ .Path }}<p:palette_alt.red>]</>'
-    foreground = 'p:palette_alt.blue'
+    template = '<p:red>[</>{{ .Path }}<p:red>]</>'
+    foreground = 'p:blue'
     background = 'transparent'
     type = 'path'
     style = 'plain'
@@ -58,8 +58,8 @@ final_space = true
       style = 'full'
 
   [[blocks.segments]]
-    template = '[{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}<p:red> *</>{{ end }}<p:palette_alt.cyan>{{ if gt .Behind 0 }}{{ end }}{{ if gt .Ahead 0 }}{{ end }}</>]'
-    foreground = 'p:palette_alt.brightBlack'
+    template = '[{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}<p:red> *</>{{ end }}<p:cyan>{{ if gt .Behind 0 }}{{ end }}{{ if gt .Ahead 0 }}{{ end }}</>]'
+    foreground = 'p:lightDark'
     background = 'transparent'
     type = 'git'
     style = 'plain'
@@ -75,7 +75,7 @@ final_space = true
 
   [[blocks.segments]]
     template = '{{ .FormattedMs }}'
-    foreground = 'p:palette_alt.yellow'
+    foreground = 'p:yellow'
     background = 'transparent'
     type = 'executiontime'
     style = 'plain'
@@ -94,7 +94,7 @@ final_space = true
     background = 'transparent'
     type = 'text'
     style = 'plain'
-    foreground_templates = ['{{if gt .Code 0}}p:palette_alt.red{{end}}', '{{if eq .Code 0}}p:palette_alt.green{{end}}']
+    foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:green{{end}}']
 
     [blocks.segments.properties]
       cache_duration = 'none'
