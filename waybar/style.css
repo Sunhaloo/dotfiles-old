@@ -29,6 +29,7 @@ tooltip {
 #tray,
 #cpu,
 #memory,
+#backlight,
 #battery,
 #network,
 #temperature,
@@ -68,6 +69,12 @@ tooltip {
 #tray {
     background-color: #000000;
     border: 2px solid #E6E6E6;
+}
+
+#backlight {
+    background-color: #000000;
+    border: 2px solid #E6E6E6;
+    color: #E6E6E6;
 }
 
 #battery {
