@@ -30,13 +30,11 @@ change_font() {
 
     # displays font options to the user
     printf "\nOption [1]: JetBrainsMono Nerd Font Mono"
-    printf "\nOption [2]: MonaspiceKr Nerd Font Mono"
-    printf "\nOption [3]: CaskaydiaCove Nerd Font Mono"
-    printf "\nOption [4]: FiraCode Nerd Font Mono"
-    printf "\nOption [5]: ShureTechMono Nerd Font Mono"
-    printf "\nOption [6]: Liberation Mono"
-    printf "\nOption [7]: IBM Plex Mono"
-    printf "\nOption [8]: Code New Roman Nerd Font Mono"
+    printf "\nOption [2]: Iosevka Nerd Font Mono"
+    printf "\nOption [3]: VictorMono Nerd Font Mono"
+    printf "\nOption [4]: MonaspiceKr Nerd Font Mono"
+    printf "\nOption [5]: CaskaydiaCove Nerd Font Mono"
+    printf "\nOption [6]: IBM Plex Mono"
     printf "\nOption [x]: Exit\n\n"
 
 	# prompt the user to enter font option
@@ -49,51 +47,39 @@ change_font() {
 	# conditions to evaluate based on user input
 	if [ "$user_font" = 1 ]; then
 		# user selects "JetBrainsMono"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="JetBrainsMono Nerd Font Mono"/' "$kitty_conf"
+		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|Iosevka Nerd Font Mono\|VictorMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|BlexMono Nerd Font Mono\)"/font_family      family="JetBrainsMono Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
 		printf "\nFont changed to JetBrainsMono Nerd Font Mono... Please Reload Kitty\n"
 		
 	elif [ "$user_font" = 2 ]; then
-		# user selects "MonaspiceKr"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="MonaspiceKr Nerd Font Mono"/' "$kitty_conf"
+		# user selects "Iosevka"
+		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|Iosevka Nerd Font Mono\|VictorMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|BlexMono Nerd Font Mono\)"/font_family      family="Iosevka Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
-		printf "\nFont changed to MonaspiceKr Nerd Font Mono... Please Reload Kitty\n"
+		printf "\nFont changed to Iosevka Nerd Font Mono... Please Reload Kitty\n"
 		
 	elif [ "$user_font" = 3 ]; then
-		# user selects "CaskaydiaCove"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|FiraCode Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="CaskaydiaCove Nerd Font Mono"/' "$kitty_conf"
+		# user selects "VictorMono
+		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|Iosevka Nerd Font Mono\|VictorMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|BlexMono Nerd Font Mono\)"/font_family      family="VictorMono Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
-		printf "\nFont changed to CaskaydiaCove Nerd Font Mono... Please Reload Kitty\n"
+		printf "\nFont changed to VictorMono Nerd Font Mono... Please Reload Kitty\n"
 		
 	elif [ "$user_font" = 4 ]; then
-		# user selects "FiraCode Nerd Font Mono"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="FiraCode Nerd Font Mono"/' "$kitty_conf"
+		# user selects "MonaspiceKr"
+		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|Iosevka Nerd Font Mono\|VictorMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|BlexMono Nerd Font Mono\)"/font_family      family="MonaspiceKr Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
-		printf "\nFont changed to FiraCode Nerd Font Mono... Please Reload Kitty\n"
+		printf "\nFont changed to MonaspiceKr Nerd Font Mono... Please Reload Kitty\n"
 
 	elif [ "$user_font" = 5 ]; then
-		# user selects "ShureTechMono"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="ShureTechMono Nerd Font Mono"/' "$kitty_conf"
+		# user selects "CaskaydiaCove"
+		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|Iosevka Nerd Font Mono\|VictorMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|BlexMono Nerd Font Mono\)"/font_family      family="CaskaydiaCove Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
-		printf "\nFont changed to ShureTechMono Nerd Font Mono... Please Reload Kitty\n"
+		printf "\nFont changed to CaskaydiaCove Nerd Font Mono... Please Reload Kitty\n"
 
 	elif [ "$user_font" = 6 ]; then
 		# user selects "Liberation"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="Liberation Mono"/' "$kitty_conf"
+		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|Iosevka Nerd Font Mono\|VictorMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|BlexMono Nerd Font Mono\)"/font_family      family="BlexMono Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
-		printf "\nFont changed to Liberation Mono... Please Reload Kitty\n"
-
-	elif [ "$user_font" = 7 ]; then
-		# user selects "Blex Mono"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="BlexMono Nerd Font Mono"/' "$kitty_conf"
-		# output confirmation message
-		printf "\nFont changed to BlexMono Nerd Font Mono... Please Reload Kitty\n"
-
-	elif [ "$user_font" = 8 ]; then
-		# user selects "CodeNewRoman"
-		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|FiraCode Nerd Font Mono\|ShureTechMono Nerd Font Mono\|Liberation Mono\|BlexMono Nerd Font Mono\|CodeNewRoman Nerd Font Mono\)"/font_family      family="CodeNewRoman Nerd Font Mono"/' "$kitty_conf"
-		# output confirmation message
-		printf "\nFont changed to CodeNewRoman Nerd Font Mono... Please Reload Kitty\n"
+		printf "\nFont changed to BlexMono Mono Nerd Font Mono... Please Reload Kitty\n"
 
 	elif [ "$user_font" = 'x' ] || [ "$user_font" = 'exit' ]; then
 		# user wants to exit the script
