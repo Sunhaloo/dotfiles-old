@@ -147,7 +147,7 @@ install_all() {
 	install_package arc-gtk-theme-eos
 	install_package otf-font-awesome ttf-jetbrains-mono-nerd ttf-victor-mono-nerd ttf-cascadia-code-nerd ttf-ibmplex-mono-nerd otf-monaspace-nerd otf-codenewroman-nerd
 	# AUR packages
-	install_yay_package intel-ivsc-firmware hyprshot pyprland-git oh-my-posh kanata zen-browser-bin vscodium-bin nwg-look ani-cli 
+	install_yay_package intel-ivsc-firmware hyprshot pyprland-git oh-my-posh kanata zen-browser-bin visual-studio-code-bin nwg-look ani-cli 
 	install_yay_package bibata-cursor-theme papirus-icon-theme
 	install_yay_package slides vencord
 }
