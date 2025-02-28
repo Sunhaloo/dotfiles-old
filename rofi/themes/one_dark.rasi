@@ -22,14 +22,14 @@
   spacing: 0;
   background-color: transparent;
 
-  font: "JetBrainsMonoNerdFont 14";
+  font: "JetBrainsMonoNerdFont 16";
   text-color: @text;
 }
 
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.5);
 }
 
 mainbox {
@@ -42,7 +42,7 @@ inputbar {
 }
 
 prompt {
-  text-color: @blue;
+  text-color: @text-alt;
 }
 
 textbox-prompt-colon {
@@ -52,7 +52,7 @@ textbox-prompt-colon {
 
 entry {
   margin: 0px 10px;
-  text-color: @yellow;
+  text-color: @text;
 }
 
 listview {
@@ -64,7 +64,7 @@ listview {
 element {
   padding: 5px;
   text-color: @text-alt;
-  highlight: bold #95ee8f; /* green */
+  highlight: @green;
   border-radius: 15px;
 }
 

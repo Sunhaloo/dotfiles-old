@@ -5,6 +5,7 @@ configuration{
 	display-window: "Window";
 	drun-display-format: "{icon} {name}";
 	show-icons: true;
+    icon-theme: "Papirus-Dark";
 	modi: "run,drun,emoji";
 
 }
