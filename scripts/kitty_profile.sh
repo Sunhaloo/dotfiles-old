@@ -16,11 +16,10 @@ display_options() {
     printf "\nOption [1]: Change Font"
     printf "\nOption [2]: Change Font Size"
     printf "\nOption [3]: Change Background Opacity"
-    printf "\nOption [4]: Exit Script\n\n"
+    printf "\nOption [4]: Toggle Between Light and Dark Theme"
+    printf "\nOption [x]: Exit Script\n\n"
 }
 
-
-# function to change the font
 change_font() {
 	printf "\nSelect Your Font\n"
 
@@ -39,10 +38,6 @@ change_font() {
 
 	# prompt the user to enter font option
 	read -p "Select Font Number: " user_font
-
-	# output '-' 50 times
-	printf '%0.s-' {1..50}
-	printf "\n"
 
 	# conditions to evaluate based on user input
 	if [ "$user_font" = 1 ]; then
@@ -76,15 +71,25 @@ change_font() {
 		printf "\nFont changed to CaskaydiaCove Nerd Font Mono... Please Reload Kitty\n"
 
 	elif [ "$user_font" = 6 ]; then
-		# user selects "Liberation"
+		# user selects "Blex Mono"
 		sed -i 's/^font_family\s\+family="\(JetBrainsMono Nerd Font Mono\|Iosevka Nerd Font Mono\|VictorMono Nerd Font Mono\|MonaspiceKr Nerd Font Mono\|CaskaydiaCove Nerd Font Mono\|BlexMono Nerd Font Mono\)"/font_family      family="BlexMono Nerd Font Mono"/' "$kitty_conf"
 		# output confirmation message
 		printf "\nFont changed to BlexMono Mono Nerd Font Mono... Please Reload Kitty\n"
 
 	elif [ "$user_font" = 'x' ] || [ "$user_font" = 'exit' ]; then
 		# user wants to exit the script
-		printf "\nGood Bye\n\n"
-		exit 0
+        # output '-' 50 times
+        printf '%0.s-' {1..50}
+        printf "\n"
+
+        printf "\nGood Bye!\n\n"
+
+        # output '-' 50 times
+        printf '%0.s-' {1..50}
+        printf "\n"
+
+        # exit the script
+        exit 0
 
 	else
 		# if the user selects anything else
@@ -144,14 +149,10 @@ change_background_opacity() {
     # displays opacity options to the user
     printf "\nOption [1]: Opaque"
     printf "\nOption [2]: Enable Transparency"
-    printf "\nOption [3]: Exit\n\n"
+    printf "\nOption [x]: Exit\n\n"
 
 	# prompt the user to enter font option
 	read -p "Select Opacity Option: " user_opacity
-
-	# output '-' 50 times
-	printf '%0.s-' {1..50}
-	printf "\n"
 
 	# conditions to evaluate based on user input
 	if [ "$user_opacity" = 1 ]; then
@@ -165,15 +166,70 @@ change_background_opacity() {
         # output confirmation message
         printf "\nChange Background Opacity To Desired Transparency\n"
 
-	elif [ "$user_opacity" = 3 ]; then
+    elif [ "$user_opacity" = 'x' ] || [ "$user_opacity" = "exit" ]; then
 		# user wants to exit the script
-		printf "\nGood Bye\n"
-		exit 0
+        # output '-' 50 times
+        printf '%0.s-' {1..50}
+        printf "\n"
+
+        printf "\nGood Bye!\n\n"
+
+        # output '-' 50 times
+        printf '%0.s-' {1..50}
+        printf "\n"
+
+        # exit the script
+        exit 0
 
 	else
 		# if the user selects anything else
 		printf "\nWrong Option\n"
 	fi
+}
+
+# function to choose between dark and light theme
+change_theme() {
+    printf "\nTheme ( Dark / Light Mode ) Selection\n"
+
+	# output '-' 50 times
+	printf '%0.s-' {1..50}
+	printf "\n"
+
+    # displays opacity options to the user
+    printf "\nOption [1]: Dark Mode"
+    printf "\nOption [2]: Light Mode"
+    printf "\nOption [x]: Exit\n\n"
+
+	# prompt the user to enter font option
+	read -p "Select Theme Option: " user_theme
+
+	# conditions to evaluate based on user input
+    if [ "$user_theme" = 1 ]; then
+        # if the user selects dark mode
+        sed -i 's/^include themes\/\(vague\|one_half_light\)\.conf/include themes\/vague.conf/' "$kitty_conf"
+
+    elif [ "$user_theme" = 2 ]; then
+        sed -i 's/^include themes\/\(vague\|one_half_light\)\.conf/include themes\/one_half_light.conf/' "$kitty_conf"
+        # if the user selects light mode
+    elif [ "$user_theme" = 'x' ] || [ "$user_theme" = "exit" ]; then
+		# user wants to exit the script
+        # output '-' 50 times
+        printf '%0.s-' {1..50}
+        printf "\n"
+
+        printf "\nGood Bye!\n\n"
+
+        # output '-' 50 times
+        printf '%0.s-' {1..50}
+        printf "\n"
+
+        # exit the script
+        exit 0
+
+	else
+		# if the user selects anything else
+		printf "\nWrong Option\n"
+    fi
 }
 
 
@@ -212,8 +268,22 @@ main() {
 				change_background_opacity
 
 			elif [[ "$user_option" = 4 ]]; then
+                # if the user wants to change the theme ( either dark / light mode )
+                change_theme
+
+            elif [ "$user_option" = 'x' ] || [ "$user_option" = "exit" ]; then
 				# user wants to exit the script
-				printf "\nGood Bye!\n"
+				# output '-' 50 times
+				printf '%0.s-' {1..50}
+				printf "\n"
+
+				printf "\nGood Bye!\n\n"
+
+				# output '-' 50 times
+				printf '%0.s-' {1..50}
+				printf "\n"
+
+                # exit the script
 				exit 0
 
 			else
