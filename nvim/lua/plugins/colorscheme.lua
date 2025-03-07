@@ -93,6 +93,31 @@ return {
                 -- toggle transparency
                 transparent = true
             })
-        end
+        end,
     },
+    {
+        -- a black theme with blue-ish syntax highlighting
+        "bluz71/vim-moonfly-colors",
+        name = "moonfly",
+        -- plugin IS loaded in immediately during startup
+        lazy = false,
+        -- make sure that other UI elements start with the theme
+        priority = 1000,
+    },
+    {
+        -- lovely / better solarize theme by the crafter devaslife
+        "craftzdog/solarized-osaka.nvim",
+        -- plugin IS loaded in immediately during startup
+        lazy = false,
+        -- make sure that other UI elements start with the theme
+        priority = 1000,
+        -- configuration for 'solarized-osaka'
+        config = function()
+            require("solarized-osaka").setup({
+                -- toggle transparency
+                transparent = true,
+                terminal_colors = true,
+            })
+        end,
+    }
 }

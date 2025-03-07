@@ -1,11 +1,7 @@
--- variable that will truncate `vim.keymap`
-local key = vim.keymap
-
 -- function that is being used by lualine's inactive sections
 local function bruh()
     return [[💀]]
 end
-
 
 
 -- file where I will be keeping all UI related plugins
@@ -225,24 +221,6 @@ return {
             -- call the setup function
             todo_comments.setup()
         end,
-    },
-    {
-        -- plugin that is ( in my opinion better than VS C*de's smooth caret )
-        "gen740/SmoothCursor.nvim",
-        -- start on these 2 events
-        event = { "BufReadPre", "BufNewFile" },
-        -- configuration for 'SmoothCursor'
-        config = function()
-            -- enable the smooth caret
-            require("smoothcursor").setup({
-                -- type of smooth "theme" ( default = "default" | matrix-mode = "matrix" )
-                type = "default",
-                timeout = 1000,
-                fancy = {
-                    enable = true
-                }
-            })
-        end
     },
     {
         -- basically 'screenkey' program but in Neovim

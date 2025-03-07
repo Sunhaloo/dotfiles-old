@@ -226,7 +226,8 @@ return {
                     "markdown_inline",
                     "yaml",
                     "json",
-                    "html"
+                    "html",
+                    "sql"
                 },
                 -- enable highlighting
                 highlight = {
