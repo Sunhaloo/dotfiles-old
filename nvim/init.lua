@@ -6,3 +6,5 @@ require("config.options")
 require("config.lazy")
 -- "import" the auto-command file
 require("config.autocmd")
+
+vim.cmd("colorscheme cyberdream")

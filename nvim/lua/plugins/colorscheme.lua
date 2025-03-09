@@ -29,7 +29,7 @@ return {
                 }
             })
             -- apply the theme
-            require("onedark").load()
+            -- require("onedark").load()
         end
     },
     {
@@ -117,6 +117,23 @@ return {
                 -- toggle transparency
                 transparent = true,
                 terminal_colors = true,
+            })
+        end,
+    },
+    {
+        -- cyberdream theme for some cybery-mood
+        "scottmckendry/cyberdream.nvim",
+        -- plugin IS loaded in immediately during startup
+        lazy = false,
+        -- make sure that other UI elements start with the theme
+        priority = 1000,
+        -- configuration for 'cyberdream'
+        config = function()
+            require("cyberdream").setup({
+                -- toggle transparency
+                transparent = true,
+                italics_comments = true,
+                borderless_pickers = false
             })
         end,
     }

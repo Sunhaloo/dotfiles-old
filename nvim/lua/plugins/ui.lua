@@ -47,7 +47,7 @@ return {
                     -- << Separator Style >>
                     -- options for the `separator_style`
                         -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' }
-                    separator_style = "slant",
+                    separator_style = "thin",
                 }
             })
         end,
