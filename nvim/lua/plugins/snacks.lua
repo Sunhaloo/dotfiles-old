@@ -54,10 +54,22 @@ return {
                     header = [[ "Developers Developers Developers" ]]
                 }
             },
+            -- basically telescope
+            picker = {
+                enabled = true,
+                prompt = "󰘧 ",
+                matcher = {
+                    -- suppose to make it more like zoxide searching algorithm
+                    frecency = true
+                },
+            },
+            -- snacks own file explorer
+            explorer = { enabled = true },
             -- renders file as quickly as possible before loading plugins
             quickfile = { enabled = true },
             --  provides indentation guides
             indent = { enabled = true },
+            -- basically better nvim-notify
             notifier = { enabled = true },
             -- basically 'neoscroll.nvim'
             scroll = { enabled = true },
@@ -74,8 +86,46 @@ return {
         },
         -- keymappings for snacks.nvim's "sub-plugins"
         keys = {
-            -- lazygit
+            { "<leader>e", function() Snacks.picker.explorer() end, desc = "Find All Files [ Snacks ]" },
+            { "<leader>fb", function() Snacks.picker.buffers({ layout = "select" }) end, desc = "Find All Files [ Snacks ]" },
+            { "<leader>af", function() Snacks.picker.smart() end, desc = "Find All Files [ Snacks ]" },
+            { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files [ Snacks ]" },
+            { "<leader>fo", function() Snacks.picker.recent() end, desc = "Find Old Files [ Snacks ]" },
+            { "<leader>fl", function() Snacks.picker.grep() end, desc = "Live Grep [ Snacks ]" },
+            { "<leader>Si", function() Snacks.picker.icons() end, desc = "Icons [ Snacks ]" },
+            { "<leader>fC", function() Snacks.picker.files({ cwd = vim.fn.expand("$HOME/.config/") }) end, desc = "Find Config Files" },
+
+            { "<leader>ft", function() Snacks.picker.todo_comments() end, desc = "Highlighted Comments [ Snacks ]" },
+            { "<leader>fh", function() Snacks.picker.help() end, desc = "Help Pages [ Snacks ]" },
+            { "<leader>fm", function() Snacks.picker.man() end, desc = "Linux Man Pages [ Snacks ]" },
             { "<leader>lg", function() Snacks.lazygit() end, desc = "Lazygit" },
+            { "<leader>fO", function() Snacks.picker.files({ layout = "ivy", cwd = vim.fn.expand("$HOME/Obsidian/S.Sunhaloo/") }) end, desc = "Find Obsidian Files" },
+
+
+            { "<leader>gd", function() Snacks.picker.lsp_definitions() end, desc = "LSP Definitions" },
+            { "<leader>gD", function() Snacks.picker.lsp_declaration() end, desc = "LSP Declarations" },
+            { "<leader>gR", function() Snacks.picker.lsp_references() end, desc = "LSP References" },
+            { "<leader>gi", function() Snacks.picker.lsp_type_definitions() end, desc = "LSP Type Definitions" },
+            { "<leader>d", function() Snacks.picker.diagnostics() end, desc = "LSP Diagnostics" },
+            { "<leader>D", function() Snacks.picker.diagnostics_buffer() end, desc = "LSP Buffer Diagnostics" },
+
+
+            { "<leader>Si", function() Snacks.picker.icons() end, desc = "Icons [ Snacks ]" },
+            { "<leader>th", function() Snacks.picker.colorschemes() end, desc = "Icons [ Snacks ]" },
+            { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss Notifications [ Snacks ]" },
+            { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
         },
-    }
+        -- refer to documentation for toggle "autocommand"
+        init = function()
+            vim.api.nvim_create_autocmd("User", {
+                -- lazy loading
+                pattern = "VeryLazy",
+                -- create callback function
+                callback = function()
+                    -- example
+                    -- Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
+                    end,
+                })
+            end,
+        }
 }

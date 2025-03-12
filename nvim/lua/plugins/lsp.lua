@@ -38,27 +38,27 @@ return {
                     local opts = { buffer = ev.buf, silent = true }
 
                     -- keymaps for LSP
-                    opts.desc = "Show LSP Definitions"
-                    key.set('n', "gd", builtin.lsp_definitions, opts)
+                    -- opts.desc = "Show LSP Definitions"
+                    -- key.set('n', "gd", builtin.lsp_definitions, opts)
 
-                    opts.desc = "Go To Declaration"
-                    key.set('n', "gD", vim.lsp.buf.declaration, opts)
+                    -- opts.desc = "Go To Declaration"
+                    -- key.set('n', "gD", vim.lsp.buf.declaration, opts)
 
-                    opts.desc = "Show LSP References"
-                    key.set('n', "gR", builtin.lsp_references, opts)
+                    -- opts.desc = "Show LSP References"
+                    -- key.set('n', "gR", builtin.lsp_references, opts)
 
-                    opts.desc = "Show LSP Type Implementations"
-                    key.set('n', "gi", builtin.lsp_implementations, opts)
+                    -- opts.desc = "Show LSP Type Implementations"
+                    -- key.set('n', "gi", builtin.lsp_implementations, opts)
 
-                    opts.desc = "Show LSP Type Definitions"
-                    key.set('n', "gt", builtin.lsp_type_definitions, opts)
+                    -- opts.desc = "Show LSP Type Definitions"
+                    -- key.set('n', "gt", builtin.lsp_type_definitions, opts)
 
-                    opts.desc = "Show Line Diagnostics"
-                    key.set('n', "<leader>d", vim.diagnostic.open_float, opts)
+                    -- opts.desc = "Show Line Diagnostics"
+                    -- key.set('n', "<leader>d", vim.diagnostic.open_float, opts)
 
-                    opts.desc = "Show Buffer Diagnostics"
-                    -- key.set('n', "<leader>D", "<Cmd>Telescope diagnostics bufnr=0<CR>", opts)
-                    key.set('n', "<leader>D", builtin.diagnostics, opts)
+                    -- opts.desc = "Show Buffer Diagnostics"
+                    -- -- key.set('n', "<leader>D", "<Cmd>Telescope diagnostics bufnr=0<CR>", opts)
+                    -- key.set('n', "<leader>D", builtin.diagnostics, opts)
 
                     opts.desc = "Next Diagnostics"
                     key.set('n', "]d", vim.diagnostic.goto_next, opts)

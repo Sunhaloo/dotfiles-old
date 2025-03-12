@@ -39,50 +39,50 @@ return {
             local key = vim.keymap
 
             -- setup the keymappings for telescope
-            key.set('n', "<leader>T", "<Cmd>Telescope<CR>", { desc = "Telescope" })
-            key.set('n', "<leader>ff", builtin.find_files, { desc = "Find Files [ Telescope ]" })
+            -- key.set('n', "<leader>T", "<Cmd>Telescope<CR>", { desc = "Telescope" })
+            -- key.set('n', "<leader>ff", builtin.find_files, { desc = "Find Files [ Telescope ]" })
             key.set('n', "<leader>fg", builtin.git_files, { desc = "Find Git Files [ Telescope ]" })
-            key.set('n', "<leader>fo", builtin.oldfiles, { desc = "Find Old Files [ Telescope ]" })
-            key.set('n', "<leader>fl", builtin.live_grep, { desc = "Live Grep [ Telescope ]" })
+            -- key.set('n', "<leader>fo", builtin.oldfiles, { desc = "Find Old Files [ Telescope ]" })
+            -- key.set('n', "<leader>fl", builtin.live_grep, { desc = "Live Grep [ Telescope ]" })
             -- WARNING: need to install 'todo-comments' by folke... I will be installing it later!
-            key.set('n', "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Highlighted Comments [ Telescope ]" })
+            -- key.set('n', "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "Highlighted Comments [ Telescope ]" })
 
             -- miscellaneous keymappings for when I am getting bored
             -- change the colourscheme
-            key.set('n', "<leader>th", builtin.colorscheme, { desc = "Change Colorscheme [ Telescope ]" })
+            -- key.set('n', "<leader>th", builtin.colorscheme, { desc = "Change Colorscheme [ Telescope ]" })
 
             -- custom "custom" keymappings for Telescope ( refer to Teej's video )
             -- allow the user to search for files in the directory: `~/Obsidian/S.Sunhaloo`
-            key.set('n', "<leader>fO", function ()
-                -- get the `find_files` method for telescope + use the 'ivy' theme
-                builtin.find_files(require("telescope.themes").get_ivy({
-                    -- setup the custom directory ( in this case my Obsidian Vault )
-                    cwd = "$HOME/Obsidian/S.Sunhaloo/"
-                }))
-            end,
-                {
-                    desc = "Find Obsidian Files [ Telescope ]"
-                }
-            )
+            -- key.set('n', "<leader>fO", function ()
+            --     -- get the `find_files` method for telescope + use the 'ivy' theme
+            --     builtin.find_files(require("telescope.themes").get_ivy({
+            --         -- setup the custom directory ( in this case my Obsidian Vault )
+            --         cwd = "$HOME/Obsidian/S.Sunhaloo/"
+            --     }))
+            -- end,
+            --     {
+            --         desc = "Find Obsidian Files [ Telescope ]"
+            --     }
+            -- )
             -- allow the user to search for configuration files in the directory: `~/.config/`
-            key.set('n', "<leader>fC", function ()
-                -- get the `find_files` method for telescope
-                builtin.find_files {
-                    -- setup the custom directory for `~/.config/`
-                    cwd = "$HOME/.config/"
-                    -- un-comment the line below to search Neovim configuration directory only
-                    -- cwd = vim.fn.stdpath("config")
-                }
-            end,
-                {
-                    desc = "Find Configuration Files [ Telescope ]"
-                }
-            )
+            -- key.set('n', "<leader>fC", function ()
+            --     -- get the `find_files` method for telescope
+            --     builtin.find_files {
+            --         -- setup the custom directory for `~/.config/`
+            --         cwd = "$HOME/.config/"
+            --         -- un-comment the line below to search Neovim configuration directory only
+            --         -- cwd = vim.fn.stdpath("config")
+            --     }
+            -- end,
+            --     {
+            --         desc = "Find Configuration Files [ Telescope ]"
+            --     }
+            -- )
             -- allow the user to search for help documentation
-            key.set('n', "<leader>fh", function()
-                -- require("telescope.builtin").help_tags(require("telescope.themes").get_dropdown())
-                builtin.help_tags(require("telescope.themes").get_ivy())
-            end, { desc = "Help - Documentation [ Telescope ]" })
+            -- key.set('n', "<leader>fh", function()
+            --     -- require("telescope.builtin").help_tags(require("telescope.themes").get_dropdown())
+            --     builtin.help_tags(require("telescope.themes").get_ivy())
+            -- end, { desc = "Help - Documentation [ Telescope ]" })
         end,
     }
 }

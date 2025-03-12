@@ -52,7 +52,7 @@ return {
             -- enable the file manager ( as per documentation )
             require("mini.files").setup({
                 -- create keymap to quickly and easily open file manager
-                vim.keymap.set('n', "<leader>e", "<Cmd>lua MiniFiles.open()<CR>", { desc = "File Explorer [ mini.nvim ]" }),
+                -- vim.keymap.set('n', "<leader>e", "<Cmd>lua MiniFiles.open()<CR>", { desc = "File Explorer [ mini.nvim ]" }),
 
                 -- change the default keymaps
                 mappings = {
