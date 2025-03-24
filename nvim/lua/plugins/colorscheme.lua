@@ -116,6 +116,7 @@ return {
             require("solarized-osaka").setup({
                 -- toggle transparency
                 transparent = true,
+                -- use colours from terminal
                 terminal_colors = true,
             })
         end,
@@ -136,5 +137,22 @@ return {
                 borderless_pickers = false
             })
         end,
-    }
+    },
+    {
+        -- eldritch theme for some different cybery-mood
+        "eldritch-theme/eldritch.nvim",
+        -- plugin IS loaded in immediately during startup
+        lazy = false,
+        -- make sure that other UI elements start with the theme
+        priority = 1000,
+        -- configuration for 'cyberdream'
+        config = function()
+            require("eldritch").setup({
+                -- toggle transparency
+                transparent = true,
+                -- use colours from terminal
+                terminal_colors = true,
+            })
+        end,
+    },
 }

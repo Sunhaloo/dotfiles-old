@@ -158,7 +158,7 @@ return {
         -- configuration for 'which-key'
         opts = {
             -- change the style / theme
-            preset = "modern"
+            preset = "helix"
         },
         -- how to "open" / "call" 'which-key'
         keys = {
@@ -222,29 +222,4 @@ return {
             todo_comments.setup()
         end,
     },
-    {
-        -- basically 'screenkey' program but in Neovim
-        "NStefan002/screenkey.nvim",
-        version = "*",
-        -- keymap to be able to toggle it on or off
-        vim.keymap.set('n', "<leader>Sk", "<Cmd>Screenkey<CR>", { desc = "Screenkey [ Neovim ]" }),
-        -- configuration for 'screenkey'
-        config = function()
-            require("screenkey").setup({
-                -- << Appearance >>
-                win_opts = {
-                    -- place the floating window on the top
-                    row = 37,
-                    -- place the floating window on the right
-                    col = vim.o.columns - 1 ,
-                    -- change the size
-                    width = 35,
-                    height = 1,
-                    border = "rounded",
-                    title = "",
-                },
-                show_leader = false,
-            })
-        end,
-    }
 }

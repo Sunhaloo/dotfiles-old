@@ -94,4 +94,5 @@ key.set('n', "lx", "<Cmd>Lex<CR>", { desc = "Open 'Lex'" })
 -- << Toggles >>
 
 -- toggle spell checking
+-- NOTE: try to do this with 'snacks.nvim'
 key.set('n', "<leader>ol", function() vim.opt.spell = not vim.opt.spell:get() end, { desc = "Toggle Spell Checking "})

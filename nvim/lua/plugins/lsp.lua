@@ -13,67 +13,34 @@ return {
                 -- load only on lua 'filetypes'
                 ft = "lua",
                 opts = {
-                  library = {
-                    { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-                  },
+                    -- configure LSP servers
+                    vim.api.nvim_create_autocmd("LspAttach", {
+                        -- create group ( organise and manage LSP auto-commands only )
+                        group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+                        -- create callback function ( 'event' as arg )
+                        callback = function(ev)
+                            -- variable that will truncate `vim.keymap`
+                            local key = vim.keymap
+                            -- variable what will hold these options for LOCAL Buffer ONLY
+                            local opts = { buffer = ev.buf, silent = true }
+
+                            -- keymaps for LSP
+                            opts.desc = "Next Diagnostics"
+                            key.set('n', "]d", vim.diagnostic.goto_next, opts)
+
+                            opts.desc = "Previous Diagnostics"
+                            key.set('n', "[d", vim.diagnostic.goto_prev, opts)
+
+                            opts.desc = "Show Documentation Under Cursor"
+                            key.set('n', "K", vim.lsp.buf.hover, opts)
+
+                            opts.desc = "Restart LSP"
+                            key.set('n', "<leader>rs", "<Cmd>LspRestart<CR>", opts)
+                        end,
+                    })
                 },
             },
         },
-
-        -- configure LSP servers
-        config = function()
-            -- variable that will truncate `vim.keymap`
-            local key = vim.keymap
-
-            -- configuration for 'nvim-lspconfig'
-            -- create auto-command which will be loaded on event 'LspAttach'
-            vim.api.nvim_create_autocmd("LspAttach", {
-                -- create group ( organise and manage LSP auto-commands only )
-                group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-                -- create callback function ( 'event' as arg )
-                callback = function(ev)
-                    -- create a variable for `telescope.builtin`
-                    local builtin = require("telescope.builtin")
-                    -- variable what will hold these options for LOCAL Buffer ONLY
-                    local opts = { buffer = ev.buf, silent = true }
-
-                    -- keymaps for LSP
-                    -- opts.desc = "Show LSP Definitions"
-                    -- key.set('n', "gd", builtin.lsp_definitions, opts)
-
-                    -- opts.desc = "Go To Declaration"
-                    -- key.set('n', "gD", vim.lsp.buf.declaration, opts)
-
-                    -- opts.desc = "Show LSP References"
-                    -- key.set('n', "gR", builtin.lsp_references, opts)
-
-                    -- opts.desc = "Show LSP Type Implementations"
-                    -- key.set('n', "gi", builtin.lsp_implementations, opts)
-
-                    -- opts.desc = "Show LSP Type Definitions"
-                    -- key.set('n', "gt", builtin.lsp_type_definitions, opts)
-
-                    -- opts.desc = "Show Line Diagnostics"
-                    -- key.set('n', "<leader>d", vim.diagnostic.open_float, opts)
-
-                    -- opts.desc = "Show Buffer Diagnostics"
-                    -- -- key.set('n', "<leader>D", "<Cmd>Telescope diagnostics bufnr=0<CR>", opts)
-                    -- key.set('n', "<leader>D", builtin.diagnostics, opts)
-
-                    opts.desc = "Next Diagnostics"
-                    key.set('n', "]d", vim.diagnostic.goto_next, opts)
-
-                    opts.desc = "Previous Diagnostics"
-                    key.set('n', "[d", vim.diagnostic.goto_prev, opts)
-
-                    opts.desc = "Show Documentation Under Cursor"
-                    key.set('n', "K", vim.lsp.buf.hover, opts)
-
-                    opts.desc = "Restart LSP"
-                    key.set('n', "<leader>rs", "<Cmd>LspRestart<CR>", opts)
-                end,
-            })
-        end,
     },
 
     -- 'mason.nvim' configuration
@@ -219,6 +186,7 @@ return {
             require("nvim-treesitter.configs").setup({
                 -- make sure that parsers for these languages are installed by "default"
                 ensure_installed = {
+                    "c",
                     "bash",
                     "lua",
                     "python",

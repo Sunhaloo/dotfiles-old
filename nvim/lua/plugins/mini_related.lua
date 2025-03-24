@@ -42,29 +42,6 @@ return {
         end,
     },
     {
-        -- my choice for a file tree ( rival 'oil.nvim' for me )
-        "echasnovski/mini.files",
-        version = false,
-        -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
-        event = "VeryLazy",
-        -- configuration for 'mini.files'
-        config = function()
-            -- enable the file manager ( as per documentation )
-            require("mini.files").setup({
-                -- create keymap to quickly and easily open file manager
-                -- vim.keymap.set('n', "<leader>e", "<Cmd>lua MiniFiles.open()<CR>", { desc = "File Explorer [ mini.nvim ]" }),
-
-                -- change the default keymaps
-                mappings = {
-                    -- emulate a toggle "keymap" like 'neo-tree.nvim'
-                    close = "<leader>e",
-                    -- basically keymap to save changes after modifying files / folders
-                    synchronize = "S"
-                }
-            })
-        end,
-    },
-    {
         -- choosing 'mini.pairs' and testing it ( over 'nvim-autopairs' )
         "echasnovski/mini.pairs",
         version = false,
