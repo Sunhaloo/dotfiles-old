@@ -33,9 +33,9 @@ key.set({'n', 'v'}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
 -- paste from system clipboard
 key.set({'n', 'v'}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
 -- search and replace one occurrence of that word
-key.set('n', "<leader>h", ":s/", { desc = "Search + Replace ( One )" })
+key.set('n', "<leader>sh", ":s/", { desc = "Search + Replace ( One )" })
 -- search and replace all occurrences of that word
-key.set('n', "<leader>H", ":%s/", { desc = "Search + Replace ( All )" })
+key.set('n', "<leader>sH", ":%s/", { desc = "Search + Replace ( All )" })
 -- increment number
 key.set('n', '+', "<C-a>", { desc = "Increment Number" })
 -- decrement number

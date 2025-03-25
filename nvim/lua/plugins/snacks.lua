@@ -11,16 +11,15 @@ return {
 			styles = {
 				-- setup the scratch layout
 				scratch = {
-					-- use a more minimal appearance
-					-- minimal = true,
 					-- change the dimension of the scratchpad
 					width = 150,
 					height = 35,
 				},
                 -- set up the floating layout
                 float = {
+                    -- make the borders look more modern
                     border = "rounded",
-                }
+                },
 			},
 
 			-- basically snacks animation library
@@ -198,32 +197,47 @@ return {
 
 		-- keymappings for snacks.nvim's "sub-plugins"
 		keys = {
+            -- << Searching and Picking Files >>
+
+
+            -- open file explorer
 			{
 				"<leader>e",
 				function()
-					Snacks.picker.explorer()
+					Snacks.picker.explorer({
+                        -- change the layout to "vertical"
+                        layout = "vertical"
+                    })
 				end,
 				desc = "Find All Files [ Snacks ]",
 			},
+
+            -- buffer picker
 			{
 				"<leader>fb",
 				function()
 					Snacks.picker.buffers({
+                        -- change the layout to "select"
 						layout = "select",
+                        -- start in 'NORMAL' mode instead of 'INSERT' mode
 						on_show = function()
 							vim.cmd.stopinsert()
 						end,
 					})
 				end,
-				desc = "Find All Files [ Snacks ]",
+				desc = "Find Buffers [ Snacks ]",
 			},
+
+            -- search and select file ( smartly?!? )
 			{
 				"<leader>fa",
 				function()
 					Snacks.picker.smart()
 				end,
-				desc = "Find All Files [ Snacks ]",
+				desc = "Find ( Smart ) Files [ Snacks ]",
 			},
+
+            -- search and select file just like in telescope
 			{
 				"<leader>ff",
 				function()
@@ -231,78 +245,142 @@ return {
 				end,
 				desc = "Find Files [ Snacks ]",
 			},
+
+            -- find all recently used files
 			{
 				"<leader>fo",
 				function()
-					Snacks.picker.recent()
+					Snacks.picker.recent({
+                        -- change the layout to "select"
+						layout = "select",
+                    })
 				end,
 				desc = "Find Old Files [ Snacks ]",
 			},
+
+            -- live grep ==> search for specific word in file
 			{
 				"<leader>fl",
 				function()
-					Snacks.picker.grep()
+					Snacks.picker.grep({
+                        -- change the layout to "telescope"
+                        layout = "telescope"
+                    })
 				end,
 				desc = "Live Grep [ Snacks ]",
 			},
-			{
-				"<leader>I",
-				function()
-					Snacks.picker.icons()
-				end,
-				desc = "Icons [ Snacks ]",
-			},
+
+            -- search and select configuration files present in the `~/.config` directory
 			{
 				"<leader>fC",
 				function()
-					Snacks.picker.files({ cwd = vim.fn.expand("$HOME/.config/") })
+					Snacks.picker.files({
+                        -- search for files only on the `~/.config` directory
+                        cwd = vim.fn.expand("$HOME/.config/"),
+                        -- change the layout to "telescope"
+                        layout = "telescope"
+                    })
 				end,
-				desc = "Find Config Files",
+				desc = "Find Config Files [ Snacks ]",
 			},
 
+            -- find all the "callouts" comment in a code / markdown document
 			{
 				"<leader>ft",
 				function()
-					Snacks.picker.todo_comments()
+					Snacks.picker.todo_comments({
+                        -- change the layout to "telescope"
+                        layout = "telescope"
+                    })
 				end,
 				desc = "Highlighted Comments [ Snacks ]",
 			},
+
+            -- search and select obsidian files present in the vault
 			{
-				"<leader>fh",
+				"<leader>fO",
 				function()
-					Snacks.picker.help()
+					Snacks.picker.files({
+                        -- search for files only on the `~/Obsidian/S.Sunhaloo/` directory
+                        cwd = vim.fn.expand("$HOME/Obsidian/S.Sunhaloo/"),
+                        -- change the layout to "sidebar"
+                        layout = "sidebar"
+                    })
 				end,
-				desc = "Help Pages [ Snacks ]",
+				desc = "Find Obsidian Files [ Snacks ]",
 			},
-			{
-				"<leader>fm",
-				function()
-					Snacks.picker.man()
-				end,
-				desc = "Linux Man Pages [ Snacks ]",
-			},
+
+
+            -- << Git Stuffs >>
+
+            -- well, what can I say... 'lazygit' inside of neovim!
 			{
 				"<leader>lg",
 				function()
 					Snacks.lazygit()
 				end,
-				desc = "Lazygit",
-			},
-			{
-				"<leader>fO",
-				function()
-					Snacks.picker.files({ layout = "ivy", cwd = vim.fn.expand("$HOME/Obsidian/S.Sunhaloo/") })
-				end,
-				desc = "Find Obsidian Files",
+				desc = "Lazygit [ Snacks ]",
 			},
 
+            -- 
+			{
+				"<leader>fg",
+				function()
+					Snacks.picker.git_files({
+                        -- change the layout to "telescope"
+                        layout = "telescope"
+                    })
+				end,
+				desc = "Find Git Files [ Snacks ]",
+			},
+
+            -- basically open the local repository ( at main ) on the web browser ( if remote repos is present )
+            -- NOTE: some pretty cool shit
+			{
+				"<leader>gO",
+				function()
+					Snacks.gitbrowse()
+				end,
+				desc = "Git Browse [ Snacks ]",
+			},
+
+            -- basically open the local repository ( at that specific file ) on the web browser ( if remote repos is present )
+            -- NOTE: again, some pretty cool shit
+			{
+				"<leader>gF",
+				function()
+					Snacks.gitbrowse.open()
+				end,
+				desc = "Git Browse - File [ Snacks ]",
+			},
+
+
+            -- << Terminal >>
+
+
+            -- toggle terminal ==> finally, I can remove 'toggleterm.nvim' ( did server me very well )
+            {
+                "<c-/>",
+                function()
+                    Snacks.terminal.toggle()
+                end,
+                mode = { "n", "t" }, -- Apply to both normal and terminal modes
+                desc = "Toggle Snacks Terminal",
+            },
+
+
+            -- << Coding >>
+
+
+            -- << LSP Related Stuff >>
 			{
 				"<leader>gd",
 				function()
 					Snacks.picker.lsp_definitions()
 				end,
-				desc = "LSP Definitions",
+				desc = "LSP Definitions [ Snacks ]",
 			},
+
 			{
 				"<leader>gD",
 				function()
@@ -310,6 +388,7 @@ return {
 				end,
 				desc = "LSP Declarations",
 			},
+
 			{
 				"<leader>gR",
 				function()
@@ -317,6 +396,7 @@ return {
 				end,
 				desc = "LSP References",
 			},
+
 			{
 				"<leader>gi",
 				function()
@@ -324,10 +404,14 @@ return {
 				end,
 				desc = "LSP Type Definitions",
 			},
+
 			{
 				"<leader>d",
 				function()
-					Snacks.picker.diagnostics()
+					Snacks.picker.diagnostics({
+                        -- change the layout to "telescope"
+                        layout = "telescope"
+                    })
 				end,
 				desc = "LSP Diagnostics",
 			},
@@ -339,6 +423,55 @@ return {
 				desc = "LSP Buffer Diagnostics",
 			},
 
+            -- find help documentation related to neovim and installed plugins
+			{
+				"<leader>fh",
+				function()
+					Snacks.picker.help({
+                        -- change the layout to "sidebar"
+                        layout = "sidebar"
+                    })
+				end,
+				desc = "Help Pages [ Snacks ]",
+			},
+
+            -- general 'man page' finder but also in neovim
+			{
+				"<leader>fm",
+				function()
+					Snacks.picker.man({
+                        -- change the layout to "sidebar"
+                        layout = "sidebar"
+                    })
+				end,
+				desc = "Linux Man Pages [ Snacks ]",
+			},
+
+
+            -- << Miscellaneous >>
+
+            -- IDK when I am going to need this... Buts its here!
+			{
+				"<leader>I",
+				function()
+					Snacks.picker.icons()
+				end,
+				desc = "Icons [ Snacks ]",
+			},
+
+            -- again, IDK when I am going to needs this... Butt ))!
+			{
+				"<leader>hl",
+				function()
+					Snacks.picker.highlights({
+                        -- change the layout to "vertical"
+                        layout = "vertical"
+                    })
+				end,
+				desc = "Icons [ Snacks ]",
+			},
+
+            -- hide the annoying fucking, repetitive notifications
 			{
 				"<leader>un",
 				function()
@@ -346,54 +479,34 @@ return {
 				end,
 				desc = "Dismiss Notifications [ Snacks ]",
 			},
+
+            -- find and select projects
 			{
 				"<leader>fp",
 				function()
-					Snacks.picker.projects()
+					Snacks.picker.projects({
+                        -- change the layout to "select"
+                        layout = "select"
+                    })
 				end,
-				desc = "Projects",
+				desc = "Projects [ Snacks ]",
 			},
 
-			{
-				"<leader>gO",
-				function()
-					Snacks.gitbrowse()
-				end,
-				desc = "Git Browse",
-			},
-			{
-				"<leader>gF",
-				function()
-					Snacks.gitbrowse.open()
-				end,
-				desc = "Git Browse - File",
-			},
-
+            -- create a Scratchpad for you to dump stuff
 			{
 				"<leader>S",
 				function()
 					Snacks.scratch()
 				end,
-				desc = "Toggle Scratchpad",
+				desc = "Toggle Scratchpad [ Snacks ]",
 			},
 			{
 				"<leader>Sl",
 				function()
 					Snacks.scratch.select()
 				end,
-				desc = "List Scratchpad",
+				desc = "List Scratchpad [ Snacks ]",
 			},
-
-
-
-            {
-                "<c-/>",
-                function()
-                    Snacks.terminal.toggle()
-                end,
-                mode = { "n", "t" }, -- Apply to both normal and terminal modes
-                desc = "Toggle Snacks Terminal",
-            },
 		},
 	},
 }
