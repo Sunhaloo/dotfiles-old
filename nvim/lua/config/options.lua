@@ -104,3 +104,8 @@ set.colorcolumn = "80"
 
 -- set the actual font for GUI
 set.guifont = "JetBrainsMono Nerd Font Mono"
+
+-- << Plugins >>
+
+-- set the status column
+-- set.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]

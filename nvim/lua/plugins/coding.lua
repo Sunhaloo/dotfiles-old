@@ -30,7 +30,7 @@ return {
                 -- terminal size
                 size = 15,
                 -- keymap to "toggle" terminal
-                open_mapping = [[<c-/>]],
+                -- open_mapping = [[<c-/>]],
                 -- make the terminal become a floating terminal
                 direction = "float",
                 -- bigger value ==> whiter / brighter terminal | 0 = colourscheme's background
