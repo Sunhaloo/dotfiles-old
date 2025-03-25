@@ -7,6 +7,18 @@ return {
         lazy = false,
         -- configuration options
         opts = {
+            -- configure the styles for the pickers
+            styles = {
+                -- setup the scratch layout
+                scratch = {
+                    -- use a more minimal appearance
+                    -- minimal = true,
+                    -- change the dimension of the scratchpad
+                    width = 150,
+                    height = 35,
+                }
+            },
+
             -- basically snacks animation library
             animate = {
                 enabled = true,
@@ -21,6 +33,7 @@ return {
             bigfile = {
                 enable = true,
                 -- configure size of file ( in bytes --> converting to megabytes )
+                size = 0.8 * 1024 * 1024
             },
 
             -- dashboard setup
@@ -143,17 +156,26 @@ return {
                 style = "fancy",
             },
 
+            -- renders file as quickly as possible before loading plugins
+            quickfile = { enabled = true },
+
+
+            -- similar to a tiling window manager's scratchpad
+            scratch = {
+                enabled = true,
+            },
+
         },
 
         -- keymappings for snacks.nvim's "sub-plugins"
         keys = {
             { "<leader>e", function() Snacks.picker.explorer() end, desc = "Find All Files [ Snacks ]" },
-            { "<leader>fb", function() Snacks.picker.buffers({ layout = "select" }) end, desc = "Find All Files [ Snacks ]" },
+            { "<leader>fb", function() Snacks.picker.buffers({ layout = "select", on_show = function() vim.cmd.stopinsert() end, }) end, desc = "Find All Files [ Snacks ]" },
             { "<leader>fa", function() Snacks.picker.smart() end, desc = "Find All Files [ Snacks ]" },
             { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files [ Snacks ]" },
             { "<leader>fo", function() Snacks.picker.recent() end, desc = "Find Old Files [ Snacks ]" },
             { "<leader>fl", function() Snacks.picker.grep() end, desc = "Live Grep [ Snacks ]" },
-            { "<leader>Si", function() Snacks.picker.icons() end, desc = "Icons [ Snacks ]" },
+            { "<leader>I", function() Snacks.picker.icons() end, desc = "Icons [ Snacks ]" },
             { "<leader>fC", function() Snacks.picker.files({ cwd = vim.fn.expand("$HOME/.config/") }) end, desc = "Find Config Files" },
 
             { "<leader>ft", function() Snacks.picker.todo_comments() end, desc = "Highlighted Comments [ Snacks ]" },
@@ -176,6 +198,9 @@ return {
 
             { "<leader>gO", function() Snacks.gitbrowse() end, desc = "Git Browse" },
             { "<leader>gF", function() Snacks.gitbrowse.open() end, desc = "Git Browse - File" },
+
+            { "<leader>S", function() Snacks.scratch() end, desc = "Toggle Scratchpad" },
+            { "<leader>Sl", function() Snacks.scratch.select() end, desc = "List Scratchpad" },
         }
     }
 }
