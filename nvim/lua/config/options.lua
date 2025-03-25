@@ -48,7 +48,7 @@ set.shiftwidth = 4
 -- enable spell checking
 -- set.spell = true
 -- language for spell checking
--- set.spelllang = { "en_gb" }
+set.spelllang = { "en_gb" }
 
 
 -- << Appearance Options >>

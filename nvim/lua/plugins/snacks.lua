@@ -88,28 +88,28 @@ return {
 							icon = " ",
 							key = "l",
 							desc = "Live Grep",
-							action = ":lua Snacks.dashboard.pick('live_grep')",
+							action = ":lua Snacks.picker.grep({ layout = 'telescope' })",
 						},
 						-- keymappings for help documentation
 						{
 							icon = "? ",
 							key = "h",
 							desc = "Help Documentation",
-							action = ":lua Snacks.dashboard.pick('help_tags')",
+							action = ":lua Snacks.picker.help({ layout = 'sidebar' })",
 						},
 						-- keymappings for finding recently used files
 						{
 							icon = " ",
 							key = "o",
 							desc = "Find Old Files",
-							action = ":lua Snacks.dashboard.pick('oldfiles')",
+							action = ":lua Snacks.picker.recent({ layout = 'select' })",
 						},
 						-- keymappings for finding system configuration files
 						{
 							icon = " ",
 							key = "c",
 							desc = "System Config Files",
-							action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.expand('$HOME/.config')})",
+							action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.expand('$HOME/.config'), layout = 'telescope' })",
 						},
 						-- keymappings for quiting neovim
 						{
@@ -447,6 +447,18 @@ return {
 				desc = "Linux Man Pages [ Snacks ]",
 			},
 
+            -- undo history
+			{
+				"<leader>uh",
+				function()
+					Snacks.picker.undo({
+                        -- change the layout to "sidebar"
+                        layout = "vertical"
+                    })
+				end,
+				desc = "Undo History [ Snacks ]",
+			},
+
 
             -- << Miscellaneous >>
 
@@ -508,5 +520,23 @@ return {
 				desc = "List Scratchpad [ Snacks ]",
 			},
 		},
+        -- toggle-able neovim options --> copied from documentation
+        init = function()
+            vim.api.nvim_create_autocmd("User", {
+                pattern = "VeryLazy",
+                callback = function()
+                    _G.dd = function(...)
+                      Snacks.debug.inspect(...)
+                    end
+                    _G.bt = function()
+                      Snacks.debug.backtrace()
+                    end
+                    vim.print = _G.dd
+
+                    -- keymappings for toggle-able options
+                    Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>ol")
+            end,
+        })
+        end,
 	},
 }

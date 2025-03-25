@@ -1,5 +1,5 @@
 return {
-   -- main LSP configuration
+    -- main LSP configuration
     {
         -- quickstart configurations for LSP
         "neovim/nvim-lspconfig",
@@ -114,9 +114,10 @@ return {
                 run_on_start = true,
             })
 
-            -- autoformat python files with 'black' and 'isort' on save
+            -- autoformat files on save
             vim.api.nvim_create_autocmd("BufWritePre", {
-                pattern = "*.py",
+                -- "declare" what files are going to get formatted
+                pattern = { "*.py", "*.lua" },
                 callback = function()
                     vim.lsp.buf.format({ async = false })
                 end,
@@ -211,7 +212,7 @@ return {
                 ignore_install = {},
                 -- no need to install parsers automatically ( write down what you need manually )
                 auto_install = false,
-                -- don't install parsers synchronously 
+                -- don't install parsers synchronously
                 sync_install = false,
             })
         end,
