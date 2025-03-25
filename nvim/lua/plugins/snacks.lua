@@ -162,7 +162,20 @@ return {
 
             -- similar to a tiling window manager's scratchpad
             scratch = {
+                -- function to create the file name for the scratchpad
+                name = "scratch_" .. vim.fn.strftime("%d_%m_%Y-%H-%M-%S"),
+
                 enabled = true,
+                -- change the scratchpad save directory
+                -- INFO: origianal directory is `vim.fn.stdpath("data") .. "/scratch"`
+                root = vim.fn.expand("~/Neovim Scratch Buffers"),
+            },
+
+            -- animation for scrolling
+            scroll = {
+                enabled = true,
+                -- change the animation
+                easing = "easeOutQuint"
             },
 
         },
