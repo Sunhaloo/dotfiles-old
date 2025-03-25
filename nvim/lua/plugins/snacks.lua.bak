@@ -18,7 +18,7 @@ return {
                 size = 0.8 * 1024 * 1024
             },
             -- dashboard setup
-            -- NOTE: you need to have 'chafa' installed on your system
+            -- INFO: you need to have 'chafa' installed on your system
             dashboard = {
                 -- enable the dashboard plugin
                 enabled = true,
@@ -30,7 +30,7 @@ return {
                         cmd = "chafa $HOME/Wallpapers/anime_girl_fishing.png --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
                         padding = 2,
                         -- set the correct height for the image being used
-                        height = 14,
+                        height = 20,
                     },
                     -- shows the whatever header --> can be configured below
                     { section = "header" },
@@ -126,6 +126,6 @@ return {
                     -- Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
                     end,
                 })
-            end,
+        end,
         }
 }

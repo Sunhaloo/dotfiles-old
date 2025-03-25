@@ -5,20 +5,26 @@ return {
         priority = 1000,
         -- plugin IS loaded in immediately during startup
         lazy = false,
+        -- configuration options
         opts = {
-            -- basically an animation library
+            -- basically snacks animation library
             animate = {
                 enabled = true,
-                fps = 120
+                -- duration of entire animation in miliseconds
+                duration = 10,
+                -- easing function ==> please refer to 'https://easings.net'
+                easing = "easeOutQuint",
+                -- global FPS settings for all other animations
             },
+
             -- prevents LSP, Treesitter, etc to attach to really large files
             bigfile = {
                 enable = true,
                 -- configure size of file ( in bytes --> converting to megabytes )
-                size = 0.8 * 1024 * 1024
             },
+
             -- dashboard setup
-            -- NOTE: you need to have 'chafa' installed on your system
+            -- INFO: you need to have 'chafa' installed on your system
             dashboard = {
                 -- enable the dashboard plugin
                 enabled = true,
@@ -27,63 +33,118 @@ return {
                     -- display an image
                     {
                         section = "terminal",
-                        cmd = "chafa $HOME/Wallpapers/anime_girl_fishing.png --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
-                        padding = 2,
+                        cmd = "chafa $HOME/Wallpapers/5.jpg --format symbols --symbols vhalf --size 60x17 --stretch; sleep .1",
+                        padding = 1,
                         -- set the correct height for the image being used
-                        height = 14,
+                        height = 16,
                     },
-                    -- shows the whatever header --> can be configured below
-                    { section = "header" },
-                    -- show the keymappings we customised below
-                    { section = "keys", gap = 1, padding = 1 },
-                    -- display the startup time
-                    { section = "startup" }
+                    {
+                        -- make the image side by side instead of top to bottom
+                        pane = 2,
+                        -- shows the whatever header --> can be configured below
+                        { section = "header" },
+                        -- show the keymappings we customised below
+                        { section = "keys", gap = 1, padding = 1 },
+                        -- display the startup time
+                        { section = "startup" }
+                    },
                 },
+                -- what will be shown for the keymappings text
                 preset = {
                     -- customise the keymappings found on dashboard
                     keys = {
-                        { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-                        { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-                        { icon = " ", key = "l", desc = "Live Grep Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-                        { icon = "? ", key = "h", desc = "Help Documentation", action = ":lua Snacks.dashboard.pick('help_tags')" },
-                        { icon = " ", key = "o", desc = "Old Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-                        { icon = " ", key = "c", desc = "System Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.expand('$HOME/.config')})" },
-                        { icon = " ", key = "q", desc = "Quit", action = "<Cmd>qa<CR>" },
+                        -- keymappings for finding files in directory
+                        {
+                            icon = " ",
+                            key = "f",
+                            desc = "Find Files",
+                            action = ":lua Snacks.dashboard.pick('files')"
+                        },
+                        -- keymappings for creation of a new file in directory
+                        {
+                            icon = " ",
+                            key = "n",desc = "New File",
+                            action = ":ene | startinsert"
+                        },
+                        -- keymappings for live grep in directory
+                        {
+                            icon = " ",
+                            key = "l",
+                            desc = "Live Grep",
+                            action = ":lua Snacks.dashboard.pick('live_grep')"
+                        },
+                        -- keymappings for help documentation
+                        {
+                            icon = "? ",
+                            key = "h",
+                            desc = "Help Documentation",
+                            action = ":lua Snacks.dashboard.pick('help_tags')"
+                        },
+                        -- keymappings for finding recently used files
+                        {
+                            icon = " ",
+                            key = "o",
+                            desc = "Find Old Files",
+                            action = ":lua Snacks.dashboard.pick('oldfiles')"
+                        },
+                        -- keymappings for finding system configuration files
+                        {
+                            icon = " ",
+                            key = "c",
+                            desc = "System Config Files",
+                            action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.expand('$HOME/.config')})"
+                        },
+                        -- keymappings for quiting neovim
+                        {
+                            icon = " ",
+                            key = "q",
+                            desc = "Quit",
+                            action = "<Cmd>qa<CR>"
+                        }
                     },
-                    -- change the "Neovim" header to this!
-                    header = [[ "Developers Developers Developers" ]]
-                }
-            },
-            -- basically telescope
-            picker = {
-                enabled = true,
-                prompt = "󰘧 ",
-                matcher = {
-                    -- suppose to make it more like zoxide searching algorithm
-                    frecency = true
+                    -- the header "string" for neovim
+                    header = [[Testing]]
                 },
             },
-            -- snacks own file explorer
-            explorer = { enabled = true },
-            -- renders file as quickly as possible before loading plugins
-            quickfile = { enabled = true },
+
+            -- abitilty to view images in neovim
+            -- WARNING: will be configured later
+            image = {
+                enabled = true
+            },
+
             --  provides indentation guides
-            indent = { enabled = true },
+            indent = {
+                enabled = true,
+                -- only show the indentation guide on position of caret
+                indent = {
+                    only_scope = true,
+                },
+            },
+
+            -- basically a telescope replacement
+            picker = {
+                enabled = true,
+                -- what is shown where next to the caret
+                prompt = "󰘧 ",
+                -- how the "searching algorithm" works
+                matcher = {
+                    -- WARNING: bonuses options has performance impact
+
+                    -- give me priority to files accessed in chronological order
+                    history_bonus = true,
+                }
+            },
+
             -- basically better nvim-notify
-            notifier = { enabled = true },
-            -- basically 'neoscroll.nvim'
-            scroll = { enabled = true },
-            -- well... "pretty status column"
-            statuscolumn = { enabled = true },
-            -- shows LSP references and be able to quickly jump to them
-            words = { enabled = true },
-            -- well provides lazygit inside of Neovim
-            lazygit = { enabled = true },
-            -- better UI for renaming stuff ( think that its used by neo-tree and others )
-            input = { enabled = false },
-            -- INFO: still going to use 'toggleterm.nvim'
-            terminal = { enabled = false },
+            notifier = {
+                enabled = true,
+                -- change the style of the notification popup
+                style = "fancy",
+            },
+
         },
+
         -- keymappings for snacks.nvim's "sub-plugins"
         keys = {
             { "<leader>e", function() Snacks.picker.explorer() end, desc = "Find All Files [ Snacks ]" },
@@ -110,22 +171,11 @@ return {
             { "<leader>D", function() Snacks.picker.diagnostics_buffer() end, desc = "LSP Buffer Diagnostics" },
 
 
-            { "<leader>Si", function() Snacks.picker.icons() end, desc = "Icons [ Snacks ]" },
-            { "<leader>th", function() Snacks.picker.colorschemes() end, desc = "Icons [ Snacks ]" },
             { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss Notifications [ Snacks ]" },
             { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
-        },
-        -- refer to documentation for toggle "autocommand"
-        init = function()
-            vim.api.nvim_create_autocmd("User", {
-                -- lazy loading
-                pattern = "VeryLazy",
-                -- create callback function
-                callback = function()
-                    -- example
-                    -- Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
-                    end,
-                })
-            end,
+
+            { "<leader>gO", function() Snacks.gitbrowse() end, desc = "Git Browse" },
+            { "<leader>gF", function() Snacks.gitbrowse.open() end, desc = "Git Browse - File" },
         }
+    }
 }
