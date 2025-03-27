@@ -12,13 +12,13 @@ return {
                 -- select from 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
                 style = "darker",
                 -- enable transparency
-                transparent =  true,
+                transparent = true,
                 -- allow the theme to have cohesion with terminal theme
                 term_colors = true,
                 -- allow user to use keymapping to change between variants of the theme
                 toggle_style_key = "<leader>oth",
                 -- you can add more to the array if you want more variants
-                toggle_style_list = {"darker", "light"},
+                toggle_style_list = { "darker", "light" },
                 -- lualine theme configuration
                 lualine = { transparent = true },
 
@@ -45,7 +45,7 @@ return {
                 -- select from 'moon', 'storm', 'night' and 'day'
                 style = "night",
                 -- disable transparency
-                transparent =  false,
+                transparent = false,
                 -- allow the theme to have cohesion with terminal theme
                 terminal_colors = true,
             })
@@ -91,7 +91,7 @@ return {
         config = function()
             require("vague").setup({
                 -- toggle transparency
-                transparent = true
+                transparent = false
             })
         end,
     },
