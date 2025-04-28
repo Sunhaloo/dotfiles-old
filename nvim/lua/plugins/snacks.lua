@@ -178,7 +178,7 @@ return {
 
             -- animation for scrolling
             scroll = {
-                enabled = true,
+                enabled = false,
                 -- change the animation
                 easing = "inCirc",
             },

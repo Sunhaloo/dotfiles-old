@@ -46,7 +46,7 @@ return {
                     color_icons = true,
                     -- << Separator Style >>
                     -- options for the `separator_style`
-                        -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' }
+                    -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' }
                     separator_style = "thin",
                 }
             })
@@ -67,7 +67,7 @@ return {
                 },
                 -- active window --> sections settings
                 sections = {
-                    lualine_a = {"mode"},
+                    lualine_a = { "mode" },
                     lualine_b = {
                         -- git branches
                         { "branch" },
@@ -173,9 +173,9 @@ return {
     },
     {
         -- plugin that adds better and visually appealing UI
-		"folke/noice.nvim",
+        "folke/noice.nvim",
         -- start on the event ( 'VeryLazy' ==> Start after essentials plugins and UI have already started )
-		event = "VeryLazy",
+        event = "VeryLazy",
         dependencies = { "MunifTanjim/nui.nvim" },
         -- configuration for 'noice.nvim'
         config = function()
@@ -212,11 +212,11 @@ return {
 
             -- jump to next todo-comment
             keymap.set("n", "]t", function()
-              todo_comments.jump_next()
+                todo_comments.jump_next()
             end, { desc = "Next todo comment" })
             -- jump to previous todo-comment
             keymap.set("n", "[t", function()
-              todo_comments.jump_prev()
+                todo_comments.jump_prev()
             end, { desc = "Previous todo comment" })
             -- call the setup function
             todo_comments.setup()

@@ -36,7 +36,6 @@ return {
 
             -- call the function to that we can use this "custom" directory
             load_snippets()
-
         end,
     }
 }

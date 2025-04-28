@@ -1,14 +1,15 @@
 return {
-    {
-        -- better visual and UI for markdown files
-        "MeanderingProgrammer/render-markdown.nvim",
-        -- start on these 2 events
-        event = { "BufReadPre", "BufNewFile" },
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "echasnovski/mini.icons"
-        },
-    },
+    -- INFO: using without ( for the moment ) as I am using 'omni-preview'
+    -- {
+    --     -- better visual and UI for markdown files
+    --     "MeanderingProgrammer/render-markdown.nvim",
+    --     -- start on these 2 events
+    --     event = { "BufReadPre", "BufNewFile" },
+    --     dependencies = {
+    --         "nvim-treesitter/nvim-treesitter",
+    --         "echasnovski/mini.icons"
+    --     },
+    -- },
     {
         -- plugin that that will provide us with "auto-bullets"
         "bullets-vim/bullets.vim",
@@ -54,14 +55,14 @@ return {
             }
         },
     },
-    {
-        -- displays the markdown file fully rendered out ( like LaTex and everything )
-        "iamcco/markdown-preview.nvim",
-        -- creates these Neovim commands like our 'FloatingTerm', 'HTerm' and 'VTerm'
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        -- on what filetype to act
-        ft = "markdown",
-        -- IDK, some build parameter / function thingy
-        build = function() vim.fn["mkdp#util#install"]() end,
-    }
+    -- {
+    --     "toppair/peek.nvim",
+    --     event = { "VeryLazy" },
+    --     build = "deno task --quiet build:fast",
+    --     config = function()
+    --         require("peek").setup()
+    --         vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+    --         vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    --     end,
+    -- },
 }

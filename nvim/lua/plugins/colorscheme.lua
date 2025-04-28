@@ -91,7 +91,7 @@ return {
         config = function()
             require("vague").setup({
                 -- toggle transparency
-                transparent = false
+                transparent = true
             })
         end,
     },

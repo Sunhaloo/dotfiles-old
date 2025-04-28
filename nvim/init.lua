@@ -8,4 +8,4 @@ require("config.lazy")
 require("config.autocmd")
 
 -- setting colourscheme as per 'cyberdream' documentation
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme vague")

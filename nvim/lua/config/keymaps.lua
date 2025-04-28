@@ -27,11 +27,11 @@ key.set('n', "<leader>L", "<Cmd>Lazy<CR>", { desc = "Lazy Plugin Manager" })
 -- remap <Esc> to <jk>
 key.set('i', "jk", "<ESC>", opts, { desc = "Exit Insert Mode" })
 -- select all within file
-key.set('n', "<C-a>", "gg<S-v>G", { desc = "Select All"})
+key.set('n', "<C-a>", "gg<S-v>G", { desc = "Select All" })
 -- copy to system clipboard
-key.set({'n', 'v'}, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
+key.set({ 'n', 'v' }, "<leader>y", [["+y]], { desc = "Copy TO System Clipboard" })
 -- paste from system clipboard
-key.set({'n', 'v'}, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
+key.set({ 'n', 'v' }, "<leader>p", [["+p]], { desc = "Paste FROM System Clipboard" })
 -- search and replace one occurrence of that word
 key.set('n', "<leader>sh", ":s/", { desc = "Search + Replace ( One )" })
 -- search and replace all occurrences of that word
@@ -52,8 +52,8 @@ key.set('i', "<C-k>", "<Up>", opts)
 -- << Coding / Writing >>
 
 -- move lines / blocks of text up / down
-key.set('v', "<A-k>", ":m '<-2<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Up"})
-key.set('v', "<A-j>", ":m '>+1<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Down"})
+key.set('v', "<A-k>", ":m '<-2<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Up" })
+key.set('v', "<A-j>", ":m '>+1<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Down" })
 -- paste even when in visual mode
 key.set('v', 'p', '"_dP', opts, { desc = "Paste in Visual Mode" })
 -- stay in visual ( indent ) mode when indenting lines / block of text
