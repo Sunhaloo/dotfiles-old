@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # I already had an install script and it was great to be able to install and configure
 # you entire system automatically and without much input from you. Really Cool Stuff!
@@ -27,3 +27,4 @@ source functions.sh
 
 # call the function to print the welcome screen
 print_logo
+
