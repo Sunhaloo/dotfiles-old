@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# I already had an install script and it was great to be able to install and configure
+
 # you entire system automatically and without much input from you. Really Cool Stuff!
 # but then I came across this video by one of the GOAT typecraft:
 
@@ -28,3 +28,50 @@ source functions.sh
 # call the function to print the welcome screen
 print_logo
 
+
+
+# download the install `yay` AUR helper
+print_dashed_lines
+printf "+\t        Yay AUR\t\t      +\n"
+print_dashed_lines
+
+# check if yay has already been installed on our system been installed
+if is_installed yay; then
+    # INFO: the reason that I am doing this is because in some distros like
+    # EndeavourOS, you will be able to just run `sudo pacman -S yay`... Heck!
+    # it ( from what I remember ) comes pre-installed on the system!
+    printf "\nYAY Has Already Been Installed!\n\n"
+
+
+# meaning that the user does not have `yay` installed on the system
+else
+    printf "\nYAY Has NOT Been Installed... Installing!\n\n"
+
+    # install the `yay` AUR helper as per the documentation
+    sudo pacman -S --needed git base-devel
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+
+    # build and install `yay` on our system
+    printf "\n\n+\t    Building Yay\t      +\n\n"
+    makepkg -si
+
+    # remove the unwanted folders
+    printf "\n\n+\t   Cleaning Installation Folders\t\t +\n\n"
+    cd .. && rm -rf yay
+fi
+
+
+print_dashed_lines
+printf "+        Updating Whole System       +\n"
+print_dashed_lines
+
+# refresh the AUR and pacman packages
+# yay -Syy --noconfirm
+# sudo pacman -Syy --noconfirm
+
+# actually update the system ( update packages downloaded with both `yay` and `pacman` )
+# yay -Syu --noconfirm
+# sudo pacman -Syu --noconfirm
+
+source dotfiles.sh
