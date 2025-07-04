@@ -1,4 +1,4 @@
-power-profiles-daemon wl-clipboard swaync waybar sddm
+power-profiles-daemon
 
 kitty neovim rofi rofi-emoji btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gvfs-mtp gvfs-nfs gufw lxinput brightnessctl network-manager-applet blueman
 
@@ -6,17 +6,10 @@ gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua
 
 ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp zathura zathura-pdf-mupdf
 
-ristretto obsidian obs-studio mpv spotify-launcher
-
-arc-gtk-theme-eos
-
-otf-font-awesome ttf-jetbrains-mono-nerd ttf-iosevka-nerd ttf-victor-mono-nerd ttf-cascadia-code-nerd ttf-ibmplex-mono-nerd otf-monaspace-nerd
+ristretto obsidian obs-studio mpv
 
 intel-ivsc-firmware oh-my-posh kanata zen-browser-bin visual-studio-code-bin nwg-look ani-cli 
 
-bibata-cursor-theme papirus-icon-theme
-
-slides vencord
 
 
 xwaylandvideobridge
