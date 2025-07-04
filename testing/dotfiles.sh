@@ -92,13 +92,15 @@ if [[ $? -eq 0 ]]; then
         printf "+\tHome Folders Exists!\t      +\n\n"
     fi
 
-    printf "+\t   Moving Folders!\t      +\n"
+    printf "+\t   Moving Folders!\t      +\n\n"
 
     # move the required configuration files
     # NOTE: remember to add starship to configuration files
     # WARNING: testing
     # cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi} ~/.config
     # cp -r $HOME/GitHub/dotfiles/{.zshrc,.tmux.conf} $HOME
+
+    printf "+      Moving Folders Completed!      +\n\n"
 
 
 # meaning that the clone was not successful

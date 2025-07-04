@@ -77,4 +77,16 @@ echo
 # yay -Syu --noconfirm
 # sudo pacman -Syu --noconfirm
 
+source term_utils.sh
 source dotfiles.sh
+
+# call the function to "install" TMUX TPM
+tmux_plugin_manager 
+
+# WARNING: arrived here
+echo ""
+install_packages "${DESKTOP[@]}"
+install_packages "${DEPENDENCIES[@]}"
+install_packages "${DEV_TOOLS[@]}"
+install_packages "${LANGS[@]}"
+install_packages "${FONT[@]}"

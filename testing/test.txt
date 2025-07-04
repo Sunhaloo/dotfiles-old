@@ -1,10 +1,5 @@
-power-profiles-daemon
-
-kitty neovim rofi rofi-emoji btop gnome-keyring thunar thunar-volman gvfs gvfs-afc gvfs-mtp gvfs-nfs gufw lxinput brightnessctl network-manager-applet blueman
 
 gcc clang nodejs npm yarn jdk21-openjdk openjdk21-src openjdk21-doc luarocks lua go rustup rust
-
-ffmpeg ripgrep fd eza zoxide fzf lazygit tmux yazi zsh yt-dlp zathura zathura-pdf-mupdf
 
 ristretto obsidian obs-studio mpv
 
