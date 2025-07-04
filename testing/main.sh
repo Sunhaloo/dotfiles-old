@@ -75,3 +75,5 @@ print_dashed_lines
 # sudo pacman -Syu --noconfirm
 
 source dotfiles.sh
+
+
