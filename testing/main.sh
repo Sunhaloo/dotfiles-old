@@ -57,7 +57,7 @@ else
     makepkg -si
 
     # remove the unwanted folders
-    printf "\n\n+\t   Cleaning Installation Folders\t\t +\n\n"
+    printf "\n+  Cleaning Installation Folders\t +\n\n"
     cd .. && rm -rf yay
 fi
 
@@ -65,6 +65,9 @@ fi
 print_dashed_lines
 printf "+        Updating Whole System       +\n"
 print_dashed_lines
+
+echo
+echo
 
 # refresh the AUR and pacman packages
 # yay -Syy --noconfirm
@@ -75,5 +78,4 @@ print_dashed_lines
 # sudo pacman -Syu --noconfirm
 
 source dotfiles.sh
-
 

@@ -19,10 +19,27 @@ print_dashed_lines
 printf "+\t   Dotfiles Setup\t      +\n"
 print_dashed_lines 
 
+echo
+
 # check if the directory '~/GitHub/dotfiles' exists
 if [[ -d "$REPO_DIR$DIR_NAME" ]]; then
     # meaning that the 'dotfiles' repository already exists
-    printf "\n+ Dotfiles Repository Already Exists! +\n\n"
+    print_dashed_lines 
+    printf "+ Dotfiles Repository Already Exists! +\n"
+    print_dashed_lines 
+
+    printf "\n+    Checking Required Directories    +\n"
+
+    # check if our configuration directory exist directory
+    if [[ -d "$CONFIG_DIR"  ]]; then
+        # meaning that folder has already be created
+        printf "\n+   Configuration Directory Exists    +\n\n"
+
+    else
+        printf "\n+  Creating Configuration Directory  +\n\n"
+        # create the '~/.config' folder
+        mkdir -p "$CONFIG_DIR"
+    fi
 
 # meaning that 'dotfiles' repository is not present
 else
@@ -30,30 +47,26 @@ else
     printf "\n+     Cloning Dotfiles Repository     +\n\n"
     print_dashed_lines 
 
-    printf "+    Checking Required Directories    +\n\n"
-
-    echo
-    pwd
-    echo
+    printf "\n+    Checking Required Directories    +\n\n"
     
     # create the directory '~/GitHub/'
-    mkdir REPO_DIR
+    mkdir "$REPO_DIR"
 
     # check if our configuration directory exist directory
     if [[ -d "$CONFIG_DIR"  ]]; then
         # meaning that folder has already be created
         printf "\n+   Configuration Directory Exists   +\n\n"
-
+        
     else
-        pwd
+        printf "\n+  Creating Configuration Directory  +\n\n"
         # create the '~/.config' folder
         mkdir -p "$CONFIG_DIR"
     fi
 
-
     # head over into the specified directory where I place all my repositories
     cd "$REPO_DIR"
 
+    printf "\n+     Cloning Dotfiles Repository     +\n\n"
     # clone the my dotfiles repository
     git clone "$REPO_URL"
 fi
@@ -82,6 +95,4 @@ else
     # return to the shell with exit status code '1'
     exit 1
 fi
-
-
 
