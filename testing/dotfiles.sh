@@ -80,8 +80,25 @@ if [[ $? -eq 0 ]]; then
     printf "+      Moving Configurations!!!       +\n"
     print_dashed_lines 
 
+    echo
 
-    # INFO: Arrived Here
+    if [[ -d "~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers}" ]]; then
+        printf "+      Creating Home Folders!         +\n\n"
+        # create the all the required folders that I need
+        mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers}
+
+    else
+        # output appropriate message
+        printf "+\tHome Folders Exists!\t      +\n\n"
+    fi
+
+    printf "+\t   Moving Folders!\t      +\n"
+
+    # move the required configuration files
+    # NOTE: remember to add starship to configuration files
+    # WARNING: testing
+    # cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi} ~/.config
+    # cp -r $HOME/GitHub/dotfiles/{.zshrc,.tmux.conf} $HOME
 
 
 # meaning that the clone was not successful

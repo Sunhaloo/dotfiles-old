@@ -78,4 +78,3 @@ echo
 # sudo pacman -Syu --noconfirm
 
 source dotfiles.sh
-
