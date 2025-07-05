@@ -83,14 +83,30 @@ source dotfiles.sh
 # call the function to "install" TMUX TPM
 tmux_plugin_manager 
 
+# ask the user if he is on laptop
+read -p "Are You On Laptop [y/N]: " laptop_user
+
+if [[ "$laptop_user" == "y" ]]; then
+    echo "User On Laptop"
+
+elif [[ "$laptop_user" == "N" || "$laptop_user" == ""  ]]; then
+    print_dashed_lines
+    printf "+         Skipping Kanata!!!          +\n"
+    print_dashed_lines
+
+else
+    echo "Wrong Input... Skipping!!!"
+fi
+
 print_dashed_lines
-printf "+        Installing Packages       +\n"
+printf "+          Installing Packages        +\n"
 print_dashed_lines
 
 echo
 
-install_packages "${DESKTOP[@]}"
-install_packages "${DEPENDENCIES[@]}"
-install_packages "${DEV_TOOLS[@]}"
-install_packages "${LANGS[@]}"
-install_packages "${FONT[@]}"
+
+# install_packages "${DESKTOP[@]}"
+# install_packages "${DEPENDENCIES[@]}"
+# install_packages "${DEV_TOOLS[@]}"
+# install_packages "${LANGS[@]}"
+# install_packages "${FONT[@]}"
