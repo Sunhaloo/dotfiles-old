@@ -36,8 +36,7 @@ is_installed() {
 is_group_installed() {
     # use positional arguments to check if package group is installed
     # place all `stdout` and `stderr` into the black hole
-    # pacman -Qg "$1" &> /dev/null
-    pacman -Qg "$1"
+    pacman -Qg "$1" &> /dev/null
 }
 
 
@@ -61,8 +60,6 @@ install_packages() {
 
     # iterate through the list of packages provided by argument ( main program )
     for pkgs in "${packages[@]}"; do
-        printf "%s" "$pkgs"
-
         # check if that package has already been installed on the system
         # this is done by calling the 2 functions found above
 
@@ -74,6 +71,8 @@ install_packages() {
 
         fi
     done
+
+    echo "${#not_on_sys[@]}"
 
     # check if the length of the array `not_on_sys` is not '0'
     if [[ "${#not_on_sys[@]}" -ne 0 ]]; then

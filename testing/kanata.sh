@@ -7,9 +7,7 @@ source functions.sh
 
 # function what will allow us to configure kanata 
 kanata_configuration() {
-    print_dashed_lines
-    printf "+\t Kanata Configuration\t      +\n"
-    print_dashed_lines
+    printf "+\t Kanata Configuration\t      +\n\n"
 
     # following the official documentation ( for Linux )
 	# sudo groupadd uinput
@@ -43,5 +41,3 @@ kanata_configuration() {
 # 	systemctl --user start kanata.service
 # 	systemctl --user status kanata.service | head
 }
-
-kanata_configuration

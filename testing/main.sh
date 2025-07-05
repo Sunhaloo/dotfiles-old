@@ -27,6 +27,9 @@ source functions.sh
 # import the `packages.conf` file
 source packages.conf
 
+# import the `kanata.sh` file
+source kanata.sh
+
 # call the function to print the welcome screen
 print_logo
 
@@ -83,13 +86,46 @@ source dotfiles.sh
 # call the function to "install" TMUX TPM
 tmux_plugin_manager 
 
-# ask the user if he is on laptop
+# ask the user if he / she is on laptop
 read -p "Are You On Laptop [y/N]: " laptop_user
 
+echo
+
 if [[ "$laptop_user" == "y" ]]; then
-    echo "User On Laptop"
+    print_dashed_lines
+    printf "+ Installing Laptop Specific Packages +\n"
+    print_dashed_lines
+
+    # call the function and appropriate array to download and install laptop packages
+    install_packages "${LAPTOP[@]}"
 
 elif [[ "$laptop_user" == "N" || "$laptop_user" == ""  ]]; then
+    print_dashed_lines
+    printf "+      Skipping Laptop Packages!      +\n"
+    print_dashed_lines
+
+else
+    echo "Wrong Input... Skipping!!!"
+fi
+
+echo
+
+# ask the user if he / she wants to install and configure kanata
+read -p "Do You Want To Install and Configure Kanata [y/N]: " kanata_config
+
+echo
+
+if [[ "$kanata_config" == "y" ]]; then
+    print_dashed_lines
+    printf "+  Installing and Configuring Kanata  +\n"
+    print_dashed_lines
+
+    # call the function to be able to install kanata
+    install_packages "kanata"
+
+    kanata_configuration 
+
+elif [[ "$kanata_config" == "N" || "$kanata_config" == ""  ]]; then
     print_dashed_lines
     printf "+         Skipping Kanata!!!          +\n"
     print_dashed_lines
@@ -98,6 +134,9 @@ else
     echo "Wrong Input... Skipping!!!"
 fi
 
+
+echo
+
 print_dashed_lines
 printf "+          Installing Packages        +\n"
 print_dashed_lines
@@ -105,8 +144,8 @@ print_dashed_lines
 echo
 
 
-# install_packages "${DESKTOP[@]}"
-# install_packages "${DEPENDENCIES[@]}"
-# install_packages "${DEV_TOOLS[@]}"
-# install_packages "${LANGS[@]}"
-# install_packages "${FONT[@]}"
+install_packages "${DESKTOP[@]}"
+install_packages "${DEPENDENCIES[@]}"
+install_packages "${DEV_TOOLS[@]}"
+install_packages "${LANGS[@]}"
+install_packages "${FONT[@]}"
