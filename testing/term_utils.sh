@@ -11,7 +11,7 @@ tmux_plugin_manager() {
 
     # check if directory '~/.tmux/' exists
     if [[ -d "$HOME/.tmux" ]]; then
-        printf "\n+ TMUX Plugin Manager Folder Exists! +\n"
+        printf "\n+ TMUX Plugin Manager Folder Exists! +\n\n"
 
     # meaning that TMUX Plugin Manager is not present on system
     else

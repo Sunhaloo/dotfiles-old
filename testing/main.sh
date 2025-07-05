@@ -24,11 +24,11 @@
 
 # import the `functions.sh` file
 source functions.sh
+# import the `packages.conf` file
+source packages.conf
 
 # call the function to print the welcome screen
 print_logo
-
-
 
 # download the install `yay` AUR helper
 print_dashed_lines
@@ -41,7 +41,6 @@ if is_installed yay; then
     # EndeavourOS, you will be able to just run `sudo pacman -S yay`... Heck!
     # it ( from what I remember ) comes pre-installed on the system!
     printf "\nYAY Has Already Been Installed!\n\n"
-
 
 # meaning that the user does not have `yay` installed on the system
 else
@@ -61,7 +60,6 @@ else
     cd .. && rm -rf yay
 fi
 
-
 print_dashed_lines
 printf "+        Updating Whole System       +\n"
 print_dashed_lines
@@ -77,14 +75,20 @@ echo
 # yay -Syu --noconfirm
 # sudo pacman -Syu --noconfirm
 
+# import the `term_utils.sh` file
 source term_utils.sh
+# import the `dotfiles.sh` file
 source dotfiles.sh
 
 # call the function to "install" TMUX TPM
 tmux_plugin_manager 
 
-# WARNING: arrived here
-echo ""
+print_dashed_lines
+printf "+        Installing Packages       +\n"
+print_dashed_lines
+
+echo
+
 install_packages "${DESKTOP[@]}"
 install_packages "${DEPENDENCIES[@]}"
 install_packages "${DEV_TOOLS[@]}"

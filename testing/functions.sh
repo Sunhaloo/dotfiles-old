@@ -27,7 +27,8 @@ EOF
 is_installed() {
     # use positional arguments to check if package is installed
     # place all `stdout` and `stderr` into the black hole
-    pacman -Q "$1" &> /dev/null
+    # pacman -Q "$1" &> /dev/null
+    pacman -Q "$1"
 }
 
 
@@ -35,8 +36,10 @@ is_installed() {
 is_group_installed() {
     # use positional arguments to check if package group is installed
     # place all `stdout` and `stderr` into the black hole
-    pacman -Qg "$1" &> /dev/null
+    # pacman -Qg "$1" &> /dev/null
+    pacman -Qg "$1"
 }
+
 
 # INFO: now I can see that typecraft is installing all this packages with `yay`
 # even if that packages is available inside the native `pacman` repositories
@@ -58,6 +61,7 @@ install_packages() {
 
     # iterate through the list of packages provided by argument ( main program )
     for pkgs in "${packages[@]}"; do
+        printf "%s" "$pkgs"
 
         # check if that package has already been installed on the system
         # this is done by calling the 2 functions found above
