@@ -26,7 +26,6 @@
 source functions.sh
 # import the `packages.conf` file
 source packages.conf
-
 # import the `kanata.sh` file
 source kanata.sh
 
@@ -123,6 +122,7 @@ if [[ "$kanata_config" == "y" ]]; then
     # call the function to be able to install kanata
     install_packages "kanata"
 
+    # call the function that will configure kanata for us
     kanata_configuration 
 
 elif [[ "$kanata_config" == "N" || "$kanata_config" == ""  ]]; then
@@ -143,9 +143,9 @@ print_dashed_lines
 
 echo
 
-
 install_packages "${DESKTOP[@]}"
 install_packages "${DEPENDENCIES[@]}"
 install_packages "${DEV_TOOLS[@]}"
 install_packages "${LANGS[@]}"
 install_packages "${FONT[@]}"
+

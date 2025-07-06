@@ -27,8 +27,8 @@ EOF
 is_installed() {
     # use positional arguments to check if package is installed
     # place all `stdout` and `stderr` into the black hole
-    # pacman -Q "$1" &> /dev/null
-    pacman -Q "$1"
+    pacman -Q "$1" &> /dev/null
+    # pacman -Q "$1"
 }
 
 
@@ -72,7 +72,7 @@ install_packages() {
         fi
     done
 
-    echo "${#not_on_sys[@]}"
+    # echo "${#not_on_sys[@]}"
 
     # check if the length of the array `not_on_sys` is not '0'
     if [[ "${#not_on_sys[@]}" -ne 0 ]]; then
