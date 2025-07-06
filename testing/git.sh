@@ -3,91 +3,73 @@
 # import the `functions.sh` file
 source functions.sh
 
-# ask the user to check if he is on the desktop environment with a browser running
-read -p "Are You On Your Desktop Environment? Do You Have A Browser Running? [y/N]: " user_desktop
+git_configuration() {
+    echo
 
-echo
+    # ask the user to check if he is on the desktop environment with a browser running
+    read -p "Are You On Your Desktop Environment? Do You Have A Browser Running? [y/N]: " user_desktop
 
-if [[ "$user_desktop" == "y" ]]; then
-    print_dashed_lines
-    printf "+          Configuring Git!           +\n"
-    print_dashed_lines
+    echo
 
+    if [[ "$user_desktop" == "y" ]]; then
+        print_dashed_lines
+        printf "+          Configuring Git!           +\n"
+        print_dashed_lines
 
-elif [[ "$user_desktop" == "N" || "$user_desktop" == ""  ]]; then
-    print_dashed_lines
-    printf "+Skipping Git Configuration!!!+\n"
-    print_dashed_lines
+        echo
 
-else
-    echo "Wrong Input... Skipping!!!"
-fi
+        read -p "Please Enter Your Email ( attached with GitHub ): " git_email
+        read -p "Please Confirm Your Email ( attached with GitHub ): " git_email_confirmation
 
-# function to configure Git
-configure_git() {
-	printf "\n"
-	# prompt the user to enter credentials
-	read -p "Please Enter Your Email ( attached with GitHub ): " git_email
-	read -p "Please Enter Your Username: " git_username
+        echo
 
-	# start configuring Git ---> output appropriate message
-	printf "\nSetting Up Git...\n\n"
+        if [[ "$git_email" == "$git_email_confirmation" ]]; then
+            print_dashed_lines
+            printf "+         Email Confirmed!!!          +\n"
+            print_dashed_lines
+        else
+            print_dashed_lines
+            printf "+            Bad Email!!!             +\n"
+            print_dashed_lines
+            exit 1
+        fi
 
-	# configure git
-	git config --global user.email "$git_email"
-	git config --global user.name "$git_username"
-	git config --global init.defaultBranch main
+        echo
+        
+        read -p "Please Enter Your Username: " git_username
 
-	# list Git configuration
-	git config --list
+        printf "+          Setting Up User!           +\n"
 
-	# output '-' 50 times
-	printf '%0.s-' {1..50}
-	printf "\n"
+        # using information provided, setup git for user
+        # git config set --global user.email "$git_email"
+        # git config set --global user.name "$git_username"
+        # git config set --global init.defaultBranch main
 
-	# output appropriate message
-	printf "\n\nGit Configuration Completed\n"
-}
+        printf "+     Setting Up User Completed!      +\n\n"
 
 
-# function to generate SSH key
-generate_ssh_key() {
-	printf "\n"
+        # display the git configuration that has been applied
+        git config list | head
 
-	# prompt the user to enter his email
-	read -p "Please Enter Your Email: " user_email
+        printf "\n\n+        Setting Up SSH Key!          +\n\n"
 
-	# output '-' 50 times
-	printf "\n"
-	printf '%0.s-' {1..50}
-	printf "\n"
+        # generate new SSH key based on user's email
+        # ssh-keygen -t ed25519 -C "$user_email"
+        # start the ssh-agent in the background
+        # eval "$(ssh-agent -s)"
 
-	# generate new SSH key based on user's email
-	ssh-keygen -t ed25519 -C "$user_email"
-	
-	printf "\n\nStarting ssh-agent in the background\n"
-	# start the ssh-agent in the background
-	eval "$(ssh-agent -s)"
+        cat ~/.ssh/id_ed25519.pub && cat ~/.ssh/id_ed25519.pub | wl-copy
 
-	# output '-' 50 times
-	printf "\n"
-	printf '%0.s-' {1..50}
-	printf "\n"
+    elif [[ "$user_desktop" == "N" || "$user_desktop" == ""  ]]; then
+        print_dashed_lines
+        printf "+    Skipping Git Configuration!!!    +\n"
+        print_dashed_lines
 
-	# add SSH private key to the ssh-agent
-	printf "\n\nAdding SSH Private Key to ssh-agent\n"
+        echo
 
-	# output '-' 50 times
-	printf "\n"
-	printf '%0.s-' {1..50}
-	printf "\n"
+    else
+        echo "Wrong Input... Skipping!!!"
 
-	# display the contents of SSH public key
-	cat ~/.ssh/id_ed25519.pub
-
-	# output '-' 50 times
-	printf "\n"
-	printf '%0.s-' {1..50}
-	printf "\n"
-
+        echo
+    fi
 }

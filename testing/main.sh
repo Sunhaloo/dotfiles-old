@@ -28,6 +28,11 @@ source functions.sh
 source packages.conf
 # import the `kanata.sh` file
 source kanata.sh
+# import the `git.sh` file
+source git.sh
+
+# set / show any errors on exit
+set -e
 
 # call the function to print the welcome screen
 print_logo
@@ -141,11 +146,55 @@ print_dashed_lines
 printf "+          Installing Packages        +\n"
 print_dashed_lines
 
-echo
-
 install_packages "${DESKTOP[@]}"
 install_packages "${DEPENDENCIES[@]}"
 install_packages "${DEV_TOOLS[@]}"
 install_packages "${LANGS[@]}"
 install_packages "${FONT[@]}"
 
+print_dashed_lines
+printf "+   Enabling Required Services!!!     +\n"
+print_dashed_lines
+
+echo
+
+for service in "${SERVICES[@]}"; do
+if ! systemctl is-enabled "$service" &> /dev/null; then
+    echo "Enabling $service..."
+    sudo systemctl enable "$service"
+else
+    echo "$service is already enabled"
+fi
+done
+
+echo
+print_dashed_lines
+
+# call the function to be able to configure git
+git_configuration 
+
+# ask the user if he / she wants to reboot the system
+read -p "Do You Want To Reboot The System [Y/n]: " user_reboot
+
+echo
+
+if [[ "$user_reboot" == "Y"  || "$user_reboot" == "" ]]; then
+    print_dashed_lines
+    printf "+\tRebooting System...\t+\n"
+    print_dashed_lines
+    
+    # sleep the program for '0.5s'
+    sleep 0.5s
+
+
+elif [[ "$user_reboot" == "n" ]]; then
+    print_dashed_lines
+    printf "+   Installation and Setup Complete   +\n"
+    print_dashed_lines
+
+    # exit the program / script without any errors
+    exit 0
+
+else
+    echo "Wrong Input... Skipping!!!"
+fi
