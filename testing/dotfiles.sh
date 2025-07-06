@@ -82,7 +82,7 @@ if [[ $? -eq 0 ]]; then
 
     echo
 
-    if [[ -d "~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers}" ]]; then
+    if [[ -d "$HOME/{Obsidian,OBS\ Studio,Screenshots,Wallpapers}" ]]; then
         printf "+      Creating Home Folders!         +\n\n"
         # create the all the required folders that I need
         mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers}
@@ -96,9 +96,8 @@ if [[ $? -eq 0 ]]; then
 
     # move the required configuration files
     # NOTE: remember to add starship to configuration files
-    # WARNING: testing
-    # cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi} ~/.config
-    # cp -r $HOME/GitHub/dotfiles/{.zshrc,.tmux.conf} $HOME
+    cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi} ~/.config
+    cp -r $HOME/GitHub/dotfiles/{.zshrc,.tmux.conf} $HOME
 
     printf "+      Moving Folders Completed!      +\n\n"
 

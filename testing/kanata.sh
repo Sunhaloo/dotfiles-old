@@ -10,33 +10,33 @@ kanata_configuration() {
     printf "\n+\t Kanata Configuration\t      +\n\n"
 
     # following the official documentation ( for Linux )
-	# sudo groupadd uinput
+	sudo groupadd uinput
 
-	# sudo usermod -aG input $USER
-	# sudo usermod -aG uinput $USER
+	sudo usermod -aG input $USER
+	sudo usermod -aG uinput $USER
 
-	# sudo cp ~/dotfiles/kanata/99-input.rules /etc/udev/rules.d/
+	sudo cp ~/dotfiles/kanata/99-input.rules /etc/udev/rules.d/
 
-	# sudo udevadm control --reload-rules && sudo udevadm trigger
+	sudo udevadm control --reload-rules && sudo udevadm trigger
 
-	# ls -l /dev/uinput
+	ls -l /dev/uinput
 
-	# sudo modprobe uinput
+	sudo modprobe uinput
 
-	# sudo rm /usr/lib/systemd/system/kanata.service
+	sudo rm /usr/lib/systemd/system/kanata.service
 
     printf "\n+     Moving Kanata Configuration     +\n\n"
 
 	# move the configuration files from dotfiles to ~/.config
 	# create the directories
-	# mkdir -p ~/.config/systemd/user
-	# mkdir -p ~/.config/kanata
+	mkdir -p ~/.config/systemd/user
+	mkdir -p ~/.config/kanata
 	# move the `.service` file
-	# cp ~/dotfiles/kanata/kanata.service ~/.config/systemd/user/
-	# cp ~/dotfiles/kanata/config.kbd ~/.config/kanata/
+	cp ~/dotfiles/kanata/kanata.service ~/.config/systemd/user/
+	cp ~/dotfiles/kanata/config.kbd ~/.config/kanata/
 
 	# run the service
-# 	systemctl --user daemon-reload
+	systemctl --user daemon-reload
 
     # ask the user if he wants to autostart kanata on boot
     read -p "Do You Want To Autostart Kanata On Boot [y/N]: " user_enable
@@ -49,7 +49,7 @@ kanata_configuration() {
         print_dashed_lines
 
         # enable kanata on boot / when computer starts
-        # systemctl --user enable kanata.service
+        systemctl --user enable kanata.service
 
     elif [[ "$user_enable" == "N" || "$user_enable" == ""  ]]; then
         print_dashed_lines
@@ -60,7 +60,8 @@ kanata_configuration() {
         echo "Wrong Input... Skipping!!!"
     fi
 
-    # systemctl --user enable kanata.service
-    # systemctl --user start kanata.service
-    # systemctl --user status kanata.service | head
+    printf "+     Starting Kanata On Boot!!!      +\n"
+
+    systemctl --user start kanata.service
+    systemctl --user status kanata.service | head
 }

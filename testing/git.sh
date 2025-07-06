@@ -18,7 +18,9 @@ git_configuration() {
 
         echo
 
+        # ask the user to enter his email
         read -p "Please Enter Your Email ( attached with GitHub ): " git_email
+        # ask the user to enter his email again for confirmation
         read -p "Please Confirm Your Email ( attached with GitHub ): " git_email_confirmation
 
         echo
@@ -41,12 +43,11 @@ git_configuration() {
         printf "+          Setting Up User!           +\n"
 
         # using information provided, setup git for user
-        # git config set --global user.email "$git_email"
-        # git config set --global user.name "$git_username"
-        # git config set --global init.defaultBranch main
+        git config set --global user.email "$git_email"
+        git config set --global user.name "$git_username"
+        git config set --global init.defaultBranch main
 
         printf "+     Setting Up User Completed!      +\n\n"
-
 
         # display the git configuration that has been applied
         git config list | head
@@ -54,9 +55,9 @@ git_configuration() {
         printf "\n\n+        Setting Up SSH Key!          +\n\n"
 
         # generate new SSH key based on user's email
-        # ssh-keygen -t ed25519 -C "$user_email"
-        # start the ssh-agent in the background
-        # eval "$(ssh-agent -s)"
+        ssh-keygen -t ed25519 -C "$user_email"
+        start the ssh-agent in the background
+        eval "$(ssh-agent -s)"
 
         cat ~/.ssh/id_ed25519.pub && cat ~/.ssh/id_ed25519.pub | wl-copy
 

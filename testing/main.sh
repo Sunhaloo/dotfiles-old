@@ -75,12 +75,12 @@ echo
 echo
 
 # refresh the AUR and pacman packages
-# yay -Syy --noconfirm
-# sudo pacman -Syy --noconfirm
+yay -Syy --noconfirm
+sudo pacman -Syy --noconfirm
 
 # actually update the system ( update packages downloaded with both `yay` and `pacman` )
-# yay -Syu --noconfirm
-# sudo pacman -Syu --noconfirm
+yay -Syu --noconfirm
+sudo pacman -Syu --noconfirm
 
 # import the `term_utils.sh` file
 source term_utils.sh
