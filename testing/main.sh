@@ -26,8 +26,6 @@
 source functions.sh
 # import the `packages.conf` file
 source packages.conf
-# import the `kanata.sh` file
-source kanata.sh
 # import the `git.sh` file
 source git.sh
 
