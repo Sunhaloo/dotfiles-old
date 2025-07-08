@@ -24,7 +24,6 @@ echo
 # check if the directory '~/GitHub/dotfiles' exists
 if [[ -d "$REPO_DIR$DIR_NAME" ]]; then
     # meaning that the 'dotfiles' repository already exists
-    print_dashed_lines 
     printf "+ Dotfiles Repository Already Exists! +\n"
     print_dashed_lines 
 

@@ -51,11 +51,21 @@ yay_installation() {
 
         makepkg -si
 
-        # remove the unwanted folders
         printf "== Post Install Folder Clean =="
 
         cd .. && rm -rf yay
     fi
+}
+
+# function that will refresh 'yay' and 'pacman' packages and update entire system
+update_system() {
+    # refresh the AUR and pacman packages
+    yay -Syy --noconfirm
+    sudo pacman -Syy --noconfirm
+
+    # actually update the system ( update packages downloaded with both `yay` and `pacman` )
+    yay -Syu --noconfirm
+    sudo pacman -Syu --noconfirm
 }
 
 # function that will install all the packages that we tell it to... obviously!
@@ -196,6 +206,25 @@ enable_services() {
 }
 
 
+# function that will clone and setup TMUX TPM
+tmux_plugin_manager() {
+    printf "== TMUX Plugin Manager ==\n"
+
+    # if the directory at location '~/.tmux/' exists
+    if [[ -d "$HOME/.tmux" ]]; then
+        printf "\n== TMUX Plugin Manager Folder Exists! ==\n\n"
+
+    # meaning that TMUX Plugin Manager is not present on system
+    else
+        printf "\n== Cloning Repository with Git!!! ==\n\n"
+
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+        printf "== TMUX Plugin Manager Installed ==\n"
+    fi
+}
+
+
 # function that will configure git and create SSH key for git
 git_configuration() {
     # INFO: Link to Documentation:
@@ -263,3 +292,32 @@ git_configuration() {
     fi
 }
 
+# function that can be used to reboot the machine of installation if need be
+reboot_computer() {
+    :
+    # ask the user if he / she wants to reboot the computer
+    read -p "Do You Want To Reboot The System [Y/n]: " user_reboot
+
+    # meaning that the user wants to reboot the computer
+    if [[ "$user_reboot" == "Y"  || "$user_reboot" == "" ]]; then
+        printf "\n== Rebooting System... ==\n"
+        
+        # sleep the program for '0.5s'
+        sleep 0.5s
+
+        # reboot the computer using `systemctl`
+        # systemctl reboot
+
+    # the user does not want to reboot
+    elif [[ "$user_reboot" == "n" ]]; then
+        # output appropriate message
+        printf "\n== Installation and Setup Complete! ==\n"
+
+        # exit the program with correct status code
+        exit 0
+
+    # if the user did not enter correct / required input
+    else
+        printf "\n== Wrong Input... Skipping Rebooting!!! ==\n"
+    fi
+}
