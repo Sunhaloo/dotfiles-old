@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
 
 # define the dotfiles repository URL
-# REPO_URL="https://github.com/Sunhaloo/dotfiles.git"
-REPO_URL="https://github.com/Sunhaloo/doits.git"
+REPO_URL="https://github.com/Sunhaloo/dotfiles.git"
 # define the dotfiles folder name
-# DIR_NAME="dotfiles"
-DIR_NAME="actual_repo"
+DIR_NAME="dotfiles"
 # define my directory where I keep all my repositories
-# REPO_DIR="$HOME/GitHub/"
-REPO_DIR="$HOME/gitshit/"
+REPO_DIR="$HOME/GitHub/"
 # define the configuration directory
-# CONFIG_DIR="$HOME/.config/"
-CONFIG_DIR="$HOME/.shitter/"
+CONFIG_DIR="$HOME/.config/"
 
 # change current working directory to home directory
 cd $HOME
@@ -24,7 +20,8 @@ if [[ -d "$REPO_DIR$DIR_NAME" ]]; then
     printf "== Dotfiles Repository Already Exists! ==\n\n"
 
     # show the user where the repository has been installed
-    printf "-- Repository Located At: %s --\n\n" "$(find "$HOME" -type d -name "$DIR_NAME" 2>/dev/null)"
+    # NOTE: use `--` to allow the user of '--' characters
+    printf -- "-- Repository Located At: %s --\n\n" "$(find "$HOME" -type d -name "$DIR_NAME" 2> /dev/null)"
 
     printf "== Checking Required Directories ==\n\n"
 
@@ -66,49 +63,94 @@ else
     # clone the my dotfiles repository
     git clone "$REPO_URL" "$REPO_DIR$DIR_NAME"
 
-    # show the user where the repository has been installed
-    printf "\n-- Repository Located At: %s --\n\n" "$(find "$HOME" -type d -name "$DIR_NAME" 2>/dev/null)"
-
-fi
-
-# WARNING: need to complete this part... Going to for supper :)
-
-# check if the cloning of the repository was successful
-if [[ $? -eq 0 ]]; then
-    # meaning that return status is '0' ==> clone successful
-    # therefore, move each folder into their respective positions
-    printf "+      Moving Configurations!!!       +\n"
+    # variable to keep the success status of the clone
+    clone_status=$?
 
     echo
+fi
 
-    if [[ -d "$HOME/{Obsidian,OBS\ Studio,Screenshots,Wallpapers}" ]]; then
-        printf "+      Creating Home Folders!         +\n\n"
-        # create the all the required folders that I need
-        mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers}
+# if the cloning of the respository was successful
+if [[ "$clone_status" -eq 0 ]]; then
+    # show the user where the repository has been installed
+    printf -- "-- Repository Located At: %s --\n\n" "$(find "$HOME" -type d -name "$DIR_NAME" 2> /dev/null)"
 
+    # meaning that return status is '0' ==> clone successful
+    # therefore, move each folder into their respective positions
+    printf "== Moving Configurations!!! ==\n\n"
+
+    # initilise array with directories / folders that we need
+    home_directories=(
+        "$HOME/Obsidian"
+        "$HOME/OBS Studio"
+        "$HOME/Screenshots"
+        "$HOME/Wallpapers"
+    )
+
+    # status flag that can change if not all files are present
+    all_exist=true
+
+    # iterate through the list of directories found in `home_directories` array
+    for home_dir in "${home_directories[@]}"; do
+        # check if each directory is present
+        if [[ ! -d "$home_dir" ]]; then
+            # output appropriate message
+            printf "== Missing Folder: %s ==\n\n" "$home_dir"
+
+            # change the status flag to 'false' as we don't have all folders
+            all_exist=false
+        fi
+    done
+
+    # if all folders exists
+    if $all_exist; then
+        printf "== All Required Home Folders Exists! ==\n\n"
+
+    # if one or more folders is missing
     else
-        # output appropriate message
-        printf "+\tHome Folders Exists!\t      +\n\n"
+        printf "== One or More Required Home Folders Are Missing! ==\n\n"
+
+        printf -- "-- Creating Required Missing Home Folders --\n\n"
+
+        # create all the folders... I know that its fucked up to create everything again
+        mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers} 2> /dev/null
     fi
 
-    printf "+\t   Moving Folders!\t      +\n\n"
+    printf "== Moving Folders! ==\n\n"
 
     # move the required configuration files
     # NOTE: remember to add starship to configuration files
     cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi} ~/.config
     cp -r $HOME/GitHub/dotfiles/{.zshrc,.tmux.conf} $HOME
 
-    printf "+      Moving Folders Completed!      +\n\n"
+    printf "== Moving Folders Completed!!! ==\n\n"
 
-
-# meaning that the clone was not successful
+# if the clone was not successful
 else
     # output appropriate message
-    echo
-    printf "+      WARNING: Cloned Failed!!!      +\n"
+    printf "== WARNING: Cloned Failed!!! ==\n"
 
-    # return to the shell with exit status code '1'
-    # exit 1
+    # remove the unwanted files created
+    rm -rf "$REPO_DIR"
+    rm -rf "$CONFIG_DIR"
+
+    # prompt the user if he wants to delete the configuration folder
+    printf "\nDo You Want to Delete The Configuration Folder %s: " "$CONFIG_DIR"
+
+    read rm_config_dir
+
+    # meaning that the user want to remove the configuration folder
+    if [[ "$rm_config_dir" == "y" ]]; then
+        printf "\n== Deleting Configuration Folder!!! ==\n"
+
+    # meaning that the user does not want to configure git right now
+    elif [[ "$rm_config_dir" == "N" || "$rm_config_dir" == ""  ]]; then
+        printf "\n== Skipping Deleting Configuration Folder!!! ==\n"
+
+    # if the user did not enter correct / required input
+    else
+        printf "\n== Wrong Input... Skipping Deletiong of Configuration Folders!!! ==\n"
+    fi
+
+    # return the "error" status code to our main program
     return 1
 fi
-

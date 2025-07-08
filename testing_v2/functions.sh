@@ -234,6 +234,7 @@ git_configuration() {
     # on the desktop environment with a browser installed
     read -p "Are You On Hyprland? Do You Have A Browser? [y/N]: " user_desktop
 
+    # meaning that the user wants configure git and setup SSH key
     if [[ "$user_desktop" == "y" ]]; then
         printf "\n== Configuring Git! ==\n\n"
 

@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-
 # you entire system automatically and without much input from you. Really Cool Stuff!
 # but then I came across this video by one of the GOAT typecraft:
 
