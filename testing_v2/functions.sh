@@ -148,19 +148,17 @@ kanata_configuration() {
 
 # function that will ask the user to if he is currently on laptop
 laptop_packages() {
-    # initialise variable
-    local laptop_packages=("$@")
-
-    echo "Laptop Function"
-    echo "${laptop_packages[@]}"
+    printf "\n== Device Type - Laptop Specific Packages!!! ==\n\n"
 
     # ask the user if he / she is on laptop
     read -p "Are You On Laptop [y/N]: " laptop_user
 
-
     # if the user wants to download and install laptop packages
     if [[ "$laptop_user" == "y" ]]; then
         printf "\n== Installing Laptop Specific Packages!!! ==\n"
+
+        # initialise variable
+        local laptop_packages=("$@")
 
         # call the required function to make 'yay' download and install required packages
         install_packages "${laptop_packages[@]}"
@@ -174,3 +172,94 @@ laptop_packages() {
         printf "\n== Wrong Input... Skipping Laptop Packages!!! ==\n"
     fi
 }
+
+# function that will enable all the required services
+enable_services() {
+    # initialise variable
+    local services=("$@")
+
+    # iterate through the list of services provided by argument ( main program )
+    for service in "${services[@]}"; do
+        # use the actual `systemctl` with argument / flag `is-enabled` to check is service is enabled
+        if ! systemctl is-enabled "$service" &> /dev/null; then
+            echo "Enabling $service..."
+
+            # enable the service that is not already enabled
+            sudo systemctl enable "$service"
+
+        # meaning that the service has already been enabled
+        else
+            # output appropriate message
+            echo "$service is already enabled"
+        fi
+    done
+}
+
+
+# function that will configure git and create SSH key for git
+git_configuration() {
+    # INFO: Link to Documentation:
+    # https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux
+
+    # prompt the user to confirm if they are currently
+    # on the desktop environment with a browser installed
+    read -p "Are You On Hyprland? Do You Have A Browser? [y/N]: " user_desktop
+
+    if [[ "$user_desktop" == "y" ]]; then
+        printf "\n== Configuring Git! ==\n\n"
+
+        # ask the user to enter his email
+        read -p "Enter Your Email ( Attached To GitHub ): " git_email
+        # ask the user to enter his email again for confirmation
+        read -p "Confirm Your Email: " git_email_confirmation
+
+        # if the user's email is the same
+        # ==> meaning original email == confirmation email
+        if [[ "$git_email" == "$git_email_confirmation" ]]; then
+            printf "\n== Email Confirmed ==\n\n"
+
+        # meaning that the original email is not the same as confirmation email
+        else
+            printf "\n== Emails Did NOT Match Up!!! ==\n"
+
+            # return the "error" status code to our main program
+            return 1
+        fi
+        
+        # if emails have checked our... ask the user to enter his username
+        read -p "Please Enter Your Username ( Attached To GitHub ): " git_username
+
+        printf "\n== Setting Up User Specific Configurations ==\n\n"
+
+        # using information provided, setup git for user
+        git config set --global user.email "$git_email"
+        git config set --global user.name "$git_username"
+        git config set --global init.defaultBranch main
+
+        printf "\n== Setting Up User Configurations Completed ==\n\n"
+
+        # display the git configuration that has been applied
+        git config list | head
+
+        printf "\n== Setting Up SSH Key == \n\n"
+
+        # following the documentation
+        ssh-keygen -t ed25519 -C "$git_email"
+        eval "$(ssh-agent -s)"
+        ssh-add ~/.ssh/id_ed25519
+
+        printf "\n== SSH Key ( Already Copied To Clipboard ) == \n\n"
+
+        # display the SSH key and also copy to the clipboard
+        cat ~/.ssh/id_ed25519.pub && cat ~/.ssh/id_ed25519.pub | wl-copy
+
+    # meaning that the user does not want to configure git right now
+    elif [[ "$user_desktop" == "N" || "$user_desktop" == ""  ]]; then
+        printf "\n== Skipping Git Configurations!!! ==\n"
+
+    # if the user did not enter correct / required input
+    else
+        printf "\n== Wrong Input... Skipping Laptop Packages!!! ==\n"
+    fi
+}
+

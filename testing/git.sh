@@ -71,6 +71,6 @@ git_configuration() {
     else
         echo "Wrong Input... Skipping!!!"
 
-        echo
+2       echo
     fi
 }
