@@ -61,8 +61,8 @@ else
     printf "== Cloning Dotfiles Repository ==\n\n"
 
     # clone the my dotfiles repository
-    # git clone "$REPO_URL" "$REPO_DIR$DIR_NAME"
-    git clone shitter@yikers.com.en.shit
+    git clone "$REPO_URL" "$REPO_DIR$DIR_NAME"
+    # git clone shitter@yikers.com.en.shit
 
     # variable to keep the success status of the clone
     clone_status=$?
