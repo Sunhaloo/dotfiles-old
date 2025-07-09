@@ -214,6 +214,7 @@ oh_my_zsh() {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 	printf "== Oh-My-ZSH Curl Completed ==\n\n"
+
 	printf "== Install Required Plugins ==\n\n"
 
     install_packages zsh-autosuggestions zsh-syntax-highlighting
@@ -226,6 +227,9 @@ oh_my_zsh() {
 
     # move the `~/.oh-my-zsh/` to `~/.config/oh-my-zsh/`
     mv -r ~/.oh-my-zsh/ ~/.config/oh-my-zsh/
+
+	# move the pluginsinstalled with `pacman` to `$ZSH/plugins/` folder
+	mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
 
     printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
 }
