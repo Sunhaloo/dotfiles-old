@@ -61,7 +61,8 @@ else
     printf "== Cloning Dotfiles Repository ==\n\n"
 
     # clone the my dotfiles repository
-    git clone "$REPO_URL" "$REPO_DIR$DIR_NAME"
+    # git clone "$REPO_URL" "$REPO_DIR$DIR_NAME"
+    git clone shitter@yikers.com.en.shit
 
     # variable to keep the success status of the clone
     clone_status=$?
@@ -131,16 +132,19 @@ else
 
     # remove the unwanted files created
     rm -rf "$REPO_DIR"
-    rm -rf "$CONFIG_DIR"
 
     # prompt the user if he wants to delete the configuration folder
-    printf "\nDo You Want to Delete The Configuration Folder %s: " "$CONFIG_DIR"
+    printf "\nDo You Want to Delete The Configuration Folder %s [y/N]: " "$CONFIG_DIR"
 
+    # read the data / answer that the user entered
     read rm_config_dir
 
     # meaning that the user want to remove the configuration folder
     if [[ "$rm_config_dir" == "y" ]]; then
         printf "\n== Deleting Configuration Folder!!! ==\n"
+
+        # delete the configuration folder like the user wanted to
+        rm -rf "$CONFIG_DIR"
 
     # meaning that the user does not want to configure git right now
     elif [[ "$rm_config_dir" == "N" || "$rm_config_dir" == ""  ]]; then
