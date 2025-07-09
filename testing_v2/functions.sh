@@ -223,9 +223,12 @@ oh_my_zsh() {
     rm -rf ~/.zsh{rc.pre-oh-my-zsh,rc,_history}
 
     # move my ZSH configuration file to be sourced
-	cp -r ~/dotfiles/.zshrc "$HOME"
+    cp -r ~/dotfiles/.zshrc "$HOME"
 
-	printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
+    # move the `~/.oh-my-zsh/` to `~/.config/oh-my-zsh/`
+    mv -r ~/.oh-my-zsh/ ~/.config/oh-my-zsh/
+
+    printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
 }
 
 # function that will clone and setup TMUX TPM
