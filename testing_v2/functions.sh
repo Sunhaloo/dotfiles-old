@@ -222,11 +222,13 @@ oh_my_zsh() {
     # remove any exisiting ZSH related files
     rm -rf ~/.zsh{rc.pre-oh-my-zsh,rc,_history}
 
+	# WARNING need to look in this
     # move my ZSH configuration file to be sourced
-    cp -r ~/dotfiles/.zshrc "$HOME"
+    cp ~/dotfiles/zsh/.zshrc $HOME
 
     # move the `~/.oh-my-zsh/` to `~/.config/oh-my-zsh/`
     mv -r ~/.oh-my-zsh/ ~/.config/oh-my-zsh/
+	cp ~/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
 
 	# move the pluginsinstalled with `pacman` to `$ZSH/plugins/` folder
 	mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/

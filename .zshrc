@@ -132,7 +132,8 @@ alias yinstall='yay -S'
 # removing and purging applications ---> provide application / package name
 alias remove='sudo pacman -R'
 # clean system packages
-alias clean='sudo pacman -Rns $(pacman -Qdtq)'
+# alias clean='sudo pacman -Rns $(pacman -Qdtq)'
+alias clean='sudo pacman -Qdtq | sudo pacman -Rns'
 # clean system logs
 alias clean_plog='sudo truncate -s 0 /var/log/pacman.log'
 # clean journalctl logs
