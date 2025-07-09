@@ -214,7 +214,6 @@ oh_my_zsh() {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 	printf "== Oh-My-ZSH Curl Completed ==\n\n"
-
 	printf "== Install Required Plugins ==\n\n"
 
     install_packages zsh-autosuggestions zsh-syntax-highlighting
