@@ -205,6 +205,28 @@ enable_services() {
     done
 }
 
+# function to install curl and setup OMZ
+oh_my_zsh() {
+    # INFO: Link to Documentation: https://github.com/ohmyzsh/ohmyzsh
+	printf "== Oh-My-ZSH Installation ==\n\n"
+
+    # following the installation guide for OMZ
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+	printf "== Oh-My-ZSH Curl Completed ==\n\n"
+
+	printf "== Install Required Plugins ==\n\n"
+
+    install_packages zsh-autosuggestions zsh-syntax-highlighting
+
+    # remove any exisiting ZSH related files
+    rm -rf ~/.zsh{rc.pre-oh-my-zsh,rc,_history}
+
+    # move my ZSH configuration file to be sourced
+	cp -r ~/dotfiles/.zshrc "$HOME"
+
+	printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
+}
 
 # function that will clone and setup TMUX TPM
 tmux_plugin_manager() {
