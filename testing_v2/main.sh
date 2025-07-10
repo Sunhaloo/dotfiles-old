@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 source functions.sh
+# source dotfiles.sh
 source packages.conf
 
 

@@ -105,7 +105,7 @@ kanata_configuration() {
 	sudo usermod -aG uinput $USER
 
     # "create" the '99-input.rules' files... In this case, I already have it!
-	sudo cp ~/dotfiles/kanata/99-input.rules /etc/udev/rules.d/
+	sudo cp ~/GitHub/dotfiles/kanata/99-input.rules /etc/udev/rules.d/
 
 	sudo udevadm control --reload-rules && sudo udevadm trigger
 
@@ -123,8 +123,8 @@ kanata_configuration() {
 	mkdir -p ~/.config/kanata
     
     # moving my configuration to `~/.config` directory
-	cp ~/dotfiles/kanata/kanata.service ~/.config/systemd/user/
-	cp ~/dotfiles/kanata/config.kbd ~/.config/kanata/
+	cp ~/GitHub/dotfiles/kanata/kanata.service ~/.config/systemd/user/
+	cp ~/GitHub/dotfiles/kanata/config.kbd ~/.config/kanata/
 
     # reload the user systemd manager configuration
 	systemctl --user daemon-reload
@@ -213,6 +213,10 @@ oh_my_zsh() {
     # following the installation guide for OMZ
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+	# WARNING: its going to throw you into ZSH...
+	# this means that you are going to have to type 'exit'
+	# so that this script can continue to run...
+
 	printf "== Oh-My-ZSH Curl Completed ==\n\n"
 
 	printf "== Install Required Plugins ==\n\n"
@@ -224,11 +228,11 @@ oh_my_zsh() {
 
 	# WARNING need to look in this
     # move my ZSH configuration file to be sourced
-    cp ~/dotfiles/zsh/.zshrc $HOME
+    cp ~/GitHub/dotfiles/zsh/.zshrc $HOME
 
     # move the `~/.oh-my-zsh/` to `~/.config/oh-my-zsh/`
     mv -r ~/.oh-my-zsh/ ~/.config/oh-my-zsh/
-	cp ~/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
+	cp ~/GitHub/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
 
 	# move the pluginsinstalled with `pacman` to `$ZSH/plugins/` folder
 	mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
@@ -253,8 +257,7 @@ tmux_plugin_manager() {
 		mkdir -p ~/.config/tmux/
 
 		# move the actual TMUX configuration to the specified directory
-		cp ~/tmux.conf ~/.config/tmux/
-		cp ~/dotfiles/tmux/tmux.conf ~/.config/tmux/
+		cp ~/GitHub/dotfiles/tmux/tmux.conf ~/.config/tmux/
 
         printf "\n== Cloning Repository with Git!!! ==\n\n"
 

@@ -27,11 +27,11 @@ if [[ -d "$REPO_DIR$DIR_NAME" ]]; then
 
     # if the directory at location '~/.config' exists
     if [[ -d "$CONFIG_DIR"  ]]; then
-        printf "== Configuration Directory Exists ==\n\n"
+        printf -- "-- Configuration Directory Exists --\n\n"
 
     # meaning that the folder has not been created
     else
-        printf "== Creating Configuration Folders / Directory ==\n\n"
+        printf -- "-- Creating Configuration Folders / Directory --\n\n"
 
         # create the '~/.config' folder
         mkdir -p "$CONFIG_DIR"
@@ -48,11 +48,11 @@ else
 
     # if the directory at location '~/.config' exists
     if [[ -d "$CONFIG_DIR"  ]]; then
-        printf "== Configuration Directory Exists ==\n\n"
+        printf -- "-- Configuration Directory Exists --\n\n"
 
     # meaning that the folder has not been created
     else
-        printf "== Creating Configuration Folders / Directory ==\n\n"
+        printf -- "-- Creating Configuration Folders / Directory --\n\n"
 
         # create the '~/.config' folder
         mkdir -p "$CONFIG_DIR"
@@ -62,7 +62,6 @@ else
 
     # clone the my dotfiles repository
     git clone "$REPO_URL" "$REPO_DIR$DIR_NAME"
-    # git clone shitter@yikers.com.en.shit
 
     # variable to keep the success status of the clone
     clone_status=$?
@@ -78,6 +77,8 @@ if [[ "$clone_status" -eq 0 ]]; then
     # meaning that return status is '0' ==> clone successful
     # therefore, move each folder into their respective positions
     printf "== Moving Configurations!!! ==\n\n"
+
+    printf -- "-- Creating Home Folders!!! --\n\n"
 
     # initilise array with directories / folders that we need
     home_directories=(
@@ -116,14 +117,13 @@ if [[ "$clone_status" -eq 0 ]]; then
         mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers} 2> /dev/null
     fi
 
-    printf "== Moving Folders! ==\n\n"
+    printf "== Moving Configuration Folders and Files! ==\n\n"
 
     # move the required configuration files
     # NOTE: remember to add starship to configuration files
     cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi} ~/.config
-    cp -r $HOME/GitHub/dotfiles/{.zshrc,.tmux.conf} $HOME
 
-    printf "== Moving Folders Completed!!! ==\n\n"
+    printf "== Configuration Folders and Files Successfully Moved!!! ==\n\n"
 
 # if the clone was not successful
 else
@@ -134,7 +134,7 @@ else
     rm -rf "$REPO_DIR"
 
     # prompt the user if he wants to delete the configuration folder
-    printf "\nDo You Want to Delete The Configuration Folder %s [y/N]: " "$CONFIG_DIR"
+    printf "\nDo You Want to Delete The Configuration Folder '%s' [y/N]: " "$CONFIG_DIR"
 
     # read the data / answer that the user entered
     read rm_config_dir
