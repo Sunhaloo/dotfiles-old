@@ -248,7 +248,7 @@ tmux_plugin_manager() {
     else
         printf "\n== Cloning Repository with Git!!! ==\n\n"
 
-        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+        git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
         printf "== TMUX Plugin Manager Installed ==\n"
     fi
