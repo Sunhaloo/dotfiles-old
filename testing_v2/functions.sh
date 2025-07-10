@@ -239,13 +239,23 @@ oh_my_zsh() {
 # function that will clone and setup TMUX TPM
 tmux_plugin_manager() {
     printf "== TMUX Plugin Manager ==\n"
+	pwd
 
     # if the directory at location '~/.tmux/' exists
-    if [[ -d "$HOME/.tmux" ]]; then
+    if [[ -d "$HOME/.tmux" || -d "$HOME/.config/tmux/plugins/tpm" ]]; then
         printf "\n== TMUX Plugin Manager Folder Exists! ==\n\n"
 
     # meaning that TMUX Plugin Manager is not present on system
     else
+        printf "\n== Creating TMUX Plugin Manager Configuration Folder! ==\n\n"
+
+		# create the TMUX configuration directory
+		mkdir -p ~/.config/tmux/
+
+		# move the actual TMUX configuration to the specified directory
+		cp ~/tmux.conf ~/.config/tmux/
+		cp ~/dotfiles/tmux/tmux.conf ~/.config/tmux/
+
         printf "\n== Cloning Repository with Git!!! ==\n\n"
 
         git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
