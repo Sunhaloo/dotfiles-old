@@ -21,7 +21,10 @@ export PATH="$PATH:/home/azmaan/.local/bin"
 export ZSH="$HOME/.config/oh-my-zsh"
 # define the 'custom' folder path for OMZ
 export ZSH_CUSTOM="$ZSH/custom"
-
+# define the config directory for starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+# define the cache directory for starship
+export STARSHIP_CACHE="$XDG_CONFIG_HOME/starship/"
 
 # == Options ==
 # -- History Options --
@@ -55,3 +58,5 @@ source $ZSH_CUSTOM/aliases.zsh
 source <(fzf --zsh)
 # set up zoxide
 eval "$(zoxide init --cmd cd zsh)"
+# set up starship
+eval "$(starship init zsh)"

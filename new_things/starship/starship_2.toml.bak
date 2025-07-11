@@ -1,0 +1,65 @@
+# Use Nerd Font for icons
+add_newline = true
+
+# === Color Palette ===
+palette = "custom_palette"
+
+[palettes.custom_palette]
+blue = "#4fa6ed"
+green = "#8ebd6b"
+light_dark = "#7a818e"
+red = "#e55561"
+teal = "#48b0bd"
+yellow = "#e5c07b"
+gray = "#c1c1c1"
+black = "#000000"
+
+# === Prompt format ===
+format = """
+[\\[](red)[$directory](blue)[\\]](red) \
+$git_branch$git_status \
+$cmd_duration
+$character
+"""
+
+# === Directory ===
+[directory]
+style = "blue"
+format = "[$path]($style)"
+truncate_to_repo = false
+truncation_length = 0  # Show full path
+truncation_symbol = ""
+
+# === Git Branch ===
+[git_branch]
+style = "light_dark"
+format = "[  $branch]($style)"
+
+# === Git Status ===
+[git_status]
+style = "light_dark"
+format = "[$all_status $ahead_behind]($style)"
+ahead = ""
+behind = ""
+conflicted = " ✖"
+untracked = " ✚"
+stashed = " "
+modified = " ●"
+staged = " ●"
+renamed = " ➜"
+deleted = " ✘"
+
+# === Command Duration ===
+[cmd_duration]
+style = "yellow"
+min_time = 5000
+format = "[$duration]($style)"
+
+# === Character (Prompt Symbol) ===
+[character]
+success_symbol = "[󰘧](green)"
+error_symbol = "[󰘧](red)"
+
+# === Optional: Transient prompt-like minimal second line ===
+[line_break]
+disabled = false

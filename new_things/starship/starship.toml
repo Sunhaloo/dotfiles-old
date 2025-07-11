@@ -1,0 +1,43 @@
+# set the new colour palette
+palette = 'deepspace'
+
+# define the actual prompt
+format="""
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$jobs $cmd_duration\
+$line_break\
+[>> ](#80B918)
+"""
+
+[fill]
+symbol=' '
+
+
+
+# define the colours for DeepSpace
+[palettes.deepspace]
+BG = '#0D0E11'
+FG = '#DEE4DF'
+S_BG = '#919191'
+S_FG = '#000000'
+CURSOR = '#797F87'
+DARK_GRAY = '#43494D'
+GRAY = '#5C656A'
+DARK_RED = '#E62D2D'
+RED = '#FD2121'
+DARK_GREEN = '#7C9F34'
+GREEN = '#80B918'
+hARK_YELLOW = '#E8AA32'
+# YELLOW = '#FFCE1F'
+YELLOW = '#000000'
+DARK_BLUE = '#3D8CC4'
+BLUE = '#2B87FF'
+DARK_PURPLE = '#A765CC'
+PURPLE = '#A14FE9'
+DARK_CYAN = '#21798A'
+CYAN = '#2DA2BA'
+DARK_WHITE = '#AAAAAA'
+WHITE = '#CCCCCC'
