@@ -120,8 +120,7 @@ if [[ "$clone_status" -eq 0 ]]; then
     printf "== Moving Configuration Folders and Files! ==\n\n"
 
     # move the required configuration files
-    # NOTE: remember to add starship to configuration files
-    cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi} ~/.config
+    cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi,starship} ~/.config
 
     printf "== Configuration Folders and Files Successfully Moved!!! ==\n\n"
 
