@@ -9,35 +9,62 @@ $git_status\
 $fill\
 $jobs $cmd_duration\
 $line_break\
-[>> ](#80B918)
+$character
 """
+
+
+[directory]
+format = "[\\[[$path](dark_blue bold)\\]](dark_red bold)"
+truncation_length = 0
+truncate_to_repo = false
+
+
+[git_branch]
+symbol = ' '
+format = "[\\[[$symbol$branch](dark_green)\\]](dark_red)"
+
+
+[git_status]
+# format = "[\\[[$conflicted[$deleted](dark_red)[$renamed](dark_white)[$modified](dark_yellow)[$staged](dark_gray)[$untracked](gray)$ahead_behind[$up_to_date](green)](white)\\]](dark_red)"
+format = "[\\[[$conflicted](red)[$deleted](dark_red)[$renamed](dark_white)[$modified](dark_yellow)[$staged](dark_gray)[$untracked](gray)[$ahead_behind](green)[$up_to_date](green)\\]](dark_red)"
+
+conflicted = ''
+ahead = '  '
+behind = '  '
+diverged = '  '
+up_to_date = ' '
+untracked = '  '
+stashed = ' 󰠔 '
+modified = '  '
+staged = ' 󰓍 '
+renamed = '  '
+deleted = ' '
+
 
 [fill]
 symbol=' '
 
 
-
-# define the colours for DeepSpace
+# DeepSpace colourscheme with proper starship keywords for colours
 [palettes.deepspace]
-BG = '#0D0E11'
-FG = '#DEE4DF'
-S_BG = '#919191'
-S_FG = '#000000'
-CURSOR = '#797F87'
-DARK_GRAY = '#43494D'
-GRAY = '#5C656A'
-DARK_RED = '#E62D2D'
-RED = '#FD2121'
-DARK_GREEN = '#7C9F34'
-GREEN = '#80B918'
-hARK_YELLOW = '#E8AA32'
-# YELLOW = '#FFCE1F'
-YELLOW = '#000000'
-DARK_BLUE = '#3D8CC4'
-BLUE = '#2B87FF'
-DARK_PURPLE = '#A765CC'
-PURPLE = '#A14FE9'
-DARK_CYAN = '#21798A'
-CYAN = '#2DA2BA'
-DARK_WHITE = '#AAAAAA'
-WHITE = '#CCCCCC'
+bg = '#0D0E11'
+fg = '#DEE4DF'
+s_bg = '#919191'
+s_fg = '#000000'
+cursor = '#797F87'
+dark_gray = '#43494D'
+gray = '#5C656A'
+dark_red = '#E62D2D'
+red = '#FD2121'
+dark_green = '#7C9F34'
+green = '#80B918'
+dark_yellow = '#E8AA32'
+yellow = '#FFCE1F'
+dark_blue = '#3D8CC4'
+blue = '#2B87FF'
+dark_purple = '#A765CC'
+purple = '#A14FE9'
+dark_cyan = '#21798A'
+cyan = '#2DA2BA'
+dark_white = '#AAAAAA'
+white = '#CCCCCC'
