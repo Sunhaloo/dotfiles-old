@@ -1,4 +1,4 @@
-// padding: top right bottom left;
+// paddin
 * {
     BG: #0D0E11;
     FG: #DEE4DF;
@@ -22,7 +22,6 @@
     DarkWhite: #AAAAAA;
     White: #CCCCCC;
 
-    // font: "Liga SFMonoNerdFont 14";
     font: "Arimo Nerd Font 14";
 
     margin: 0;
@@ -38,9 +37,9 @@ window {
     width: 600px;
     transparency: "real";
     background-color: rgba (13, 14, 17, 55 %);
-    // border: 1px;
-    // boder-radius: 12px;
-    // border-color: #343535;
+    border: 1px;
+    border-radius: 12px;
+    border-color: @Gray;
 }
 
 mainbox {
@@ -62,6 +61,8 @@ entry {
 }
 
 listview {
+    border: 1px;
+    border-color: rgba (67, 73, 77, 25%);
     columns: 1;
     lines: 8;
     dynamic: true;
@@ -76,10 +77,11 @@ element {
     text-color: red;
     highlight: green;
     border-radius: 5px;
+    border-color: #FFFFFF;
 }
 
 element selected {
-  background-color: red;
+  // background-color: red;
   text-color: white;
 }
 
