@@ -1,152 +1,54 @@
+/* ________Variables________ */
 * {
-    BG: #0D0E11;
-    FG: #DEE4DF;
-    Black: #000000;
-    Cursor: #797F87;
-    DarkGray: #43494D;
-    Gray: #5C656A;
-    Gray1: #383838;
-    DarkRed: #E62D2D;
-    Red: #FD2121;
-    DarkGreen: #7C9F34;
-    Green: #80B918;
-    DarkYellow: #E8AA32;
-    Yellow: #FFCE1F;
-    DarkBlue: #3D8CC4;
-    Blue: #2B87FF;
-    DarkPurple: #A765CC;
-    Purple: #A14FE9;
-    DarkCyan: #21798A;
-    Cyan: #2DA2BA;
-    DarkWhite: #AAAAAA;
-    White: #CCCCCC;
+	/* ________Window________ */	
+    window-width: 800px;
+	window-height: 550px;
+	window-border: 1.75px;
+    window-border-color: #4A4A4C;
+	window-border-radius: 12px;
+    window-bg-color:  rgba(26, 27, 38, 0.65);
 
-    font: "Arimo Nerd Font 14";
 
-    margin: 0;
-    padding: 0;
-    spacing: 0;
+    bg-col-light: #1e1e2e;
+    selected-col: #1e1e2e;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #f38ba8;
+    grey: #6c7086;
 
-    background-color: transparent;
-    text-color: @FG;
-
-    highlight: bold;
 }
-
+/* ________Main window________ */
 window {
-    location: center;
-    width: 800px;
-    // height: 550px;
-    transparency: "real";
-    background-color: rgba (13, 14, 17, 60 %);
-    border: 1px;
-    border-radius: 12px;
-    border-color: @DarkGray;
+	width: @window-width;
+    // height: @window-height;
+    border: @window-border;
+    border-color: @window-border-color;
+    background-color: @window-bg-color;
+	border-radius: @window-border-radius;
 }
 
+/* ________Main view inside the window________ */
 mainbox {
-    padding: 10px 10px 10px 10px;
+    background-color: transparent;
 	children: [inputbar, listview, footer];
 }
 
-
-inputbar {
-    padding: 20px 2px 20px 2px;
-    children: [prompt, entry];
-}
-
-
-prompt {
-    text-color: #727473;
-}
-
-
-entry {
-    text-color: #C8C6C6;
-    cursor-width: 1px;
-    cursor-color: #5D5F5D;
-    placeholder-color: #727473;
-}
-
-listview {
-    border: 1px;
-    border-color: rgba (67, 73, 77, 25%);
-    columns: 1;
-    lines: 9;
-    dynamic: true;
-    cycle: true;
-    background-color: rgba (92, 101, 106, 5%);
-    border-radius: 12px;
-    padding: 6px;
-}
-
-element {
-    padding: 6px 0px 6px 8px;
-    border-radius: 5px;
-    border-color: #FFFFFF;
-}
-
-element selected {
-    border-radius: 9px;
-    background-color: #2D2F2E;
-    text-color: white;
-}
-
-
-element-text {
-    // text-color: #C8C6C6;
-    text-color: @White;
-	vertical-align: 0.5;
-}
-
-element-text selected {
-    text-color: @FG;
-}
-
-element-icon {
-    size: 24px;
-	background-color: transparent;
-}
-
-
 spacer {
 	str: "";
 	expand: true;
 	background-color: transparent;
 }
 
-footer {
-	children: [textbox-1, spacer, keys-info];
-	expand:false;
-	orientation: horizontal;
-    background-color: rgba (92, 101, 106, 5%);
-    border-color: rgba (67, 73, 77, 25%);
-	border: 2px;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 10px 0px 0px 0px;
-}
-
-
-textbox-1 {
-    expand: false;
-    str: "󰣇";
-	background-color: transparent;	
-	text-color: rgba(255, 255, 255, 0.2);
-	vertical-align: 0.5;
-    margin: -6px;
-}
-
-
-spacer {
-	str: "";
+textbox-separator {
+	str: "|";
 	expand: true;
 	background-color: transparent;
+	margin: 0 6px;
+	font: "Inter Bold 14px";
+	vertical-align: 0.5;
+    text-color: rgba(255, 255, 255, 0.2);
 }
 
-
-
-// WARNING: testing
 keys-info {
 	children: [
 				// Launch
@@ -175,7 +77,6 @@ keys-info {
     background-color: transparent; 
 }
 
-
 textbox-return-text {
 	str: "Launch";
 	expand: false;
@@ -194,7 +95,7 @@ textbox-return-icon {
 	margin: 8px 0;
 	padding: 0 4px;
 	border-radius: 4px;
-    background-color: rgba (92, 101, 106, 5%);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 textbox-command-icon {
@@ -205,7 +106,7 @@ textbox-command-icon {
 	margin: 8px 0;
 	padding: 0 4px;
 	border-radius: 4px;
-    background-color: rgba (92, 101, 106, 5%);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 textbox-down-text {
@@ -226,7 +127,7 @@ textbox-down-icon {
 	margin: 8px 0;
 	padding: 0 4px;
 	border-radius: 4px;
-    background-color: rgba (92, 101, 106, 5%);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 textbox-up-text {
@@ -247,7 +148,7 @@ textbox-up-icon {
 	margin: 8px 0;
 	padding: 0 4px;
 	border-radius: 4px;
-    background-color: rgba (92, 101, 106, 5%);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 textbox-left-text {
 	str: " ";
@@ -267,7 +168,7 @@ textbox-left-icon {
 	margin: 8px 0;
 	padding: 0 4px;
 	border-radius: 4px;
-    background-color: rgba (92, 101, 106, 5%);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 textbox-right-text {
 	str: " ";
@@ -287,7 +188,7 @@ textbox-right-icon {
 	margin: 8px 0;
 	padding: 0 4px;
 	border-radius: 4px;
-    background-color: rgba (92, 101, 106, 5%);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 footer {
@@ -295,7 +196,7 @@ footer {
 	expand:false;
 	orientation: horizontal;
 	padding: 5px 10px;
-    background-color: rgba (92, 101, 106, 5%);
+	background-color: rgba(083, 083, 087, 0.1);
 
     border-color: rgba(255, 255, 255, 0.1);
 
@@ -310,7 +211,6 @@ textbox-1 {
 	vertical-align: 0.5;
 }
 
-
 textbox {
     expand: false;
     str: "Application";
@@ -320,13 +220,70 @@ textbox {
 	vertical-align: 0.5;
 }
 
-
-textbox-separator {
-	str: "|";
-	expand: true;
+inputbar {
+	children: [entry];
 	background-color: transparent;
-	margin: 0 6px;
-	font: "Inter Bold 14px";
+	border-color: #ffffff;
+}
+
+entry {
+	placeholder-color: rgba(255, 255, 255, 0.3);
+    padding: 18px 14px; 
+    text-color: white;
+    border-color: rgba(255, 255, 255, 0.1);
+	border: 0 0 2px 0;
+    background-color: transparent;
+}
+
+prompt {
+    text-color: #FFFFFF;
+}
+
+
+
+
+listview {
+    padding: 6px;
+    lines: 7;
+	spacing: 5px;
+    background-color: transparent; 
+}
+
+element {
+    padding: 12px;
+	border-radius: 8px;
+	border: 0;
+    background-color: transparent; 
+    text-color: blue;
+	spacing: 10px;
+	children: [group, textbox];
+}
+
+
+group {
+background-color: transparent;
+	orientation: horizontal;
+	spacing: 10px;
+	children: [element-icon, element-text];
+}
+
+element hover {
+	background-color: red;
+}
+
+element-icon {
+    size: 30px;
+	background-color: transparent;
+}
+
+
+element-text {
+	font: "Inter Medium 16px";
 	vertical-align: 0.5;
-    text-color: rgba(255, 255, 255, 0.2);
+	text-color: white;
+	background-color: transparent;
+}
+
+element selected {
+    background-color:  rgba(255, 255, 255, 0.2);
 }
