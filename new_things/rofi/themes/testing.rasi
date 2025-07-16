@@ -64,6 +64,8 @@ inputbar {
 // our search icon
 prompt {
     text-color: @DarkWhite;
+    vertical-align: 0.8;
+    // vertical-align: 1.0;
 }
 
 
@@ -74,6 +76,7 @@ entry {
     cursor-color: #5D5F5D;
     // placeholder-color: #727473;
     placeholder-color: @DarkWhite;
+    vertical-align: 0.5;
 }
 
 
@@ -124,12 +127,6 @@ element-icon {
 	background-color: transparent;
 }
 
-spacer {
-	str: "";
-	expand: true;
-	background-color: transparent;
-}
-
 
 // I mean its called the footer for a reason
 footer {
@@ -145,24 +142,25 @@ footer {
 }
 
 
-textbox-1 {
-    expand: false;
-    str: "󰣇 ";
-	background-color: transparent;	
-    // actual blue color for arch linux
-	// text-color: rgba (30, 136, 229, 60 %);
-	text-color: rgba (43, 135, 255, 60 %);
-	vertical-align: 0.5;
-    margin: 10px;
-}
-
-
+// our spacer between our logo and the text inside the footer
 spacer {
 	str: "";
 	expand: true;
 	background-color: transparent;
 }
 
+
+// our logo image what is found inside our footer
+textbox-1 {
+    expand: false;
+    str: "󰣇 ";
+	background-color: transparent;
+    // actual blue color for arch linux
+	// text-color: rgba (30, 136, 229, 60 %);
+	text-color: rgba (43, 135, 255, 60 %);
+	vertical-align: 0.5;
+    margin: 10px;
+}
 
 
 // WARNING: testing
@@ -190,13 +188,13 @@ keys-info {
 	expand: false;
 	vertical-align: 0.5;
 	orientation: horizontal;
-	spacing: 2px;
+	spacing: 0px;
     background-color: transparent; 
 }
 
 
 textbox-return-text {
-	str: "Launch";
+	str: "Run";
 	expand: false;
 	text-color: white; 
 	vertical-align: 0.5;
@@ -206,24 +204,25 @@ textbox-return-text {
 }
 
 textbox-return-icon {
-	str: " 󰌑 ";
+	str: "󰌑";
 	expand: false;
-	text-color: rgba (255, 255, 255, 0.6);
+	// text-color: rgba (255, 255, 255, 0.6);
+	text-color: @FG;
 	vertical-align: 0.5;
 	margin: 8px 0;
 	padding: 2px 10px 0px 5px;
-	border-radius: 4px;
+	border-radius: 6px;
     background-color: rgba (92, 101, 106, 5%);
     // background-color: red;
 }
 
 textbox-command-icon {
-	str: " 󰘳 ";
+	str: " ";
 	expand: false;
 	text-color: white; 
 	vertical-align: 0.5;
 	margin: 8px 0;
-	padding: 0 4px;
+	padding: 2px 10px 0px 5px;
 	border-radius: 4px;
     background-color: rgba (92, 101, 106, 5%);
 }
@@ -256,6 +255,8 @@ textbox-up-text {
 	vertical-align: 0.5;
 	border-radius: 4px;
     background-color: transparent; 
+	margin: 8px 0;
+	padding: 2px 10px 0px 5px;
 }
 
 
@@ -276,6 +277,8 @@ textbox-left-text {
 	vertical-align: 0.5;
 	border-radius: 4px;
     background-color: transparent; 
+	margin: 8px 0;
+	padding: 2px 10px 0px 5px;
 }
 
 
@@ -296,6 +299,8 @@ textbox-right-text {
 	vertical-align: 0.5;
 	border-radius: 4px;
     background-color: transparent; 
+	margin: 8px 0;
+	padding: 2px 10px 0px 5px;
 }
 
 
@@ -324,8 +329,9 @@ textbox-separator {
 	str: "|";
 	expand: true;
 	background-color: transparent;
-	margin: 0 6px;
-	font: "Inter Bold 14px";
 	vertical-align: 0.5;
-    text-color: rgba(255, 255, 255, 0.2);
+    // text-color: rgba(255, 255, 255, 0.2);
+    text-color: @DarkGray;
+	margin: 8px 0;
+	padding: 2px 10px 0px 5px;
 }
