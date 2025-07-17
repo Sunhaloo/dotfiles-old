@@ -3,17 +3,11 @@
 source functions.sh
 source packages.conf
 
+print_logo
+
 yay_installation 
 
-clear
-
 update_system 
-
-clear
-
-if ! source dotfiles.sh; then
-    printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
-fi
 
 clear
 
@@ -22,7 +16,6 @@ install_packages "${SYSTEM_UTILS[@]}"
 install_packages "${DESKTOP[@]}"
 install_packages "${DEVELOPMENT[@]}"
 install_packages "${LANGS[@]}"
-install_packages "${SERVICES[@]}"
 
 clear
 
@@ -30,11 +23,13 @@ laptop_packages "${LAPTOP[@]}"
 
 clear
 
-enable_services
+enable_services "${SERVICES[@]}"
 
 clear
 
-oh_my_zsh
+# oh_my_zsh
+# NOTE: going to get the manual installation way
+oh_my_zsh_manual
 
 clear
  
@@ -43,6 +38,12 @@ tmux_plugin_manager
 clear
 
 kanata_configuration
+
+clear
+
+if ! source dotfiles.sh; then
+    printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
+fi
 
 clear
 

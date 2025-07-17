@@ -224,7 +224,7 @@ oh_my_zsh() {
 	printf "== Oh-My-ZSH Installation ==\n\n"
 
     # following the installation guide for OMZ
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 	# WARNING: its going to throw you into ZSH...
 	# this means that you are going to have to type 'exit'
@@ -232,23 +232,41 @@ oh_my_zsh() {
 
 	printf "== Oh-My-ZSH Curl Completed ==\n\n"
 
-	printf "== Install Required Plugins ==\n\n"
-
-    install_packages zsh-autosuggestions zsh-syntax-highlighting
-
     # remove any exisiting ZSH related files
     rm -rf ~/.zsh{rc.pre-oh-my-zsh,rc,_history}
 
-	# WARNING need to look in this
-    # move my ZSH configuration file to be sourced
-    cp ~/GitHub/dotfiles/zsh/.zshrc $HOME
-
     # move the `~/.oh-my-zsh/` to `~/.config/oh-my-zsh/`
     mv -r ~/.oh-my-zsh/ ~/.config/oh-my-zsh/
+
+    # move my ZSH configuration file to be sourced
+    cp ~/GitHub/dotfiles/zsh/.zshrc $HOME
 	cp ~/GitHub/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
 
-	# move the pluginsinstalled with `pacman` to `$ZSH/plugins/` folder
+	# move the plugins installed with `pacman` to `$ZSH/plugins/` folder
 	mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
+
+    printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
+}
+
+
+# WARNING: testing manual OMZ installation
+# function to install curl and setup OMZ
+oh_my_zsh_manual() {
+    # INFO: Link to Documentation: https://github.com/ohmyzsh/ohmyzsh
+	printf "== Oh-My-ZSH Installation ==\n\n"
+
+    # NOTE: not following the official install step(s)
+    git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.config/oh-my-zsh
+
+	printf "== Oh-My-ZSH Clone Completed ==\n\n"
+
+    # move my ZSH configuration file to be sourced
+    cp ~/GitHub/dotfiles/zsh/.zshrc $HOME
+	cp ~/GitHub/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
+
+	# move the plugins installed with `pacman` to `$ZSH/plugins/` folder
+	# mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
+	cp -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
 
     printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
 }
@@ -362,7 +380,7 @@ reboot_computer() {
         sleep 0.5s
 
         # reboot the computer using `systemctl`
-        # systemctl reboot
+        systemctl reboot
 
     # the user does not want to reboot
     elif [[ "$user_reboot" == "n" ]]; then
