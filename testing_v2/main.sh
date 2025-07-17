@@ -1,14 +1,26 @@
 #!/usr/bin/env bash
 
 source functions.sh
-# source dotfiles.sh
 source packages.conf
 
+# yay_installation 
+
+# update_system 
+
+# if ! source dotfiles.sh; then
+#     printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
+# fi
+
+# install_packages "${DESKTOP[@]}"
+
+# laptop_packages
+
+# oh_my_zsh
+
+# tmux_plugin_manager
 
 # if ! git_configuration; then
 #     printf "\nGit Configuration was Skipped or Failed, continuing with the rest...\n"
 # fi
 
-# if ! source dotfiles.sh; then
-#     printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
-# fi
+# reboot_computer

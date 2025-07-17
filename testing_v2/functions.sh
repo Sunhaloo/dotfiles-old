@@ -3,18 +3,18 @@
 # function that will print out the welcome logo
 print_logo() {
     cat << "EOF"
-  _____    _____       ___     ___   
- / ____|  / ____|     / _ \   / _ \  
-| (___   | (___      | (_) | | (_) | 
- \___ \   \___ \      \__  |  \__  | 
- ____) |  ____) |       / /     / /  
-|_____/  |_____/       /_/     /_/   
+     _             _     _ _     _      
+    / \   _ __ ___| |__ (_) |__ | | ___ 
+   / _ \ | '__/ __| '_ \| | '_ \| |/ _ \
+  / ___ \| | | (__| | | | | |_) | |  __/
+ /_/   \_\_|  \___|_| |_|_|_.__/|_|\___|
+                                        
 
-
-          "Less is More"
+            "Less is More"
 
 EOF
 }
+
 
 # function that will check if a package is already installed on system
 is_installed() {
@@ -74,7 +74,6 @@ install_packages() {
     local packages=("$@")
     not_on_sys=()
 
-    echo "Install Function"
     echo "${packages[@]}"
 
     # iterate through the list of packages provided by argument ( main program )
@@ -338,7 +337,6 @@ git_configuration() {
 
 # function that can be used to reboot the machine of installation if need be
 reboot_computer() {
-    :
     # ask the user if he / she wants to reboot the computer
     read -p "Do You Want To Reboot The System [Y/n]: " user_reboot
 
