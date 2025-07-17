@@ -97,62 +97,76 @@ kanata_configuration() {
     # INFO: Link to Documentation: https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md
     printf "\n== Kanata Configuration ==\n\n"
 
-    # following the official documentation ( for Linux )
-	sudo groupadd uinput
+    # ask the user if he / she is on laptop
+    read -p "Do You Want to Install and Configure Kanata [y/N]: " kanata_user
 
-	sudo usermod -aG input $USER
-	sudo usermod -aG uinput $USER
+    if [[ "$kanata_user" == "y" ]]; then
+        # following the official documentation ( for Linux )
+        sudo groupadd uinput
 
-    # "create" the '99-input.rules' files... In this case, I already have it!
-	sudo cp ~/GitHub/dotfiles/kanata/99-input.rules /etc/udev/rules.d/
+        sudo usermod -aG input $USER
+        sudo usermod -aG uinput $USER
 
-	sudo udevadm control --reload-rules && sudo udevadm trigger
+        # "create" the '99-input.rules' files... In this case, I already have it!
+        sudo cp ~/GitHub/dotfiles/kanata/99-input.rules /etc/udev/rules.d/
 
-    # simply verification
-	ls -l /dev/uinput
+        sudo udevadm control --reload-rules && sudo udevadm trigger
 
-	sudo modprobe uinput
+        # simply verification
+        ls -l /dev/uinput
 
-	sudo rm /usr/lib/systemd/system/kanata.service
+        sudo modprobe uinput
 
-    printf "\n+     Moving Kanata Configuration     +\n\n"
+        sudo rm /usr/lib/systemd/system/kanata.service
 
-    # prepared the required directories for configuration files
-	mkdir -p ~/.config/systemd/user
-	mkdir -p ~/.config/kanata
-    
-    # moving my configuration to `~/.config` directory
-	cp ~/GitHub/dotfiles/kanata/kanata.service ~/.config/systemd/user/
-	cp ~/GitHub/dotfiles/kanata/config.kbd ~/.config/kanata/
+        printf "\n+     Moving Kanata Configuration     +\n\n"
 
-    # reload the user systemd manager configuration
-	systemctl --user daemon-reload
+        # prepared the required directories for configuration files
+        mkdir -p ~/.config/systemd/user
+        mkdir -p ~/.config/kanata
+        
+        # moving my configuration to `~/.config` directory
+        cp ~/GitHub/dotfiles/kanata/kanata.service ~/.config/systemd/user/
+        cp ~/GitHub/dotfiles/kanata/config.kbd ~/.config/kanata/
 
-    # ask the user if he wants to autostart kanata on boot
-    read -p "Do You Want To Autostart Kanata On Boot [y/N]: " user_enable
+        # reload the user systemd manager configuration
+        systemctl --user daemon-reload
 
-    # if the user wants to enable kanata on boot
-    if [[ "$user_enable" == "y" ]]; then
-        printf "\n== Enabling Kanata On Boot!!! ==\n"
+        # ask the user if he wants to autostart kanata on boot
+        read -p "Do You Want To Autostart Kanata On Boot [y/N]: " user_enable
 
-        # enable kanata on boot / when computer starts
-        systemctl --user enable kanata.service
+        # if the user wants to enable kanata on boot
+        if [[ "$user_enable" == "y" ]]; then
+            printf "\n== Enabling Kanata On Boot!!! ==\n"
 
-    # if the user does not want to enable kanata on boot
-    elif [[ "$user_enable" == "N" || "$user_enable" == ""  ]]; then
-        printf "\n== Skipping Kanata On Boot - Autostart!!! ==\n"
+            # enable kanata on boot / when computer starts
+            systemctl --user enable kanata.service
+
+        # if the user does not want to enable kanata on boot
+        elif [[ "$user_enable" == "N" || "$user_enable" == ""  ]]; then
+            printf "\n== Skipping Kanata On Boot - Autostart!!! ==\n"
+
+        # if the user did not enter correct / required input
+        else
+            printf "\n== Wrong Input... Skipping Kanata Autostart!!! ==\n"
+        fi
+
+        printf "== Starting Kanata's Service== \n"
+
+        # start kanata right away
+        systemctl --user start kanata.service
+        # check if kanata has been successfully started
+        systemctl --user status kanata.service | head
+
+    # if the user does not want to install laptop packages
+    elif [[ "$kanata_user" == "N" || "$kanata_user" == ""  ]]; then
+        printf "\n== Skipping Kanata Configuration!!! ==\n"
+
 
     # if the user did not enter correct / required input
     else
-        printf "\n== Wrong Input... Skipping Kanata Autostart!!! ==\n"
+        printf "\n== Wrong Input... Skipping Kanata!!! ==\n"
     fi
-
-    printf "== Starting Kanata's Service== \n"
-
-    # start kanata right away
-    systemctl --user start kanata.service
-    # check if kanata has been successfully started
-    systemctl --user status kanata.service | head
 }
 
 # function that will ask the user to if he is currently on laptop
