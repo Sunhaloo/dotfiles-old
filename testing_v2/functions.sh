@@ -74,11 +74,11 @@ install_packages() {
     local packages=("$@")
     not_on_sys=()
 
+    # WARNING: TESTING
     echo "${packages[@]}"
 
     # iterate through the list of packages provided by argument ( main program )
     for pkgs in "${packages[@]}"; do
-        echo "$pkgs"
         # if the package inside the `packages` array is not found on system
         if ! is_installed "$pkgs" && ! is_group_installed "$pkgs"; then
             # add that package to the array `not_on_sys`

@@ -3,28 +3,53 @@
 source functions.sh
 source packages.conf
 
-# yay_installation 
+yay_installation 
 
-# update_system 
+clear
 
-# if ! source dotfiles.sh; then
-#     printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
-# fi
+update_system 
 
-# install_packages "${DESKTOP[@]}"
+clear
 
-# laptop_packages
+if ! source dotfiles.sh; then
+    printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
+fi
 
-# enable_services
+clear
 
-# oh_my_zsh
+install_packages "${WINDOW_MANAGER[@]}"
+install_packages "${SYSTEM_UTILS[@]}"
+install_packages "${DESKTOP[@]}"
+install_packages "${DEVELOPMENT[@]}"
+install_packages "${LANGS[@]}"
+install_packages "${SERVICES[@]}"
 
-# tmux_plugin_manager
+clear
 
-# kanata_configuration
+laptop_packages "${LAPTOP[@]}"
 
-# if ! git_configuration; then
-#     printf "\nGit Configuration was Skipped or Failed, continuing with the rest...\n"
-# fi
+clear
 
-# reboot_computer
+enable_services
+
+clear
+
+oh_my_zsh
+
+clear
+ 
+tmux_plugin_manager
+
+clear
+
+kanata_configuration
+
+clear
+
+if ! git_configuration; then
+    printf "\nGit Configuration was Skipped or Failed, continuing with the rest...\n"
+fi
+
+clear
+
+reboot_computer
