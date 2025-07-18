@@ -113,6 +113,7 @@ if [[ "$clone_status" -eq 0 ]]; then
 
         printf -- "-- Creating Required Missing Home Folders --\n\n"
 
+        # WARNING: testing
         # create all the folders... I know that its fucked up to create everything again
         mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers} 2> /dev/null
     fi
@@ -120,7 +121,9 @@ if [[ "$clone_status" -eq 0 ]]; then
     printf "== Moving Configuration Folders and Files! ==\n\n"
 
     # move the required configuration files
-    cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi,starship} ~/.config
+    # WARNING: testing
+    # cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi,starship,tmux} ~/.config
+    cp -r $HOME/GitHub/dotfiles/{kanata,rofi,starship,tmux} ~/.config
 
     printf "== Configuration Folders and Files Successfully Moved!!! ==\n\n"
 

@@ -27,6 +27,10 @@ enable_services "${SERVICES[@]}"
 
 clear
 
+if ! source dotfiles.sh; then
+    printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
+fi
+
 # oh_my_zsh
 # NOTE: going to get the manual installation way
 oh_my_zsh_manual
@@ -40,10 +44,6 @@ clear
 kanata_configuration
 
 clear
-
-if ! source dotfiles.sh; then
-    printf "\nConfiguration SH was Skipped or Failed, continuing with the rest...\n"
-fi
 
 clear
 

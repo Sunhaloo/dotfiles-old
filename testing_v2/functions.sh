@@ -101,6 +101,9 @@ kanata_configuration() {
     read -p "Do You Want to Install and Configure Kanata [y/N]: " kanata_user
 
     if [[ "$kanata_user" == "y" ]]; then
+        # install the actual kanata packages
+        install_packages kanata
+
         # following the official documentation ( for Linux )
         sudo groupadd uinput
 
@@ -265,8 +268,7 @@ oh_my_zsh_manual() {
 	cp ~/GitHub/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
 
 	# move the plugins installed with `pacman` to `$ZSH/plugins/` folder
-	# mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
-	cp -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
+	mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
 
     printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
 }
@@ -284,11 +286,12 @@ tmux_plugin_manager() {
     else
         printf "\n== Creating TMUX Plugin Manager Configuration Folder! ==\n\n"
 
+        # WARNING: testing
 		# create the TMUX configuration directory
-		mkdir -p ~/.config/tmux/
+		# mkdir -p ~/.config/tmux/
 
 		# move the actual TMUX configuration to the specified directory
-		cp ~/GitHub/dotfiles/tmux/tmux.conf ~/.config/tmux/
+		# cp ~/GitHub/dotfiles/tmux/tmux.conf ~/.config/tmux/
 
         printf "\n== Cloning Repository with Git!!! ==\n\n"
 
