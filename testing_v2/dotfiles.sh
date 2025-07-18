@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# import / source the proper file(s)
+source functions.sh
+
 # define the dotfiles repository URL
 REPO_URL="https://github.com/Sunhaloo/dotfiles.git"
 # define the dotfiles folder name
@@ -113,7 +116,11 @@ if [[ "$clone_status" -eq 0 ]]; then
 
         printf -- "-- Creating Required Missing Home Folders --\n\n"
 
-        # WARNING: testing
+        install_packages xdg-user-dir
+
+        # create the XDG Based Home Directories
+        xdg-user-dirs-update 
+
         # create all the folders... I know that its fucked up to create everything again
         mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers} 2> /dev/null
     fi

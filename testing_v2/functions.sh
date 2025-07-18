@@ -2,6 +2,9 @@
 
 # function that will print out the welcome logo
 print_logo() {
+    # clear the screen before we commence / finish
+    clear
+
     cat << "EOF"
      _             _     _ _     _      
     / \   _ __ ___| |__ (_) |__ | | ___ 
@@ -66,6 +69,9 @@ update_system() {
     # actually update the system ( update packages downloaded with both `yay` and `pacman` )
     yay -Syu --noconfirm
     sudo pacman -Syu --noconfirm
+
+    # clear the whole screen after the update
+    clear
 }
 
 # function that will install all the packages that we tell it to... obviously!
@@ -73,9 +79,6 @@ install_packages() {
     # initialise variables
     local packages=("$@")
     not_on_sys=()
-
-    # WARNING: TESTING
-    echo "${packages[@]}"
 
     # iterate through the list of packages provided by argument ( main program )
     for pkgs in "${packages[@]}"; do
@@ -90,6 +93,9 @@ install_packages() {
     if [[ "${#not_on_sys[@]}" -ne 0 ]]; then
         yay -S --noconfirm "${not_on_sys[@]}"
     fi
+
+    # clear the screen after install package or a group of packages
+    clear
 }
 
 # function that will allow us to configure kanata ( rust-based keyboard remapper )
@@ -149,9 +155,15 @@ kanata_configuration() {
         elif [[ "$user_enable" == "N" || "$user_enable" == ""  ]]; then
             printf "\n== Skipping Kanata On Boot - Autostart!!! ==\n"
 
+            # clear the screen if the user does not want to enable kanata
+            clear
+
         # if the user did not enter correct / required input
         else
             printf "\n== Wrong Input... Skipping Kanata Autostart!!! ==\n"
+
+            # clear the screen if the user did not enter something valid
+            clear
         fi
 
         printf "== Starting Kanata's Service== \n"
@@ -165,10 +177,15 @@ kanata_configuration() {
     elif [[ "$kanata_user" == "N" || "$kanata_user" == ""  ]]; then
         printf "\n== Skipping Kanata Configuration!!! ==\n"
 
+        # clear the screen if the user does not want to install kanata
+        clear
 
     # if the user did not enter correct / required input
     else
         printf "\n== Wrong Input... Skipping Kanata!!! ==\n"
+
+        # clear the screen if the user did not enter something valid
+        clear
     fi
 }
 
@@ -193,9 +210,15 @@ laptop_packages() {
     elif [[ "$laptop_user" == "N" || "$laptop_user" == ""  ]]; then
         printf "\n== Skipping Laptop Packages! ==\n"
 
+        # clear the screen if the user did not install and laptop packages
+        clear
+
     # if the user did not enter correct / required input
     else
         printf "\n== Wrong Input... Skipping Laptop Packages!!! ==\n"
+
+        # clear the screen if the user did not enter the right "key"
+        clear
     fi
 }
 
@@ -219,9 +242,15 @@ enable_services() {
             echo "$service is already enabled"
         fi
     done
+
+    # clear the whole screen after enabling all the required services
+    clear
 }
 
+
 # function to install curl and setup OMZ
+# BUG: this one is not reliable due to the fact that it enter 'ZSH' when it installs
+# therefore halting the execution of my script and hence fucking things up!
 oh_my_zsh() {
     # INFO: Link to Documentation: https://github.com/ohmyzsh/ohmyzsh
 	printf "== Oh-My-ZSH Installation ==\n\n"
@@ -252,8 +281,7 @@ oh_my_zsh() {
 }
 
 
-# WARNING: testing manual OMZ installation
-# function to install curl and setup OMZ
+# SUCCESS: this is the good one
 oh_my_zsh_manual() {
     # INFO: Link to Documentation: https://github.com/ohmyzsh/ohmyzsh
 	printf "== Oh-My-ZSH Installation ==\n\n"
@@ -267,16 +295,20 @@ oh_my_zsh_manual() {
     cp ~/GitHub/dotfiles/zsh/.zshrc $HOME
 	cp ~/GitHub/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
 
+    rm ~/.config/oh-my-zsh/custom/example.zsh
+
 	# move the plugins installed with `pacman` to `$ZSH/plugins/` folder
 	sudo mv /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
 
     printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
+
+    # clear the screen after setting up OMZ
+    clear
 }
 
 # function that will clone and setup TMUX TPM
 tmux_plugin_manager() {
     printf "== TMUX Plugin Manager ==\n"
-	pwd
 
     # if the directory at location '~/.tmux/' exists
     if [[ -d "$HOME/.tmux" || -d "$HOME/.config/tmux/plugins/tpm" ]]; then
@@ -284,23 +316,16 @@ tmux_plugin_manager() {
 
     # meaning that TMUX Plugin Manager is not present on system
     else
-        printf "\n== Creating TMUX Plugin Manager Configuration Folder! ==\n\n"
-
-        # WARNING: testing
-		# create the TMUX configuration directory
-		# mkdir -p ~/.config/tmux/
-
-		# move the actual TMUX configuration to the specified directory
-		# cp ~/GitHub/dotfiles/tmux/tmux.conf ~/.config/tmux/
-
         printf "\n== Cloning Repository with Git!!! ==\n\n"
 
         git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
         printf "== TMUX Plugin Manager Installed ==\n"
     fi
-}
 
+    # clear the screen after installing TPM
+    clear
+}
 
 # function that will configure git and create SSH key for git
 git_configuration() {
@@ -364,9 +389,15 @@ git_configuration() {
     elif [[ "$user_desktop" == "N" || "$user_desktop" == ""  ]]; then
         printf "\n== Skipping Git Configurations!!! ==\n"
 
+        # if the user did not want to setup `git` then clear the screen
+        clear
+
     # if the user did not enter correct / required input
     else
         printf "\n== Wrong Input... Skipping Laptop Packages!!! ==\n"
+
+        # clear the screen if the user did not enter something valid
+        clear
     fi
 }
 
@@ -382,13 +413,19 @@ reboot_computer() {
         # sleep the program for '0.5s'
         sleep 0.5s
 
+        # call the function to print the logo for one last time and off we go
+        print_logo
+
         # reboot the computer using `systemctl`
         systemctl reboot
 
     # the user does not want to reboot
     elif [[ "$user_reboot" == "n" ]]; then
         # output appropriate message
-        printf "\n== Installation and Setup Complete! ==\n"
+        printf "\n== Installation and Setup Complete! ==\n\n"
+
+        # call the function to print the logo for one last time and off we go
+        print_logo
 
         # exit the program with correct status code
         exit 0
@@ -396,5 +433,8 @@ reboot_computer() {
     # if the user did not enter correct / required input
     else
         printf "\n== Wrong Input... Skipping Rebooting!!! ==\n"
+
+        # clear the screen if the user did not enter something valid
+        clear
     fi
 }
