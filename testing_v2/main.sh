@@ -12,10 +12,16 @@ update_system
 clear
 
 install_packages "${WINDOW_MANAGER[@]}"
-install_packages "${SYSTEM_UTILS[@]}"
 install_packages "${DESKTOP[@]}"
 install_packages "${DEVELOPMENT[@]}"
 install_packages "${LANGS[@]}"
+
+printf "== Setup Rustup and Cargo ==\n\n"
+
+# initialise rust - cargo
+rustup default stable
+
+install_packages "${SYSTEM_UTILS[@]}"
 
 clear
 

@@ -268,7 +268,7 @@ oh_my_zsh_manual() {
 	cp ~/GitHub/dotfiles/zsh/aliases.zsh  ~/.config/oh-my-zsh/custom/
 
 	# move the plugins installed with `pacman` to `$ZSH/plugins/` folder
-	mv -r /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
+	sudo mv /usr/share/zsh/plugins/* ~/.config/oh-my-zsh/plugins/
 
     printf "== Oh-My-ZSH and ZSH Setup Completed!!! ==\n\n"
 }
