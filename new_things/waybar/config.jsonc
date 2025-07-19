@@ -2,6 +2,7 @@
     "layer": "top",
     "position": "top",
     "spacing": 0,
+    // "spacing": 2,
     "height": 44,
 
 
@@ -12,27 +13,25 @@
 
 
     "modules-center": [
-        "hyprland/window"
     ],
 
 
     "modules-right": [
         "tray",
-        "battery",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
+        // "power-profiles-daemon",
         "cpu",
         "memory",
         "backlight",
+        "battery",
         "temperature",
         "clock"
     ],
 
     "custom/logo": {
         "format": "  ",
-        "tooltip": false,
-        "on-click": "wlogout"
+        "tooltip": false
     },
 
     "hyprland/window": {
@@ -159,7 +158,7 @@
       "format-icons": {
         "default": "󰤃",
         "performance": "󰈸",
-        "balanced": "",
+        "balanced": "~",
         "power-saver": ""
       }
     },
@@ -167,7 +166,7 @@
 
     "network": {
         "format-wifi": "{icon} ({signalStrength}%)",
-        "format-ethernet": "󰈀",
+        "format-ethernet": "",
         "format-disconnected": "󰤮",
         "format-alt" : "󱛇",
         "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",

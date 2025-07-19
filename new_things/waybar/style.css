@@ -1,6 +1,5 @@
 * {
   font-family: "Liga SFMonoNerdFont", "JetBrainsMono Nerd Font Propo";
-  /* font-family: "JetBrainsMono Nerd Font Propo"; */
   font-size: 16px;
   min-height: 28px;
   min-width: 28px;
@@ -10,7 +9,7 @@
 }
 
 window#waybar {
-    background-color: rgba(136, 136, 136, 0.2);
+    background-color: rgba(136, 136, 136, 0.5);
 }
 
 #workspaces button {
@@ -20,17 +19,14 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  padding: 2px;
-  margin: 6px 6px 6px 0px;
-  color: #DEE4DF;
+  color: #CCCCCC;
+  background-color: rgba(136, 136, 136, 0.5);
   font-weight: 700;
 }
 
-#workspaces button.focused {
-  padding: 2px;
-  margin: 6px 6px 6px 0px;
-  color: red;
-  background-color: green;
+#workspaces button.active {
+  color: #CCCCCC;
+  background-color: rgba(136, 136, 136, 0.5);
   font-weight: 700;
 }
 
@@ -45,3 +41,22 @@ window#waybar {
   margin: 6px 12px 6px 6px;
   color: #1E88E5;
 }
+
+
+#clock {
+    background-color: red;
+    margin: 6px 12px 6px 6px;
+    color: #DEE4DF;
+}
+
+
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#temperature {
+    margin: 6px 0px 6px 6px;
+    color: #DEE4DF;
+    background-color: red;
+}
+
