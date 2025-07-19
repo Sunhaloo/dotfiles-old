@@ -1,0 +1,26 @@
+* {
+  font-family: "Liga SFMonoNerdFont", "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+  min-height: 0;
+  min-width: 0;
+  border: none;
+  border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(13, 14, 17, 0.4);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#workspaces button {
+  padding: 8px;
+  margin: 6px 6px 6px 0px;
+  border-radius: 6px;
+  color: #DEE4DF;
+}
+
+
+#custom-logo {
+  color: #DEE4DF;
+}
