@@ -52,19 +52,25 @@
     },
 
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
+        "spacing": 0
     },
 
 
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y/%m/%d}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "calendar": {
+             // "mode"          : "year",
+             "mode"          : "month",
+             "mode-mon-col"  : 3,
+             "on-click-right": "cpu",
+             "format": {
+                  "months":     "<span color='#ffead3'><b>{}</b></span>",
+                  "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                  "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                  "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+             }
+        }
     },
 
 
@@ -82,15 +88,14 @@
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "critical-threshold": 80
     },
 
 
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -98,23 +103,40 @@
 
     "battery": {
         "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 40,
+            "critical": 20
         },
         "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-full": "󱐋",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-
-
-    "battery#bat2": {
-        "bat": "BAT2"
+        "format-icons": {
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        }
     },
 
 
@@ -123,22 +145,23 @@
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
+        "default": "󰤃",
+        "performance": "󰈸",
+        "balanced": "",
+        "power-saver": ""
       }
     },
 
 
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "{icon} ({signalStrength}%)",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "format-alt" : "󱛇",
+        "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": " {ifname}\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
     },
 
 
