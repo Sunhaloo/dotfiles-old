@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "spacing": 0,
-    "height": 36,
+    "height": 44,
 
 
     "modules-left": [
@@ -87,7 +87,8 @@
 
     "cpu": {
         "format": " {usage}%",
-        "tooltip": false
+        "tooltip": false,
+		"on-click": "kitty -e btop"
     },
 
 
