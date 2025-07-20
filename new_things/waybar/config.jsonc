@@ -75,10 +75,10 @@
              "mode-mon-col"  : 3,
              "on-click-right": "cpu",
              "format": {
-                  "months":     "<span color='#ffead3'><b>{}</b></span>",
-                  "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                  "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                  "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                  "months":     "<span color='#7C9F34'><b>{}</b></span>",
+                  "days":       "<span color='#DEE4DF'><b>{}</b></span>",
+                  "weekdays":   "<span color='#AAAAAA'><b>{}</b></span>",
+                  "today":      "<span color='#21798A'><b><u>{}</u></b></span>"
              }
         }
     },
