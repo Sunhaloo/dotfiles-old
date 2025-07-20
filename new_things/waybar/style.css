@@ -1,5 +1,6 @@
 * {
-  font-family: "Liga SFMonoNerdFont", "JetBrainsMono Nerd Font Propo";
+  /* font-family: "Liga SFMonoNerdFont", "JetBrainsMono Nerd Font Propo"; */
+  font-family: "JetBrainsMono Nerd Font Propo";
   font-size: 16px;
   min-height: 28px;
   min-width: 28px;
@@ -44,19 +45,50 @@ window#waybar {
 
 
 #clock {
-    background-color: red;
     margin: 6px 12px 6px 6px;
     color: #DEE4DF;
 }
 
 
+#tray,
+#pulseaudio,
 #network,
 #power-profiles-daemon,
 #cpu,
 #memory,
-#temperature {
-    margin: 6px 0px 6px 6px;
+#backlight,
+#battery {
+    margin: 6px 0px 6px 10px;
     color: #DEE4DF;
-    background-color: red;
 }
+
+
+#temperature {
+    margin: 6px 12px 6px 12px;
+    color: #DEE4DF;
+}
+
+
+/* WARNING: still need to finalise the colours as DeepSpace does not have 'Orange' */
+#battery.warning {
+    color: #21798A;
+}
+
+
+#battery.critical {
+    color: #E8AA32;
+}
+
+
+#battery.urgent {
+    font-weight: 700;
+    color: #E62D2D;
+}
+
+
+#temperature.critical {
+    font-weight: 700;
+    color: #E62D2D;
+}
+
 

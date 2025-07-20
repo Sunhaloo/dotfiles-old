@@ -13,20 +13,20 @@
 
 
     "modules-center": [
+        "clock"
     ],
 
 
     "modules-right": [
         "tray",
+        "backlight",
         "pulseaudio",
         "network",
         // "power-profiles-daemon",
         "cpu",
         "memory",
-        "backlight",
         "battery",
-        "temperature",
-        "clock"
+        "temperature"
     ],
 
     "custom/logo": {
@@ -98,10 +98,11 @@
 
     "temperature": {
         // "thermal-zone": 2,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon} {temperatureC}°C",
+        "format-critical": "FUCKING BOILING ",
         "format-icons": ["", "", ""],
         "critical-threshold": 80,
+        // "critical-threshold": 10,
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
     },
 
