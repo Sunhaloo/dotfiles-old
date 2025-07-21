@@ -45,7 +45,7 @@ else
     printf "== Cloning Dotfiles Repository ==\n\n"
 
     printf "== Checking Required Directories ==\n\n"
-    
+
     # create the directory '~/GitHub/'
     mkdir "$REPO_DIR"
 
@@ -119,7 +119,7 @@ if [[ "$clone_status" -eq 0 ]]; then
         install_packages xdg-user-dir
 
         # create the XDG Based Home Directories
-        xdg-user-dirs-update 
+        xdg-user-dirs-update
 
         # create all the folders... I know that its fucked up to create everything again
         mkdir ~/{Obsidian,OBS\ Studio,Screenshots,Wallpapers} 2> /dev/null
@@ -129,8 +129,8 @@ if [[ "$clone_status" -eq 0 ]]; then
 
     # move the required configuration files
     # WARNING: testing
-    # cp -r $HOME/GitHub/dotfiles/{hypr,waybar,kitty,nvim,rofi,starship,tmux} ~/.config
-    cp -r $HOME/GitHub/dotfiles/{kanata,rofi,starship,tmux} ~/.config
+    # cp -r $HOME/GitHub/dotfiles/{hypr,kanata,kitty,nvim,rofi,starship,tmux,waybar} ~/.config
+    cp -r $HOME/GitHub/dotfiles/{kanata,kitty,rofi,starship,tmux,waybar} ~/.config
 
     printf "== Configuration Folders and Files Successfully Moved!!! ==\n\n"
 
