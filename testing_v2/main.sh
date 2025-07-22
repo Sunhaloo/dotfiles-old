@@ -23,6 +23,8 @@ install_packages "${DESKTOP[@]}"
 install_packages "${DEVELOPMENT[@]}"
 # install all the packages related to coding and development
 install_packages "${LANGS[@]}"
+# install all the packages related to fonts used
+install_packages "${FONTS[@]}"
 
 printf "== Setup Rustup and Cargo ==\n\n"
 
