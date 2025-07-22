@@ -116,8 +116,6 @@ if [[ "$clone_status" -eq 0 ]]; then
 
         printf -- "-- Creating Required Missing Home Folders --\n\n"
 
-        install_packages xdg-user-dir
-
         # create the XDG Based Home Directories
         xdg-user-dirs-update
 
