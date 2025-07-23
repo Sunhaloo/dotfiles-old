@@ -4,6 +4,6 @@ plugins = [
 ]
 
 [scratchpads.term]
-animation = "fromTop"
 command = "kitty --class scratchpad -o font_size=14.0"
 margin = 50
+size = "60% 80%"
