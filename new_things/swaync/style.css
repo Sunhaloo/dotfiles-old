@@ -20,69 +20,58 @@
   --cyan: rgba(45, 162, 186, 1.0);
   --dark_white: rgba(170, 170, 170, 1.0);
   --white: rgba(204, 204, 204, 1.0);
-  --cc-bg: rgba(46, 46, 46, 0.7);
-  --noti-border-color: rgba(255, 255, 255, 1);
-  --noti-bg: 48, 48, 48;
-  --noti-bg-alpha: 0.8;
-  --noti-bg-darker: rgb(38, 38, 38);
-  --noti-bg-hover: rgb(56, 56, 56);
-  --noti-bg-focus: rgba(68, 68, 68, 0.6);
-  --noti-close-bg: rgb(78, 78, 78);
-  --noti-close-bg-hover: rgb(94, 94, 94);
-  --text-color: rgb(255, 255, 255);
-  --text-color-disabled: rgb(150, 150, 150);
-  --bg-selected: rgb(0, 128, 255);
-  --notification-icon-size: 32px;
+  --notification-icon-size: 64px;
   --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
   --notification-group-icon-size: 32px;
 }
 
+/* close button for each notifications inside control center */
 .close-button {
-  /* The notification Close Button */
-  /* background: var(--noti-close-bg); */
-  background: var(--bg);
-  color: var(--text-color);
+  background: var(--dark_gray);
+  color: var(--fg);
   text-shadow: none;
   padding: 0;
-  border-radius: 100%;
-  margin-top: 8px;
-  margin-right: 8px;
-  box-shadow: none;
+  border-radius: 6px;
+  margin-top: 6px;
+  margin-right: 6px;
   border: none;
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 18px;
+  min-height: 18px;
 }
 
+/* close button for each notifications inside control center with hover */
 .close-button:hover {
-  box-shadow: none;
-  background: var(--noti-close-bg-hover);
+  background: var(--cursor);
   transition: background 0.15s ease-in-out;
   border: none;
 }
 
-
-/* NOTE: the main notification popups thing */
+/* the "padding" / rectangular box behind the actual notification displayed during floating */
 .notification-row {
   background: none;
   outline: none;
 }
 
+
+/* how bundles of notifications will be displayed on hover while not collapsed */
 .notification-row:focus {
-  background: var(--noti-bg-focus);
+  /* background: var(--noti-bg-focus); */
+  background: var(--dark_gray);
 }
 
+/* add padding to the actual notification and the "box behind" that notification */
 .notification-row .notification-background {
-  padding: 6px 12px;
+  padding: 10px 10px;
 }
 
+/* our actual notification displayed when something happens */
 .notification-row .notification-background .notification {
-  /* The actual notification */
   border-radius: 12px;
-  border: 1px solid var(--noti-border-color);
-  /* border: 1px solid red; */
+  border: 2px solid var(--white);
   padding: 0;
   transition: background 0.15s ease-in-out;
-  background: rgba(var(--noti-bg), var(--noti-bg-alpha));
+  /* background: rgba(67, 73, 77, 0.7); */
+  background: rgba(13, 14, 17, 0.9);
 }
 
 .notification-row .notification-background .notification.low {
@@ -109,9 +98,11 @@
   border-radius: 12px;
 }
 
+
+/* our actual notification displayed when something happens and when we hover over it */
 .notification-row .notification-background .notification .notification-default-action:hover {
   -gtk-icon-filter: none;
-  background: var(--noti-bg-hover);
+  background: var(--gray);
 }
 
 .notification-row .notification-background .notification .notification-default-action:not(:only-child) {
@@ -120,6 +111,7 @@
   border-bottom-right-radius: 0px;
 }
 
+/* the "inside" of the actual floating notification */
 .notification-row .notification-background .notification .notification-default-action .notification-content {
   background: transparent;
   border-radius: 12px;
@@ -130,7 +122,7 @@
   /* Notification Primary Image */
   -gtk-icon-filter: none;
   -gtk-icon-size: var(--notification-icon-size);
-  border-radius: 100px;
+  border-radius: 12px;
   /* Size in px */
   margin: 4px;
 }
@@ -148,14 +140,12 @@
   filter: none;
 }
 
-/* NOTE: main heading for notifications that popups */
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
   /* Notification summary/title */
   font-size: 16px;
   font-weight: bold;
   background: transparent;
-  /* color: var(--text-color); */
-  /* color: red; */
+  color: var(--text-color);
   text-shadow: none;
 }
 
@@ -169,14 +159,12 @@
   margin-right: 30px;
 }
 
-/* NOTE: main body messages for notifications that popups */
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
   /* Notification body */
   font-size: 15px;
   font-weight: normal;
   background: transparent;
-  /* color: var(--text-color); */
-  color: red;
+  color: var(--text-color);
   text-shadow: none;
 }
 
@@ -267,112 +255,74 @@
   margin: 12px 20px;
 }
 
-/* NOTE: group expanded buttons */
 .notification-group .notification-group-buttons, .notification-group .notification-group-headers {
   margin: 0 16px;
-  /* color: var(--text-color); */
-  color: red;
+  color: var(--text-color);
 }
 
 .notification-group .notification-group-headers {
   /* Notification Group Headers */
 }
 
-/* NOTE: icon next to group header notification-group */
 .notification-group .notification-group-headers .notification-group-icon {
-  /* color: var(--text-color); */
-  color: red;
-  /* -gtk-icon-size: var(--notification-group-icon-size); */
-  -gtk-icon-size: 10px;
+  color: var(--text-color);
+  -gtk-icon-size: var(--notification-group-icon-size);
 }
 
-/* NOTE: the text next to the expanded notifications groups */
 .notification-group .notification-group-headers .notification-group-header {
-  /* color: var(--text-color); */
-  color: red;
-  font-size: 10px;
+  color: var(--text-color);
 }
 
 .notification-group .notification-group-buttons {
   /* Notification Group Buttons */
-  color: red;
 }
 
-/* NOTE: the group / single notification when not expanded */
+
+/* the background colour behind each / bundles of notifications */
 .notification-group.collapsed {
-  /* When another group is expanded, lower the opacity of the collapsed ones */
-  /* background-color: var(--bg); */
-  background-color: red;
+  background-color: var(--bg);
 }
 
 .notification-group.collapsed.not-expanded {
   opacity: 0.4;
-  /* background-color: var(--bg); */
-  background-color: red;
 }
 
-/* NOTE: how the notification will look inside control center when not expanded */
+/* how each notification will be displayed when collapsed */
 .notification-group.collapsed .notification-row .notification {
-  background-color: rgba(var(--noti-bg), 1);
-  /* background-color: red; */
+  background-color: var(--dark_gray);
 }
 
 .notification-group.collapsed .notification-row:not(:last-child) {
   /* Top notification in stack */
   /* Set lower stacked notifications opacity to 0 */
-  /* opacity: 1.0; */
 }
 
-
-/* NOTE: IDK but I think that this controls the actual opacity of the stacks below the first one */
 .notification-group.collapsed .notification-row:not(:last-child) .notification-action,
 .notification-group.collapsed .notification-row:not(:last-child) .notification-default-action {
   opacity: 0;
 }
 
-
-/* NOTE: the color of the actual notification on mouse hover --> first one controls everything below */
+/* how bundles of notification will displayed when collapsed */
 .notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
-  /* background-color: var(--noti-bg-hover); */
-  background-color: blue;
+  /* background-color: red; */
+  background-color: var(--gray);
 }
 
-/* NOTE: the main control center notifications with buttons */
+/* our main control center which is opened by keybinding */
 .control-center {
-  /* The Control Center which contains the old notifications + widgets */
   background: var(--bg);
-  color: var(--text-color);
+  color: var(--fg);
   border-radius: 12px;
 }
 
-/* .control-center-list-placeholder { */
-/*   /* The placeholder when there are no notifications */ */
-/*   opacity: 0.7; */
-/*   color: var(--fg); */
-/*   font-size: 20px; */
-/* } */
-/**/
-/* .control-center .control-center-list-placeholder image { */
-/*     width: 10px; */
-/*     height: 10px; */
-/* } */
-
-.control-center-list-placeholder {
+.control-center .control-center-list-placeholder {
   /* The placeholder when there are no notifications */
-  opacity: 0.7;
-  color: var(--fg);
-  font-size: 2px;
-  width: 10px;
-  height: 10px;
+  opacity: 0.5;
 }
 
 .control-center .control-center-list {
   /* List of notifications */
   background: transparent;
-  /* background: red; */
-  /* background: var(--bg); */
-  font-size: 12px;
-  /* background-color: var(--bg); */
 }
 
 .control-center .control-center-list .notification {
@@ -389,7 +339,6 @@
   background-color: var(--noti-bg-hover);
 }
 
-/* NOTE: this is the view behind after opening the control center */
 .blank-window {
   /* Window behind control center and on all other monitors */
   background: transparent;
