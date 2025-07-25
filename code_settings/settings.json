@@ -1,7 +1,7 @@
 {
     // general settings
     "window.title": "",
-    "window.restoreWindows": "none",
+    "window.restoreWindows": "preserve",
     "workbench.startupEditor": "none",
     "workbench.editor.revealIfOpen": true,
     "editor.minimap.enabled": false,
@@ -23,11 +23,11 @@
     "vim.highlightedyank.textColor": "rgba(85, 229, 217, 1)",
 
     // themes
-    "workbench.colorTheme": "One Dark Pro Darker",
-    "workbench.iconTheme": "symbols",
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.iconTheme": "vs-minimal",
 
     // font
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontFamily": "BlexMono Nerd Font Mono",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
 
@@ -35,11 +35,11 @@
     "editor.lineNumbers": "relative",
     "editor.cursorStyle": "line",
     "editor.cursorBlinking": "smooth",
-    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSmoothCaretAnimation": "off",
     "editor.smoothScrolling": true,
 
     // terminal settings
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "terminal.integrated.fontFamily": "BlexMono Nerd Font Mono",
     "terminal.integrated.fontSize": 14,
     "terminal.integrgraded.fontLigatures": true,
 
