@@ -22,7 +22,7 @@ key.set('n', "<leader>R", "<Cmd>source %<CR>", { desc = "Reload Neovim" })
 key.set('n', "<leader>L", "<Cmd>Lazy<CR>", { desc = "Lazy Plugin Manager" })
 
 
--- == Quality of Life ==
+-- << Quality of Life >>
 
 -- remap <Esc> to <jk>
 key.set('i', "jk", "<ESC>", opts, { desc = "Exit Insert Mode" })
@@ -49,7 +49,7 @@ key.set('i', "<C-j>", "<Down>", opts)
 key.set('i', "<C-k>", "<Up>", opts)
 
 
--- == Coding / Writing ==
+-- << Coding / Writing >>
 
 -- move lines / blocks of text up / down
 key.set('v', "<A-k>", ":m '<-2<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Up" })
@@ -61,7 +61,7 @@ key.set('v', '<', "<gv", opts, { desc = "Stay in Visual Mode ( Indent In )" })
 key.set('v', '>', ">gv", opts, { desc = "Stay in Visual Mode ( Indent Out )" })
 
 
--- == Tabs - Buffers - Splits ==
+-- << Tabs - Buffers - Splits >>
 
 -- create a new tab
 key.set('n', "te", "<Cmd>tabnew<CR>", { desc = "Open New Tab" })
@@ -85,7 +85,7 @@ key.set('n', "<leader>ss", "<Cmd>new<CR>", opts, { desc = "Create Horizontal Spl
 key.set('n', "<leader>sv", "<Cmd>vnew<CR>", opts, { desc = "Create Vertical Split ( Same Buffer )" })
 
 
--- == Miscellaneous ==
+-- << Miscellaneous >>
 
 -- open vim built-in file manager ( 'Explore' / 'Lex' )
 key.set('n', "lx", "<Cmd>Lex<CR>", { desc = "Open 'Lex'" })

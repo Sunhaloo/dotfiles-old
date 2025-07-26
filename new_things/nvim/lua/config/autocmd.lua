@@ -1,6 +1,6 @@
 -- our auto-command file
 
--- == Comments ==
+-- << Comments >>
 -- auto-command that will be activated on 'INSERT' mode
 vim.api.nvim_create_autocmd("InsertEnter", {
     -- auto-command group that will not be duplicated ( etc... )
@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
     command = [[set formatoptions-=cro]]
 })
 
--- == Spell Checking ==
+-- << Spell Checking >>
 -- auto-command that will be activated on "starting" Neovim
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     -- auto-command group that will not be duplicated ( etc... )
@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     end,
 })
 
--- == Coloured Yanking ==
+-- << Coloured Yanking >>
 -- auto-command that will be activated after "yanking" character / text or text-object
 vim.api.nvim_create_autocmd("TextYankPost", {
     -- auto-command group that will not be duplicated ( etc... )

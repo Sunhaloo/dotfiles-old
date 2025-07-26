@@ -25,7 +25,7 @@ set.timeoutlen = 800
 -- disable persisent undo ( undo stops when you close - re-open file )
 -- set.undofile = false
 -- enable persisent undo ( undo does not stops when you close - re-open file )
-set.undofile = false
+set.undofile = true
 
 
 -- == Coding and Writing Options ==
@@ -55,7 +55,7 @@ set.spelllang = { "en_gb" }
 
 -- == Appearance Options ==
 
--- enable terminal colours ( MORE COLOURSSSS!!!! )
+-- enable terminal colours
 set.termguicolors = true
 -- hide the command line until used ( default = 1 | hidden = 0 ) TESTING '1'
 set.cmdheight = 0 -- --> setting this option to 'off' ==> option below becomes automatically 'off'
@@ -64,7 +64,7 @@ set.showmode = false
 -- stop highlighting search query on exit search query
 set.hlsearch = false
 -- completely show the concealed text
-set.conceallevel = 2
+set.conceallevel = 0
 
 -- always show tabline
 set.showtabline = 2
@@ -78,7 +78,7 @@ set.shortmess = "wfiIlnxtToOCF" -- --> default value = "ltToOCF"
 vim.g.netrw_banner = 1
 
 
--- << Coding Appearance Options >>
+-- == Coding Appearance Options ==
 
 -- highlight the current line ( horizontally )
 set.cursorline = true
@@ -90,7 +90,7 @@ set.pumwidth = 1000 -- --> default value = 1000
 set.pumblend = 7 -- --> default value = 0
 
 
--- << Neovim Splits Options >>
+-- == Neovim Splits Options ==
 
 -- new horizontal split will go below the current split
 set.splitbelow = true
