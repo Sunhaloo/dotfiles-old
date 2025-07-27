@@ -7,8 +7,6 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 		-- will allow us to download formatters automatically
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		-- completion "engine" that will be able to source LSP completions
-		"Saghen/blink.cmp",
 	},
 
 	-- configuration for 'mason' and 'mason-lspconfig'

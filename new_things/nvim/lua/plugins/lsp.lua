@@ -2,7 +2,8 @@ return {
 	-- quickstart configurations for LSP
 	"neovim/nvim-lspconfig",
 	-- start on these 2 events
-	event = { "BufReadPre", "BufNewFile" },
+	-- event = { "BufReadPre", "BufNewFile" },
+	event = "InsertEnter",
 	-- dependencies to install with 'nvim-lspconfig'
 	dependencies = {
 		{

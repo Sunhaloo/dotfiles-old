@@ -1,7 +1,7 @@
 return {
 	"stevearc/conform.nvim",
 	-- start on these 2 events
-	-- event = { "BufReadPre", "BufNewFile" },
+	event = { "BufReadPre", "BufNewFile" },
 
 	-- actual conform / formatting configuration
 	config = function()
