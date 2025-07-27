@@ -1,7 +1,6 @@
 -- variable that will truncate `vim.opt`
 local set = vim.opt
 
-
 -- == General Neovim Options ==
 
 -- no need to create backup files ==> use auto-save.nvim plugin
@@ -27,7 +26,6 @@ set.timeoutlen = 800
 -- enable persisent undo ( undo does not stops when you close - re-open file )
 set.undofile = true
 
-
 -- == Coding and Writing Options ==
 
 -- enable line numbers
@@ -52,9 +50,10 @@ set.shiftwidth = 4
 -- language for spell checking
 set.spelllang = { "en_gb" }
 
-
 -- == Appearance Options ==
 
+-- change to "rounded" setup
+set.winborder = "rounded"
 -- enable terminal colours
 set.termguicolors = true
 -- hide the command line until used ( default = 1 | hidden = 0 ) TESTING '1'
@@ -77,7 +76,6 @@ set.shortmess = "wfiIlnxtToOCF" -- --> default value = "ltToOCF"
 -- disable help message in 'Lex'
 vim.g.netrw_banner = 1
 
-
 -- == Coding Appearance Options ==
 
 -- highlight the current line ( horizontally )
@@ -88,7 +86,6 @@ set.pumheight = 0 -- --> default value = 0
 set.pumwidth = 1000 -- --> default value = 1000
 -- transparency for popup menus ( Completions, Help, Command-Line Menus )
 set.pumblend = 7 -- --> default value = 0
-
 
 -- == Neovim Splits Options ==
 
