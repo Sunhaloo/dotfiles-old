@@ -12,14 +12,14 @@ vim.g.maplocalleader = " "
 
 -- NOTE: using `<Cmd>` means that you need to use `<CR>
 
--- << Reload and Package Management >>
+-- == Reload and Package Management ==
 
 -- reload the current file
 key.set("n", "<leader>R", "<Cmd>source %<CR>", { desc = "Reload Neovim" })
 -- open 'lazy' "start" window
 key.set("n", "<leader>L", "<Cmd>Lazy<CR>", { desc = "Lazy Plugin Manager" })
 
--- << Quality of Life >>
+-- == Quality of Life ==
 
 -- remap <Esc> to <jk>
 key.set("i", "jk", "<ESC>", opts, { desc = "Exit Insert Mode" })
@@ -44,7 +44,7 @@ key.set("i", "<C-l>", "<Right>", opts)
 key.set("i", "<C-j>", "<Down>", opts)
 key.set("i", "<C-k>", "<Up>", opts)
 
--- << Coding / Writing >>
+-- == Coding / Writing ==
 
 -- move lines / blocks of text up / down
 key.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts, { desc = "Move Lines / Blocks of Text Up" })
@@ -55,7 +55,7 @@ key.set("v", "p", '"_dP', opts, { desc = "Paste in Visual Mode" })
 key.set("v", "<", "<gv", opts, { desc = "Stay in Visual Mode ( Indent In )" })
 key.set("v", ">", ">gv", opts, { desc = "Stay in Visual Mode ( Indent Out )" })
 
--- << Tabs - Buffers - Splits >>
+-- == Tabs - Buffers - Splits ==
 
 -- create a new tab
 key.set("n", "te", "<Cmd>tabnew<CR>", { desc = "Open New Tab" })
@@ -78,4 +78,9 @@ key.set("n", "<leader>ss", "<Cmd>new<CR>", opts, { desc = "Create Horizontal Spl
 -- split window vertically with new buffer
 key.set("n", "<leader>sv", "<Cmd>vnew<CR>", opts, { desc = "Create Vertical Split ( Same Buffer )" })
 
-key.set("n", "<leader>fT", ":lua Snacks.terminal()<CR>", opts, { desc = "Create Vertical Split ( Same Buffer )" })
+-- == Plugins Related ==
+
+-- snacks.nvim terminal keymappings
+-- key.set("n", "<c-_>", ":lua Snacks.terminal.toggle()<CR>", opts, { desc = "Toggle Terminal [ Snacks ]" })
+key.set("t", "<c-_>", "<Cmd>close<CR>", opts, { desc = "Close Window ( Terminal ) [ Snacks ]" })
+-- key.set("n", "<leader>ff", ":lua Snacks.picker.files()<CR>", opts, { desc = "Close Window ( Terminal ) [ Snacks ]" })
