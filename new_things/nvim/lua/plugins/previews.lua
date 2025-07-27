@@ -2,6 +2,8 @@ return {
 	{
 		-- ulra, mega, chad plugin for general previewing
 		"sylvanfranklin/omni-preview.nvim",
+		-- start on these 2 events
+		event = { "BufReadPre", "BufNewFile" },
 		-- dependencies to install with 'omni-preview'
 		dependencies = {
 			{
