@@ -1,5 +1,6 @@
 local custom_opts = { noremap = true, silent = true }
 
+vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit Insert Mode" })
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 
 vim.keymap.set("n", "sh", "<cmd>split<cr>", { desc = "Horizontal Split ( Same File )" })
