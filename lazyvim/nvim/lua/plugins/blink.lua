@@ -4,6 +4,8 @@ return {
     -- how blink will internal fuzzy finder will work
     fuzzy = { implementation = "prefer_rust" },
 
+    snippets = { preset = "luasnip" },
+
     keymap = {
       preset = "super-tab",
       ["<Tab>"] = { "select_and_accept" },
